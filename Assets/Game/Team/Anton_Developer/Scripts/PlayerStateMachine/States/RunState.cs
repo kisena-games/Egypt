@@ -8,7 +8,7 @@ public class RunState : IPlayerState
     {
         _player = player;
         _player.Speed = 5f;
-        Debug.Log("Вошел в состояние: Обычное передвижение");
+        _player.SetAnimation("Run");
     }
 
     public void Update()

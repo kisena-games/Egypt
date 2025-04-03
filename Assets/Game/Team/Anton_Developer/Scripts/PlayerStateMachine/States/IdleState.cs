@@ -8,7 +8,7 @@ public class IdleState : IPlayerState
     {
         _player = player;
         _player.Speed = 0f; // Останавливаем персонажа
-        Debug.Log("Персонаж в режиме ожидания");
+        _player.SetAnimation("Idle");
     }
 
     public void Update()

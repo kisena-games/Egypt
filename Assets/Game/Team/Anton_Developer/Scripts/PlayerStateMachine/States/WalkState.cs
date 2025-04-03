@@ -8,7 +8,7 @@ public class WalkState : IPlayerState
     {
         _player = player;
         _player.Speed = 2f;
-        Debug.Log("Вошел в состояние: Стелс-режим");
+        _player.SetAnimation("Walk");
     }
 
     public void Update()
