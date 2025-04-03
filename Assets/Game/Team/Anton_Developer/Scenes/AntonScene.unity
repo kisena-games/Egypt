@@ -575,18 +575,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.89, z: 0}
---- !u!114 &1623089069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132147555721976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6f7872af8537a944a23ef3a45e4605a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2053312197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1031,8 +1019,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450652077144130}
-  - component: {fileID: 1623089069}
   - component: {fileID: 1623089068}
+  - component: {fileID: 919132147555721977}
+  - component: {fileID: 919132147555721978}
   m_Layer: 0
   m_Name: Ch31_nonPBR@Idle
   m_TagString: Untagged
@@ -1040,6 +1029,42 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &919132147555721977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147555721976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b17460635f15548a2f1ca9c07b169d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 5
+  _rotationSpeed: 10
+--- !u!95 &919132147555721978
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147555721976}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: e4900cc9fd2dc7e4cba291fc1d78113d, type: 3}
+  m_Controller: {fileID: 9100000, guid: a5477a1f04fcb6b4b917e9a6bc900a85, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!137 &937843376684083372
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
