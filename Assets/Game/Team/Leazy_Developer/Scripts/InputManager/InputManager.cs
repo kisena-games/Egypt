@@ -20,24 +20,33 @@ public class InputManager : MonoBehaviour
     }
     #endregion
 
-    public Vector2 MoveInput { get; private set; } = Vector2.zero;
-    public Vector2 LookDelta { get; private set; } = Vector2.zero;
-
-    public Action JumpAction;
+    public Vector2 MoveInputNormalized { get; private set; } = Vector2.zero;
+    public bool IsMoving { get; private set; } = false;
+    public bool IsSprint { get; private set; } = false;
 
     public void OnMoveInput(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            
+            IsMoving = true;
+            MoveInputNormalized = context.ReadValue<Vector2>();
         }
-
-        MoveInput = context.ReadValue<Vector2>();
-        Debug.Log(MoveInput);
+        else if (context.canceled)
+        {
+            IsMoving = false;
+            MoveInputNormalized = Vector2.zero;
+        }
     }
 
-    public void OnLookDelta(InputAction.CallbackContext context)
+    public void OnSprint(InputAction.CallbackContext context)
     {
-
+        if (context.performed)
+        {
+            IsSprint = true;
+        }
+        else if (context.canceled)
+        {
+            IsSprint = false;
+        }
     }
 }

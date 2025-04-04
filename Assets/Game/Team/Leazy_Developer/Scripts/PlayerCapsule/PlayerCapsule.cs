@@ -20,8 +20,8 @@ public class PlayerCapsule : MonoBehaviour
 
     private void Move()
     {
-        Vector2 moveInput = InputManager.Instance.MoveInput;
-        if (moveInput != Vector2.zero)
+        Vector2 moveInput = InputManager.Instance.MoveInputNormalized;
+        if (InputManager.Instance.IsMoving)
         {
             Vector3 camForward = _mainCamera.transform.forward;
             Vector3 camRight = _mainCamera.transform.right;
