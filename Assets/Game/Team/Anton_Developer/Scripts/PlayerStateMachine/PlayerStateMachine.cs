@@ -1,51 +1,55 @@
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterController), typeof(Animator))]
 public class PlayerStateMachine : MonoBehaviour
 {
-    private IPlayerState _currentState;
-    private CharacterController _controller;
+    [SerializeField] private float _walkSpeed = 5f;
+    [SerializeField] private float _runSpeed = 8f;
+    [SerializeField] private float _rotationSpeed = 10f;
+
     private Animator _animator;
+    private CharacterController _playerController;
+    private Camera _mainCamera;
+    private StateMachine _stateMachine;
 
-    public float Speed { get; set; } = 5f;
-    public Vector3 Velocity => _controller.velocity;
-
-    void Awake()
+    private void Start()
     {
-        _controller = GetComponent<CharacterController>();
-        ChangeState(new IdleState());
         _animator = GetComponent<Animator>();
-        if (_animator == null)
-        {
-            Debug.LogError("Animator не найден на персонаже!");
-        }
+        _playerController = GetComponent<CharacterController>();
+        _mainCamera = Camera.main;
+
+        InitializeStateMachine();
     }
 
-    void Update()
+    private void Update()
     {
-        _currentState?.Update();
-        Move();
+        _stateMachine.OnUpdate();
     }
 
-    public void ChangeState(IPlayerState newState)
+    private void InitializeStateMachine()
     {
-        _currentState?.Exit(); // Вызываем выход из текущего состояния
-        _currentState = newState; // Меняем состояние
-        _currentState.Enter(this); // Входим в новое состояние
+        State idleState = new IdleState(_animator, _playerController);
+        State walkState = new WalkState(_animator, _playerController, _mainCamera, transform, _walkSpeed, _rotationSpeed);
+        State runState = new RunState(_animator, _playerController, _mainCamera, transform, _runSpeed, _rotationSpeed);
+
+        // Переходы с использованием FuncCondition
+        idleState.AddTransition(new StateTransition(walkState, new FuncStateCondition(() => IsMoving() && !Input.GetKey(KeyCode.LeftShift))));
+        idleState.AddTransition(new StateTransition(runState, new FuncStateCondition(() => IsMoving() && Input.GetKey(KeyCode.LeftShift))));
+
+        walkState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => !IsMoving())));
+        walkState.AddTransition(new StateTransition(runState, new FuncStateCondition(() => IsMoving() && Input.GetKey(KeyCode.LeftShift))));
+
+        runState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => !IsMoving())));
+        runState.AddTransition(new StateTransition(walkState, new FuncStateCondition(() => IsMoving() && !Input.GetKey(KeyCode.LeftShift))));
+
+        _stateMachine = new StateMachine(idleState);
     }
 
-    private void Move()
+    private bool IsMoving()
     {
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
         Vector3 move = new Vector3(moveX, 0, moveZ).normalized;
-
-        _controller.Move(move * Speed * Time.deltaTime);
-
-        _animator.SetFloat("Speed", move.magnitude * Speed);
-    }
-
-    public void SetAnimation(string animationName)
-    {
-        _animator.Play(animationName);
+        return move.magnitude >= 0.1f;
     }
 }

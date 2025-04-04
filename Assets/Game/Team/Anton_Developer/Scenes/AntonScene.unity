@@ -1128,7 +1128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450652077144130}
   - component: {fileID: 1623089068}
-  - component: {fileID: 919132147555721977}
+  - component: {fileID: 919132147555721979}
   - component: {fileID: 919132147555721978}
   m_Layer: 0
   m_Name: Ch31_nonPBR@Idle
@@ -1137,21 +1137,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &919132147555721977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132147555721976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80b17460635f15548a2f1ca9c07b169d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _walkSpeed: 5
-  _runSpeed: 8
-  _rotationSpeed: 10
 --- !u!95 &919132147555721978
 Animator:
   serializedVersion: 7
@@ -1174,6 +1159,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &919132147555721979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147555721976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6f7872af8537a944a23ef3a45e4605a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _walkSpeed: 5
+  _runSpeed: 8
+  _rotationSpeed: 10
 --- !u!137 &937843376684083372
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0

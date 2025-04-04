@@ -1,34 +1,25 @@
 using UnityEngine;
 
-public class IdleState : IPlayerState
+public class IdleState : State
 {
-    private PlayerStateMachine _player;
+    private readonly Animator _animator;
+    private readonly CharacterController _controller;
 
-    public void Enter(PlayerStateMachine player)
+    public IdleState(Animator animator, CharacterController controller)
     {
-        _player = player;
-        _player.Speed = 0f; // Останавливаем персонажа
-        _player.SetAnimation("Idle");
+        _animator = animator;
+        _controller = controller;
     }
 
-    public void Update()
+    public override void OnEnter()
     {
-        // Проверяем ввод движения (A, D, W, S или стрелки)
-        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
-        {
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                _player.ChangeState(new WalkState()); // Если зажат Shift ? WalkState
-            }
-            else
-            {
-                _player.ChangeState(new RunState()); // Обычное движение
-            }
-        }
+        _animator.SetBool("Idle", true);
+        _animator.SetBool("Walk", false);
+        _animator.SetBool("Run", false);
     }
 
-    public void Exit()
+    public override void OnUpdate()
     {
-        Debug.Log("Выход из состояния: Ожидание");
+        _controller.Move(Vector3.zero);
     }
 }

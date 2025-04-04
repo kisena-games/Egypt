@@ -1,30 +1,53 @@
 using UnityEngine;
 
-public class RunState : IPlayerState
+public class RunState : State
 {
-    private PlayerStateMachine _player;
+    private readonly Animator _animator;
+    private readonly CharacterController _controller;
+    private readonly Camera _camera;
+    private readonly Transform _transform;
+    private readonly float _runSpeed;
+    private readonly float _rotationSpeed;
 
-    public void Enter(PlayerStateMachine player)
+    public RunState(Animator animator, CharacterController controller, Camera camera, Transform transform, float runSpeed, float rotationSpeed)
     {
-        _player = player;
-        _player.Speed = 5f;
-        _player.SetAnimation("Run");
+        _animator = animator;
+        _controller = controller;
+        _camera = camera;
+        _transform = transform;
+        _runSpeed = runSpeed;
+        _rotationSpeed = rotationSpeed;
     }
 
-    public void Update()
+    public override void OnEnter()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            _player.ChangeState(new WalkState());
-        }
-        else if (_player.Velocity.magnitude < 0.1f) // Проверяем скорость
-        {
-            _player.ChangeState(new IdleState());
-        }
+        _animator.SetBool("Run", true);
+        _animator.SetBool("Idle", false);
+        _animator.SetBool("Walk", false);
     }
 
-    public void Exit()
+    public override void OnUpdate()
     {
-        Debug.Log("Выход из состояния: Обычное передвижение");
+        float moveX = Input.GetAxis("Horizontal");
+        float moveZ = Input.GetAxis("Vertical");
+        Vector3 move = new Vector3(moveX, 0, moveZ).normalized;
+
+        if (move.magnitude >= 0.1f)
+        {
+            Vector3 camForward = _camera.transform.forward;
+            Vector3 camRight = _camera.transform.right;
+            camForward.y = 0;
+            camRight.y = 0;
+            camForward.Normalize();
+            camRight.Normalize();
+
+            Vector3 moveDirection = camForward * moveZ + camRight * moveX;
+            moveDirection.Normalize();
+
+            Quaternion toRotation = Quaternion.LookRotation(moveDirection);
+            _transform.rotation = Quaternion.Slerp(_transform.rotation, toRotation, _rotationSpeed * Time.deltaTime);
+
+            _controller.Move(moveDirection * _runSpeed * Time.deltaTime);
+        }
     }
 }

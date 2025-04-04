@@ -10,7 +10,7 @@ public class PlayerMover : MonoBehaviour
     private CharacterController _playerController;
     private Camera _mainCamera;
     private float _currentSpeed;
-    private string _currentState = "Idle"; // Храним текущее состояние
+    private string _currentState = "Idle"; 
 
     private void Start()
     {
@@ -37,10 +37,8 @@ public class PlayerMover : MonoBehaviour
             Vector3 moveDirection = camForward * moveZ + camRight * moveX;
             moveDirection.Normalize();
 
-            // Проверяем, зажат ли Shift
             float targetSpeed = Input.GetKey(KeyCode.LeftShift) ? _runSpeed : _walkSpeed;
 
-            // Применяем движение и поворот
             Quaternion toRotation = Quaternion.LookRotation(moveDirection);
             transform.rotation = Quaternion.Slerp(transform.rotation, toRotation, _rotationSpeed * Time.deltaTime);
 
@@ -57,7 +55,7 @@ public class PlayerMover : MonoBehaviour
         {
             _animator.SetBool("Walk", false);
             _animator.SetBool("Run", false);
-            _animator.SetBool("Idle", true); // Теперь точно включится Idle
+            _animator.SetBool("Idle", true);
             _currentState = "Idle";
         }
         else if (_currentSpeed > 0 && _currentSpeed <= _walkSpeed && _currentState != "Walk")
