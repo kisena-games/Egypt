@@ -1,47 +1,71 @@
 using UnityEngine;
 
-public class MummyStateMacine : MonoBehaviour
+// Добавьте этот компонент к Mummy
+[RequireComponent(typeof(CharacterController), typeof(Animator))]
+public class MummyStateMachine : MonoBehaviour
 {
-    private State _currentState;
-    private CharacterController _controller;
+    [SerializeField] private float _walkSpeed = 5f;
+    [SerializeField] private float _runSpeed = 8f;
+    [SerializeField] private float _rotationSpeed = 10f;
+    [SerializeField] private float _detectionDistance = 4f;
+    [SerializeField] private float _viewAngle = 120f;
+
     private Animator _animator;
+    private CharacterController _mummyController;
+    private StateMachine _stateMachine;
+    private State idleState, patrollingState;
 
-    public float Speed { get; set; } = 5f;
-    public Vector3 Velocity => _controller.velocity;
+    private Transform _player;
 
-    void Awake()
+
+    private void Start()
     {
-        _controller = GetComponent<CharacterController>();
-        ChangeState(new State());
-        //_animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
+        _mummyController = GetComponent<CharacterController>();
+
+        InitializeStateMachine();
+
+        _player = GameObject.Find("PlayerCapsule")?.transform;
     }
 
-   void Update()
+    private void Update()
     {
-        _currentState?.OnUpdate();
-        Move();
-    }
-    
-    public void ChangeState(State newState)
-    {
-        _currentState?.OnExit(); // Вызываем выход из текущего состояния
-        _currentState = newState; // Меняем состояние
-        _currentState.OnEnter(); // Входим в новое состояние
+        _stateMachine.OnUpdate();
+
+        DetectPlayer();
     }
 
-    private void Move()
+    private void InitializeStateMachine()
     {
-        float moveX = Input.GetAxis("Horizontal");
-        float moveZ = Input.GetAxis("Vertical");
-        Vector3 move = new Vector3(moveX, 0, moveZ).normalized;
+        idleState = new MummyIdleState(_animator, _mummyController);
+        patrollingState = new MummyPatrollingState(_animator, _mummyController);
 
-        _controller.Move(move * Speed * Time.deltaTime);
+        idleState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => false))); // Заменено на логику с лучом
+        patrollingState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => false))); // Заменено на логику с лучом
 
-       // _animator.SetFloat("Speed", move.magnitude * Speed);
+        _stateMachine = new StateMachine(idleState);
     }
 
-    public void SetAnimation(string animationName)
+    private void DetectPlayer()
     {
-        _animator.Play(animationName);
+        if (_player != null)
+        {
+            Vector3 directionToPlayer = (_player.position - transform.position).normalized;
+
+            float angle = Vector3.Angle(transform.position, directionToPlayer);
+
+            if (angle < _viewAngle * 0.5f) 
+            {
+                if (Physics.Raycast(transform.position, directionToPlayer, out RaycastHit hit, _detectionDistance))
+                {
+                    _stateMachine = new StateMachine(patrollingState);
+                
+                }
+                
+            }
+            else
+                _stateMachine = new StateMachine(idleState);
+        }
     }
 }
+    
