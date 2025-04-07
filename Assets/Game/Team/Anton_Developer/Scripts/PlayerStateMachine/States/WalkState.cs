@@ -28,9 +28,8 @@ public class WalkState : State
 
     public override void OnUpdate()
     {
-        float moveX = Input.GetAxis("Horizontal");
-        float moveZ = Input.GetAxis("Vertical");
-        Vector3 move = new Vector3(moveX, 0, moveZ).normalized;
+        Vector2 input = InputManager.Instance.MoveInputNormalized;
+        Vector3 move = new Vector3(input.x, 0, input.y).normalized;
 
         if (move.magnitude >= 0.1f)
         {
@@ -41,7 +40,7 @@ public class WalkState : State
             camForward.Normalize();
             camRight.Normalize();
 
-            Vector3 moveDirection = camForward * moveZ + camRight * moveX;
+            Vector3 moveDirection = camForward * input.y + camRight * input.x;
             moveDirection.Normalize();
 
             Quaternion toRotation = Quaternion.LookRotation(moveDirection);

@@ -32,7 +32,6 @@ public class PlayerStateMachine : MonoBehaviour
         State walkState = new WalkState(_animator, _playerController, _mainCamera, transform, _walkSpeed, _rotationSpeed);
         State runState = new RunState(_animator, _playerController, _mainCamera, transform, _runSpeed, _rotationSpeed);
 
-        // Переходы с использованием FuncCondition
         idleState.AddTransition(new StateTransition(walkState, new FuncStateCondition(() => IsMoving() && !Input.GetKey(KeyCode.LeftShift))));
         idleState.AddTransition(new StateTransition(runState, new FuncStateCondition(() => IsMoving() && Input.GetKey(KeyCode.LeftShift))));
 
@@ -47,9 +46,6 @@ public class PlayerStateMachine : MonoBehaviour
 
     private bool IsMoving()
     {
-        float moveX = Input.GetAxis("Horizontal");
-        float moveZ = Input.GetAxis("Vertical");
-        Vector3 move = new Vector3(moveX, 0, moveZ).normalized;
-        return move.magnitude >= 0.1f;
+        return InputManager.Instance.IsMoving;
     }
-}
+}  
