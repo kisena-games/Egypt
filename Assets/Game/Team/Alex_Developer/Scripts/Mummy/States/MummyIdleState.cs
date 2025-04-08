@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MummyIdleState:State
+public class MummyIdleState : State
 {
     private readonly Animator _animator;
     private readonly CharacterController _controller;
@@ -13,9 +13,13 @@ public class MummyIdleState:State
 
     public override void OnEnter()
     {
-        _animator?.SetBool("Idle", true);
-        _animator?.SetBool("Patrolling", false);
-        Debug.Log("Idle");
+        _animator.SetBool("Idle", true);
+        //Debug.Log("Idle");
+    }
+
+    public override void OnExit() 
+    {
+        _animator.SetBool("Idle", false);
     }
 
     public override void OnUpdate()

@@ -13,9 +13,13 @@ public class MummyPatrollingState:State
 
     public override void OnEnter()
     {
-        _animator?.SetBool("Idle", false);
-        _animator?.SetBool("Patrolling", true);
-        Debug.Log("Patrolling");
+        _animator.SetBool("Patrolling", true);
+        //Debug.Log("Patrolling");
+    }
+
+    public override void OnExit()
+    {
+        _animator.SetBool("Patrolling", false);
     }
 
     public override void OnUpdate()

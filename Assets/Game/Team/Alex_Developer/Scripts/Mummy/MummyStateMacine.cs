@@ -12,20 +12,20 @@ public class MummyStateMachine : MonoBehaviour
 
     private Animator _animator;
     private CharacterController _mummyController;
-    private StateMachine _stateMachine;
-    private State idleState, patrollingState;
+    private StateMachine _stateMachine; 
 
     private Transform _player;
 
+    private bool _isIdle;
+    private bool _isPatrolling;
 
-    private void Start()
+    private void Awake()
     {
         _animator = GetComponent<Animator>();
         _mummyController = GetComponent<CharacterController>();
+        _player = FindFirstObjectByType<PlayerCapsule>().transform;
 
         InitializeStateMachine();
-
-        _player = GameObject.Find("PlayerCapsule")?.transform;
     }
 
     private void Update()
@@ -37,11 +37,11 @@ public class MummyStateMachine : MonoBehaviour
 
     private void InitializeStateMachine()
     {
-        idleState = new MummyIdleState(_animator, _mummyController);
-        patrollingState = new MummyPatrollingState(_animator, _mummyController);
+        State idleState = new MummyIdleState(_animator, _mummyController);
+        State patrollingState = new MummyPatrollingState(_animator, _mummyController);
 
-        idleState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => false))); // Заменено на логику с лучом
-        patrollingState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => false))); // Заменено на логику с лучом
+        idleState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => _isPatrolling))); // Заменено на логику с лучом
+        patrollingState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => _isIdle))); // Заменено на логику с лучом
 
         _stateMachine = new StateMachine(idleState);
     }
@@ -58,13 +58,16 @@ public class MummyStateMachine : MonoBehaviour
             {
                 if (Physics.Raycast(transform.position, directionToPlayer, out RaycastHit hit, _detectionDistance))
                 {
-                    _stateMachine = new StateMachine(patrollingState);
-                
+                    _isPatrolling = true;
+                    _isIdle = false;
                 }
                 
             }
             else
-                _stateMachine = new StateMachine(idleState);
+            {
+                _isPatrolling = false;
+                _isIdle = true;
+            }
         }
     }
 }
