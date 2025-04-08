@@ -28,18 +28,18 @@ public class PlayerStateMachine : MonoBehaviour
 
     private void InitializeStateMachine()
     {
-        State idleState = new IdleState(_animator, _playerController);
-        State walkState = new WalkState(_animator, _playerController, _mainCamera, transform, _walkSpeed, _rotationSpeed);
-        State runState = new RunState(_animator, _playerController, _mainCamera, transform, _runSpeed, _rotationSpeed);
+        State idleState = new PlayerIdleState(_animator);
+        State walkState = new PlayerWalkState(_animator, _playerController, _mainCamera, transform, _walkSpeed, _rotationSpeed);
+        State runState = new PlayerRunState(_animator, _playerController, _mainCamera, transform, _runSpeed, _rotationSpeed);
 
-        idleState.AddTransition(new StateTransition(walkState, new FuncStateCondition(() => IsMoving() && !Input.GetKey(KeyCode.LeftShift))));
-        idleState.AddTransition(new StateTransition(runState, new FuncStateCondition(() => IsMoving() && Input.GetKey(KeyCode.LeftShift))));
+        idleState.AddTransition(new StateTransition(walkState, new FuncStateCondition(() => IsMoving() && !IsSprint())));
+        idleState.AddTransition(new StateTransition(runState, new FuncStateCondition(() => IsMoving() && IsSprint())));
 
         walkState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => !IsMoving())));
-        walkState.AddTransition(new StateTransition(runState, new FuncStateCondition(() => IsMoving() && Input.GetKey(KeyCode.LeftShift))));
+        walkState.AddTransition(new StateTransition(runState, new FuncStateCondition(() => IsMoving() && IsSprint())));
 
         runState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => !IsMoving())));
-        runState.AddTransition(new StateTransition(walkState, new FuncStateCondition(() => IsMoving() && !Input.GetKey(KeyCode.LeftShift))));
+        runState.AddTransition(new StateTransition(walkState, new FuncStateCondition(() => IsMoving() && !IsSprint())));
 
         _stateMachine = new StateMachine(idleState);
     }
@@ -47,5 +47,10 @@ public class PlayerStateMachine : MonoBehaviour
     private bool IsMoving()
     {
         return InputManager.Instance.IsMoving;
+    }
+
+    private bool IsSprint()
+    {
+        return InputManager.Instance.IsSprint;
     }
 }  

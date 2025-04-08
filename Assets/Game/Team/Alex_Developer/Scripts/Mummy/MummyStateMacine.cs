@@ -1,16 +1,15 @@
 using UnityEngine;
 
-// Добавьте этот компонент к Mummy
-[RequireComponent(typeof(CharacterController), typeof(Animator))]
+[RequireComponent(typeof(CharacterController))]
 public class MummyStateMachine : MonoBehaviour
 {
+    [SerializeField] private Animator _animator;
     [SerializeField] private float _walkSpeed = 5f;
     [SerializeField] private float _runSpeed = 8f;
     [SerializeField] private float _rotationSpeed = 10f;
     [SerializeField] private float _detectionDistance = 4f;
     [SerializeField] private float _viewAngle = 120f;
 
-    private Animator _animator;
     private CharacterController _mummyController;
     private StateMachine _stateMachine; 
 
@@ -21,7 +20,6 @@ public class MummyStateMachine : MonoBehaviour
 
     private void Awake()
     {
-        _animator = GetComponent<Animator>();
         _mummyController = GetComponent<CharacterController>();
         _player = FindFirstObjectByType<PlayerCapsule>().transform;
 

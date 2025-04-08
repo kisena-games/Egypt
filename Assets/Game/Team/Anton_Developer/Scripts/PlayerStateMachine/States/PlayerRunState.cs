@@ -1,35 +1,40 @@
 using UnityEngine;
 
-public class WalkState : State
+public class PlayerRunState : State
 {
+    private const string RUN_ANIM_KEY = "Run";
+
     private readonly Animator _animator;
     private readonly CharacterController _controller;
     private readonly Camera _camera;
     private readonly Transform _transform;
-    private readonly float _walkSpeed;
+    private readonly float _runSpeed;
     private readonly float _rotationSpeed;
 
-    public WalkState(Animator animator, CharacterController controller, Camera camera, Transform transform, float walkSpeed, float rotationSpeed)
+    public PlayerRunState(Animator animator, CharacterController controller, Camera camera, Transform transform, float runSpeed, float rotationSpeed)
     {
         _animator = animator;
         _controller = controller;
         _camera = camera;
         _transform = transform;
-        _walkSpeed = walkSpeed;
+        _runSpeed = runSpeed;
         _rotationSpeed = rotationSpeed;
     }
 
     public override void OnEnter()
     {
-        _animator.SetBool("Walk", true);
-        _animator.SetBool("Idle", false);
-        _animator.SetBool("Run", false);
+        _animator.SetBool(RUN_ANIM_KEY, true);
+    }
+
+    public override void OnExit()
+    {
+        _animator.SetBool(RUN_ANIM_KEY, false);
     }
 
     public override void OnUpdate()
     {
         Vector2 input = InputManager.Instance.MoveInputNormalized;
-        Vector3 move = new Vector3(input.x, 0, input.y).normalized;
+        Vector3 move = new Vector3(input.x, 0, input.y);
 
         if (move.magnitude >= 0.1f)
         {
@@ -46,7 +51,7 @@ public class WalkState : State
             Quaternion toRotation = Quaternion.LookRotation(moveDirection);
             _transform.rotation = Quaternion.Slerp(_transform.rotation, toRotation, _rotationSpeed * Time.deltaTime);
 
-            _controller.Move(moveDirection * _walkSpeed * Time.deltaTime);
+            _controller.Move(moveDirection * _runSpeed * Time.deltaTime);
         }
     }
 }
