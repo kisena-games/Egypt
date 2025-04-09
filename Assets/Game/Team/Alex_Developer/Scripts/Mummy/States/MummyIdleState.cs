@@ -14,7 +14,7 @@ public class MummyIdleState : State
     public override void OnEnter()
     {
         _animator.SetBool("Idle", true);
-        //Debug.Log("Idle");
+        Debug.Log("Idle");
     }
 
     public override void OnExit() 
