@@ -1,9 +1,10 @@
-using Unity.IO.LowLevel.Unsafe;
-using Unity.VisualScripting;
+
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 
-[RequireComponent(typeof(CharacterController))]
 public class MummyStateMachine : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
@@ -13,37 +14,54 @@ public class MummyStateMachine : MonoBehaviour
     [SerializeField] private float _rotationSpeed = 10f;
     [SerializeField] private float _detectionDistance = 4f;
     [SerializeField] private float _viewAngle = 120f;
-    
-    private CharacterController _mummyController;
+    [SerializeField] private List<Vector3> _waypoints;
+
     private StateMachine _stateMachine;
+    private Camera _mainCamera;
+    private NavMeshAgent _agent;
+
+    private Vector2 _startPosition;
 
     private bool _isIdle;
     private bool _isPatrolling;
+    float _timer;
 
-    State idleState;
-    State patrollingState;
 
     private void Awake()
     {
-        _mummyController = GetComponent<CharacterController>();
-        
+        _mainCamera=Camera.main;
+        _agent=GetComponent<NavMeshAgent>();
+        _startPosition=transform.position;
+
         InitializeStateMachine();
+        StartCoroutine(NavMeshAgentReleaseation());
+ 
     }
 
     private void Update()
     {
         _stateMachine.OnUpdate();
+        NavMeshAgentReleaseation();
     }
 
     private void InitializeStateMachine()
     {
-        idleState = new MummyIdleState(_animator, _mummyController);
-        patrollingState = new MummyPatrollingState(_animator, _mummyController);
+        State idleState = new MummyIdleState(_animator);
+        State patrollingState = new MummyPatrollingState(_animator);
 
         idleState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => _isPatrolling))); // Заменено на логику с лучом
         patrollingState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => _isIdle))); // Заменено на логику с лучом
 
         _stateMachine = new StateMachine(idleState);
+    }
+    private IEnumerator NavMeshAgentReleaseation()
+    {
+        while (true)
+        {
+            _agent.SetDestination(_waypoints[Random.Range(0,_waypoints.Count)]);
+            yield return new WaitForSeconds(Random.Range(1,3));
+        }
+        yield return null;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -52,7 +70,6 @@ public class MummyStateMachine : MonoBehaviour
         {
             _isPatrolling = false;
             _isIdle = true;
-            _stateMachine = new StateMachine(patrollingState);
         }
     }
 
@@ -60,9 +77,8 @@ public class MummyStateMachine : MonoBehaviour
     {
         if (other.GetComponent<PlayerCapsule>())
         {
-            _isPatrolling = false;
-            _isIdle = true;
-            _stateMachine = new StateMachine(idleState);
+            _isPatrolling = true;
+            _isIdle = false;
         }
     }
 }
