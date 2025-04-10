@@ -3,12 +3,10 @@ using UnityEngine;
 public class MummyPatrollingState:State
 {
     private readonly Animator _animator;
-    private readonly CharacterController _controller;
 
-    public MummyPatrollingState(Animator animator, CharacterController controller)
+    public MummyPatrollingState(Animator animator)
     {
         _animator = animator;
-        _controller = controller;
     }
 
     public override void OnEnter()
@@ -24,7 +22,7 @@ public class MummyPatrollingState:State
 
     public override void OnUpdate()
     {
-        _controller.Move(Vector3.zero);
+        
     }
 }
 
