@@ -1,27 +1,29 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MummyIdleState : State
 {
     private readonly Animator _animator;
-
-    public MummyIdleState(Animator animator)
+    private static NavMeshAgent _agent;
+    public MummyIdleState(Animator animator, NavMeshAgent agent)
     {
         _animator = animator;
+        _agent = agent;
     }
 
     public override void OnEnter()
     {
-        _animator.SetBool("Idle", true);
         Debug.Log("Idle");
     }
 
     public override void OnExit() 
     {
-        _animator.SetBool("Idle", false);
+
     }
 
     public override void OnUpdate()
     {
-        
+        if (_agent.velocity.magnitude < 1) _animator.SetBool("Patrolling", false);
+        else _animator.SetBool("Patrolling", true);
     }
 }
