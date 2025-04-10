@@ -1,20 +1,19 @@
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController), typeof(Animator))]
+[RequireComponent(typeof(CharacterController))]
 public class PlayerStateMachine : MonoBehaviour
 {
+    [SerializeField] private Animator _animator;
     [SerializeField] private float _walkSpeed = 5f;
     [SerializeField] private float _runSpeed = 8f;
     [SerializeField] private float _rotationSpeed = 10f;
 
-    private Animator _animator;
     private CharacterController _playerController;
     private Camera _mainCamera;
     private StateMachine _stateMachine;
 
     private void Start()
     {
-        _animator = GetComponent<Animator>();
         _playerController = GetComponent<CharacterController>();
         _mainCamera = Camera.main;
 
