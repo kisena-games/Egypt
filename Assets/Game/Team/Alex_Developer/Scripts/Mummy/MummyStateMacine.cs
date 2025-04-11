@@ -27,31 +27,33 @@ public class MummyStateMachine : MonoBehaviour
     private void Awake()
     {
         _agent=GetComponent<NavMeshAgent>();
-  
+
+
+
+        _waypoints = GetComponentsInChildren<Transform>()
+            .Where(t => t.name.Contains("Sphere"))
+            .Select(waypoint => { waypoint.SetParent(null, true); return waypoint; })
+            .ToList();
+
         InitializeStateMachine();
-        
-        _waypoints = new List<Transform>(GetComponentsInChildren<Transform>()
-            .Where(t => t.name.Contains("Sphere")));
-        MummyPatrollingState.waypoints = _waypoints;
-        StartCoroutine(MummyPatrollingState.NavMeshAgentReleaseation());
-        foreach (Transform waypoint in _waypoints)
-        {
-            waypoint.SetParent(null, true);
-        }
     }
    
     private void InitializeStateMachine()
     {
         State idleState = new MummyIdleState(_animator,_agent);
-        State patrollingState = new MummyPatrollingState(_animator,_agent);
+        State patrollingState = new MummyPatrollingState(_animator,_agent,_waypoints);
         
 
         idleState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => _isPatrolling ))); // Заменено на логику с лучом
         patrollingState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => _isIdle))); // Заменено на логику с лучом
 
         _stateMachine= new StateMachine(idleState);
+        StartCoroutine(MummyPatrollingState.NavMeshAgentReleaseation());
     }
-    private void Update()=>_stateMachine.OnUpdate();
+    private void Update()
+    {
+        _stateMachine.OnUpdate();
+    }
     
     private void OnTriggerEnter(Collider other)
     {

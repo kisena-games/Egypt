@@ -8,7 +8,7 @@ using UnityEngine.AI;
 
 public class MummyPatrollingState:State
 {
-    public static List<Transform> waypoints;
+    private static List<Transform> _waypoints;
 
     private readonly Animator _animator;
 
@@ -16,10 +16,11 @@ public class MummyPatrollingState:State
     
     private static bool _isBreak=true;
 
-    public MummyPatrollingState(Animator animator, NavMeshAgent agent)
+    public MummyPatrollingState(Animator animator, NavMeshAgent agent, List<Transform> waypoints)
     {
         _animator = animator;
         _agent = agent;
+        _waypoints = waypoints;
     }
     
     public override void OnEnter()
@@ -45,9 +46,9 @@ public class MummyPatrollingState:State
         {
             if (_isBreak==false)
             {
-                var waypoint = waypoints[Random.Range(0, waypoints.Count)].position;
+                var waypoint = _waypoints[Random.Range(0, _waypoints.Count)].position;
                 _agent.SetDestination(waypoint);
-                //_agent.transform.LookAt(new Vector3(0, waypoint.y, 0));
+                _agent.transform.LookAt(new Vector3(0, waypoint.y, 0));
                 yield return new WaitForSeconds(Random.Range(1, 3));
             }
             yield return null;
