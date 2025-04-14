@@ -28,8 +28,6 @@ public class MummyStateMachine : MonoBehaviour
     {
         _agent=GetComponent<NavMeshAgent>();
 
-
-
         _waypoints = GetComponentsInChildren<Transform>()
             .Where(t => t.name.Contains("Sphere"))
             .Select(waypoint => { waypoint.SetParent(null, true); return waypoint; })

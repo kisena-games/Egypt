@@ -1581,10 +1581,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5480046322629888731, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
       propertyPath: m_Speed
-      value: 3.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5480046322629888731, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
       propertyPath: m_BaseOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480046322629888731, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
+      propertyPath: m_AutoBraking
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5480046322629888731, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
