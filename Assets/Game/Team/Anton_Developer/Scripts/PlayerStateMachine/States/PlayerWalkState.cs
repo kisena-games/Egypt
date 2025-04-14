@@ -10,8 +10,9 @@ public class PlayerWalkState : State
     private readonly Transform _transform;
     private readonly float _walkSpeed;
     private readonly float _rotationSpeed;
+    private readonly float _gravity;
 
-    public PlayerWalkState(Animator animator, CharacterController controller, Camera camera, Transform transform, float walkSpeed, float rotationSpeed)
+    public PlayerWalkState(Animator animator, CharacterController controller, Camera camera, Transform transform, float walkSpeed, float rotationSpeed, float gravity)
     {
         _animator = animator;
         _controller = controller;
@@ -19,6 +20,7 @@ public class PlayerWalkState : State
         _transform = transform;
         _walkSpeed = walkSpeed;
         _rotationSpeed = rotationSpeed;
+        _gravity = gravity;
     }
 
     public override void OnEnter()
@@ -35,6 +37,7 @@ public class PlayerWalkState : State
     {
         Vector2 input = InputManager.Instance.MoveInputNormalized;
         Vector3 move = new Vector3(input.x, 0, input.y);
+        Vector3 motion = Vector3.zero;
 
         if (move.magnitude >= 0.1f)
         {
@@ -51,7 +54,12 @@ public class PlayerWalkState : State
             Quaternion toRotation = Quaternion.LookRotation(moveDirection);
             _transform.rotation = Quaternion.Slerp(_transform.rotation, toRotation, _rotationSpeed * Time.deltaTime);
 
-            _controller.Move(moveDirection * _walkSpeed * Time.deltaTime);
+            motion = moveDirection * _walkSpeed;
         }
+
+        // Применяем гравитацию
+        motion += Vector3.down * _gravity * Time.deltaTime;
+
+        _controller.Move(motion * Time.deltaTime);
     }
 }
