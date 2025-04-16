@@ -57,7 +57,6 @@ public class PlayerWalkState : State
             motion = moveDirection * _walkSpeed;
         }
 
-        // Применяем гравитацию
         motion += Vector3.down * _gravity * Time.deltaTime;
 
         _controller.Move(motion * Time.deltaTime);

@@ -1,3 +1,5 @@
+using Unity.VisualScripting;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class PlayerJumpState : State
@@ -7,77 +9,58 @@ public class PlayerJumpState : State
     private readonly Animator _animator;
     private readonly CharacterController _controller;
     private readonly Camera _camera;
-    private readonly Transform _transform;
-    private readonly float _rotationSpeed;
+    private readonly Transform _playerTransform;
     private readonly float _jumpForce;
+    private readonly float _rotationSpeed;
     private readonly float _gravity;
-    private float _verticalVelocity;
-    private Vector3 _horizontalVelocity;
 
-    public PlayerJumpState(Animator animator, CharacterController controller, Camera camera, Transform transform, float jumpForce, float gravity, float rotationSpeed, Vector3 initialVelocity)
+    private Vector3 _velocity;
+
+    public PlayerJumpState(Animator animator, CharacterController controller, Camera camera, Transform playerTransform, float jumpForce, float rotationSpeed, float gravity)
     {
         _animator = animator;
         _controller = controller;
         _camera = camera;
-        _transform = transform;
+        _playerTransform = playerTransform;
         _jumpForce = jumpForce;
-        _gravity = gravity;
         _rotationSpeed = rotationSpeed;
-        _verticalVelocity = jumpForce;
-        _horizontalVelocity = initialVelocity;
+        _gravity = gravity;
     }
 
-    public override void OnEnter()
+    public void Enter()
     {
-        _verticalVelocity = _jumpForce; // Устанавливаем заново при входе
         _animator.SetBool(JUMP_ANIM_KEY, true);
-        Debug.Log($"Jump started: JumpForce={_jumpForce}, VerticalVelocity={_verticalVelocity}");
-    }
-
-    public override void OnExit()
-    {
-        _animator.SetBool(JUMP_ANIM_KEY, false);
-        Debug.Log("Jump ended");
+        _velocity.y = _jumpForce;
+        Debug.Log("jump");
     }
 
     public override void OnUpdate()
     {
-        // Применяем гравитацию
-        _verticalVelocity -= _gravity * Time.deltaTime;
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+        Vector3 input = new Vector3(horizontal, 0f, vertical);
 
-        // Обработка горизонтального движения
-        Vector2 input = InputManager.Instance.MoveInputNormalized;
-        Vector3 move = new Vector3(input.x, 0, input.y);
+        Vector3 move = _camera.transform.TransformDirection(input);
+        move.y = 0f;
+        move.Normalize();
 
-        if (move.magnitude >= 0.1f)
+        if (move.magnitude > 0.1f)
         {
-            Vector3 camForward = _camera.transform.forward;
-            Vector3 camRight = _camera.transform.right;
-            camForward.y = 0;
-            camRight.y = 0;
-            camForward.Normalize();
-            camRight.Normalize();
-
-            Vector3 moveDirection = camForward * input.y + camRight * input.x;
-            moveDirection.Normalize();
-
-            Quaternion toRotation = Quaternion.LookRotation(moveDirection);
-            _transform.rotation = Quaternion.Slerp(_transform.rotation, toRotation, _rotationSpeed * Time.deltaTime);
-
-            // Обновляем горизонтальную инерцию
-            _horizontalVelocity = moveDirection * _horizontalVelocity.magnitude;
+            Quaternion toRotation = Quaternion.LookRotation(move, Vector3.up);
+            _playerTransform.rotation = Quaternion.Lerp(_playerTransform.rotation, toRotation, _rotationSpeed * Time.deltaTime);
         }
 
-        // Формируем вектор движения
-        Vector3 motion = _horizontalVelocity + Vector3.up * _verticalVelocity;
-        _controller.Move(motion * Time.deltaTime);
+        _velocity.y -= _gravity * Time.deltaTime;
 
-        Debug.Log($"Jump Update: VerticalVelocity={_verticalVelocity}, Grounded={_controller.isGrounded}");
+        Vector3 movement = move * Time.deltaTime;
+        movement += Vector3.up * _velocity.y * Time.deltaTime;
 
-        // Проверка приземления
-        if (_controller.isGrounded && _verticalVelocity < 0)
-        {
-            _verticalVelocity = -_gravity * Time.deltaTime; // Мягкий сброс для стабильности
-        }
+        _controller.Move(movement);
+    }
+
+    public void Exit()
+    {
+        _animator.SetBool(JUMP_ANIM_KEY, false);
+        Debug.Log("ExitJump");
     }
 }
