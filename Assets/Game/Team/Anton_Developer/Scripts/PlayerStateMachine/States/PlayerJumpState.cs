@@ -27,7 +27,7 @@ public class PlayerJumpState : State
         _gravity = gravity;
     }
 
-    public void Enter()
+    public override void OnEnter()
     {
         _animator.SetBool(JUMP_ANIM_KEY, true);
         _velocity.y = _jumpForce;
@@ -58,7 +58,7 @@ public class PlayerJumpState : State
         _controller.Move(movement);
     }
 
-    public void Exit()
+    public override void OnExit()
     {
         _animator.SetBool(JUMP_ANIM_KEY, false);
         Debug.Log("ExitJump");

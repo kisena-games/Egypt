@@ -34,17 +34,17 @@ public class PlayerStateMachine : MonoBehaviour
         State runState = new PlayerRunState(_animator, _playerController, _mainCamera, transform, _runSpeed, _rotationSpeed, _gravity);
         State jumpState = new PlayerJumpState(_animator, _playerController, _mainCamera, transform, _jumpForce, _rotationSpeed, _gravity);
 
+        idleState.AddTransition(new StateTransition(jumpState, new FuncStateCondition(() => IsJumping())));
         idleState.AddTransition(new StateTransition(walkState, new FuncStateCondition(() => IsMoving() && !IsSprint())));
         idleState.AddTransition(new StateTransition(runState, new FuncStateCondition(() => IsMoving() && IsSprint())));
-        idleState.AddTransition(new StateTransition(jumpState, new FuncStateCondition(() => IsJumping())));
 
+        walkState.AddTransition(new StateTransition(jumpState, new FuncStateCondition(() => IsJumping())));
         walkState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => !IsMoving())));
         walkState.AddTransition(new StateTransition(runState, new FuncStateCondition(() => IsMoving() && IsSprint())));
-        walkState.AddTransition(new StateTransition(jumpState, new FuncStateCondition(() => IsJumping())));
 
+        runState.AddTransition(new StateTransition(jumpState, new FuncStateCondition(() => IsJumping())));
         runState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => !IsMoving())));
         runState.AddTransition(new StateTransition(walkState, new FuncStateCondition(() => IsMoving() && !IsSprint())));
-        runState.AddTransition(new StateTransition(jumpState, new FuncStateCondition(() => IsJumping())));
 
         jumpState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => _playerController.isGrounded && !IsMoving())));
         jumpState.AddTransition(new StateTransition(walkState, new FuncStateCondition(() => _playerController.isGrounded && IsMoving() && !IsSprint())));
@@ -66,6 +66,11 @@ public class PlayerStateMachine : MonoBehaviour
     private bool IsJumping()
     {
         bool isGrounded = _playerController.isGrounded;
-        return Input.GetKeyDown(KeyCode.Space) && isGrounded;
+        bool isJumpPressed = Input.GetKeyDown(KeyCode.Space);
+
+        if (isJumpPressed && isGrounded)
+            Debug.Log("Jump condition triggered");
+
+        return isJumpPressed && isGrounded;
     }
 }
