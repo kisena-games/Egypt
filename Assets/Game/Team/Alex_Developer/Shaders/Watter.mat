@@ -45,6 +45,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _CalculateLevelOfDetailTexture2D_197c0aa9e0c641dba30677c86edc1138_Texture_1_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -65,11 +69,19 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _GatherTexture2D_d7655bb7137e498c9750e8c32071d3f7_Texture_1_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalFromTexture_b48a883c8c3641539778fdcd533c1533_Texture_0_Texture2D:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -113,11 +125,27 @@ Material:
         m_Texture: {fileID: 8400000, guid: a133e83b5682e2e40917910eefff5831, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_df6b8e4575e94763b6a0ccc36f337d71_Texture_1_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_fd6c572aba1a4114b96f84f5d3206354_Texture_1_Texture2D:
         m_Texture: {fileID: 8400000, guid: f9059f22c6aeec44b9052265698ffc51, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Triplanar_6876630a6e8b437896bf0673ebd0e51f_Texture_1_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Triplanar_6d14600bbb574e359f49a1635af7854b_Texture_1_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Triplanar_ed75cd1d1b7b4a88ac2508ec6a00b1d9_Texture_1_Texture2D:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -143,6 +171,7 @@ Material:
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
+    - _CastShadows: 0
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
@@ -162,12 +191,14 @@ Material:
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
+    - _Quality: 0
     - _QueueControl: 1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _RefractionScale: 0.5
     - _RefractionSpeed: 0.1
     - _RefractionStrength: 1
+    - _ScreenDistance: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -176,14 +207,17 @@ Material:
     - _Surface: 0
     - _WaterDepth: 20
     - _WorkflowMode: 1
+    - _ZTest: 4
     - _ZWrite: 1
+    - _ZWriteControl: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DeepWater: {r: 0, g: 0.40399984, b: 1, a: 1}
+    - _DeepWater: {r: 0, g: 0.4039998, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamColor: {r: 0.688, g: 1, b: 1, a: 0.38431373}
-    - _ShallowWater: {r: 0, g: 0.8164697, b: 1, a: 0.105882354}
+    - _ScreenOfset: {r: 0, g: 0, b: 0, a: 0}
+    - _ShallowWater: {r: 0, g: 0.8164697, b: 1, a: 0.3764706}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
