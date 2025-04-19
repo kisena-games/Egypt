@@ -7,6 +7,8 @@ public class PlayerStateMachine : MonoBehaviour
     [SerializeField] private float _walkSpeed = 5f;
     [SerializeField] private float _runSpeed = 8f;
     [SerializeField] private float _rotationSpeed = 10f;
+    [SerializeField] private float _jumpForce = 5f;
+    [SerializeField] private float _gravity = 9.81f;
 
     private CharacterController _playerController;
     private Camera _mainCamera;
@@ -27,18 +29,26 @@ public class PlayerStateMachine : MonoBehaviour
 
     private void InitializeStateMachine()
     {
-        State idleState = new PlayerIdleState(_animator);
-        State walkState = new PlayerWalkState(_animator, _playerController, _mainCamera, transform, _walkSpeed, _rotationSpeed);
-        State runState = new PlayerRunState(_animator, _playerController, _mainCamera, transform, _runSpeed, _rotationSpeed);
+        State idleState = new PlayerIdleState(_animator, _playerController, _gravity);
+        State walkState = new PlayerWalkState(_animator, _playerController, _mainCamera, transform, _walkSpeed, _rotationSpeed, _gravity);
+        State runState = new PlayerRunState(_animator, _playerController, _mainCamera, transform, _runSpeed, _rotationSpeed, _gravity);
+        State jumpState = new PlayerJumpState(_animator, _playerController, _mainCamera, transform, _jumpForce, _rotationSpeed, _gravity);
 
+        idleState.AddTransition(new StateTransition(jumpState, new FuncStateCondition(() => IsJumping())));
         idleState.AddTransition(new StateTransition(walkState, new FuncStateCondition(() => IsMoving() && !IsSprint())));
         idleState.AddTransition(new StateTransition(runState, new FuncStateCondition(() => IsMoving() && IsSprint())));
 
+        walkState.AddTransition(new StateTransition(jumpState, new FuncStateCondition(() => IsJumping())));
         walkState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => !IsMoving())));
         walkState.AddTransition(new StateTransition(runState, new FuncStateCondition(() => IsMoving() && IsSprint())));
 
+        runState.AddTransition(new StateTransition(jumpState, new FuncStateCondition(() => IsJumping())));
         runState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => !IsMoving())));
         runState.AddTransition(new StateTransition(walkState, new FuncStateCondition(() => IsMoving() && !IsSprint())));
+
+        jumpState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => _playerController.isGrounded && !IsMoving())));
+        jumpState.AddTransition(new StateTransition(walkState, new FuncStateCondition(() => _playerController.isGrounded && IsMoving() && !IsSprint())));
+        jumpState.AddTransition(new StateTransition(runState, new FuncStateCondition(() => _playerController.isGrounded && IsMoving() && IsSprint())));
 
         _stateMachine = new StateMachine(idleState);
     }
@@ -52,4 +62,15 @@ public class PlayerStateMachine : MonoBehaviour
     {
         return InputManager.Instance.IsSprint;
     }
-}  
+
+    private bool IsJumping()
+    {
+        bool isGrounded = _playerController.isGrounded;
+        bool isJumpPressed = Input.GetKeyDown(KeyCode.Space);
+
+        if (isJumpPressed && isGrounded)
+            Debug.Log("Jump condition triggered");
+
+        return isJumpPressed && isGrounded;
+    }
+}
