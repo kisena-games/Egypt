@@ -3,27 +3,21 @@ using UnityEngine.AI;
 
 public class MummyIdleState : State
 {
+    private const string IDLE_ANIM_KEY = "Idle";
+
     private readonly Animator _animator;
-    private static NavMeshAgent _agent;
-    public MummyIdleState(Animator animator, NavMeshAgent agent)
+    public MummyIdleState(Animator animator)
     {
         _animator = animator;
-        _agent = agent;
     }
 
     public override void OnEnter()
     {
-        Debug.Log("Idle");
+        _animator.SetBool(IDLE_ANIM_KEY, true);
     }
 
     public override void OnExit() 
     {
-
-    }
-
-    public override void OnUpdate()
-    {
-        if (_agent.velocity.magnitude < 1) _animator.SetBool("Patrolling", false);
-        else _animator.SetBool("Patrolling", true);
+        _animator.SetBool(IDLE_ANIM_KEY, false);
     }
 }
