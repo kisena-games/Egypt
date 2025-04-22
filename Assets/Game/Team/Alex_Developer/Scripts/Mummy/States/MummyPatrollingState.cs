@@ -67,7 +67,6 @@ public class MummyPatrollingState:State
 
     private void GoToNextDestination()
     {
-        GameObject.Instantiate(new GameObject(), _patrollingPoints[_pointIndex]);
         _agent.SetDestination(_patrollingPoints[_pointIndex].position);
         _pointIndex = _pointIndex >= _patrollingPoints.Length - 1 ? 0 : _pointIndex + 1;
     }

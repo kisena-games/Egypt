@@ -2160,7 +2160,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7291200111824259747}
   m_Enabled: 1
-  m_AgentTypeID: -1372625422
+  m_AgentTypeID: 0
   m_Radius: 0.25
   m_Speed: 0.5
   m_Acceleration: 8
@@ -2265,7 +2265,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 5
+  m_Radius: 15
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &644844155234287663
 MonoBehaviour:
@@ -2279,7 +2279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5adca6c2679d8ac4e80f61a0583d70a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 5
+  _radius: 15
 --- !u!1 &7528256407334603926
 GameObject:
   m_ObjectHideFlags: 0
@@ -2817,7 +2817,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 5
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4599343487155014500
 MonoBehaviour:
@@ -2831,7 +2831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dc1167357cb5f4d877d1e75c5d87b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 1
+  _radius: 2
 --- !u!1 &9031790793763361315
 GameObject:
   m_ObjectHideFlags: 0
