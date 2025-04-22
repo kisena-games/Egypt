@@ -1,4 +1,5 @@
 using FMOD.Studio;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -8,67 +9,66 @@ using UnityEngine.AI;
 
 public class MummyPatrollingState:State
 {
-    private static List<Transform> _waypoints;
+    private const string WALK_ANIM_KEY = "Walk";
 
     private readonly Animator _animator;
+    private readonly NavMeshAgent _agent;
 
-    private static NavMeshAgent _agent; 
-    
-    private static bool _isBreak=true;
+    private Transform[] _patrollingPoints;
+    private float _timer;
+    private float _currentSpeed;
 
-    private static float _timer,_currentSpeed;
+    private int _pointIndex;
 
-    public MummyPatrollingState(Animator animator, NavMeshAgent agent, List<Transform> waypoints)
+    public MummyPatrollingState(Animator animator, NavMeshAgent agent, Transform[] patrollingPoints)
     {
         _animator = animator;
         _agent = agent;
-        _waypoints = waypoints;
+        _patrollingPoints = patrollingPoints;
         _currentSpeed = _agent.speed;
     }
     
     public override void OnEnter()
     {
-        _isBreak = false;
-        
-        Debug.Log("Patrolling");
-        _animator.SetBool("Patrolling", true);
-        _agent.speed = _currentSpeed;
+        float minDistance = Mathf.Infinity;
+        for (int i = 0; i < _patrollingPoints.Length; i++)
+        {
+            float distance = Vector3.Distance(_agent.transform.position, _patrollingPoints[i].position);
+
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                _pointIndex = i;
+            }
+        }
+
+        _animator.SetBool(WALK_ANIM_KEY, true);
+
+        _agent.isStopped = false;
+        GoToNextDestination();
     }
 
     public override void OnExit()
     {
-        _isBreak = true;
-        _animator.SetBool("Patrolling", false);
-        _agent.speed = 0f;
+        _animator.SetBool(WALK_ANIM_KEY, false);
+        _agent.isStopped = true;
     }
 
     public override void OnUpdate()
     {
-        _timer += Time.deltaTime;
+        float distanceToTarget = Vector3.Distance(_agent.transform.position, _agent.destination);
 
-        if ((int)_timer % 2 == 0)
+        if (distanceToTarget <= _agent.stoppingDistance)
         {
-            _agent.speed = _currentSpeed;
-        }
-        else
-        {
-            _agent.speed = 0f;
+            GoToNextDestination();
         }
 
     }
-    public static IEnumerator NavMeshAgentReleaseation()
+
+    private void GoToNextDestination()
     {
-        while (true)
-        {
-            if (_isBreak==false)
-            {
-                var waypoint = _waypoints[Random.Range(0, _waypoints.Count)].position;
-                _agent.SetDestination(waypoint);
-      
-                yield return new WaitForSeconds(Random.Range(4, 6));
-            }
-            yield return null;
-        }
+        _agent.SetDestination(_patrollingPoints[_pointIndex].position);
+        _pointIndex = _pointIndex >= _patrollingPoints.Length - 1 ? 0 : _pointIndex + 1;
     }
 }
 

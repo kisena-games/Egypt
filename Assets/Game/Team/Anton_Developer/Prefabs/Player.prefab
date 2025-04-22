@@ -2836,8 +2836,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1590824102472552271}
+  - component: {fileID: 8057664024810974056}
   - component: {fileID: 3928806787939714856}
   - component: {fileID: 3540574157620985836}
+  - component: {fileID: 8463132745799333075}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2862,6 +2864,27 @@ Transform:
   - {fileID: 4898386136171783716}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &8057664024810974056
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7853256048540415587}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!143 &3928806787939714856
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2903,6 +2926,20 @@ MonoBehaviour:
   _walkSpeed: 5
   _runSpeed: 8
   _rotationSpeed: 10
+  _jumpForce: 5
+  _gravity: 9.81
+--- !u!114 &8463132745799333075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7853256048540415587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e72f0ee81ea84f04eb71edf579d354cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8024066443925983385
 GameObject:
   m_ObjectHideFlags: 0
