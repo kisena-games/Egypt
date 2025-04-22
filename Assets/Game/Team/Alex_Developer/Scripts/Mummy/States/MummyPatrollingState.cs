@@ -16,11 +16,14 @@ public class MummyPatrollingState:State
     
     private static bool _isBreak=true;
 
+    private static float _timer,_currentSpeed;
+
     public MummyPatrollingState(Animator animator, NavMeshAgent agent, List<Transform> waypoints)
     {
         _animator = animator;
         _agent = agent;
         _waypoints = waypoints;
+        _currentSpeed = _agent.speed;
     }
     
     public override void OnEnter()
@@ -28,17 +31,30 @@ public class MummyPatrollingState:State
         _isBreak = false;
         
         Debug.Log("Patrolling");
+        _animator.SetBool("Patrolling", true);
+        _agent.speed = _currentSpeed;
     }
 
     public override void OnExit()
     {
         _isBreak = true;
+        _animator.SetBool("Patrolling", false);
+        _agent.speed = 0f;
     }
 
     public override void OnUpdate()
     {
-        if(_agent.velocity.magnitude<1) _animator.SetBool("Patrolling", false); 
-        else _animator.SetBool("Patrolling", true);
+        _timer += Time.deltaTime;
+
+        if ((int)_timer % 2 == 0)
+        {
+            _agent.speed = _currentSpeed;
+        }
+        else
+        {
+            _agent.speed = 0f;
+        }
+
     }
     public static IEnumerator NavMeshAgentReleaseation()
     {
@@ -48,12 +64,11 @@ public class MummyPatrollingState:State
             {
                 var waypoint = _waypoints[Random.Range(0, _waypoints.Count)].position;
                 _agent.SetDestination(waypoint);
-                _agent.transform.LookAt(new Vector3(0, waypoint.y, 0));
-                yield return new WaitForSeconds(Random.Range(1, 3));
+      
+                yield return new WaitForSeconds(Random.Range(4, 6));
             }
             yield return null;
         }
-        yield return null;
     }
 }
 
