@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class ThirdPersonController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [Header("Player Settings")]
     public float moveSpeed = 2.0f;
@@ -21,8 +21,8 @@ public class ThirdPersonController : MonoBehaviour
     public float groundedRadius = 0.28f;
     public LayerMask groundLayers;
 
-    // Private variables
     private CharacterController _controller;
+    private Camera _mainCamera;
     private float _speed;
     private float _verticalVelocity;
     private float _rotationVelocity;
@@ -36,6 +36,7 @@ public class ThirdPersonController : MonoBehaviour
         _controller = GetComponent<CharacterController>();
         _jumpTimeoutDelta = jumpTimeout;
         _fallTimeoutDelta = fallTimeout;
+        _mainCamera = Camera.main;
     }
 
     void Update()
@@ -71,15 +72,26 @@ public class ThirdPersonController : MonoBehaviour
 
         Vector3 inputDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")).normalized;
 
-        if (inputDirection != Vector3.zero)
+        if (inputDirection.magnitude >= 0.1f)
         {
-            _targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg;
-            float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity, rotationSmoothTime);
-            transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
-        }
+            Vector3 camForward = _mainCamera.transform.forward;
+            Vector3 camRight = _mainCamera.transform.right;
+            camForward.y = 0f;
+            camRight.y = 0f;
+            camForward.Normalize();
+            camRight.Normalize();
 
-        Vector3 moveDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
-        _controller.Move(moveDirection.normalized * (_speed * Time.deltaTime) + Vector3.up * _verticalVelocity * Time.deltaTime);
+            Vector3 moveDirection = camForward * inputDirection.z + camRight * inputDirection.x;
+
+            Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, toRotation, rotationSmoothTime);
+
+            _controller.Move(moveDirection.normalized * (_speed * Time.deltaTime) + Vector3.up * _verticalVelocity * Time.deltaTime);
+        }
+        else
+        {
+            _controller.Move(Vector3.up * _verticalVelocity * Time.deltaTime);
+        }
     }
 
     void JumpAndGravity()
