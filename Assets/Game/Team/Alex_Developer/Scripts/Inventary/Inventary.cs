@@ -15,22 +15,21 @@ public class Inventary:MonoBehaviour
 
     private void Update()
     {
+        Vector2 targetPosition = _slots[currentIndex].anchoredPosition;
         float scrollInput = Input.mouseScrollDelta.y;
 
         if (_slots.Count == 0)
             return;
 
-        currentIndex += (int)scrollInput;
+        currentIndex -= (int)scrollInput;
 
-        if (currentIndex >= _slots.Count)
-            currentIndex = 0;
-        else if (currentIndex < 0)
-            currentIndex = _slots.Count - 1;
+        currentIndex = currentIndex >= _slots.Count ? 0 :
+            (currentIndex < 0 ? _slots.Count - 1 : currentIndex);
 
-        Vector2 targetPosition = _slots[currentIndex].anchoredPosition;
+        _selector.anchoredPosition = currentIndex > 0 && currentIndex < _slots.Count-1 ?
+            Vector2.Lerp(_selector.anchoredPosition,targetPosition, _lerpSpeed * Time.deltaTime) :
+            _slots[currentIndex].anchoredPosition;
 
-        _selector.anchoredPosition = currentIndex > 0 && currentIndex < _slots.Count-1 ? Vector2.Lerp(_selector.anchoredPosition,
-            targetPosition, _lerpSpeed * Time.deltaTime) : _slots[currentIndex].anchoredPosition;
     }
 
 }
