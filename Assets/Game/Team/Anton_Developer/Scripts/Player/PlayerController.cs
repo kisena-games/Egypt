@@ -3,6 +3,11 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
+    private const string IDLE_ANIM_KEY = "Idle";
+    private const string WALK_ANIM_KEY = "Walk";
+    private const string RUN_ANIM_KEY = "Run";
+    private const string JUMP_ANIM_KEY = "Jump";
+
     [Header("Player Settings")]
     public float moveSpeed = 2.0f;
     public float sprintSpeed = 5.0f;
@@ -23,10 +28,9 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController _controller;
     private Camera _mainCamera;
+    private Animator _animator;
     private float _speed;
     private float _verticalVelocity;
-    private float _rotationVelocity;
-    private float _targetRotation = 0.0f;
     private float _terminalVelocity = 53.0f;
     private float _jumpTimeoutDelta;
     private float _fallTimeoutDelta;
@@ -34,6 +38,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _controller = GetComponent<CharacterController>();
+        _animator = GetComponentInChildren<Animator>();
         _jumpTimeoutDelta = jumpTimeout;
         _fallTimeoutDelta = fallTimeout;
         _mainCamera = Camera.main;
@@ -44,6 +49,7 @@ public class PlayerController : MonoBehaviour
         GroundedCheck();
         JumpAndGravity();
         Move();
+        UpdateAnimations();
     }
 
     void GroundedCheck()
@@ -60,7 +66,11 @@ public class PlayerController : MonoBehaviour
         float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
         float speedOffset = 0.1f;
 
-        if (currentHorizontalSpeed < targetSpeed - speedOffset || currentHorizontalSpeed > targetSpeed + speedOffset)
+        if (targetSpeed > 0 && currentHorizontalSpeed < 0.1f)
+        {
+            _speed = targetSpeed;
+        }
+        else if (Mathf.Abs(currentHorizontalSpeed - targetSpeed) > speedOffset)
         {
             _speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed, Time.deltaTime * speedChangeRate);
             _speed = Mathf.Round(_speed * 1000f) / 1000f;
@@ -70,7 +80,9 @@ public class PlayerController : MonoBehaviour
             _speed = targetSpeed;
         }
 
-        Vector3 inputDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")).normalized;
+        float inputX = Input.GetAxis("Horizontal");
+        float inputZ = Input.GetAxis("Vertical");
+        Vector3 inputDirection = new Vector3(inputX, 0.0f, inputZ);
 
         if (inputDirection.magnitude >= 0.1f)
         {
@@ -81,7 +93,7 @@ public class PlayerController : MonoBehaviour
             camForward.Normalize();
             camRight.Normalize();
 
-            Vector3 moveDirection = camForward * inputDirection.z + camRight * inputDirection.x;
+            Vector3 moveDirection = camForward * inputZ + camRight * inputX;
 
             Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
             transform.rotation = Quaternion.Slerp(transform.rotation, toRotation, rotationSmoothTime);
@@ -108,6 +120,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && _jumpTimeoutDelta <= 0.0f)
             {
                 _verticalVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
+                _animator?.SetBool(JUMP_ANIM_KEY, true);
             }
 
             if (_jumpTimeoutDelta >= 0.0f)
@@ -129,6 +142,17 @@ public class PlayerController : MonoBehaviour
         {
             _verticalVelocity += gravity * Time.deltaTime;
         }
+    }
+
+    void UpdateAnimations()
+    {
+        bool isMoving = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical")).magnitude > 0.1f;
+        bool isRunning = isMoving && Input.GetKey(KeyCode.LeftShift);
+        bool isJumping = !grounded;
+
+        _animator.SetBool(IDLE_ANIM_KEY, !isMoving && !isJumping);
+        _animator.SetBool(WALK_ANIM_KEY, isMoving && !isRunning && grounded);
+        _animator.SetBool(RUN_ANIM_KEY, isRunning && grounded);
     }
 
     private void OnDrawGizmosSelected()
