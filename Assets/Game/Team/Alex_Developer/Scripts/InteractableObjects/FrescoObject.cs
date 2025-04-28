@@ -15,6 +15,5 @@ public class FrescoObject : MonoBehaviour, IInteractable
     {
         // логика проверки активного предмета в инвентаре на нужны к жтому объекту
 
-
     }
 }

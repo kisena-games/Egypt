@@ -1,12 +1,19 @@
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public class PuzzleObject : MonoBehaviour, IInteractable
 {
     [SerializeField] private PuzzleEnumType _puzzleType;
+    private Outline _outline;
+
+    private void Awake()
+    {
+        _outline = GetComponent<Outline>();
+    }
 
     public void Highlight(bool isActive)
     {
-        // вкл,выкл подсветки
+        _outline.enabled = isActive ? true: false;
     }
 
     public void Interact(PlayerInventory inventory)
@@ -17,6 +24,7 @@ public class PuzzleObject : MonoBehaviour, IInteractable
 
 public enum PuzzleEnumType
 {
-    BlueSphere,
-    RedSphere
+    RedCube,
+    GreenSphere,
+    BlueCapsule
 }
