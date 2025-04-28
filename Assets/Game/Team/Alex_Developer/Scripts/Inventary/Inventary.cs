@@ -22,7 +22,7 @@ public class Inventary:MonoBehaviour
         if (_slots.Count == 0)
             return;
 
-        currentIndex -= (int)scrollInput;
+        currentIndex -= (int)scrollInput;//
 
 
         currentIndex = currentIndex >= _slots.Count ? 0 :

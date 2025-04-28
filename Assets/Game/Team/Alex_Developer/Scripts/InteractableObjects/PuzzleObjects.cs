@@ -26,5 +26,5 @@ public enum PuzzleEnumType
 {
     RedCube,
     GreenSphere,
-    BlueCapsule
+    BlueCapsule//
 }
