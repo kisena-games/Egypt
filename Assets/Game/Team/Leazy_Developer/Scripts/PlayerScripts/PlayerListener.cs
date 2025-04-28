@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TestPlayerListener : MonoBehaviour
+public class PlayerListener : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
