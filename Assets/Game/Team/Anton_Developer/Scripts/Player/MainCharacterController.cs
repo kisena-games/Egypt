@@ -28,6 +28,7 @@ public class MainCharacterController : MonoBehaviour
     private int _animIDSpeed;
     private int _animIDGrounded;
     private int _animIDJump;
+    private int _animIDFreeFall;
     private int _animIDMotionSpeed;
     private float _animationBlend;
 
@@ -51,6 +52,7 @@ public class MainCharacterController : MonoBehaviour
         _animIDSpeed = Animator.StringToHash("Speed");
         _animIDGrounded = Animator.StringToHash("Grounded");
         _animIDJump = Animator.StringToHash("Jump");
+        _animIDFreeFall = Animator.StringToHash("FreeFall");
         _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
     }
 
@@ -116,6 +118,7 @@ public class MainCharacterController : MonoBehaviour
             if (_animator)
             {
                 _animator.SetBool(_animIDJump, false);
+                _animator.SetBool(_animIDFreeFall, false);
             }
 
             if (_verticalVelocity < 0.0f)
@@ -150,7 +153,7 @@ public class MainCharacterController : MonoBehaviour
             {
                 if (_animator)
                 {
-                    _animator.SetBool(_animIDJump, true);
+                    _animator.SetBool(_animIDFreeFall, true);
                 }
             }
 
