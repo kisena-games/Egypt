@@ -96,10 +96,14 @@ public class MainCharacterController : MonoBehaviour
             _controller.Move(Vector3.up * _verticalVelocity * Time.deltaTime);
         }
 
+
         if (_animator)
         {
-            _animator.SetFloat(_animIDSpeed, _animationBlend);
-            _animator.SetFloat(_animIDMotionSpeed, 1);
+            if (_isGrounded)
+            {
+                _animator.SetFloat(_animIDSpeed, _animationBlend);
+                _animator.SetFloat(_animIDMotionSpeed, 1);
+            }
         }
     }
 
@@ -171,5 +175,6 @@ public class MainCharacterController : MonoBehaviour
         {
             _animator.SetBool(_animIDGrounded, _isGrounded);
         }
+
     }
 }

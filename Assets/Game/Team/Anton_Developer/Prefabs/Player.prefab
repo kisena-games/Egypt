@@ -806,6 +806,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5809868479978707774}
   - component: {fileID: 1490635247212771202}
+  - component: {fileID: 387928162619834907}
   m_Layer: 0
   m_Name: player_visual
   m_TagString: Untagged
@@ -852,6 +853,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &387928162619834907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023974271848410701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb51d7642fc01149b1b8bb253bab8eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2029933460238858862
 GameObject:
   m_ObjectHideFlags: 0
@@ -3394,6 +3407,7 @@ GameObject:
   - component: {fileID: 3928806787939714856}
   - component: {fileID: 3540574157620985836}
   - component: {fileID: 8463132745799333075}
+  - component: {fileID: 6448445568162653801}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3472,7 +3486,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7853256048540415587}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6f7872af8537a944a23ef3a45e4605a, type: 3}
   m_Name: 
@@ -3495,6 +3509,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72f0ee81ea84f04eb71edf579d354cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6448445568162653801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7853256048540415587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4abb91cb136174093abd7016552fed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 3.5
+  _sprintSpeed: 6.5
+  _speedChangeRate: 10
+  _jumpHeight: 1.2
+  _gravity: -9.81
+  _groundedRadius: 0.28
+  _groundedOffset: -0.14
+  _rotationSmoothTime: 0.12
+  _fallTimeout: 0
+  _jumpTimeout: 0.5
+  _groundLayers:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &8024066443925983385
 GameObject:
   m_ObjectHideFlags: 0
