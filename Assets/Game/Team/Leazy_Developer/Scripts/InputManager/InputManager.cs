@@ -24,7 +24,7 @@ public class InputManager : MonoBehaviour
     public bool IsMoving { get; private set; } = false;
     public bool IsSprint { get; private set; } = false;
 
-    public void OnMoveInput(InputAction.CallbackContext context)
+    public virtual void OnMoveInput(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
@@ -38,7 +38,7 @@ public class InputManager : MonoBehaviour
         }
     }
 
-    public void OnSprint(InputAction.CallbackContext context)
+    public virtual void OnSprint(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
