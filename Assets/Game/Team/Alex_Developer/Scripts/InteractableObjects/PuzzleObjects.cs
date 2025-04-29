@@ -3,7 +3,10 @@ using UnityEngine.Assertions.Must;
 
 public class PuzzleObject : MonoBehaviour, IInteractable
 {
+    public static int interactID { get; private set; }
+
     [SerializeField] private PuzzleEnumType _puzzleType;
+
     private Outline _outline;
 
     private void Awake()
@@ -14,11 +17,18 @@ public class PuzzleObject : MonoBehaviour, IInteractable
     public void Highlight(bool isActive)
     {
         _outline.enabled = isActive ? true: false;
+        
     }
 
     public void Interact(PlayerInventory inventory)
     {
-        // логика подбора предмета
+        interactID = Inventary.indexContainer[Inventary.currentIndex];
+        if (interactID == 0)
+        {
+            interactID = Inventary.currentIndex;
+            gameObject.SetActive(false);
+        }
+
     }
 }
 
@@ -26,5 +36,5 @@ public enum PuzzleEnumType
 {
     RedCube,
     GreenSphere,
-    BlueCapsule//
+    BlueCapsule
 }
