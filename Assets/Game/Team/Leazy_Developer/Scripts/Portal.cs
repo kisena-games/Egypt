@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
+    [SerializeField] private int _sceneIndex = 1;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<PlayerListener>())
@@ -13,15 +15,13 @@ public class Portal : MonoBehaviour
 
     private void LoadNextLevel()
     {
-        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-        if (sceneIndex < SceneManager.sceneCountInBuildSettings)
+        if (_sceneIndex < SceneManager.sceneCountInBuildSettings)
         {
-            SceneManager.LoadScene(sceneIndex + 1);
+            SceneManager.LoadScene(_sceneIndex);
         }
         else
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
     }
 }

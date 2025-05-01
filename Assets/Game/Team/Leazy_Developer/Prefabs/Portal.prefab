@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 935025223460563051}
+  - component: {fileID: 881572575589290101}
   - component: {fileID: 8744253014085715247}
   m_Layer: 0
   m_Name: Portal
@@ -33,6 +34,27 @@ Transform:
   - {fileID: 5368452576448054700}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &881572575589290101
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9193968909497295854}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8744253014085715247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,6 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22a7a4c320a323641b9590695c98c631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneIndex: 1
 --- !u!1001 &5372232337826958450
 PrefabInstance:
   m_ObjectHideFlags: 0
