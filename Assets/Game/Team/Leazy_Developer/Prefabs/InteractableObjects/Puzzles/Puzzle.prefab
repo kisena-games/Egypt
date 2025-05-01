@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2432542218356868380}
   - component: {fileID: -4473527873543841369}
   - component: {fileID: 2587627756580731441}
-  - component: {fileID: 3909615217262787987}
+  - component: {fileID: 7730597002354838045}
   m_Layer: 0
   m_Name: Puzzle
   m_TagString: Untagged
@@ -73,7 +73,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &3909615217262787987
+--- !u!114 &7730597002354838045
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -82,8 +82,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860830882941148043}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8a31968ac750f043a24739ba6938ed2, type: 3}
+  m_Script: {fileID: 11500000, guid: 39635eb5d60d33c48b4a2addd793aee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <PuzzleType>k__BackingField: 0
-  <PuzzleSprite>k__BackingField: {fileID: 0}
+  _puzzleType: 0

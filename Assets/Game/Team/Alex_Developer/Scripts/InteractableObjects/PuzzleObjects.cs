@@ -34,7 +34,9 @@ public class PuzzleObject : MonoBehaviour, IInteractable
 
 public enum PuzzleEnumType
 {
-    RedCube,
+    None,
+    BlueCube,
     GreenSphere,
-    BlueCapsule
+    RedSphere,
+    PurplePyramid
 }
