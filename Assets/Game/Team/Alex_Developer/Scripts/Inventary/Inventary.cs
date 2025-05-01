@@ -5,14 +5,15 @@ using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.Localization.SmartFormat.Core.Parsing;
 
-public class Inventary:MonoBehaviour 
+public class Inventary : MonoBehaviour
 {
 
     [SerializeField] private List<RectTransform> _slots;
     [SerializeField] private RectTransform _selector;
     [SerializeField] private float _lerpSpeed = 5f;
-
+    
     public static int currentIndex { get; private set; }
+    public static int[] indexContainer = new int[6];
     
     private void Update()
     {
@@ -22,7 +23,7 @@ public class Inventary:MonoBehaviour
         if (_slots.Count == 0)
             return;
 
-        currentIndex -= (int)scrollInput;//
+        currentIndex -= (int)scrollInput;
 
 
         currentIndex = currentIndex >= _slots.Count ? 0 :
