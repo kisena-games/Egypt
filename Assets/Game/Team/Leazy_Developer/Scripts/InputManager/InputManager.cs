@@ -24,6 +24,11 @@ public class InputManager : MonoBehaviour
     public bool IsMoving { get; private set; } = false;
     public bool IsSprint { get; private set; } = false;
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     public virtual void OnMoveInput(InputAction.CallbackContext context)
     {
         if (context.performed)
