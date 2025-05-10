@@ -16,6 +16,7 @@ public class PlayerStateMachine : MonoBehaviour
     private CharacterController _playerController;
     private Camera _mainCamera;
     private StateMachine _stateMachine;
+    private bool _isStealth = false;
 
     private void Start()
     {
@@ -27,6 +28,10 @@ public class PlayerStateMachine : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            _isStealth = !_isStealth;
+        }
         _stateMachine.OnUpdate();
     }
 
@@ -35,7 +40,10 @@ public class PlayerStateMachine : MonoBehaviour
         State activeState = new ActiveState(_animator, _playerController, _mainCamera, transform, _gravity, _moveSpeed, 
             _sprintSpeed, _speedChangeRate, _jumpForce, _rotationSmoothTime, _fallTimeout, _groundLayers);
         State stealthState = new StealthState(_animator, _playerController, _mainCamera, transform, _moveSpeed,
-            _speedChangeRate, _rotationSmoothTime);
+            _speedChangeRate, _rotationSmoothTime, _groundLayers);
+
+        activeState.AddTransition(new StateTransition(stealthState, new FuncStateCondition(() => _isStealth)));
+        stealthState.AddTransition(new StateTransition(activeState, new FuncStateCondition(() => !_isStealth)));
 
         _stateMachine = new StateMachine(activeState);
     }
