@@ -49,6 +49,11 @@ public class ActiveState : State
         _fallTimeout = fallTimeout;
     }
 
+    public override void OnEnter()
+    {
+        _animator.SetBool("Stealth", false);
+    }
+
     public override void OnUpdate()
     {
         JumpAndGravity();
