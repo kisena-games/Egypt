@@ -1,68 +1,13 @@
 fileFormatVersion: 2
-guid: 2029c9051030e7148a3333f98d674c66
+guid: e83770af05666fb448505be0f5cf9116
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Collumn_1
-    second: {fileID: 2100000, guid: 03fafcc8d9cc7084e9853096b93b38e1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Collumn_2
-    second: {fileID: 2100000, guid: 2b7d58251f18a394486a4556233e8287, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Collumn_3
-    second: {fileID: 2100000, guid: 62121be5087113042984d43f7a826257, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Door
-    second: {fileID: 2100000, guid: 651e74fe93a47c54eb73ee24000fa19a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Lamp1
-    second: {fileID: 2100000, guid: a3e5a0117bfe86d4ab11345ba8f740bd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Path1
-    second: {fileID: 2100000, guid: 3d430763efa67f941968d76074de6cff, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Stairs
-    second: {fileID: 2100000, guid: 764b8ebc63641e049a4d7604c0fe4c47, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Wall
-    second: {fileID: 2100000, guid: 2043020767651a3448e392653e5cc7c4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert1
-    second: {fileID: 2100000, guid: a080fa9a31d30884bb3d55540d14939f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert23
-    second: {fileID: 2100000, guid: 171e8331d0507bc4b9bd63469ae01d0c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert3
-    second: {fileID: 2100000, guid: c2b496a08c20ad84e9edf7809949a94c, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
-    materialSearch: 2
+    materialSearch: 1
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
@@ -92,7 +37,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
