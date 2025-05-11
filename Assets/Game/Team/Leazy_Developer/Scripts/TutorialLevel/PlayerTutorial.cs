@@ -15,6 +15,7 @@ public class PlayerTutorial : MonoBehaviour
         if (other.TryGetComponent(out TutorialTrigger trigger))
         {
             _tutorialManager.Trigger(trigger.Type);
+            trigger.gameObject.SetActive(false);
         }
     }
 }

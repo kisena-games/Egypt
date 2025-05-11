@@ -114,8 +114,8 @@ MonoBehaviour:
     SplineCurvature: 0
   RecenteringTarget: 2
   HorizontalAxis:
-    Value: 90
-    Center: -1.7599182
+    Value: 0
+    Center: 0
     Range: {x: -180, y: 180}
     Wrap: 1
     Recentering:
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollideAgainst:
     serializedVersion: 2
-    m_Bits: 264
+    m_Bits: 265
   IgnoreTag: 
   TransparentLayers:
     serializedVersion: 2
