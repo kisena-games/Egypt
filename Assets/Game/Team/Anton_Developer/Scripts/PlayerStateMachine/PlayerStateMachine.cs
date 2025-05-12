@@ -4,15 +4,19 @@ using UnityEngine;
 public class PlayerStateMachine : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
-    [SerializeField] private float _walkSpeed = 5f;
-    [SerializeField] private float _runSpeed = 8f;
-    [SerializeField] private float _rotationSpeed = 10f;
-    [SerializeField] private float _jumpForce = 5f;
-    [SerializeField] private float _gravity = 9.81f;
+    [SerializeField] private float _moveSpeed = 3.5f;
+    [SerializeField] private float _sprintSpeed = 6.5f;
+    [SerializeField] private float _speedChangeRate = 10.0f;
+    [SerializeField] private float _rotationSmoothTime = 0.12f;
+    [SerializeField] private float _jumpForce = 1.2f;
+    [SerializeField] private float _gravity = -9.81f;
+    [SerializeField] private float _fallTimeout;
+    [SerializeField] private LayerMask _groundLayers;
 
     private CharacterController _playerController;
     private Camera _mainCamera;
     private StateMachine _stateMachine;
+    private bool _isStealth = false;
 
     private void Start()
     {
@@ -24,34 +28,28 @@ public class PlayerStateMachine : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            _isStealth = !_isStealth;
+        }
         _stateMachine.OnUpdate();
     }
 
     private void InitializeStateMachine()
     {
-        State idleState = new PlayerIdleState(_animator, _playerController, _gravity, _jumpForce);
-        State walkState = new PlayerWalkState(_animator, _playerController, _mainCamera, transform, _walkSpeed, _rotationSpeed, _gravity);
-        State runState = new PlayerRunState(_animator, _playerController, _mainCamera, transform, _runSpeed, _rotationSpeed, _gravity);
+        State activeState = new ActiveState(_animator, _playerController, _mainCamera, transform, _gravity, _moveSpeed, 
+            _sprintSpeed, _speedChangeRate, _jumpForce, _rotationSmoothTime, _fallTimeout, _groundLayers);
+        State stealthState = new StealthState(_animator, _playerController, _mainCamera, transform, _moveSpeed,
+            _speedChangeRate, _rotationSmoothTime, _groundLayers);
 
-        idleState.AddTransition(new StateTransition(walkState, new FuncStateCondition(() => IsMoving() && !IsSprint())));
-        idleState.AddTransition(new StateTransition(runState, new FuncStateCondition(() => IsMoving() && IsSprint())));
+        activeState.AddTransition(new StateTransition(stealthState, new FuncStateCondition(() => _isStealth)));
+        stealthState.AddTransition(new StateTransition(activeState, new FuncStateCondition(() => !_isStealth)));
 
-        walkState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => !IsMoving())));
-        walkState.AddTransition(new StateTransition(runState, new FuncStateCondition(() => IsMoving() && IsSprint())));
-
-        runState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => !IsMoving())));
-        runState.AddTransition(new StateTransition(walkState, new FuncStateCondition(() => IsMoving() && !IsSprint())));
-
-        _stateMachine = new StateMachine(idleState);
+        _stateMachine = new StateMachine(activeState);
     }
 
     private bool IsMoving()
     {
         return InputManager.Instance.IsMoving;
-    }
-
-    private bool IsSprint()
-    {
-        return InputManager.Instance.IsSprint;
     }
 }
