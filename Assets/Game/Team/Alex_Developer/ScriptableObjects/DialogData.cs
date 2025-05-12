@@ -8,11 +8,11 @@ public class DialogData : ScriptableObject
 {
     [SerializeField] private List<string> _texts;
     [SerializeField] private List<string> _playerTexts;
-    [SerializeField] private Image _image;
+    [SerializeField] private Sprite _image;
 
     public List<string> texts { get { return _texts; } }
     public List<string> playerTexts { get { return _playerTexts; } }
-    public Image image { get { return _image; } }
+    public Sprite image { get { return _image; } }
 
 
 }
