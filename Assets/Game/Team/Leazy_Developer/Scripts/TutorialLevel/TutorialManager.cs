@@ -8,9 +8,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private List<TutorialInfo> _infos;
     [SerializeField] private float _minTriggerTime = 2f;
 
-    //[SerializeField] private GameObject _wasd_panel;
-    //[SerializeField] private GameObject _sprint_panel;
-    //[SerializeField] private GameObject _jump_panel;
+    
 
     public void Trigger(TutorialType type)
     {
@@ -42,6 +40,18 @@ public class TutorialManager : MonoBehaviour
                     case TutorialType.Jump:
                         isTriggerDone = Input.GetKeyDown(KeyCode.Space);
                         break;
+                    case TutorialType.Sprint:
+                        isTriggerDone = Input.GetKeyDown(KeyCode.LeftShift);
+                        break;
+                    case TutorialType.Interact:
+                        isTriggerDone = Input.GetKeyDown(KeyCode.E);
+                        break;
+                    case TutorialType.Crouch:
+                        isTriggerDone = Input.GetKeyDown(KeyCode.LeftControl);
+                        break;
+                    case TutorialType.Inventory:
+                        isTriggerDone = Input.GetKeyDown(KeyCode.E);
+                        break;
                 }
             }
 
@@ -64,6 +74,9 @@ public class TutorialInfo
 public enum TutorialType
 {
     Move,
+    Jump,
     Sprint,
-    Jump
+    Interact,
+    Crouch,
+    Inventory
 }

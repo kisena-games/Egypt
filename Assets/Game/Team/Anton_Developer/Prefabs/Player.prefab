@@ -2836,7 +2836,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1590824102472552271}
-  - component: {fileID: 8057664024810974056}
   - component: {fileID: 3928806787939714856}
   - component: {fileID: 3540574157620985836}
   - component: {fileID: 1687140186667791315}
@@ -2865,27 +2864,6 @@ Transform:
   - {fileID: 4898386136171783716}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &8057664024810974056
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7853256048540415587}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 1
-  m_Center: {x: 0, y: 1, z: 0.5}
 --- !u!143 &3928806787939714856
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2946,6 +2924,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d3b324b66ddc749b2f4815853908e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _interactDistance: 3.5
+  _updateInteractTime: 0.5
 --- !u!114 &1079389032663220193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2958,6 +2938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63fbbb6f96a005b4b9012efa46d7d042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inventorySize: 6
 --- !u!1 &8024066443925983385
 GameObject:
   m_ObjectHideFlags: 0
