@@ -30,6 +30,8 @@ public class StealthState : State
     public override void OnEnter()
     {
         _animator.SetBool("Stealth", true);
+        _controller.height = 0.9f;
+        _controller.center = new Vector3(0, 0.5f, 0);
     }
     public StealthState(Animator animator, CharacterController controller, Camera camera, Transform transform,
         float moveSpeed, float speedChangeRate, float rotationSmoothTime, LayerMask groundLayers)

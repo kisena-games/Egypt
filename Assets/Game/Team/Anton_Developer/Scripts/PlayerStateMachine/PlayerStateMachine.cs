@@ -30,8 +30,23 @@ public class PlayerStateMachine : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-            _isStealth = !_isStealth;
+            if (_isStealth)
+            {
+                if (!IsObstacleAbove())
+                {
+                    _isStealth = false;
+                }
+            }
+            else
+            {
+                _isStealth = true;
+            }
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            _isStealth = false;
+        }
+
         _stateMachine.OnUpdate();
     }
 
@@ -44,12 +59,20 @@ public class PlayerStateMachine : MonoBehaviour
 
         activeState.AddTransition(new StateTransition(stealthState, new FuncStateCondition(() => _isStealth)));
         stealthState.AddTransition(new StateTransition(activeState, new FuncStateCondition(() => !_isStealth)));
+        //stealthState.AddTransition(new StateTransition(activeState, new FuncStateCondition(() => IsSprint)));
 
         _stateMachine = new StateMachine(activeState);
     }
 
-    private bool IsMoving()
+    private bool IsSprint()
     {
-        return InputManager.Instance.IsMoving;
+        return InputManager.Instance.IsSprint;
+    }
+
+    private bool IsObstacleAbove()
+    {
+        Vector3 origin = transform.position + Vector3.up * 1.0f;
+        float checkHeight = 1.01f;
+        return Physics.Raycast(origin, Vector3.up, checkHeight, _groundLayers);
     }
 }

@@ -52,6 +52,8 @@ public class ActiveState : State
     public override void OnEnter()
     {
         _animator.SetBool("Stealth", false);
+        _controller.height = 1.85f;
+        _controller.center = new Vector3(0,1f, 0);
     }
 
     public override void OnUpdate()
