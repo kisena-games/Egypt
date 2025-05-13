@@ -72,7 +72,7 @@ public class PlayerStateMachine : MonoBehaviour
     private bool IsObstacleAbove()
     {
         Vector3 origin = transform.position + Vector3.up * 1.0f;
-        float checkHeight = 1.2f;
+        float checkHeight = 1.01f;
         return Physics.Raycast(origin, Vector3.up, checkHeight, _groundLayers);
     }
 }
