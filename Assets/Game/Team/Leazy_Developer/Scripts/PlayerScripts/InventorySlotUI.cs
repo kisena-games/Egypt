@@ -3,24 +3,25 @@ using UnityEngine.UI;
 
 public class InventorySlotUI : MonoBehaviour
 {
-    [SerializeField] private Vector3 _activeItemScale = new Vector3(1.12f, 1.12f, 1.12f);
+    [SerializeField] private Image _backgroundImage;
     [SerializeField] private Image _itemImage;
+    [SerializeField] private Sprite _activeBackgroundSprite;
 
-    private Vector3 _startScale;
+    private Sprite _defaultBackgroundSprite;
 
     private void Start()
     {
-        _startScale = transform.localScale;
+        _defaultBackgroundSprite = _backgroundImage.sprite;
     }
 
     public void Activate()
     {
-        transform.localScale = _activeItemScale;
+        _backgroundImage.sprite = _activeBackgroundSprite;
     }
 
     public void Deactivate()
     {
-        transform.localScale = _startScale;
+        _backgroundImage.sprite = _defaultBackgroundSprite;
     }
 
     public void AddItem(Sprite sprite)

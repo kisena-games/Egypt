@@ -1,17 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Barrier : MonoBehaviour
 {
-    [SerializeField] private List<Fresco> _frescos;
+    [SerializeField] private List<Fresco> _frescosToActivateBarrier;
+    [SerializeField] private List<BarrierConfiguration> _resultConfigurations;
 
     private void Start()
     {
-        StartCoroutine(TryUnlockBarrier());
+        StartCoroutine(UpdateBarrier());
     }
 
-    private IEnumerator TryUnlockBarrier()
+    private void UnlockBarrier()
+    {
+        foreach (var config in _resultConfigurations)
+        {
+            config.resultObject.SetActive(config.isNeedActive);
+        }
+
+        Destroy(gameObject);
+    }
+
+    private IEnumerator UpdateBarrier()
     {
         bool isCanUnlock = false;
 
@@ -21,7 +33,7 @@ public class Barrier : MonoBehaviour
 
             isCanUnlock = true;
 
-            foreach (var fresco in _frescos)
+            foreach (var fresco in _frescosToActivateBarrier)
             {
                 if (!fresco.IsActivated)
                 {
@@ -30,9 +42,16 @@ public class Barrier : MonoBehaviour
                 }
             }
 
-            yield return null;
+            yield return new WaitForSeconds(0.4f);
         }
 
-        Destroy(gameObject);
+        UnlockBarrier();
     }
+}
+
+[Serializable]
+public class BarrierConfiguration
+{
+    public bool isNeedActive;
+    public GameObject resultObject;
 }
