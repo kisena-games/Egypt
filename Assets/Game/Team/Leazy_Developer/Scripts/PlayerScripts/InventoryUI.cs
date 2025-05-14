@@ -22,6 +22,8 @@ public class InventoryUI : MonoBehaviour
         {
             _slots[i] = Instantiate(_slotPrefab, gameObject.transform).GetComponent<InventorySlotUI>();
         }
+
+        UpdateActiveSlot(0);
     }
 
     private void Start()

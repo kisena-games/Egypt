@@ -21,11 +21,6 @@ public class PlayerInventory : MonoBehaviour
         _items = new PuzzleSO[_inventorySize];
     }
 
-    private void Start()
-    {
-        MoveActiveItem(0);
-    }
-
     private void Update()
     {
         UpdateActiveItem();

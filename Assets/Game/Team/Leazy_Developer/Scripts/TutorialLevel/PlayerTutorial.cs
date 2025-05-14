@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerTutorial : MonoBehaviour
 {
-    [SerializeField] private TutorialManager _tutorialManager;
+    [SerializeField] private TutorialManager _tutorialManager;    
 
     private void Start()
     {

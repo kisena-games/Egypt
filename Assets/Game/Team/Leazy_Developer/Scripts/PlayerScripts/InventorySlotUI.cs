@@ -5,14 +5,8 @@ public class InventorySlotUI : MonoBehaviour
 {
     [SerializeField] private Image _backgroundImage;
     [SerializeField] private Image _itemImage;
+    [SerializeField] private Sprite _defaultBackgroundSprite;
     [SerializeField] private Sprite _activeBackgroundSprite;
-
-    private Sprite _defaultBackgroundSprite;
-
-    private void Start()
-    {
-        _defaultBackgroundSprite = _backgroundImage.sprite;
-    }
 
     public void Activate()
     {

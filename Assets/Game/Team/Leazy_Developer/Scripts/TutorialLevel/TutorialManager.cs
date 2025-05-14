@@ -8,7 +8,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private List<TutorialInfo> _infos;
     [SerializeField] private float _minTriggerTime = 2f;
 
-    
+    private int triggersNum = 0;
 
     public void Trigger(TutorialType type)
     {
@@ -27,9 +27,15 @@ public class TutorialManager : MonoBehaviour
         info.CanvasPanel.SetActive(true);
         bool isTriggerDone = false;
         float _time = 0f;
+        triggersNum++;
 
         while (!isTriggerDone || _time < _minTriggerTime)
         {
+            if (triggersNum > 1)
+            {
+                break;
+            }
+
             if (!isTriggerDone)
             {
                 switch (info.Type)
@@ -61,6 +67,7 @@ public class TutorialManager : MonoBehaviour
         }
 
         info.CanvasPanel.SetActive(false);
+        triggersNum--;
     }
 }
 

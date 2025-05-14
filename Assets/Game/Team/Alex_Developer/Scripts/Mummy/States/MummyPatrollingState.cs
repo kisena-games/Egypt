@@ -1,9 +1,3 @@
-using FMOD.Studio;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Build.Pipeline;
 using UnityEngine;
 using UnityEngine.AI;
 

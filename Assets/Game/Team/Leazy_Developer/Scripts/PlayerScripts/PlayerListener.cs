@@ -8,7 +8,7 @@ public class PlayerListener : MonoBehaviour
 {
     [Header("Interact Parameters")]
     [SerializeField] private float _interactDistance = 2f;
-    [SerializeField] private float _updateInteractTime = 0.5f;
+    [SerializeField] private float _updateInteractTime = 0.3f;
 
     public IInteractable LastObject { get; private set; }
 
