@@ -23,6 +23,9 @@
         },
         {
             "m_Id": "3ffbdde4b649471c8bcc4b091ce9bd00"
+        },
+        {
+            "m_Id": "de691047578f415fb3cd2a957d0fc521"
         }
     ],
     "m_Keywords": [],
@@ -116,6 +119,9 @@
         },
         {
             "m_Id": "0f80fdc7a05b44e6a1e88e15ec5f1a7a"
+        },
+        {
+            "m_Id": "4d10f919fe614f3daa23de0ddbfc90c1"
         }
     ],
     "m_GroupDatas": [],
@@ -285,6 +291,20 @@
             "m_InputSlot": {
                 "m_Node": {
                     "m_Id": "4bc917d74a6243e1881fd6c064d02328"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "4d10f919fe614f3daa23de0ddbfc90c1"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "17b7a70ad8994f5aa0b8d27b4649d6e7"
                 },
                 "m_SlotId": 0
             }
@@ -1090,7 +1110,7 @@
     "m_ShaderOutputName": "Edge1",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": 0.5,
+        "x": 0.8299999833106995,
         "y": 0.0,
         "z": 0.0,
         "w": 0.0
@@ -1333,10 +1353,10 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": 20.0,
-    "m_FloatType": 0,
+    "m_FloatType": 1,
     "m_RangeValues": {
         "x": 0.0,
-        "y": 1.0
+        "y": 100.0
     }
 }
 
@@ -1660,6 +1680,9 @@
         },
         {
             "m_Id": "3ffbdde4b649471c8bcc4b091ce9bd00"
+        },
+        {
+            "m_Id": "de691047578f415fb3cd2a957d0fc521"
         }
     ]
 }
@@ -1741,6 +1764,42 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "4d10f919fe614f3daa23de0ddbfc90c1",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -726.0,
+            "y": 919.0,
+            "width": 109.0,
+            "height": 34.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "fd4cf55bb316429bb620d822c6641b45"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "de691047578f415fb3cd2a957d0fc521"
+    }
 }
 
 {
@@ -3310,6 +3369,34 @@
 }
 
 {
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "de691047578f415fb3cd2a957d0fc521",
+    "m_Guid": {
+        "m_GuidSerialized": "3eb8bbce-8fed-493e-8b18-b39f1bb2758f"
+    },
+    "m_Name": "Period",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "Period",
+    "m_DefaultReferenceName": "_Period",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 0.5,
+    "m_FloatType": 1,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
+    }
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector2MaterialSlot",
     "m_ObjectId": "e2317e55660147c7b1b354bed63cd338",
@@ -3511,5 +3598,20 @@
         "z": 0.0,
         "w": 0.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "fd4cf55bb316429bb620d822c6641b45",
+    "m_Id": 0,
+    "m_DisplayName": "Period",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
 }
 
