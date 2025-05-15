@@ -64,8 +64,20 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_85e54cb15ceb4c44bdc0af9c6986e74e_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: bce43503518074f40aaca9d808ac14a3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_b36ab083b58f4a63bfdf291ae433f9c0_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 4ad01ee100698464ca9de1f39d8f906d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 4ad01ee100698464ca9de1f39d8f906d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -85,6 +97,7 @@ Material:
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
+    - _Angle: 2
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
@@ -112,8 +125,11 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
+    - _TextureVolume: 10
+    - _USE_TEXTURE: 1
     - _WorkflowMode: 1
     - _ZWrite: 1
+    - _speed: 2
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
