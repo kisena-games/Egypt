@@ -2228,6 +2228,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PurpleCube
       objectReference: {fileID: 0}
+    - target: {fileID: 8802795263367552473, guid: d793c7f40772b044d91511ba487ba287, type: 3}
+      propertyPath: m_Name
+      value: Cube
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2246,7 +2250,7 @@ GameObject:
   - component: {fileID: 2035216737}
   - component: {fileID: 2035216736}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Quade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
