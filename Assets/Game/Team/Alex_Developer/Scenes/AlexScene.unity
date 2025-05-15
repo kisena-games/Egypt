@@ -435,7 +435,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39635eb5d60d33c48b4a2addd793aee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _puzzleType: 0
 --- !u!1001 &161608299
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -446,7 +445,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 949704290080629542, guid: a906482a4d8a0464cb3e654b43d5a68a, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 949704290080629542, guid: a906482a4d8a0464cb3e654b43d5a68a, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
@@ -499,7 +498,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6172567158395169907, guid: a906482a4d8a0464cb3e654b43d5a68a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 549193453}
   m_SourcePrefab: {fileID: 100100000, guid: a906482a4d8a0464cb3e654b43d5a68a, type: 3}
 --- !u!1 &192858154
 GameObject:
@@ -910,6 +912,32 @@ Transform:
   - {fileID: 1425239187}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &549193449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6172567158395169907, guid: a906482a4d8a0464cb3e654b43d5a68a, type: 3}
+  m_PrefabInstance: {fileID: 161608299}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &549193453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549193449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf7ceee5fe7f784c9452616fc212b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enabled: 0
+  _Texture2D: {fileID: 0}
+  _USE_TEXTURE: 1
+  _Color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  _TextureVolume: 10
+  _Angle: 2
+  _speed: 1
+  _Emission: 20
+  _Period: 0.5
 --- !u!1001 &623985694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -964,7 +992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8698024292346095939, guid: e0a92d2ef86db2641a1970fd524e6112, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8698024292346095939, guid: e0a92d2ef86db2641a1970fd524e6112, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
@@ -1290,8 +1318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b8d211f73e49d144bc01e41cc55e3cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _puzzleToInteract: 2
-  _selector: {fileID: 992329690}
 --- !u!1 &773650017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,8 +1492,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b8d211f73e49d144bc01e41cc55e3cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _puzzleToInteract: 1
-  _selector: {fileID: 992329690}
 --- !u!1 &831865309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,11 +1615,6 @@ Transform:
   - {fileID: 494507702}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!224 &992329690 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 511594980290421939, guid: 5e3423160dda08f468665c6af6c997c3, type: 3}
-  m_PrefabInstance: {fileID: 379061487}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1125219594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,7 +1663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39635eb5d60d33c48b4a2addd793aee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _puzzleType: 1
 --- !u!114 &1125219597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1956,8 +1974,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b8d211f73e49d144bc01e41cc55e3cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _puzzleToInteract: 0
-  _selector: {fileID: 992329690}
 --- !u!1001 &1632252747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2218,7 +2234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5314346765508402796, guid: d793c7f40772b044d91511ba487ba287, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5314346765508402796, guid: d793c7f40772b044d91511ba487ba287, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
@@ -2394,7 +2410,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39635eb5d60d33c48b4a2addd793aee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _puzzleType: 2
 --- !u!136 &2069362239
 CapsuleCollider:
   m_ObjectHideFlags: 0
