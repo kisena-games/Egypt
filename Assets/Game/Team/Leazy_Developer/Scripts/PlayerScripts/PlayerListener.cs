@@ -13,6 +13,7 @@ public class PlayerListener : MonoBehaviour
     public IInteractable LastObject { get; private set; }
 
     private PlayerInventory _inventory;
+    private WaitForSeconds _forTime;
 
     private void OnDrawGizmos()
     {
@@ -22,6 +23,7 @@ public class PlayerListener : MonoBehaviour
 
     private void Awake()
     {
+        _forTime = new WaitForSeconds(_updateInteractTime);
         _inventory = GetComponent<PlayerInventory>();
     }
 
@@ -118,7 +120,7 @@ public class PlayerListener : MonoBehaviour
         {
             UpdateClosestObject();
 
-            yield return new WaitForSeconds(_updateInteractTime);
+            yield return _forTime;
         }
     }
 }

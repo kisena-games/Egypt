@@ -36,6 +36,8 @@ public class InventoryUI : MonoBehaviour
     private void OnDestroy()
     {
         _playerInventory.ActivateItemAction -= UpdateActiveSlot;
+        _playerInventory.AddItemAction -= AddSlot;
+        _playerInventory.RemoveActiveItemAction -= ClearActiveSlot;
     }
 
     public void UpdateActiveSlot(int index)
