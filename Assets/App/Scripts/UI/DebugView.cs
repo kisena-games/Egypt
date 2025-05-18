@@ -18,8 +18,6 @@ namespace App.Scripts.UI
         public virtual void Hide()
         {
             base.Hide();
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
         }
 
         public override void Show()
