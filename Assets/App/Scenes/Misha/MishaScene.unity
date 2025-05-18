@@ -453,7 +453,11 @@ MonoBehaviour:
   _initialData:
     gameplayData:
       GameplayParent: {fileID: 1244600248}
+<<<<<<<< HEAD:Assets/App/Scenes/Misha/MishaScene.unity
       Player: {fileID: 2785454076761220887}
+========
+      Player: {fileID: 2785454076761220888}
+>>>>>>>> 65e0876f6971729ed97c5e14748c7e1e6283c4a5:Assets/App/Team/Misha_Developer/Scenes/MishaScene.unity
     UIInitialData:
       UIParent: {fileID: 164574359}
 --- !u!4 &436482407
@@ -755,9 +759,9 @@ Transform:
   - {fileID: 84566607}
   - {fileID: 192858156}
   - {fileID: 1632252748}
+  - {fileID: 2785454076761220886}
   - {fileID: 633878037}
   - {fileID: 474861477}
-  - {fileID: 2785454076761220886}
   m_Father: {fileID: 436482407}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1632252747
@@ -975,7 +979,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1590824102472552271, guid: e53a80bf140af9848bf9960b610a486f, type: 3}
   m_PrefabInstance: {fileID: 2785454076761220885}
   m_PrefabAsset: {fileID: 0}
+<<<<<<<< HEAD:Assets/App/Scenes/Misha/MishaScene.unity
 --- !u!114 &2785454076761220887 stripped
+========
+--- !u!114 &2785454076761220888 stripped
+>>>>>>>> 65e0876f6971729ed97c5e14748c7e1e6283c4a5:Assets/App/Team/Misha_Developer/Scenes/MishaScene.unity
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1687140186667791315, guid: e53a80bf140af9848bf9960b610a486f, type: 3}
   m_PrefabInstance: {fileID: 2785454076761220885}
