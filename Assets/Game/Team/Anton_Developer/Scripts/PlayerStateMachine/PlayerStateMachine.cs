@@ -46,6 +46,10 @@ public class PlayerStateMachine : MonoBehaviour
         {
             _isStealth = false;
         }
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            _isStealth = false;
+        }
 
         _stateMachine.OnUpdate();
     }
@@ -59,7 +63,7 @@ public class PlayerStateMachine : MonoBehaviour
 
         activeState.AddTransition(new StateTransition(stealthState, new FuncStateCondition(() => _isStealth)));
         stealthState.AddTransition(new StateTransition(activeState, new FuncStateCondition(() => !_isStealth)));
-        //stealthState.AddTransition(new StateTransition(activeState, new FuncStateCondition(() => IsSprint)));
+        stealthState.AddTransition(new StateTransition(activeState, new FuncStateCondition(IsSprint)));
 
         _stateMachine = new StateMachine(activeState);
     }
