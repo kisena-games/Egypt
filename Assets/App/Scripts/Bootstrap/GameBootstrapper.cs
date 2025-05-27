@@ -22,6 +22,7 @@ namespace App.Scripts.Bootstrap
         private void Awake()
         {
             _game = new Game.Game(this, _initialData);
+            DontDestroyOnLoad(gameObject);
         }
     }
 }

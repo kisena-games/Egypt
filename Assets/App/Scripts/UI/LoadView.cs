@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using App.Scripts.Bootstrap.StateMachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,38 +12,14 @@ namespace App.Scripts.UI
         [SerializeField] private GameObject _loadingScreen;
         [SerializeField] Slider _loadingBar;
 
-        [SerializeField] private string _sceneName;
-
-        [ContextMenu("Load Scene (Test)")]
-        public void Loading()
+        public void UpdateProgressBar(float value)
         {
-            Loading(_sceneName);
+            _loadingBar.value = value;
         }
 
-        public void Loading(string sceneName)
+        public void ShowLoadingScreen()
         {
             _loadingScreen.SetActive(true);
-        
-            StartCoroutine(LoadAsync(sceneName));
         }
-
-        private IEnumerator LoadAsync(string sceneName)
-        {
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
-            asyncLoad.allowSceneActivation = false;
-
-            while (!asyncLoad.isDone)
-            {
-                _loadingBar.value = asyncLoad.progress;
-            
-                if (asyncLoad.progress >= 0.9f && !asyncLoad.allowSceneActivation)
-                {
-                    yield return new WaitForSeconds(1f);
-                    asyncLoad.allowSceneActivation = true;
-                }
-                yield return null;
-            }
-        }
-    
     }
 }

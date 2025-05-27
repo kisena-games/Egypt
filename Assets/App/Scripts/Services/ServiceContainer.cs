@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace App.Scripts.Services
 {
-    public class ServiceContainer
+    public class ServiceContainer : IServiceContainer
     {
         private static ServiceContainer _instance;
 

@@ -1,3 +1,4 @@
+using App.Scripts.Core;
 using App.Scripts.Data;
 using App.Scripts.Services;
 using App.Scripts.Services.View;
@@ -10,31 +11,22 @@ namespace App.Scripts.Bootstrap.StateMachine.States
     public class GameplayState : IState
     {
         private readonly StateMachine _stateMachine;
-        private readonly InitialGameplayData _initialData;
         public bool IsActive { get; private set; }
 
         private GameplayView View => _view ??= ServiceContainer.Container.Get<IViewContainer>().GetView<GameplayView>();
         private GameplayView _view;
         
         public GameplayState(
-            StateMachine stateMachine,
-            InitialGameplayData initialData)
+            StateMachine stateMachine)
         {
             _stateMachine = stateMachine;
-            _initialData = initialData;
-            if (_initialData.Player.TryGetComponent(out PlayerInventory playerInventory))
-            {
-                var inventoryView = ServiceContainer.Container.Get<IViewContainer>().GetView<InventoryView>();
-                inventoryView.Show();
-                inventoryView.Initialize(playerInventory);
-            }
 
             ServiceContainer.Container.Get<IViewContainer>().GetView<PauseView>().DebugPanelOpen += () => 
                 ServiceContainer.Container.Get<IViewContainer>().ShowView<DebugView>();
             ServiceContainer.Container.Get<IUpdatableCoroutineRunner>().OnUpdate += Update;
         }
 
-        public void Update()
+        private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
@@ -44,11 +36,22 @@ namespace App.Scripts.Bootstrap.StateMachine.States
         
         public void Enter()
         {
-            IsActive = true;
+            EntryPoint entryPoint = GameObject.FindFirstObjectByType<EntryPoint>();
+            entryPoint.PlayerLoadScene.OnLoadScene += LoadScene;
+            var inventoryView = ServiceContainer.Container.Get<IViewContainer>().GetView<InventoryView>();
+            inventoryView.Show();
+            inventoryView.Initialize(entryPoint.PlayerInventory);
             View.Show();
             LoadLevel();
+            IsActive = true;
         }
 
+        private void LoadScene(string sceneName)
+        {
+            _stateMachine.Enter<GameLoadState, GameLoadPayload>(new GameLoadPayload(sceneName,
+                () => _stateMachine.Enter<GameplayState>()));
+        }
+        
         private void Pause()
         {
             ServiceContainer.Container.Get<IViewContainer>().GetView<PauseView>().Pause();
@@ -78,6 +81,5 @@ namespace App.Scripts.Bootstrap.StateMachine.States
         private void LoadLevel()
         {
         }
-        
     }
 }

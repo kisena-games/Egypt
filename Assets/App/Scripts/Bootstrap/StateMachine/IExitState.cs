@@ -1,7 +1,7 @@
 ﻿namespace App.Scripts.Bootstrap.StateMachine
 {
-    public interface IState : IExitState
+    public interface IExitState
     {
-        void Enter();
+        public void Exit();
     }
 }
