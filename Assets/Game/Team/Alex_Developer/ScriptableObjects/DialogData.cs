@@ -6,13 +6,13 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "DialogData", menuName = "Scriptable Objects/DialogData")]
 public class DialogData : ScriptableObject
 {
-    [SerializeField] private List<string> _texts;
-    [SerializeField] private List<string> _playerTexts;
-    [SerializeField] private Sprite _image;
 
+    public string publicName { get { return _name; } }
     public List<string> texts { get { return _texts; } }
-    public List<string> playerTexts { get { return _playerTexts; } }
-    public Sprite image { get { return _image; } }
+    public List<Sprite> images { get { return _images; } }
 
-
+    
+    [SerializeField] private string _name;
+    [SerializeField] private List<string> _texts;
+    [SerializeField] private List<Sprite> _images;
 }
