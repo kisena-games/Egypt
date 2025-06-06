@@ -658,7 +658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3031651391681310275}
   m_Layer: 0
-  m_Name: Container0
+  m_Name: ContainerRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -697,7 +697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7310126129169348396}
   m_Layer: 0
-  m_Name: Container1
+  m_Name: ContainerLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -919,6 +919,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34be186e1f5ee940b441dd7e301eced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogSequence:
+  - {fileID: 11400000, guid: d1f8b0f7bfc8753439e9edec2ccd4b18, type: 2}
+  - {fileID: 11400000, guid: 19be57c58e7581849b2b046cf27bb829, type: 2}
+  - {fileID: 11400000, guid: e6ee20e70736e8348b85c582d10b14ac, type: 2}
+  - {fileID: 11400000, guid: 9c69659cb3abae440b4824a49fee5a9c, type: 2}
+  - {fileID: 11400000, guid: e6ee20e70736e8348b85c582d10b14ac, type: 2}
+  - {fileID: 11400000, guid: 19be57c58e7581849b2b046cf27bb829, type: 2}
+  - {fileID: 11400000, guid: 9c69659cb3abae440b4824a49fee5a9c, type: 2}
+  - {fileID: 11400000, guid: 19be57c58e7581849b2b046cf27bb829, type: 2}
+  leftText: {fileID: 0}
+  rightText: {fileID: 0}
+  leftImage: {fileID: 1631728890245607153}
+  rightImage: {fileID: 1336204198080412162}
 --- !u!1 &6382374830625709453
 GameObject:
   m_ObjectHideFlags: 0

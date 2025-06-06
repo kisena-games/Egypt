@@ -15,4 +15,8 @@ public class DialogData : ScriptableObject
     [SerializeField] private string _name;
     [SerializeField] private List<string> _texts;
     [SerializeField] private List<Sprite> _images;
+
+
+
+
 }
