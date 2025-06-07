@@ -2,118 +2,106 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
+using ModestTree;
+using System.Collections;
 
 public class Dialog : MonoBehaviour
 {
-    private Dictionary<DialogData, int> dialogTextIndices = new Dictionary<DialogData, int>();
-
     public List<DialogData> dialogSequence;
     public TextMeshProUGUI leftText;
+    public TextMeshProUGUI leftName;
     public TextMeshProUGUI rightText;
+    public TextMeshProUGUI rightName;
     public Image leftImage;
     public Image rightImage;
+    public string playerName = "Говард";
+    public float clickCooldown = 0.2f; // Prevents rapid click issues
 
-    private int currentDialogIndex = 0;
-    private int currentTextIndex = 0;
+    private Dictionary<string, int> characterTextIndices = new Dictionary<string, int>();
+    private bool isDialogActive = true;
+    private float lastClickTime;
 
-    void Start()
+    private void Start()
     {
-        StartDialog();
+        StartCoroutine(ShowText());
     }
 
-    void Update()
+    private IEnumerator ShowText()
     {
-        if (Input.GetMouseButtonDown(0))
+        // Initialize character indices
+        foreach (var dialog in dialogSequence)
         {
-            ShowNextText();
-        }
-    }
-
-    void StartDialog()
-    {
-        if (dialogSequence.Count == 0) return;
-        currentDialogIndex = 0;
-        currentTextIndex = 0;
-        LoadCurrentDialog();
-    }
-
-    void LoadCurrentDialog()
-    {
-        if (currentDialogIndex >= dialogSequence.Count)
-        {
-            Debug.Log("Dialog finished!");
-            return;
-        }
-
-        DialogData currentDialog = dialogSequence[currentDialogIndex];
-        bool isLeft = currentDialog.publicName != "Говард"; // Example condition
-
-        leftText.text = "";
-        rightText.text = "";
-        leftImage.gameObject.SetActive(false);
-        rightImage.gameObject.SetActive(false);
-
-        if (currentDialog.images.Count > 0)
-        {
-            if (isLeft)
+            if (dialog == null || dialog.texts == null || dialog.texts.Count == 0)
             {
-                leftImage.sprite = currentDialog.images[0];
-                leftImage.gameObject.SetActive(true);
+                Debug.LogError($"Invalid dialog data (null or empty texts). Skipping...");
+                continue;
             }
-            else
+
+            if (!characterTextIndices.ContainsKey(dialog.publicName))
             {
-                rightImage.sprite = currentDialog.images[0];
-                rightImage.gameObject.SetActive(true);
+                characterTextIndices[dialog.publicName] = 0;
             }
         }
 
-        ShowNextText();
-    }
-
-    private void ShowNextText()
-    {
-        if (currentDialogIndex >= dialogSequence.Count) return;
-
-        DialogData currentDialog = dialogSequence[currentDialogIndex];
-
-        if (!dialogTextIndices.ContainsKey(currentDialog))
+        while (isDialogActive)
         {
-            dialogTextIndices[currentDialog] = 0;
-        }
+            bool anyTextRemaining = false;
 
-        int textIndex = dialogTextIndices[currentDialog];
-
-        if (textIndex >= currentDialog.texts.Count)
-        {
-            dialogTextIndices[currentDialog] = 0;
-            currentDialogIndex++;
-            if (currentDialogIndex < dialogSequence.Count)
+            foreach (var dialog in dialogSequence)
             {
-                LoadCurrentDialog();
+                if (dialog == null || dialog.texts == null ||
+                    characterTextIndices[dialog.publicName] >= dialog.texts.Count)
+                {
+                    continue;
+                }
+
+                anyTextRemaining = true;
+                int currentIndex = characterTextIndices[dialog.publicName];
+
+                // Determine which side to display
+                bool isPlayer = dialog.publicName == playerName;
+                TextMeshProUGUI activeText = isPlayer ? rightText : leftText;
+                TextMeshProUGUI activeName = isPlayer ? rightName : leftName;
+                Image activeImage = isPlayer ? rightImage : leftImage;
+
+                // Clear the opposite side
+                TextMeshProUGUI inactiveText = isPlayer ? leftText : rightText;
+                TextMeshProUGUI inactiveName = isPlayer ? leftName : rightName;
+                Image inactiveImage = isPlayer ? leftImage : rightImage;
+
+                inactiveText.text = "";
+                inactiveName.text = "";
+                inactiveImage.enabled = false;
+
+                // Set active side content
+                activeText.text = dialog.texts[currentIndex];
+                activeName.text = dialog.publicName;
+
+                if (dialog.images != null && currentIndex < dialog.images.Count && dialog.images[currentIndex] != null)
+                {
+                    activeImage.sprite = dialog.images[currentIndex];
+                    activeImage.enabled = true;
+                }
+                else
+                {
+                    activeImage.enabled = false;
+                }
+
+                // Wait for mouse click with cooldown
+                yield return new WaitUntil(() => Input.GetMouseButtonDown(0) && Time.time - lastClickTime > clickCooldown);
+                lastClickTime = Time.time;
+                yield return null; // Wait one frame
+
+                characterTextIndices[dialog.publicName]++;
             }
-            else
+
+            // Exit if no more text to display
+            if (!anyTextRemaining)
             {
-                Debug.Log("Dialog finished!");
+                isDialogActive = false;
+                yield break;
             }
-            return;
         }
-
-        string text = currentDialog.texts[textIndex];
-
-        if (currentDialog.publicName != "Говард")
-        {
-            leftText.text = text;
-            rightText.text = "";
-        }
-        else
-        {
-            rightText.text = text;
-            leftText.text = "";
-        }
-
-        dialogTextIndices[currentDialog] = textIndex + 1;
     }
-
-
-
 }
