@@ -9,12 +9,9 @@ using System.Collections;
 public class Dialog : MonoBehaviour
 {
     public List<DialogData> dialogSequence;
-    public TextMeshProUGUI leftText;
-    public TextMeshProUGUI leftName;
-    public TextMeshProUGUI rightText;
-    public TextMeshProUGUI rightName;
-    public Image leftImage;
-    public Image rightImage;
+    public TextMeshProUGUI dialogText;
+    public TextMeshProUGUI speakerName;
+    public Image speakerImage;
     public string playerName = "Говард";
     public float clickCooldown = 0.2f; // Prevents rapid click issues
 
@@ -22,11 +19,14 @@ public class Dialog : MonoBehaviour
     private bool isDialogActive = true;
     private float lastClickTime;
 
-    private void Start()
+    private void OnEnable()
     {
         StartCoroutine(ShowText());
     }
-
+    private void OnDisable()
+    {
+        StopCoroutine(ShowText());
+    }
     private IEnumerator ShowText()
     {
         // Initialize character indices
@@ -59,33 +59,18 @@ public class Dialog : MonoBehaviour
                 anyTextRemaining = true;
                 int currentIndex = characterTextIndices[dialog.publicName];
 
-                // Determine which side to display
-                bool isPlayer = dialog.publicName == playerName;
-                TextMeshProUGUI activeText = isPlayer ? rightText : leftText;
-                TextMeshProUGUI activeName = isPlayer ? rightName : leftName;
-                Image activeImage = isPlayer ? rightImage : leftImage;
-
-                // Clear the opposite side
-                TextMeshProUGUI inactiveText = isPlayer ? leftText : rightText;
-                TextMeshProUGUI inactiveName = isPlayer ? leftName : rightName;
-                Image inactiveImage = isPlayer ? leftImage : rightImage;
-
-                inactiveText.text = "";
-                inactiveName.text = "";
-                inactiveImage.enabled = false;
-
-                // Set active side content
-                activeText.text = dialog.texts[currentIndex];
-                activeName.text = dialog.publicName;
+                // Set dialog content
+                dialogText.text = dialog.texts[currentIndex];
+                speakerName.text = dialog.publicName;
 
                 if (dialog.images != null && currentIndex < dialog.images.Count && dialog.images[currentIndex] != null)
                 {
-                    activeImage.sprite = dialog.images[currentIndex];
-                    activeImage.enabled = true;
+                    speakerImage.sprite = dialog.images[currentIndex];
+                    speakerImage.enabled = true;
                 }
                 else
                 {
-                    activeImage.enabled = false;
+                    speakerImage.enabled = false;
                 }
 
                 // Wait for mouse click with cooldown
