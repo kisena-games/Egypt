@@ -110,8 +110,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 115, y: -280.2}
-  m_SizeDelta: {x: 1600, y: 1600}
+  m_AnchoredPosition: {x: 115, y: -382.4}
+  m_SizeDelta: {x: 1300, y: 1300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4758273072957157293
 CanvasRenderer:
@@ -260,8 +260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -174.9, y: -228.5}
-  m_SizeDelta: {x: 600, y: 1000}
+  m_AnchoredPosition: {x: -432.8, y: -269.6}
+  m_SizeDelta: {x: 700, y: 1100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8496609548310675656
 CanvasRenderer:
@@ -547,7 +547,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 350, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8060165191090656024
 CanvasRenderer:
@@ -604,14 +604,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 41.51
+  m_fontSizeBase: 41.51
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -761,7 +761,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 579, y: -326.6}
+  m_AnchoredPosition: {x: 489.1, y: -404.3}
   m_SizeDelta: {x: 300, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1683766255764507618
@@ -938,6 +938,7 @@ MonoBehaviour:
   speakerImage: {fileID: 1336204198080412162}
   playerName: "\u0413\u043E\u0432\u0430\u0440\u0434"
   clickCooldown: 0.2
+  fadeDuration: 0.2
 --- !u!1 &6382374830625709453
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,8 +973,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 125.2, y: -434.1}
-  m_SizeDelta: {x: 1302.5, y: 50}
+  m_AnchoredPosition: {x: 122, y: -517.4}
+  m_SizeDelta: {x: 1118, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2097122242072474890
 CanvasRenderer:
@@ -1003,7 +1004,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+  m_text: "\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442\u0442"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d9f9f02520ffb54ab6719921b623b78, type: 2}
   m_sharedMaterial: {fileID: -1429402542564807370, guid: 5d9f9f02520ffb54ab6719921b623b78, type: 2}
@@ -1030,8 +1031,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1040,9 +1041,9 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
-  m_lineSpacing: -30
+  m_lineSpacing: -20
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
