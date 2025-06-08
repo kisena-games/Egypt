@@ -6,42 +6,65 @@ using System.Linq;
 using ModestTree;
 using System.Collections;
 using DG.Tweening;
+using System;
+
+
 
 public class Dialog : MonoBehaviour
 {
-    public List<DialogData> dialogSequence;
-    public TextMeshProUGUI dialogText;
-    public TextMeshProUGUI speakerName;
-    public Image speakerImage;
-    public string playerName = "Говард";
-    public float clickCooldown = 0.2f;
-    public float fadeDuration = 0.5f; // Duration for fade in/out effects
+    public static Action OnDialogComplete;
+
+    [SerializeField] private KeyCode _skipKey;
+    [SerializeField] private Button _skipButton;
+    [SerializeField] private List<DialogData> _dialogSequence;
+    [SerializeField] private TextMeshProUGUI _dialogText;
+    [SerializeField] private TextMeshProUGUI _speakerName;
+    [SerializeField] private Image _speakerImage;
+    [SerializeField] private string _playerName = "Говард";
+    [SerializeField] private float _clickCooldown = 0.2f;
+    [SerializeField] private float _fadeDuration = 0.5f; // Duration for fade in/out effects
 
     private Dictionary<string, int> characterTextIndices = new Dictionary<string, int>();
-    private bool isDialogActive = true;
-    private float lastClickTime;
     private Sequence currentSequence;
+
+    private bool isDialogActive = true;
+    private bool _isSkip;
+
+    private float lastClickTime;
+    
 
     private void OnEnable()
     {
-        // Initialize with transparent elements
-        dialogText.alpha = 0f;
-        speakerName.alpha = 0f;
-        speakerImage.color = new Color(1, 1, 1, 0);
+        
+        if (_skipButton != null)
+            _skipButton.onClick.AddListener(OnSkipButtonPressed);
+
+        _dialogText.alpha = 0f;
+        _speakerName.alpha = 0f;
+        _speakerImage.color = new Color(1, 1, 1, 0);
 
         StartCoroutine(ShowText());
     }
-
+    private void Update()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
     private void OnDisable()
     {
+        Time.timeScale = 1f;
+        if (_skipButton != null)
+            _skipButton.onClick.RemoveListener(OnSkipButtonPressed);
         StopCoroutine(ShowText());
-        currentSequence?.Kill(); // Kill any running tweens
+        currentSequence?.Kill();
     }
-
+    private void OnSkipButtonPressed()
+    {
+        _isSkip = true;
+    }
     private IEnumerator ShowText()
     {
         // Initialize character indices
-        foreach (var dialog in dialogSequence)
+        foreach (var dialog in _dialogSequence)
         {
             if (dialog == null || dialog.texts == null || dialog.texts.Count == 0)
             {
@@ -59,7 +82,7 @@ public class Dialog : MonoBehaviour
         {
             bool anyTextRemaining = false;
 
-            foreach (var dialog in dialogSequence)
+            foreach (var dialog in _dialogSequence)
             {
                 if (dialog == null || dialog.texts == null ||
                     characterTextIndices[dialog.publicName] >= dialog.texts.Count)
@@ -70,57 +93,85 @@ public class Dialog : MonoBehaviour
                 anyTextRemaining = true;
                 int currentIndex = characterTextIndices[dialog.publicName];
 
-                // Create a sequence for smooth transitions
                 currentSequence = DOTween.Sequence();
+                currentSequence.Append(_dialogText.DOFade(0, _fadeDuration / 2));
+                currentSequence.Join(_speakerName.DOFade(0, _fadeDuration / 2));
+                currentSequence.Join(_speakerImage.DOFade(0, _fadeDuration / 2));
 
-                // Fade out current elements
-                currentSequence.Append(dialogText.DOFade(0, fadeDuration / 2));
-                currentSequence.Join(speakerName.DOFade(0, fadeDuration / 2));
-                currentSequence.Join(speakerImage.DOFade(0, fadeDuration / 2));
-
-                // Update content while invisible
                 currentSequence.AppendCallback(() => {
-                    dialogText.text = dialog.texts[currentIndex].text;
-                    speakerName.text = dialog.publicName;
+                    _dialogText.text = dialog.texts[currentIndex].text;
+                    _speakerName.text = dialog.publicName;
 
                     if (dialog.images != null && currentIndex < dialog.images.Count && dialog.images[currentIndex] != null)
                     {
-                        speakerImage.sprite = dialog.images[currentIndex];
-                        speakerImage.enabled = true;
+                        _speakerImage.sprite = dialog.images[currentIndex];
+                        _speakerImage.enabled = true;
                     }
                     else
                     {
-                        speakerImage.enabled = false;
+                        _speakerImage.enabled = false;
                     }
                 });
 
-                // Fade in new elements
-                currentSequence.Append(dialogText.DOFade(1, fadeDuration));
-                currentSequence.Join(speakerName.DOFade(1, fadeDuration));
-                if (speakerImage.enabled)
+                currentSequence.Append(_dialogText.DOFade(1, _fadeDuration));
+                currentSequence.Join(_speakerName.DOFade(1, _fadeDuration));
+                if (_speakerImage.enabled)
                 {
-                    currentSequence.Join(speakerImage.DOFade(1, fadeDuration));
+                    currentSequence.Join(_speakerImage.DOFade(1, _fadeDuration));
                 }
 
-                // Wait for sequence to complete
                 yield return currentSequence.WaitForCompletion();
 
-                // Wait for mouse click with cooldown
-                yield return new WaitUntil(() => Input.GetMouseButtonDown(0) && Time.time - lastClickTime > clickCooldown);
-                lastClickTime = Time.time;
-                yield return null; // Wait one frame
+                // Вместо просто ожидания клика, добавим возможность пропуска диалога по Escape
+                bool clickedOrSkipped = false;
+                while (!clickedOrSkipped)
+                {
+                    if (Input.GetMouseButtonDown(0) && Time.time - lastClickTime > _clickCooldown)
+                    {
+                        lastClickTime = Time.time;
+                        clickedOrSkipped = true;
+                    }
+                    else if (Input.GetKeyDown(_skipKey) ||_isSkip)
+                    {
+                        isDialogActive = false;
+                        clickedOrSkipped = true;
+                        OnDialogComplete?.Invoke();
+                        break;
+                    }
+                    yield return null;
+                }
+
+                if (!isDialogActive)
+                    break;
 
                 characterTextIndices[dialog.publicName]++;
             }
 
-            // Exit if no more text to display
-            if (!anyTextRemaining)
+            // Если диалог завершён, затем затухаем и вызовем событие
+            if (!anyTextRemaining || !isDialogActive)
+            {
+                currentSequence = DOTween.Sequence();
+                currentSequence.Append(_dialogText.DOFade(0, _fadeDuration));
+                currentSequence.Join(_speakerName.DOFade(0, _fadeDuration));
+                currentSequence.Join(_speakerImage.DOFade(0, _fadeDuration));
+                yield return currentSequence.WaitForCompletion();
+
+                isDialogActive = false;
+
+                OnDialogComplete?.Invoke(); // Вызов события завершения диалога
+
+                yield break;
+            }
+        
+
+        // Exit if no more text to display
+        if (!anyTextRemaining)
             {
                 // Fade out all elements before exiting
                 currentSequence = DOTween.Sequence();
-                currentSequence.Append(dialogText.DOFade(0, fadeDuration));
-                currentSequence.Join(speakerName.DOFade(0, fadeDuration));
-                currentSequence.Join(speakerImage.DOFade(0, fadeDuration));
+                currentSequence.Append(_dialogText.DOFade(0, _fadeDuration));
+                currentSequence.Join(_speakerImage.DOFade(0, _fadeDuration));
+                currentSequence.Join(_speakerImage.DOFade(0, _fadeDuration));
                 yield return currentSequence.WaitForCompletion();
 
                 isDialogActive = false;
