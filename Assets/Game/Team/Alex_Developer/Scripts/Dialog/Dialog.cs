@@ -12,7 +12,7 @@ using System;
 
 public class Dialog : MonoBehaviour
 {
-    public static Action OnDialogComplete;
+    public Action OnDialogComplete;
 
     [SerializeField] private KeyCode _skipKey;
     [SerializeField] private Button _skipButton;
@@ -136,6 +136,8 @@ public class Dialog : MonoBehaviour
                         isDialogActive = false;
                         clickedOrSkipped = true;
                         OnDialogComplete?.Invoke();
+                        gameObject.SetActive(false);
+                        StopCoroutine(ShowText());
                         break;
                     }
                     yield return null;
