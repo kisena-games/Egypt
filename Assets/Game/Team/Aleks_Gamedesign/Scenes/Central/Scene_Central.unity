@@ -215,10 +215,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6774934446834206196, guid: d07e363df9bcff74b903a7d639ac02e7, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1188,6 +1184,7 @@ MonoBehaviour:
   - {fileID: 1151543209}
   - {fileID: 1803741231}
   - {fileID: 1529618972}
+  _playerAnimator: {fileID: 1516253032}
   _dialog: {fileID: 5831764}
 --- !u!135 &641855743
 SphereCollider:
@@ -1913,6 +1910,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 887785248}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1516253032 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1490635247212771202, guid: e53a80bf140af9848bf9960b610a486f, type: 3}
+  m_PrefabInstance: {fileID: 32873090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1529618972 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7217971387693410402, guid: dbced6f779fb8674299b6de2e935869a, type: 3}

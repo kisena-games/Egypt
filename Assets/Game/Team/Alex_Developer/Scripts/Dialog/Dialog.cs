@@ -21,8 +21,8 @@ public class Dialog : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _speakerName;
     [SerializeField] private Image _speakerImage;
     [SerializeField] private string _playerName = "Говард";
-    [SerializeField] private float _clickCooldown = 0.2f;
-    [SerializeField] private float _fadeDuration = 0.5f; // Duration for fade in/out effects
+    [SerializeField] private float _clickCooldown = 0.01f;
+    [SerializeField] private float _fadeDuration = 0.2f; // Duration for fade in/out effects
 
     private Dictionary<string, int> characterTextIndices = new Dictionary<string, int>();
     private Sequence currentSequence;
@@ -35,25 +35,24 @@ public class Dialog : MonoBehaviour
 
     private void OnEnable()
     {
+        _skipButton.interactable = true;
         
-        if (_skipButton != null)
-            _skipButton.onClick.AddListener(OnSkipButtonPressed);
+        
+        // Reset any necessary dialog state here, for example:
+        characterTextIndices.Clear(); // Assuming characterTextIndices needs to be reset
+        isDialogActive = true;
+        _isSkip = false;
+        _dialogText.DOFade(1, 0);
+        _speakerName.DOFade(1, 0); 
+        _speakerImage.DOFade(1, 0); 
 
-        _dialogText.alpha = 0f;
-        _speakerName.alpha = 0f;
-        _speakerImage.color = new Color(1, 1, 1, 0);
-
+        // Start the ShowText coroutine
         StartCoroutine(ShowText());
     }
-    private void Update()
-    {
-        Cursor.lockState = CursorLockMode.None;
-    }
+    
     private void OnDisable()
     {
-        Time.timeScale = 1f;
-        if (_skipButton != null)
-            _skipButton.onClick.RemoveListener(OnSkipButtonPressed);
+        
         StopCoroutine(ShowText());
         currentSequence?.Kill();
     }
@@ -80,6 +79,7 @@ public class Dialog : MonoBehaviour
 
         while (isDialogActive)
         {
+            _skipButton.onClick.AddListener(OnSkipButtonPressed);
             bool anyTextRemaining = false;
 
             foreach (var dialog in _dialogSequence)
@@ -98,7 +98,8 @@ public class Dialog : MonoBehaviour
                 currentSequence.Join(_speakerName.DOFade(0, _fadeDuration / 2));
                 currentSequence.Join(_speakerImage.DOFade(0, _fadeDuration / 2));
 
-                currentSequence.AppendCallback(() => {
+                currentSequence.AppendCallback(() =>
+                {
                     _dialogText.text = dialog.texts[currentIndex].text;
                     _speakerName.text = dialog.publicName;
 
@@ -131,7 +132,7 @@ public class Dialog : MonoBehaviour
                         lastClickTime = Time.time;
                         clickedOrSkipped = true;
                     }
-                    else if (Input.GetKeyDown(_skipKey) ||_isSkip)
+                    else if (Input.GetKeyDown(_skipKey) || _isSkip)
                     {
                         isDialogActive = false;
                         clickedOrSkipped = true;
@@ -159,24 +160,9 @@ public class Dialog : MonoBehaviour
                 yield return currentSequence.WaitForCompletion();
 
                 isDialogActive = false;
-
+                _isSkip = false;
                 OnDialogComplete?.Invoke(); // Вызов события завершения диалога
 
-                yield break;
-            }
-        
-
-        // Exit if no more text to display
-        if (!anyTextRemaining)
-            {
-                // Fade out all elements before exiting
-                currentSequence = DOTween.Sequence();
-                currentSequence.Append(_dialogText.DOFade(0, _fadeDuration));
-                currentSequence.Join(_speakerImage.DOFade(0, _fadeDuration));
-                currentSequence.Join(_speakerImage.DOFade(0, _fadeDuration));
-                yield return currentSequence.WaitForCompletion();
-
-                isDialogActive = false;
                 yield break;
             }
         }
