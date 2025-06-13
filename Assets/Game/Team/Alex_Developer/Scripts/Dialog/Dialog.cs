@@ -35,9 +35,10 @@ public class Dialog : MonoBehaviour
 
     private void OnEnable()
     {
-        _skipButton.interactable = true;
-        
-        
+
+        _skipButton.GetComponentInChildren<TextMeshProUGUI>().text = $"Пропустить: {_skipKey}";
+        _skipButton.onClick.AddListener(OnSkipButtonPressed);
+
         // Reset any necessary dialog state here, for example:
         characterTextIndices.Clear(); // Assuming characterTextIndices needs to be reset
         isDialogActive = true;
@@ -79,7 +80,7 @@ public class Dialog : MonoBehaviour
 
         while (isDialogActive)
         {
-            _skipButton.onClick.AddListener(OnSkipButtonPressed);
+            
             bool anyTextRemaining = false;
 
             foreach (var dialog in _dialogSequence)
