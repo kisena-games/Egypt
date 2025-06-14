@@ -4,6 +4,23 @@ using UnityEngine.SceneManagement;
 public class Portal : MonoBehaviour
 {
     [SerializeField] private int _sceneIndex = 1;
+    [SerializeField] private GameObject _portalParticles;
+    [SerializeField] private Dialog _dialog;
+    private BoxCollider _boxCollider;
+    private void Awake()
+    {
+        _portalParticles.SetActive(false);
+        _boxCollider = GetComponent<BoxCollider>();
+        _boxCollider.enabled = false;
+    }
+    private void OnEnable()
+    {
+        _dialog.OnDialogComplete += OnDialogFinished;
+    }
+    private void OnDisable()
+    {
+        _dialog.OnDialogComplete -= OnDialogFinished;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -12,7 +29,11 @@ public class Portal : MonoBehaviour
             LoadNextLevel();
         }
     }
-
+    private void OnDialogFinished()
+    {
+        _portalParticles.SetActive(true);
+        _boxCollider.enabled = true;
+    }
     private void LoadNextLevel()
     {
         if (_sceneIndex < SceneManager.sceneCountInBuildSettings)

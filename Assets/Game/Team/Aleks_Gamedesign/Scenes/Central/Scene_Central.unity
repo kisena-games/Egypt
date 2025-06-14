@@ -1178,7 +1178,6 @@ MonoBehaviour:
   _scriptsForPause:
   - {fileID: 544625498}
   - {fileID: 1151543209}
-  - {fileID: 1803741231}
   - {fileID: 1529618972}
   _playerAnimator: {fileID: 1516253032}
   _dialog: {fileID: 5831764}
@@ -1645,6 +1644,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1087783910 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 772916932574172582, guid: 003a81393608f52489b7de202075a7de, type: 3}
+  m_PrefabInstance: {fileID: 7683839378793040625}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1143771708
 GameObject:
   m_ObjectHideFlags: 0
@@ -2388,17 +2392,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1803741231 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8744253014085715247, guid: 003a81393608f52489b7de202075a7de, type: 3}
-  m_PrefabInstance: {fileID: 7683839378793040625}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22a7a4c320a323641b9590695c98c631, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1854746871
 GameObject:
   m_ObjectHideFlags: 0
@@ -11852,12 +11845,24 @@ PrefabInstance:
       value: 0.59
       objectReference: {fileID: 0}
     - target: {fileID: 8744253014085715247, guid: 003a81393608f52489b7de202075a7de, type: 3}
+      propertyPath: _dialog
+      value: 
+      objectReference: {fileID: 5831764}
+    - target: {fileID: 8744253014085715247, guid: 003a81393608f52489b7de202075a7de, type: 3}
       propertyPath: _sceneIndex
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8744253014085715247, guid: 003a81393608f52489b7de202075a7de, type: 3}
+      propertyPath: _portalParticles
+      value: 
+      objectReference: {fileID: 1087783910}
     - target: {fileID: 9193968909497295854, guid: 003a81393608f52489b7de202075a7de, type: 3}
       propertyPath: m_Name
       value: Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193968909497295854, guid: 003a81393608f52489b7de202075a7de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
