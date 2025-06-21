@@ -5,21 +5,21 @@ public class Fresco : MonoBehaviour, IInteractable
 {
     [SerializeField] private PuzzleEnumType _puzzleToInteract;
     [SerializeField] private Light _light;
-
+    [SerializeField] private NewOutline _outline;
     public bool IsActivated { get; private set; }
 
-    private Outline _outline;
+    
 
     private void Awake()
     {
-        _outline = GetComponent<Outline>();
+        //_outline = GetComponent<Outline>();
     }
 
     public void Highlight(bool isActive)
     {
         if (_outline != null && !IsActivated)
         {
-            _outline.enabled = isActive;
+            _outline.Enabled = isActive;
         }
     }
 
@@ -33,7 +33,7 @@ public class Fresco : MonoBehaviour, IInteractable
             {
                 inventory.RemoveActiveItem();
                 IsActivated = true;
-                _outline.enabled = false;
+                _outline.Enabled = false;
                 _light.enabled = true;
             }
         }

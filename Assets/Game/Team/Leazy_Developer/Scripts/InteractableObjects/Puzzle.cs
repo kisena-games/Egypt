@@ -5,18 +5,18 @@ public class Puzzle : MonoBehaviour, IInteractable
 {
     [SerializeField] private PuzzleSO _puzzleSO;
 
-    private Outline _outline;
+    [SerializeField] private NewOutline _outline;
 
     private void Awake()
     {
-        _outline = GetComponent<Outline>();
+        //_outline = GetComponent<Outline>();
     }
 
     public void Highlight(bool isActive)
     {
         if (_outline != null)
         {
-            _outline.enabled = isActive;
+            _outline.Enabled = isActive;
         }
     }
 
