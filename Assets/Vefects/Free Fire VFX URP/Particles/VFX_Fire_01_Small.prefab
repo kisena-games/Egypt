@@ -14677,7 +14677,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  emitterVelocityMode: 1
+  emitterVelocityMode: 0
   looping: 1
   prewarm: 1
   playOnAwake: 1
@@ -15234,7 +15234,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 1000
+    maxNumParticles: 10
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -15947,9 +15947,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0.33333334, b: 0, a: 0.8980392}
-        key1: {r: 1, g: 0.5833334, b: 0, a: 1}
-        key2: {r: 1, g: 0.33333334, b: 0, a: 0.9137255}
+        key0: {r: 1, g: 0.97560436, b: 0.80784315, a: 0.8980392}
+        key1: {r: 1, g: 0.9426221, b: 0.7882353, a: 1}
+        key2: {r: 1, g: 0.90809846, b: 0.7490196, a: 0.9137255}
         key3: {r: 1, g: 0.33333334, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -15957,7 +15957,7 @@ ParticleSystem:
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
         ctime1: 19619
-        ctime2: 65396
+        ctime2: 65535
         ctime3: 65396
         ctime4: 0
         ctime5: 0
@@ -18468,7 +18468,7 @@ ParticleSystem:
     rangeCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 4
       minScalar: 1
       maxCurve:
         serializedVersion: 2
