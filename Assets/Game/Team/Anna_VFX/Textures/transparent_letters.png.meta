@@ -1,0 +1,2239 @@
+fileFormatVersion: 2
+guid: 0f144999c26ba9245bace88990158290
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: transparent_words_0
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1770
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72febdabf7e4f5f4c8e7d21a0b4141ea
+      internalID: -400063768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_1
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1770
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d26a1d218e3bc848a1534cda09382b5
+      internalID: -95999535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_2
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 1770
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d868d0647f06a54a84fa24aa46e0d08
+      internalID: -1491075262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_3
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1770
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8840582470849534eb9216049ff76acc
+      internalID: -2096855552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_4
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 1770
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f23f0084d49c84a9d24856b62833f5
+      internalID: 894291297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_5
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 1770
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 393cc5b75974d45439db39511e86991d
+      internalID: 2088112948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_6
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 1770
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b7a1669024c2e45a09b0264e347d16
+      internalID: -1888530288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_7
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 1770
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb22d6bd08bdfda4a8f7a4bef9617dfe
+      internalID: -1832211398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_8
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 1770
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d1dc21c576467747a71ea8c1e28044e
+      internalID: 1199318789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_9
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 1770
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18fb56c0d05498c468a6fede435b5e6b
+      internalID: 458727162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_10
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1556
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c262f4a1168dc04d953d2cefdcdb77f
+      internalID: 62072403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_11
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1556
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbfebc1c873fff345bf8023b3f9d69fd
+      internalID: -1633078463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_12
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 1556
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2d275604c8c674c90c9dfd1f702793
+      internalID: -1822832632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_13
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1556
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a27d29f194e330742a33cec06f1b54cb
+      internalID: 227095199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_14
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 1556
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde9710f366f4af4987f24f8ee02ee01
+      internalID: 262554955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_15
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 1556
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4d09dda94d82343a6d15ebe8018442
+      internalID: 1350190755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_16
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 1556
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8d7370da3e8c848b767f55dbd03587
+      internalID: -331710070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_17
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 1556
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec46695487e2844296c11afb092fbee
+      internalID: -1860692236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_18
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 1556
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f99b42db0209fc4e963849eac782c2c
+      internalID: -178873374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_19
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 1556
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30fbbf7a62fdd34a86b8549788ac4f8
+      internalID: 536408766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_20
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1342
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b1adf31707d4d4cb18d9b3fb66593e
+      internalID: 448060824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_21
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1342
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a220c289f06a96438db7e5301ed018c
+      internalID: -1229883752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_22
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 1342
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e681d3b4a0ee9140a5136f2614a0cf5
+      internalID: 325604524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_23
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1342
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a5e0c6c28fe3d438fc020c358e372c
+      internalID: -1338250181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_24
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 1342
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f475ccd0d467e0b40b5e90563367f02e
+      internalID: -866608067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_25
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 1342
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83714e7e10a94c74b9357d3da39f87b6
+      internalID: 1745879996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_26
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 1342
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d26ea99f2b624429a5d83e80ecfbb8
+      internalID: 1204291979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_27
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 1342
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8134c409fd6d9c14f959a1781efde14e
+      internalID: 117463221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_28
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 1342
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb90b1c7e896e234d8a5ccfbfddf458c
+      internalID: -657717858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_29
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 1342
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3683e387657b6bd4da01c30fa7c030eb
+      internalID: 1696163466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_30
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1128
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faded1dcbc0db3e478506c44758e9c6d
+      internalID: -1719942124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_31
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1128
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b21eef6c8cadcb46bf75f165fb2c967
+      internalID: -1330652345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_32
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 1128
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc17c71c08058774399e2cd0286bb215
+      internalID: 631124562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_33
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1128
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853c38c180c4f414eb8a9245014ed25e
+      internalID: -1800493658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_34
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 1128
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2bfc3c64871a448818befb3b346933
+      internalID: 1619481418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_35
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 1128
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd923aa43e76f64d9e9484098b5d71d
+      internalID: 580836570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_36
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 1128
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9ec77ccc58a2c489d109cb16a18af7
+      internalID: 7854802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_37
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 1128
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b9e98377bc929c41a0da4f1341dfe90
+      internalID: 217706700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_38
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 1128
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0077c5d60fd57224bb254b72518be235
+      internalID: 565079962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_39
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 1128
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb8815d933547a42bffd41b4553f7e1
+      internalID: 469977289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_40
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 914
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738e8da1c7d93a34c991d941f71bc095
+      internalID: 589371412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_41
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 914
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7654f3ada57a21b47b1ebb8afcbce001
+      internalID: 936223325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_42
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 914
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf13ab292c256d4f8f41ba448439d85
+      internalID: -1931959328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_43
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 914
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a71ad8f2ca43d46bc4881919b27466
+      internalID: -1776383512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_44
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 914
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b32dc05ab8198f4e88eb6b952dc93dd
+      internalID: 214043853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_45
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 914
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b05acb91234e349ad630fbed853ec1
+      internalID: 1272663999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_46
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 914
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8267b4b78f2c12a41bb7a1a0ff573795
+      internalID: 1491894514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_47
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 914
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e5bbd91e7c3d945bd8911ca08e1a2c
+      internalID: -751118538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_48
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 914
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74b35c1bc4b1974c91ef331f0c84a40
+      internalID: 1703491569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_49
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 914
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6782392e00075845adc3b262600c776
+      internalID: -543778405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_50
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 700
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd5e7b277f556384ba9e5ddef85b0331
+      internalID: 52964988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_51
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 700
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63fb592c73084ae49bd94c6b48e8418f
+      internalID: -1403985448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_52
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 700
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d2b2cbb37b6d84b8ffcb44d72d326b
+      internalID: 724963393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_53
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 700
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db5804d3d026044798b78849bc9a1ff
+      internalID: -486939597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_54
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 700
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f149eb07af876e41ab4b088d0f41bcb
+      internalID: 982376453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_55
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 700
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf21fc7f48b7b104c849a6fce469fc62
+      internalID: 2077396890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_56
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 700
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc50141eac1c8645921307393a6907e
+      internalID: -769265555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_57
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 700
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcaadcdc0cdb8e543af8b2545c4a9531
+      internalID: -761540955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_58
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 700
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d751cc3d2d46b40a5d286d1cfa2b4c
+      internalID: 549431703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_59
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 700
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776a0c3d305090043959cc5b7a5888c4
+      internalID: -1080860904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_60
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 486
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22312bd3055d5274d9d5bc4fb55c2535
+      internalID: 759081128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_61
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 486
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a99b3451d30764aa11a32c7e758b54
+      internalID: 651645620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_62
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 486
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7650cb19ca2e2474aa5f8e3bd7bc2e1a
+      internalID: -1626316048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_63
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 486
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0256ed571a1531d4bb9e4181c60f5b00
+      internalID: 2107789522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_64
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 486
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf421e6004a3474998695724f7b3340
+      internalID: -1850527677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_65
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 486
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a152514316c7f41a02872adde218f9
+      internalID: -1870325737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_66
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 486
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3034e52398992984dadab2202cca625a
+      internalID: 2098118141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_67
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 486
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aea4f776ff93b642913c721cb69dda3
+      internalID: -36081462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_68
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 486
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 954637b829df4c74db0ebf38214f3dd1
+      internalID: 930820492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_69
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 486
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11513c6db72d62f4d963eed488a1ac7e
+      internalID: 1794252255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_70
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 272
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd82cfca7025344bbe22f2dd8b2c267
+      internalID: 1638928076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_71
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 272
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 412f40bfb3c175c4889aaf59b3b378d6
+      internalID: -956751548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_72
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 272
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f01267d9c7a6a994892d9496f4036566
+      internalID: -1692806176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_73
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 272
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f39f56e5a93c74dbe7024909791f2e
+      internalID: 793841349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_74
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 272
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8724d02e92c98054e83e3066a0f32ae6
+      internalID: -477528739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_75
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 272
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcae337a6a625874ebbf25743da1f6a2
+      internalID: -734932420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_76
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 272
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7913a3f3ce2c25d4188e6666e10b0ac9
+      internalID: -856510132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_77
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 272
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ce8c4519b97eb4a992735a8676ff3d
+      internalID: 1099603512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_78
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 272
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f504ae018a9eb814389b46ea55c8566e
+      internalID: 177477081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_79
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 272
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d49e069df0cab4f84d4cda321893f9
+      internalID: 116540606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_80
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 58
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5714405a33eec274490386fa1bbc7392
+      internalID: -1065278777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_81
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 58
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa06f9d2f209dbe47a8f91c93f5384d4
+      internalID: 409123653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_82
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 58
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d4948c976f4d12429fce5aac7c7c984
+      internalID: -191954003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_83
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 58
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b64c739f901174bbcaf8ad303416dd
+      internalID: 1321963256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_84
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 58
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff6b60ed56bd544bbd2a36552544b44
+      internalID: -12947735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_85
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 58
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9795b2b284df0c74e9b0110da83a01fc
+      internalID: 597190945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_86
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 58
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02c1ecbca1fffa498bab5976749f7f7
+      internalID: -1412738476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_87
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 58
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3228cff2c1c9ef64ba2fcf441696aec8
+      internalID: -790880443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_88
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 58
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6115b680d6fd5dd4cbbf6d96546602ee
+      internalID: -1069537494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transparent_words_89
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 58
+        width: 187
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d3790e3b0a63a548be75aed528acaa3
+      internalID: 665277914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2332336f1b6d38e4bac0b4b325f0a932
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      transparent_words_0: -400063768
+      transparent_words_1: -95999535
+      transparent_words_10: 62072403
+      transparent_words_11: -1633078463
+      transparent_words_12: -1822832632
+      transparent_words_13: 227095199
+      transparent_words_14: 262554955
+      transparent_words_15: 1350190755
+      transparent_words_16: -331710070
+      transparent_words_17: -1860692236
+      transparent_words_18: -178873374
+      transparent_words_19: 536408766
+      transparent_words_2: -1491075262
+      transparent_words_20: 448060824
+      transparent_words_21: -1229883752
+      transparent_words_22: 325604524
+      transparent_words_23: -1338250181
+      transparent_words_24: -866608067
+      transparent_words_25: 1745879996
+      transparent_words_26: 1204291979
+      transparent_words_27: 117463221
+      transparent_words_28: -657717858
+      transparent_words_29: 1696163466
+      transparent_words_3: -2096855552
+      transparent_words_30: -1719942124
+      transparent_words_31: -1330652345
+      transparent_words_32: 631124562
+      transparent_words_33: -1800493658
+      transparent_words_34: 1619481418
+      transparent_words_35: 580836570
+      transparent_words_36: 7854802
+      transparent_words_37: 217706700
+      transparent_words_38: 565079962
+      transparent_words_39: 469977289
+      transparent_words_4: 894291297
+      transparent_words_40: 589371412
+      transparent_words_41: 936223325
+      transparent_words_42: -1931959328
+      transparent_words_43: -1776383512
+      transparent_words_44: 214043853
+      transparent_words_45: 1272663999
+      transparent_words_46: 1491894514
+      transparent_words_47: -751118538
+      transparent_words_48: 1703491569
+      transparent_words_49: -543778405
+      transparent_words_5: 2088112948
+      transparent_words_50: 52964988
+      transparent_words_51: -1403985448
+      transparent_words_52: 724963393
+      transparent_words_53: -486939597
+      transparent_words_54: 982376453
+      transparent_words_55: 2077396890
+      transparent_words_56: -769265555
+      transparent_words_57: -761540955
+      transparent_words_58: 549431703
+      transparent_words_59: -1080860904
+      transparent_words_6: -1888530288
+      transparent_words_60: 759081128
+      transparent_words_61: 651645620
+      transparent_words_62: -1626316048
+      transparent_words_63: 2107789522
+      transparent_words_64: -1850527677
+      transparent_words_65: -1870325737
+      transparent_words_66: 2098118141
+      transparent_words_67: -36081462
+      transparent_words_68: 930820492
+      transparent_words_69: 1794252255
+      transparent_words_7: -1832211398
+      transparent_words_70: 1638928076
+      transparent_words_71: -956751548
+      transparent_words_72: -1692806176
+      transparent_words_73: 793841349
+      transparent_words_74: -477528739
+      transparent_words_75: -734932420
+      transparent_words_76: -856510132
+      transparent_words_77: 1099603512
+      transparent_words_78: 177477081
+      transparent_words_79: 116540606
+      transparent_words_8: 1199318789
+      transparent_words_80: -1065278777
+      transparent_words_81: 409123653
+      transparent_words_82: -191954003
+      transparent_words_83: 1321963256
+      transparent_words_84: -12947735
+      transparent_words_85: 597190945
+      transparent_words_86: -1412738476
+      transparent_words_87: -790880443
+      transparent_words_88: -1069537494
+      transparent_words_89: 665277914
+      transparent_words_9: 458727162
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
