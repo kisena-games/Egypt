@@ -7,6 +7,7 @@ public class Barrier : MonoBehaviour
 {
     [SerializeField] private List<Fresco> _frescosToActivateBarrier;
     [SerializeField] private List<BarrierConfiguration> _resultConfigurations;
+    public static Action OnUnlockBarier;
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class Barrier : MonoBehaviour
         {
             config.resultObject.SetActive(config.isNeedActive);
         }
-
+        OnUnlockBarier?.Invoke();
         Destroy(gameObject);
     }
 
