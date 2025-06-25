@@ -6249,14 +6249,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!1 &390349453 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7131401307255788800, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
-  m_PrefabInstance: {fileID: 622521919}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &390349456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5862613817031353211, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
+  m_PrefabInstance: {fileID: 622521919}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &390349458 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 4242800559370839950, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
   m_PrefabInstance: {fileID: 622521919}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &390546942 stripped
@@ -9124,13 +9124,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1314344006}
     m_Modifications:
+    - target: {fileID: 271108154157415045, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 271108154157415045, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2114397613233509854, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
       propertyPath: '_frescos.Array.data[0]'
       value: 
       objectReference: {fileID: 1619084463}
     - target: {fileID: 2114397613233509854, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
+      propertyPath: _particleSystems.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2114397613233509854, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
+      propertyPath: '_particleSystems.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1006000639}
+    - target: {fileID: 2114397613233509854, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
+      propertyPath: '_particleSystems.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1397271768}
+    - target: {fileID: 2114397613233509854, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
       propertyPath: _resultConfigurations.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2114397613233509854, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
       propertyPath: _frescosToActivateBarrier.Array.size
@@ -9141,9 +9161,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1619084463}
     - target: {fileID: 2114397613233509854, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
+      propertyPath: _resultConfigurationsComponent.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2114397613233509854, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
+      propertyPath: _resultConfigurations.Array.data[0].component
+      value: 
+      objectReference: {fileID: 390349458}
+    - target: {fileID: 2114397613233509854, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
+      propertyPath: _resultConfigurations.Array.data[0].isNeedActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2114397613233509854, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
       propertyPath: _resultConfigurations.Array.data[0].resultObject
       value: 
-      objectReference: {fileID: 390349453}
+      objectReference: {fileID: 0}
+    - target: {fileID: 2114397613233509854, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
+      propertyPath: _resultConfigurationsComponent.Array.data[0].component
+      value: 
+      objectReference: {fileID: 390349458}
+    - target: {fileID: 3548607863980304261, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548607863980304261, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5862613817031353211, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
       propertyPath: m_LocalPosition.x
       value: 58.12
@@ -9187,6 +9231,10 @@ PrefabInstance:
     - target: {fileID: 7131401307255788800, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
       propertyPath: m_Name
       value: Barrier
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445978410991379322, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
+      propertyPath: looping
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12082,6 +12130,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cccf87494759d2d41b42fdb83201c03a, type: 3}
   m_PrefabInstance: {fileID: 996578899}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1006000639 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8445978410991379322, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
+  m_PrefabInstance: {fileID: 622521919}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1009693841
 PrefabInstance:
@@ -15902,6 +15955,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8d17c7bfce46bee438ba3ab26605466c, type: 3}
   m_PrefabInstance: {fileID: 1364420261}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1397271768 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 271108154157415045, guid: fe7a4b51f037dd54489c3b600ee5a677, type: 3}
+  m_PrefabInstance: {fileID: 622521919}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1400660517
 GameObject:
@@ -24196,11 +24254,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player_AudioSource: {fileID: 99651293}
   _vfx_AudioSource: {fileID: 759609572}
-  _sandAudioClip: {fileID: 8300000, guid: 8f7de5cccac9b5c4e8c898ab27e04e12, type: 3}
-  _waterAudioClip: {fileID: 8300000, guid: 17fe3f8ca58bf074ebe7a3773e6dd185, type: 3}
-  _stoneAudioClip: {fileID: 8300000, guid: b53b4c7aeb1e11342a9205ad591f3149, type: 3}
   _isSandScene: 0
   _waterTag: water
+  _sandClip: {fileID: 8300000, guid: 8f7de5cccac9b5c4e8c898ab27e04e12, type: 3}
+  _waterClip: {fileID: 8300000, guid: 17fe3f8ca58bf074ebe7a3773e6dd185, type: 3}
+  _stoneClip: {fileID: 8300000, guid: b53b4c7aeb1e11342a9205ad591f3149, type: 3}
+  _barierClip: {fileID: 8300000, guid: 24abed8f3836bbe4b97034131da76f7d, type: 3}
+  _interactableClip: {fileID: 8300000, guid: 2421eb2dc02a006468c4a84270677e50, type: 3}
+  _frescoClip: {fileID: 8300000, guid: 46381a957c4beca498b778d67c9f5eaf, type: 3}
 --- !u!1001 &2056145515
 PrefabInstance:
   m_ObjectHideFlags: 0

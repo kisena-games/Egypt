@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Fresco : MonoBehaviour, IInteractable
 {
+    public static Action OnInteractFresco;
     [SerializeField] private PuzzleEnumType _puzzleToInteract;
     [SerializeField] private Light _light;
     [SerializeField] private NewOutline _outline;
@@ -35,6 +37,7 @@ public class Fresco : MonoBehaviour, IInteractable
                 IsActivated = true;
                 _outline.Enabled = false;
                 _light.enabled = true;
+                OnInteractFresco?.Invoke();
             }
         }
     }

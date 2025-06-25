@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 
 public class Puzzle : MonoBehaviour, IInteractable
 {
+    public static Action OnInteractInventory;
+
     [SerializeField] private PuzzleSO _puzzleSO;
 
     [SerializeField] private NewOutline _outline;
@@ -25,6 +28,7 @@ public class Puzzle : MonoBehaviour, IInteractable
         if (inventory.Add(_puzzleSO))
         {
             Destroy(gameObject);
+            OnInteractInventory?.Invoke();
         }
     }
 }
