@@ -4,10 +4,12 @@ using UnityEngine;
 public class MummyController : MonoBehaviour
 {
     [SerializeField] private float _timeToCalmDownSmell = 5f;
+    [SerializeField] private float _timeToCalmDownNoise = 5f;
 
     private MummyStateMachine _mummyStateMachine;
 
     private Coroutine _smellCoroutine;
+    private Coroutine _noiseCoroutine;
 
     private void Awake()
     {
@@ -37,11 +39,20 @@ public class MummyController : MonoBehaviour
     public void TriggerNoiseRadiusEnter()
     {
         Debug.Log("NOISE RADIUS ENTER");
+
+        if (_smellCoroutine != null)
+        {
+            StopCoroutine(_noiseCoroutine);
+            _noiseCoroutine = null;
+        }
+
+        _mummyStateMachine.SetNoise(true);
     }
 
     public void TriggerNoiseRadiusExit()
     {
         Debug.Log("NOISE RADIUS EXIT");
+        _noiseCoroutine = StartCoroutine(WaitToNoiseCalmDown());
     }
 
     public void TriggerSenseRadiusEnter()
@@ -59,5 +70,11 @@ public class MummyController : MonoBehaviour
         yield return new WaitForSeconds(_timeToCalmDownSmell);
 
         _mummyStateMachine.SetSmell(false);
+    }
+    IEnumerator WaitToNoiseCalmDown()
+    {
+        yield return new WaitForSeconds(_timeToCalmDownNoise);
+
+        _mummyStateMachine.SetNoise(false);
     }
 }

@@ -5755,8 +5755,8 @@ Mesh:
     firstVertex: 0
     vertexCount: 4
     localAABB:
-      m_Center: {x: 1.6168785, y: 0.000007685764, z: 0.47285223}
-      m_Extent: {x: 0.49054384, y: 0, z: 2.4719753}
+      m_Center: {x: 1.6004791, y: 0.000007685764, z: 0.47285223}
+      m_Extent: {x: 0.5069432, y: 0, z: 2.4719753}
   m_Shapes:
     vertices: []
     shapes: []
@@ -5835,7 +5835,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 192
-    _typelessdata: bc2b903f1bf2003744e3ffbf000000000000803f000000000000803f0000000000000000000080bfbc2b903f44e3ffbfbc2b903f1bf200370e783c40000000000000803f000000000000803f0000000000000000000080bfbc2b903f0e783c4002e006401bf2003744e3ffbf000000000000803f000000000000803f0000000000000000000080bf02e0064044e3ffbf02e006401bf200370e783c40000000000000803f000000000000803f0000000000000000000080bf02e006400e783c40
+    _typelessdata: fcf88b3f1bf2003744e3ffbf000000000000803f000000000000803f0000000000000000000080bffcf88b3f44e3ffbffcf88b3f1bf200370e783c40000000000000803f000000000000803f0000000000000000000080bffcf88b3f0e783c4002e006401bf2003744e3ffbf000000000000803f000000000000803f0000000000000000000080bf02e0064044e3ffbf02e006401bf200370e783c40000000000000803f000000000000803f0000000000000000000080bf02e006400e783c40
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -5889,8 +5889,8 @@ Mesh:
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
-    m_Center: {x: 1.6168785, y: 0.000007685764, z: 0.47285223}
-    m_Extent: {x: 0.49054384, y: 0, z: 2.4719753}
+    m_Center: {x: 1.6004791, y: 0.000007685764, z: 0.47285223}
+    m_Extent: {x: 0.5069432, y: 0, z: 2.4719753}
   m_MeshUsageFlags: 0
   m_CookingOptions: 30
   m_BakedConvexCollisionMesh: 
@@ -13926,9 +13926,9 @@ MonoBehaviour:
   m_Shape:
     rid: 6311350153006285005
   m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 10091
-  m_Size: {x: 0.9810877, y: 0, z: 4.9439507}
-  m_LocalCenter: {x: 1.6168785, y: 0.000007688999, z: 0.4728523}
+  m_UnmodifiedMeshVersion: 10161
+  m_Size: {x: 1.0138865, y: 0, z: 4.9439507}
+  m_LocalCenter: {x: 1.6004791, y: 0.000007688999, z: 0.4728523}
   references:
     version: 2
     RefIds:
@@ -13973,13 +13973,13 @@ MonoBehaviour:
   - m_Vertices: 03000000
   m_SharedTextures: []
   m_Positions:
-  - {x: 1.1263347, y: 0.000007685764, z: -1.9991231}
-  - {x: 1.1263347, y: 0.000007685764, z: 2.9448276}
+  - {x: 1.0935359, y: 0.000007685764, z: -1.9991231}
+  - {x: 1.0935359, y: 0.000007685764, z: 2.9448276}
   - {x: 2.1074224, y: 0.000007685764, z: -1.9991231}
   - {x: 2.1074224, y: 0.000007685764, z: 2.9448276}
   m_Textures0:
-  - {x: 1.1263347, y: -1.9991231}
-  - {x: 1.1263347, y: 2.9448276}
+  - {x: 1.0935359, y: -1.9991231}
+  - {x: 1.0935359, y: 2.9448276}
   - {x: 2.1074224, y: -1.9991231}
   - {x: 2.1074224, y: 2.9448276}
   m_Textures2: []
@@ -13998,7 +13998,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 374579295}
-  m_VersionIndex: 10091
+  m_VersionIndex: 10161
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

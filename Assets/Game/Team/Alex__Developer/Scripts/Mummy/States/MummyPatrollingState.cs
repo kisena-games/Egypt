@@ -10,7 +10,7 @@ public class MummyPatrollingState:State
 
     private Transform[] _patrollingPoints;
     private float _timer;
-    private float _currentSpeed;
+    private float _currentSpeed=1f;
 
     private int _pointIndex;
 
@@ -19,11 +19,12 @@ public class MummyPatrollingState:State
         _animator = animator;
         _agent = agent;
         _patrollingPoints = patrollingPoints;
-        _currentSpeed = _agent.speed;
     }
     
     public override void OnEnter()
     {
+        _agent.speed = _currentSpeed;
+        _animator.speed = _currentSpeed;
         float minDistance = Mathf.Infinity;
         for (int i = 0; i < _patrollingPoints.Length; i++)
         {
