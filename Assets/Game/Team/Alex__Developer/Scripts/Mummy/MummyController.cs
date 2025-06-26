@@ -25,7 +25,7 @@ public class MummyController : MonoBehaviour
             StopCoroutine(_smellCoroutine);
             _smellCoroutine = null;
         }
-
+        _mummyStateMachine.SetReturn(false);
         _mummyStateMachine.SetSmell(true);
     }
 
@@ -34,6 +34,7 @@ public class MummyController : MonoBehaviour
         Debug.Log("SMELL RADIUS EXIT");
 
         _smellCoroutine = StartCoroutine(WaitToSmellCalmDown());
+        
     }
 
     public void TriggerNoiseRadiusEnter()
@@ -58,18 +59,23 @@ public class MummyController : MonoBehaviour
     public void TriggerSenseRadiusEnter()
     {
         Debug.Log("SENSE RADIUS ENTER");
+
     }
 
     public void TriggerSenseRadiusExit()
     {
         Debug.Log("SENSE RADIUS EXIT");
+
     }
 
+  
+  
     IEnumerator WaitToSmellCalmDown()
     {
         yield return new WaitForSeconds(_timeToCalmDownSmell);
 
         _mummyStateMachine.SetSmell(false);
+        _mummyStateMachine.SetReturn(true);
     }
     IEnumerator WaitToNoiseCalmDown()
     {

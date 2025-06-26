@@ -45,8 +45,8 @@ public class MummyPatrollingState:State
 
     public override void OnExit()
     {
-        _animator.SetBool(WALK_ANIM_KEY, false);
-        _agent.isStopped = true;
+        //_animator.SetBool(WALK_ANIM_KEY, false);
+        //_agent.isStopped = true;
     }
 
     public override void OnUpdate()

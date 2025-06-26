@@ -15,6 +15,8 @@ public class MummyStateMachine : MonoBehaviour
 
     [Header("For Attack")]
     [SerializeField] private Transform _player;
+    [Header("For return")]
+    [SerializeField] private Transform _returnPoint;
 
     private NavMeshAgent _agent;
     private StateMachine _stateMachine;
@@ -24,6 +26,7 @@ public class MummyStateMachine : MonoBehaviour
     private bool _isFeelPlayerNoise = false;
     private bool _isFeelPlayerSense = false;
 
+    private bool _isFeelPlayerReturn = false;
 
     private void Awake()
     {
@@ -43,10 +46,15 @@ public class MummyStateMachine : MonoBehaviour
         State idleState = new MummyIdleState(_animator);
         State patrollingState = new MummyPatrollingState(_animator, _agent, _patrollingPoints);
         State attackState = new MummyAttackState(_animator, _agent, _player);
+        State returningState = new MummyReturningState(_animator, _agent, _returnPoint);
 
 
         idleState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => _isFeelPlayerSmell)));
-        patrollingState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => !_isFeelPlayerSmell)));
+        patrollingState.AddTransition(new StateTransition(returningState, new FuncStateCondition(() => !_isFeelPlayerSmell)));
+
+        returningState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => !_isFeelPlayerReturn)));
+        returningState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => _isFeelPlayerReturn)));
+
         patrollingState.AddTransition(new StateTransition(attackState, new FuncStateCondition(() => _isFeelPlayerNoise)));
         attackState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => !_isFeelPlayerNoise)));
 
@@ -58,11 +66,17 @@ public class MummyStateMachine : MonoBehaviour
         Debug.Log("SetSmell: " + isFeelPlayerSmell.ToString());
 
         _isFeelPlayerSmell = isFeelPlayerSmell;
+ 
     }
     public void SetNoise(bool isFeelPlayerNoise)
     {
-        Debug.Log("SetSmell: " + isFeelPlayerNoise.ToString());
+        Debug.Log("SetNoise: " + isFeelPlayerNoise.ToString());
         _isFeelPlayerNoise = isFeelPlayerNoise;
+    }
+    public void SetReturn(bool isFeelPlayerReturn)
+    {
+        Debug.Log("SetReturn: " + isFeelPlayerReturn.ToString());
+        _isFeelPlayerReturn = isFeelPlayerReturn;
     }
 }
         

@@ -1,6 +1,7 @@
 using Unity.Services.Analytics;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class MummyReturningState : State
 {
@@ -9,37 +10,37 @@ public class MummyReturningState : State
     private readonly Animator _animator;
     private readonly NavMeshAgent _agent;
 
-    private Transform[] _patrollingPoints;
+    private Transform _startPoint;
 
-    public MummyReturningState(Animator animator, NavMeshAgent agent, Transform[] patrollingPoints)
+    public MummyReturningState(Animator animator, NavMeshAgent agent, Transform startPoint)
     {
         _animator = animator;
         _agent = agent;
-        _patrollingPoints = patrollingPoints;
+        _startPoint = startPoint;
     }
 
     public override void OnEnter()
     {
-        Transform closestPoint = null;
-
-        float minDistance = Mathf.Infinity;
-        foreach (Transform point in _patrollingPoints)
-        {
-            float distance = Vector3.Distance(_agent.transform.position, point.position);
-
-            if (distance < minDistance)
-            {
-                minDistance = distance;
-                closestPoint = point;
-            }
-        }
-
+        _agent.isStopped = false;
         _animator.SetBool(WALK_ANIM_KEY, true);
-        _agent.destination = closestPoint.position;
+        
+    }
+    public override void OnUpdate()
+    {
+
+        _agent.SetDestination(_startPoint.localPosition);
+        Debug.Log("w");
+        if (Vector3.Distance(_agent.transform.localPosition, _startPoint.localPosition) <0.5f)
+        {
+            _animator.SetBool(WALK_ANIM_KEY, false);
+            _agent.isStopped = true;
+            OnExit();
+        }
+        
     }
 
     public override void OnExit()
     {
-        _animator.SetBool(WALK_ANIM_KEY, false);
+       
     }
 }
