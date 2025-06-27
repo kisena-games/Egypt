@@ -9,7 +9,7 @@ public class MummyAttackState : State
     private readonly NavMeshAgent _agent;
 
     private Transform _player;
-    private float _currentSpeed=10f;
+    private float _currentSpeed=5f;
 
 
     public MummyAttackState(Animator animator, NavMeshAgent agent, Transform player)
@@ -23,7 +23,7 @@ public class MummyAttackState : State
     public override void OnEnter()
     {
         _agent.speed= _currentSpeed;
-        _animator.speed= _currentSpeed*0.5F;
+        _animator.speed= _currentSpeed;
         _animator.SetBool(WALK_ANIM_KEY, true);
         _agent.isStopped = false;
         GoToNextDestination();

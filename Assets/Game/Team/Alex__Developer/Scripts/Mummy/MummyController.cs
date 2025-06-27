@@ -25,7 +25,7 @@ public class MummyController : MonoBehaviour
             StopCoroutine(_smellCoroutine);
             _smellCoroutine = null;
         }
-        _mummyStateMachine.SetReturn(false);
+
         _mummyStateMachine.SetSmell(true);
     }
 
@@ -75,7 +75,7 @@ public class MummyController : MonoBehaviour
         yield return new WaitForSeconds(_timeToCalmDownSmell);
 
         _mummyStateMachine.SetSmell(false);
-        _mummyStateMachine.SetReturn(true);
+
     }
     IEnumerator WaitToNoiseCalmDown()
     {

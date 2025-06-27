@@ -1,4 +1,5 @@
-public enum PuzzleEnumType
+
+public enum PuzzleEnumTypeT
 {
     None,
     BlueCube,

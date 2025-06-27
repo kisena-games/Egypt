@@ -50,10 +50,6 @@ public class MummyStateMachine : MonoBehaviour
 
 
         idleState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => _isFeelPlayerSmell)));
-        patrollingState.AddTransition(new StateTransition(returningState, new FuncStateCondition(() => !_isFeelPlayerSmell)));
-
-        returningState.AddTransition(new StateTransition(idleState, new FuncStateCondition(() => !_isFeelPlayerReturn)));
-        returningState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => _isFeelPlayerReturn)));
 
         patrollingState.AddTransition(new StateTransition(attackState, new FuncStateCondition(() => _isFeelPlayerNoise)));
         attackState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => !_isFeelPlayerNoise)));
@@ -73,11 +69,7 @@ public class MummyStateMachine : MonoBehaviour
         Debug.Log("SetNoise: " + isFeelPlayerNoise.ToString());
         _isFeelPlayerNoise = isFeelPlayerNoise;
     }
-    public void SetReturn(bool isFeelPlayerReturn)
-    {
-        Debug.Log("SetReturn: " + isFeelPlayerReturn.ToString());
-        _isFeelPlayerReturn = isFeelPlayerReturn;
-    }
+
 }
         
     

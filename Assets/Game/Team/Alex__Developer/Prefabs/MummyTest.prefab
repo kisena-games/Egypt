@@ -2188,6 +2188,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 1941233597125917433}
   _patrollingWay: {fileID: 0}
+  _player: {fileID: 0}
+  _returnPoint: {fileID: 0}
 --- !u!114 &8504719192823836947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2213,6 +2215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeToCalmDownSmell: 5
+  _timeToCalmDownNoise: 5
 --- !u!1 &7395023237323874210
 GameObject:
   m_ObjectHideFlags: 0
