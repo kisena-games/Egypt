@@ -7,12 +7,7 @@ public class Portal : MonoBehaviour
     [SerializeField] private GameObject _portalParticles;
     [SerializeField] private Dialog _dialog;
     private BoxCollider _boxCollider;
-    private void Awake()
-    {/*
-        _portalParticles.SetActive(false);
-        _boxCollider = GetComponent<BoxCollider>();
-        _boxCollider.enabled = false;*/
-    }
+   
     private void OnEnable()
     {
         if (_dialog != null)
@@ -33,6 +28,8 @@ public class Portal : MonoBehaviour
     }
     private void OnDialogFinished()
     {
+        _boxCollider = GetComponent<BoxCollider>();
+        _boxCollider.enabled = false;
         _portalParticles.SetActive(true);
         _boxCollider.enabled = true;
     }

@@ -6,6 +6,7 @@ using UnityEngine;
 public class OverlapSphereTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject _dialogObject;
+    [SerializeField] private AudioSource _playerAudio;
     [SerializeField] private List<MonoBehaviour> _scriptsForPause;
     [SerializeField] private Animator _playerAnimator;
     [SerializeField] private Dialog _dialog;
@@ -46,12 +47,10 @@ public class OverlapSphereTrigger : MonoBehaviour
         foreach (var script in _scriptsForPause)
         {
             script.enabled = !value;
+            _playerAudio.enabled= !value;
             
         }
-        if (value)
-        {
-            _playerAnimator.enabled = false;
-        }
-        else _playerAnimator.enabled = true;
+        _playerAnimator.enabled = !value;
+        
     }
 }
