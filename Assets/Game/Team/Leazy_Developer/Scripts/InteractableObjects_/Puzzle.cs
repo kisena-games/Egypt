@@ -27,8 +27,8 @@ public class Puzzle : MonoBehaviour, IInteractable
     {
         if (inventory.Add(_puzzleSO))
         {
-            Destroy(gameObject);
             OnInteractInventory?.Invoke();
+            gameObject.SetActive(false);
         }
     }
 }

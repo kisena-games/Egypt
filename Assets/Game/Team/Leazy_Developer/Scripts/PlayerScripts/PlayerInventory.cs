@@ -28,7 +28,7 @@ public class PlayerInventory : MonoBehaviour
 
     private void UpdateActiveItem()
     {
-        float scrollDelta = Input.mouseScrollDelta.y;
+        float scrollDelta = -Input.mouseScrollDelta.y;
 
         if (scrollDelta == 1f)
         {
