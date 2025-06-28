@@ -10,7 +10,11 @@ public class Barrier : MonoBehaviour
     [SerializeField] private List<ParticleSystem> _particleSystems;
     [SerializeField] private List<BarrierConfiguration> _resultConfigurations;
     [SerializeField] private List<BarrierConfigurationComponent> _resultConfigurationsComponent;
+    [Header("For fast test")]
+    [SerializeField] private bool isCanUnlock;
     public static Action OnUnlockBarrier;
+
+    
 
     private void Start()
     {
@@ -48,7 +52,7 @@ public class Barrier : MonoBehaviour
 
     private IEnumerator UpdateBarrier()
     {
-        bool isCanUnlock = false;
+        isCanUnlock = false;
 
         while (!isCanUnlock)
         {

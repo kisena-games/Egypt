@@ -13,6 +13,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 740b8c5f725d00a418eb96c4847162d5, type: 2}
     - target: {fileID: 1957356212076353638, guid: efa7f283230c7ab47abc50ad91c5a98b, type: 3}
+      propertyPath: _outline
+      value: 
+      objectReference: {fileID: 5982576848855866526}
+    - target: {fileID: 1957356212076353638, guid: efa7f283230c7ab47abc50ad91c5a98b, type: 3}
       propertyPath: _puzzleToInteract
       value: 5
       objectReference: {fileID: 0}
@@ -30,31 +34,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297011726509823784, guid: efa7f283230c7ab47abc50ad91c5a98b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 85.21
       objectReference: {fileID: 0}
     - target: {fileID: 5297011726509823784, guid: efa7f283230c7ab47abc50ad91c5a98b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.68
       objectReference: {fileID: 0}
     - target: {fileID: 5297011726509823784, guid: efa7f283230c7ab47abc50ad91c5a98b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 35.373196
       objectReference: {fileID: 0}
     - target: {fileID: 5297011726509823784, guid: efa7f283230c7ab47abc50ad91c5a98b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5297011726509823784, guid: efa7f283230c7ab47abc50ad91c5a98b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5297011726509823784, guid: efa7f283230c7ab47abc50ad91c5a98b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5297011726509823784, guid: efa7f283230c7ab47abc50ad91c5a98b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5297011726509823784, guid: efa7f283230c7ab47abc50ad91c5a98b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -62,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297011726509823784, guid: efa7f283230c7ab47abc50ad91c5a98b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 5297011726509823784, guid: efa7f283230c7ab47abc50ad91c5a98b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -80,8 +84,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: GreenSphere_BigFresco
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9138985202553051029, guid: efa7f283230c7ab47abc50ad91c5a98b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3234514261486684676, guid: efa7f283230c7ab47abc50ad91c5a98b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5982576848855866526}
   m_SourcePrefab: {fileID: 100100000, guid: efa7f283230c7ab47abc50ad91c5a98b, type: 3}
+--- !u!1 &988714148861110381 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3234514261486684676, guid: efa7f283230c7ab47abc50ad91c5a98b, type: 3}
+  m_PrefabInstance: {fileID: 2403747728310772329}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5982576848855866526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988714148861110381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf7ceee5fe7f784c9452616fc212b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enabled: 0
+  _Texture2D: {fileID: 2800000, guid: 4ad01ee100698464ca9de1f39d8f906d, type: 3}
+  _USE_TEXTURE: 1
+  _Color: {r: 0.1548594, g: 0.3773585, b: 0.21516289, a: 1}
+  _TextureVolume: 10
+  _Angle: 2
+  _speed: 2
+  _Emission: 20
+  _Period: 0.7

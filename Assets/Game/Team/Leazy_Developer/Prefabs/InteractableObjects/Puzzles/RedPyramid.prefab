@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 819222622305407409}
   - component: {fileID: 5226422046515485636}
   - component: {fileID: 6935777737019225978}
+  - component: {fileID: 5353552401013621683}
   m_Layer: 0
   m_Name: Pyramid
   m_TagString: Untagged
@@ -86,6 +87,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5353552401013621683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5214679311330196928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf7ceee5fe7f784c9452616fc212b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enabled: 0
+  _Texture2D: {fileID: 2800000, guid: 4ad01ee100698464ca9de1f39d8f906d, type: 3}
+  _USE_TEXTURE: 1
+  _Color: {r: 1, g: 0.015686274, b: 0.09163017, a: 1}
+  _TextureVolume: 10
+  _Angle: 2
+  _speed: 5
+  _Emission: 20
+  _Period: 0.5
 --- !u!1001 &3046203127198287026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96,15 +118,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2432542218356868380, guid: da6ddb05067514b4dbcbfe8052f279c5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 570.95
       objectReference: {fileID: 0}
     - target: {fileID: 2432542218356868380, guid: da6ddb05067514b4dbcbfe8052f279c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.363
       objectReference: {fileID: 0}
     - target: {fileID: 2432542218356868380, guid: da6ddb05067514b4dbcbfe8052f279c5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 608
       objectReference: {fileID: 0}
     - target: {fileID: 2432542218356868380, guid: da6ddb05067514b4dbcbfe8052f279c5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -134,6 +156,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3336495714562321529, guid: da6ddb05067514b4dbcbfe8052f279c5, type: 3}
+      propertyPath: _outline
+      value: 
+      objectReference: {fileID: 5353552401013621683}
     - target: {fileID: 3336495714562321529, guid: da6ddb05067514b4dbcbfe8052f279c5, type: 3}
       propertyPath: _puzzleSO
       value: 

@@ -8,18 +8,20 @@ public class Portal : MonoBehaviour
     [SerializeField] private Dialog _dialog;
     private BoxCollider _boxCollider;
     private void Awake()
-    {
+    {/*
         _portalParticles.SetActive(false);
         _boxCollider = GetComponent<BoxCollider>();
-        _boxCollider.enabled = false;
+        _boxCollider.enabled = false;*/
     }
     private void OnEnable()
     {
-        _dialog.OnDialogComplete += OnDialogFinished;
+        if (_dialog != null)
+            _dialog.OnDialogComplete += OnDialogFinished;
     }
     private void OnDisable()
     {
-        _dialog.OnDialogComplete -= OnDialogFinished;
+        if(_dialog != null)
+            _dialog.OnDialogComplete -= OnDialogFinished;
     }
 
     private void OnTriggerEnter(Collider other)
