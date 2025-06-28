@@ -15,8 +15,8 @@ public class MummyStateMachine : MonoBehaviour
 
     [Header("For Attack")]
     [SerializeField] private Transform _player;
-    [Header("For return")]
-    [SerializeField] private Transform _returnPoint;
+    [Header("For loose in level")]
+    [SerializeField] private int _sceneIndex;
 
     private NavMeshAgent _agent;
     private StateMachine _stateMachine;
@@ -26,7 +26,7 @@ public class MummyStateMachine : MonoBehaviour
     private bool _isFeelPlayerNoise = false;
     private bool _isFeelPlayerSense = false;
 
-    private bool _isFeelPlayerReturn = false;
+    private bool _isFeelPlayerKill = false;
 
     private void Awake()
     {
@@ -46,13 +46,14 @@ public class MummyStateMachine : MonoBehaviour
         State idleState = new MummyIdleState(_animator);
         State patrollingState = new MummyPatrollingState(_animator, _agent, _patrollingPoints);
         State attackState = new MummyAttackState(_animator, _agent, _player);
-        State returningState = new MummyReturningState(_animator, _agent, _returnPoint);
+        State killState = new MummyKillingState(_animator, _agent, _sceneIndex);
 
 
         idleState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => _isFeelPlayerSmell)));
 
         patrollingState.AddTransition(new StateTransition(attackState, new FuncStateCondition(() => _isFeelPlayerNoise)));
         attackState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => !_isFeelPlayerNoise)));
+        attackState.AddTransition(new StateTransition(killState, new FuncStateCondition(() => _isFeelPlayerKill)));
 
         _stateMachine = new StateMachine(idleState);
     }
@@ -68,6 +69,11 @@ public class MummyStateMachine : MonoBehaviour
     {
         Debug.Log("SetNoise: " + isFeelPlayerNoise.ToString());
         _isFeelPlayerNoise = isFeelPlayerNoise;
+    }
+    public void SetKill(bool isFeelPlayerKill)
+    {
+        Debug.Log("SetKill: " + isFeelPlayerKill.ToString());
+        _isFeelPlayerKill = isFeelPlayerKill;
     }
 
 }
