@@ -24,7 +24,7 @@ public class MummyPatrollingState:State
     public override void OnEnter()
     {
         _agent.speed = _currentSpeed;
-        _animator.speed = _currentSpeed;
+        _animator.speed = _currentSpeed*2F;
         float minDistance = Mathf.Infinity;
         for (int i = 0; i < _patrollingPoints.Length; i++)
         {
