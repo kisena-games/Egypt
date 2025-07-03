@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class NewOutline : MonoBehaviour
 {
+    [SerializeField] private Material _material;
     public bool Enabled = false;
 
     [Header("Shader properties")]
@@ -35,10 +36,8 @@ public class NewOutline : MonoBehaviour
             return;
         }
 
-        string scriptPath = AssetDatabase.GetAssetPath(MonoScript.FromMonoBehaviour(this));
-        string scriptDirectory = System.IO.Path.GetDirectoryName(scriptPath);
-        string materialPath = System.IO.Path.Combine(scriptDirectory, "Outline.mat");
-        outlineMaterial = AssetDatabase.LoadAssetAtPath<Material>(materialPath);
+        
+        outlineMaterial = _material;
 
         if (outlineMaterial == null)
         {

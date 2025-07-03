@@ -2747,6 +2747,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PurplePyramid_BigFresco
       objectReference: {fileID: 0}
+    - target: {fileID: 8060390441030481512, guid: 5c6e2a60f9106ac4e8714f90b35dfa1e, type: 3}
+      propertyPath: _material
+      value: 
+      objectReference: {fileID: 2100000, guid: 11237d7ddbe0e074a9c76f945842be1a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4654,6 +4658,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1262674271}
     m_Modifications:
+    - target: {fileID: 2323225885240113488, guid: 803ed270eb0ffe04cb6e2f1cbd7d93bd, type: 3}
+      propertyPath: _material
+      value: 
+      objectReference: {fileID: 2100000, guid: 11237d7ddbe0e074a9c76f945842be1a, type: 2}
     - target: {fileID: 4028533618999659466, guid: 803ed270eb0ffe04cb6e2f1cbd7d93bd, type: 3}
       propertyPath: m_Name
       value: GreenSphere
@@ -5932,6 +5940,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 220049412}
     m_Modifications:
+    - target: {fileID: 2825391259068137482, guid: 44161bab6598267439d4f5e9da0f84b9, type: 3}
+      propertyPath: _material
+      value: 
+      objectReference: {fileID: 2100000, guid: 11237d7ddbe0e074a9c76f945842be1a, type: 2}
     - target: {fileID: 5467994834021364675, guid: 44161bab6598267439d4f5e9da0f84b9, type: 3}
       propertyPath: m_Name
       value: BlueCube_BigFresco
@@ -17694,6 +17706,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PurplePyramid
       objectReference: {fileID: 0}
+    - target: {fileID: 7091908480471696813, guid: c7f2a4bcd72143b439bdebd2c7f462d3, type: 3}
+      propertyPath: _material
+      value: 
+      objectReference: {fileID: 2100000, guid: 11237d7ddbe0e074a9c76f945842be1a, type: 2}
     - target: {fileID: 8951761223977511742, guid: c7f2a4bcd72143b439bdebd2c7f462d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 79.46
@@ -18515,6 +18531,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 220049412}
     m_Modifications:
+    - target: {fileID: 5982576848855866526, guid: a4b34940b431c9349b2ed0cc1521e692, type: 3}
+      propertyPath: _material
+      value: 
+      objectReference: {fileID: 2100000, guid: 11237d7ddbe0e074a9c76f945842be1a, type: 2}
     - target: {fileID: 7555096012586480961, guid: a4b34940b431c9349b2ed0cc1521e692, type: 3}
       propertyPath: m_LocalPosition.x
       value: 85.21
@@ -18632,7 +18652,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5274919729185185021, guid: 26b852b613c203c498c215d941f53bf4, type: 3}
+      propertyPath: _material
+      value: 
+      objectReference: {fileID: 2100000, guid: 11237d7ddbe0e074a9c76f945842be1a, type: 2}
+    m_RemovedComponents:
+    - {fileID: 7079149431359424252, guid: 26b852b613c203c498c215d941f53bf4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -20625,6 +20650,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4389318826471824903, guid: cc40580e6782b8c4fa511227328df42b, type: 3}
+      propertyPath: _material
+      value: 
+      objectReference: {fileID: 2100000, guid: 11237d7ddbe0e074a9c76f945842be1a, type: 2}
     - target: {fileID: 7023598256093940709, guid: cc40580e6782b8c4fa511227328df42b, type: 3}
       propertyPath: m_Name
       value: BlueCube
@@ -23220,6 +23249,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7155952774301974206, guid: e0a92d2ef86db2641a1970fd524e6112, type: 3}
+      propertyPath: _material
+      value: 
+      objectReference: {fileID: 2100000, guid: 11237d7ddbe0e074a9c76f945842be1a, type: 2}
     - target: {fileID: 7158154203952907773, guid: e0a92d2ef86db2641a1970fd524e6112, type: 3}
       propertyPath: m_Name
       value: RedSphere
