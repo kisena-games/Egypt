@@ -547,6 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edf7ceee5fe7f784c9452616fc212b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _material: {fileID: 0}
   Enabled: 0
   _Texture2D: {fileID: 2800000, guid: 4ad01ee100698464ca9de1f39d8f906d, type: 3}
   _USE_TEXTURE: 1
@@ -604,6 +605,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5832228765146220462, guid: d793c7f40772b044d91511ba487ba287, type: 3}
+      propertyPath: _material
+      value: 
+      objectReference: {fileID: 2100000, guid: 11237d7ddbe0e074a9c76f945842be1a, type: 2}
     - target: {fileID: 6465162684018070449, guid: d793c7f40772b044d91511ba487ba287, type: 3}
       propertyPath: m_Name
       value: PurpleCube
@@ -1218,6 +1223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edf7ceee5fe7f784c9452616fc212b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _material: {fileID: 0}
   Enabled: 0
   _Texture2D: {fileID: 2800000, guid: 4ad01ee100698464ca9de1f39d8f906d, type: 3}
   _USE_TEXTURE: 1
@@ -3270,13 +3276,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6954214776182308136, guid: 017ec3af064302c458fe4c2655e6978c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 698688708}
   m_SourcePrefab: {fileID: 100100000, guid: 017ec3af064302c458fe4c2655e6978c, type: 3}
 --- !u!4 &698688706 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7918503625434905403, guid: 017ec3af064302c458fe4c2655e6978c, type: 3}
   m_PrefabInstance: {fileID: 698688705}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &698688707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6954214776182308136, guid: 017ec3af064302c458fe4c2655e6978c, type: 3}
+  m_PrefabInstance: {fileID: 698688705}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &698688708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698688707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf7ceee5fe7f784c9452616fc212b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _material: {fileID: 0}
+  Enabled: 0
+  _Texture2D: {fileID: 2800000, guid: 4ad01ee100698464ca9de1f39d8f906d, type: 3}
+  _USE_TEXTURE: 1
+  _Color: {r: 1, g: 0.024591789, b: 0.015686274, a: 1}
+  _TextureVolume: 10
+  _Angle: 2
+  _speed: 1
+  _Emission: 20
+  _Period: 0.5
 --- !u!1 &698862620 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3143945384248434086, guid: 4b3038927656da74692cf8d48ba06ccd, type: 3}
@@ -3953,13 +3989,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6172567158395169907, guid: a906482a4d8a0464cb3e654b43d5a68a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 803926395}
   m_SourcePrefab: {fileID: 100100000, guid: a906482a4d8a0464cb3e654b43d5a68a, type: 3}
 --- !u!4 &803926393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1116966397521621700, guid: a906482a4d8a0464cb3e654b43d5a68a, type: 3}
   m_PrefabInstance: {fileID: 803926392}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &803926394 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6172567158395169907, guid: a906482a4d8a0464cb3e654b43d5a68a, type: 3}
+  m_PrefabInstance: {fileID: 803926392}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &803926395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803926394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf7ceee5fe7f784c9452616fc212b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _material: {fileID: 0}
+  Enabled: 0
+  _Texture2D: {fileID: 2800000, guid: 4ad01ee100698464ca9de1f39d8f906d, type: 3}
+  _USE_TEXTURE: 1
+  _Color: {r: 0.015686274, g: 0.73425645, b: 1, a: 1}
+  _TextureVolume: 10
+  _Angle: 2
+  _speed: 1
+  _Emission: 20
+  _Period: 0.5
 --- !u!1001 &808280024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7565,6 +7631,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PurplePyramid
       objectReference: {fileID: 0}
+    - target: {fileID: 7091908480471696813, guid: c7f2a4bcd72143b439bdebd2c7f462d3, type: 3}
+      propertyPath: _material
+      value: 
+      objectReference: {fileID: 2100000, guid: 11237d7ddbe0e074a9c76f945842be1a, type: 2}
     - target: {fileID: 8951761223977511742, guid: c7f2a4bcd72143b439bdebd2c7f462d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.165405
@@ -10368,6 +10438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edf7ceee5fe7f784c9452616fc212b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _material: {fileID: 0}
   Enabled: 0
   _Texture2D: {fileID: 2800000, guid: 4ad01ee100698464ca9de1f39d8f906d, type: 3}
   _USE_TEXTURE: 1
@@ -16237,6 +16308,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7155952774301974206, guid: e0a92d2ef86db2641a1970fd524e6112, type: 3}
+      propertyPath: _material
+      value: 
+      objectReference: {fileID: 2100000, guid: 11237d7ddbe0e074a9c76f945842be1a, type: 2}
     - target: {fileID: 7158154203952907773, guid: e0a92d2ef86db2641a1970fd524e6112, type: 3}
       propertyPath: m_Name
       value: RedSphere
@@ -16337,6 +16412,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GreenCube
       objectReference: {fileID: 0}
+    - target: {fileID: 3811078275108258302, guid: e95a98543e7fbee44a5aba198d685f2f, type: 3}
+      propertyPath: _material
+      value: 
+      objectReference: {fileID: 2100000, guid: 11237d7ddbe0e074a9c76f945842be1a, type: 2}
     - target: {fileID: 5538194600920722067, guid: e95a98543e7fbee44a5aba198d685f2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.6042023
