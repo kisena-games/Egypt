@@ -4910,8 +4910,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ad1d1c2921f924ba7f2e21d13156bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frescos:
+  _frescosToActivateBarrier:
   - {fileID: 0}
+  _particleSystems:
+  - {fileID: 8445978410991379322}
+  - {fileID: 271108154157415045}
+  _resultConfigurations: []
+  _resultConfigurationsComponent:
+  - isNeedActive: 0
+    component: {fileID: 4242800559370839950}
+  isCanUnlock: 0
 --- !u!1001 &72394365689343653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4973,6 +4981,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198748979371217952, guid: 1a365141225c22e49a7bb976869b22a8, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198748979371217952, guid: 1a365141225c22e49a7bb976869b22a8, type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198748979371217952, guid: 1a365141225c22e49a7bb976869b22a8, type: 3}
       propertyPath: UVModule.flipU
       value: 0
       objectReference: {fileID: 0}
@@ -5004,5 +5020,10 @@ PrefabInstance:
 --- !u!4 &76457560887682939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4103333903944158, guid: 1a365141225c22e49a7bb976869b22a8, type: 3}
+  m_PrefabInstance: {fileID: 72394365689343653}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &271108154157415045 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198748979371217952, guid: 1a365141225c22e49a7bb976869b22a8, type: 3}
   m_PrefabInstance: {fileID: 72394365689343653}
   m_PrefabAsset: {fileID: 0}

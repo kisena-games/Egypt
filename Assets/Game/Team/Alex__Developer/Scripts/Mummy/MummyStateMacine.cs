@@ -22,9 +22,9 @@ public class MummyStateMachine : MonoBehaviour
     private StateMachine _stateMachine;
     private Transform[] _patrollingPoints;
 
-    private bool _isFeelPlayerSmell = false;
-    private bool _isFeelPlayerNoise = false;
-    private bool _isFeelPlayerKill = false;
+    public bool isFeelPlayerSmell { get; private set; }
+    public bool isFeelPlayerNoise { get; private set; }
+    public bool isFeelPlayerKill { get; private set; }
 
     private void Awake()
     {
@@ -45,14 +45,15 @@ public class MummyStateMachine : MonoBehaviour
         State idleState = new MummyIdleState(_animator);
         State patrollingState = new MummyPatrollingState(_animator, _agent, _patrollingPoints);
         State attackState = new MummyAttackState(_animator, _agent, _player);
-        State killState = new MummyKillingState(_animator, _agent, _sceneIndex);
+        State killState = new MummyKillingState(_animator, _agent);
 
 
-        idleState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => _isFeelPlayerSmell)));
+        idleState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => isFeelPlayerSmell)));
 
-        patrollingState.AddTransition(new StateTransition(attackState, new FuncStateCondition(() => _isFeelPlayerNoise)));
-        attackState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => !_isFeelPlayerNoise)));
-        attackState.AddTransition(new StateTransition(killState, new FuncStateCondition(() => _isFeelPlayerKill)));
+        patrollingState.AddTransition(new StateTransition(attackState, new FuncStateCondition(() => isFeelPlayerNoise)));
+        attackState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => !isFeelPlayerNoise)));
+        attackState.AddTransition(new StateTransition(killState, new FuncStateCondition(() => isFeelPlayerKill)));
+        killState.AddTransition(new StateTransition(attackState, new FuncStateCondition(() => !isFeelPlayerKill)));
         _stateMachine = new StateMachine(idleState);
     }
 
@@ -60,18 +61,18 @@ public class MummyStateMachine : MonoBehaviour
     {
         Debug.Log("SetSmell: " + isFeelPlayerSmell.ToString());
 
-        _isFeelPlayerSmell = isFeelPlayerSmell;
+        this.isFeelPlayerSmell = isFeelPlayerSmell;
  
     }
     public void SetNoise(bool isFeelPlayerNoise)
     {
         Debug.Log("SetNoise: " + isFeelPlayerNoise.ToString());
-        _isFeelPlayerNoise = isFeelPlayerNoise;
+        this.isFeelPlayerNoise = isFeelPlayerNoise;
     }
     public void SetKill(bool isFeelPlayerKill)
     {
         Debug.Log("SetKill: " + isFeelPlayerKill.ToString());
-        _isFeelPlayerKill = isFeelPlayerKill;
+        this.isFeelPlayerKill = isFeelPlayerKill;
     }
     
 }

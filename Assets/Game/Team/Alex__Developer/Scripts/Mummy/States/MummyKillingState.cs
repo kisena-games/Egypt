@@ -15,27 +15,34 @@ public class MummyKillingState : State
     private int _sceneIndex;
     private float _timeToKill=1f;
 
-    public MummyKillingState(Animator animator, NavMeshAgent agent,int sceneIndex)
+    public MummyKillingState(Animator animator, NavMeshAgent agent)
     {
         _animator = animator;
         _agent = agent;
-        _sceneIndex = sceneIndex;
+   
     }
 
     public override void OnEnter()
     {
         _agent.isStopped = true;
         _animator.SetBool(KILL_ANIM_KEY, true);
-        
+
     }
     public override void OnUpdate()
     {
+ 
         _timeToKill -= Time.deltaTime;
-        if(_timeToKill < 0 ) 
-        SceneManager.LoadScene(_sceneIndex);
+        if(_timeToKill < 0)
+        {
+            PlayerHealth.healthCount--;
+            _timeToKill = 1f;
+        } 
+        
     }
     public override void OnExit()
     {
-        
+        _agent.isStopped = false;
+        _animator.SetBool(KILL_ANIM_KEY, false);
+        _timeToKill = 1f;
     }
 }

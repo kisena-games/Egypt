@@ -11,18 +11,31 @@ public class PlayerAttacking : MonoBehaviour
     [SerializeField] private GameObject _radiuses;
     [SerializeField] private MummyStateMachine _mummyStateMacine;
     private PlayerStateMachine _playerStateMachine;
-    private bool _isMummyWait,_isScarabWait;
-
-    private void Start()
+    private bool _isMummyWait,_isScarabWait,x;
+    public bool isSpecificalMummy;
+    
+    private void OnEnable()
     {
-        _playerStateMachine = FindAnyObjectByType<PlayerStateMachine>();
+        
+        if (isSpecificalMummy)
+        {
+
+            _radiuses.SetActive(false);
+            _mummyStateMacine.SetSmell(true);
+            _mummyStateMacine.SetNoise(false);
+            _mummyStateMacine.SetKill(false);
+        }
+         _playerStateMachine = FindAnyObjectByType<PlayerStateMachine>();
     }
     private void Update()
     {
 
         if(SceneManager.GetActiveScene().buildIndex >= 5)
         {
-            if (_playerStateMachine._isStealth)
+            
+            if (_playerStateMachine.isStealth
+            && !_mummyStateMacine.isFeelPlayerKill
+            && !_mummyStateMacine.isFeelPlayerNoise)
             {
                 _radiuses.SetActive(false);
                 _mummyStateMacine.SetSmell(true);
@@ -52,7 +65,7 @@ public class PlayerAttacking : MonoBehaviour
     private IEnumerator WaitMummyAttack()
     {
         yield return new WaitForSeconds(5);
-        if (!_playerStateMachine._isStealth)
+        if (!_playerStateMachine.isStealth)
         {
             _radiuses.SetActive(true);
         }

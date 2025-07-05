@@ -2938,6 +2938,7 @@ GameObject:
   - component: {fileID: 3540574157620985836}
   - component: {fileID: 1687140186667791315}
   - component: {fileID: 1079389032663220193}
+  - component: {fileID: 9101272293111707692}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -3010,6 +3011,7 @@ MonoBehaviour:
   _groundLayers:
     serializedVersion: 2
     m_Bits: 9
+  isStealth: 0
 --- !u!114 &1687140186667791315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3038,6 +3040,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventorySize: 6
+--- !u!114 &9101272293111707692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7853256048540415587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e2bcc6ba1ed57e4a98a0ddccba02e9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneIndex: 4
+  _imageDark: {fileID: 0}
 --- !u!1 &8024066443925983385
 GameObject:
   m_ObjectHideFlags: 0

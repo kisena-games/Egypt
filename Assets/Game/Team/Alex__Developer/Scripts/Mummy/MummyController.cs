@@ -65,7 +65,7 @@ public class MummyController : MonoBehaviour
     public void TriggerSenseRadiusExit()
     {
         Debug.Log("SENSE RADIUS EXIT");
-
+        _mummyStateMachine.SetKill(false);
     }
 
   

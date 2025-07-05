@@ -2128,6 +2128,7 @@ GameObject:
   - component: {fileID: 8504719192823836947}
   - component: {fileID: 1197716421611104545}
   - component: {fileID: 8260105277863336882}
+  - component: {fileID: 6584243517791992817}
   m_Layer: 0
   m_Name: MummyTest
   m_TagString: Untagged
@@ -2232,6 +2233,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _radiuses: {fileID: 972142351945986902}
   _mummyStateMacine: {fileID: 5931303617944635439}
+  isSpecificalMummy: 0
+--- !u!136 &6584243517791992817
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7291200111824259747}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7395023237323874210
 GameObject:
   m_ObjectHideFlags: 0
@@ -2836,7 +2861,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1
+  m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4599343487155014500
 MonoBehaviour:
@@ -2850,7 +2875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dc1167357cb5f4d877d1e75c5d87b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 0.5
+  _radius: 1.5
 --- !u!1 &9031790793763361315
 GameObject:
   m_ObjectHideFlags: 0
