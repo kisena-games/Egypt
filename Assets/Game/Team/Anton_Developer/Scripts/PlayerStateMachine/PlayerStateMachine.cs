@@ -16,7 +16,7 @@ public class PlayerStateMachine : MonoBehaviour
     private CharacterController _playerController;
     private Camera _mainCamera;
     private StateMachine _stateMachine;
-    private bool _isStealth = false;
+    public bool _isStealth = false;
 
     private void Start()
     {

@@ -24,8 +24,6 @@ public class MummyStateMachine : MonoBehaviour
 
     private bool _isFeelPlayerSmell = false;
     private bool _isFeelPlayerNoise = false;
-    private bool _isFeelPlayerSense = false;
-
     private bool _isFeelPlayerKill = false;
 
     private void Awake()
@@ -39,6 +37,7 @@ public class MummyStateMachine : MonoBehaviour
     private void Update()
     {
         _stateMachine.OnUpdate();
+
     }
 
     private void InitializeStateMachine()
@@ -54,7 +53,6 @@ public class MummyStateMachine : MonoBehaviour
         patrollingState.AddTransition(new StateTransition(attackState, new FuncStateCondition(() => _isFeelPlayerNoise)));
         attackState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => !_isFeelPlayerNoise)));
         attackState.AddTransition(new StateTransition(killState, new FuncStateCondition(() => _isFeelPlayerKill)));
-
         _stateMachine = new StateMachine(idleState);
     }
 
@@ -75,7 +73,7 @@ public class MummyStateMachine : MonoBehaviour
         Debug.Log("SetKill: " + isFeelPlayerKill.ToString());
         _isFeelPlayerKill = isFeelPlayerKill;
     }
-
+    
 }
         
     

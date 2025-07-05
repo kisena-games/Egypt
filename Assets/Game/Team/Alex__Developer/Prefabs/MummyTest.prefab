@@ -2127,6 +2127,7 @@ GameObject:
   - component: {fileID: 5931303617944635439}
   - component: {fileID: 8504719192823836947}
   - component: {fileID: 1197716421611104545}
+  - component: {fileID: 8260105277863336882}
   m_Layer: 0
   m_Name: MummyTest
   m_TagString: Untagged
@@ -2217,6 +2218,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timeToCalmDownSmell: 5
   _timeToCalmDownNoise: 5
+--- !u!114 &8260105277863336882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7291200111824259747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3abbe9462b0c0241a6554689395843f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _radiuses: {fileID: 972142351945986902}
+  _mummyStateMacine: {fileID: 5931303617944635439}
 --- !u!1 &7395023237323874210
 GameObject:
   m_ObjectHideFlags: 0
