@@ -3,47 +3,78 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using DG.Tweening;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
     public static int healthCount = 3;
-    public int HealthCount;
+
     [SerializeField] private int _sceneIndex;
     [SerializeField] private Image _imageDark;
     [SerializeField] private Image _blood;
     [SerializeField] private Image _bloodBack;
     private int _preCount;
+    private float _emisson;
     private void Start()
     {
         healthCount = 3;
         _preCount= healthCount;
-        _imageDark.DOColor(new Color(0, 0, 0,0), 1f);
+        StartCoroutine(waitSceneInit());
+    }
+    private IEnumerator waitSceneInit()
+    {
+        yield return new WaitForSeconds(0.3f);
+        _imageDark.DOColor(colorBlack(0), 1f);
+    }
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        
+    }
+    private Color color(float a)
+    {
+        return new Color(1,1,1,a);
+    }
+    
+    private Color colorRed(float a)
+    {
+        return new Color(1, 0, 0, a);
+    }
+    private Color colorBlack(float a)
+    {
+        return new Color(0, 0, 0, a);
     }
     private void Update()
     {
-        if (_preCount> healthCount)
+        if (_preCount> healthCount&&!(healthCount<=0))
         {
-            _blood.DOColor(new Color(1, 1, 1, 0.5f), 0.5f)
-      .OnComplete(() => {
-          _blood.DOColor(new Color(1, 1, 1, 0), 1f);
-      });
-            _bloodBack.DOColor(new Color(1, 0, 0, 0.5f), 0.5f)
-      .OnComplete(() => {
-          _bloodBack.DOColor(new Color(1, 0, 0, 0), 1f);
-      });
+            _emisson += 0.4f;
+            _blood.DOColor(color(_emisson), 0.5f)
+                .OnComplete(() => {
+                    _blood.DOColor(color(0), 1f);
+                });
+            _bloodBack.DOColor(colorRed(_emisson), 0.5f)
+                .OnComplete(() => {
+                    _bloodBack.DOColor(colorRed(0), 1f);
+                });
             _preCount = healthCount;
-           
            
         }
         
-            
 
-        
-        HealthCount=healthCount;
         if (healthCount <= 0)
         {
             StopAllCoroutines();
-            _imageDark.DOColor(new Color(0, 0, 0, 1), 1f)
+            _imageDark.DOColor(colorBlack(1f), 0.5f)
                 .OnComplete(()=>SceneManager.LoadScene(_sceneIndex));
             
         }

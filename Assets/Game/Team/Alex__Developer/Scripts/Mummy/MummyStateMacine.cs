@@ -15,8 +15,10 @@ public class MummyStateMachine : MonoBehaviour
 
     [Header("For Attack")]
     [SerializeField] private Transform _player;
+    [SerializeField] private Collider _mummyCollider;
     [Header("For loose in level")]
     [SerializeField] private int _sceneIndex;
+    
 
     private NavMeshAgent _agent;
     private StateMachine _stateMachine;
@@ -45,7 +47,7 @@ public class MummyStateMachine : MonoBehaviour
         State idleState = new MummyIdleState(_animator);
         State patrollingState = new MummyPatrollingState(_animator, _agent, _patrollingPoints);
         State attackState = new MummyAttackState(_animator, _agent, _player);
-        State killState = new MummyKillingState(_animator, _agent);
+        State killState = new MummyKillingState(_animator, _agent,_mummyCollider);
 
 
         idleState.AddTransition(new StateTransition(patrollingState, new FuncStateCondition(() => isFeelPlayerSmell)));
