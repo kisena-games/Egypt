@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,40 +7,44 @@ public class AudioSelector : MonoBehaviour
 {
     [SerializeField] private AudioSource _player_AudioSource;
     [SerializeField] private AudioSource _vfx_AudioSource;
+    [SerializeField] private AudioSource _vfx_AudioSource2;
     [SerializeField] private bool _isSandScene;
     [SerializeField] private string _waterTag;
-    [Header("Step sounds")]
-    [SerializeField] private AudioClip _sandClip;
-    [SerializeField] private AudioClip _waterClip;
-    [SerializeField] private AudioClip _stoneClip;
-    [Header("Fx sounds")]
-    [SerializeField] private AudioClip _barierClip;
-    [SerializeField] private AudioClip _interactableClip;
-    [SerializeField] private AudioClip _frescoClip;
 
-
-
+    [SerializeField] private AudioDataSO _audioDataSO;
+ 
     private void OnEnable()
     {
         Barrier.OnUnlockBarrier += OnUnlockBarrier;
         Puzzle.OnInteractInventory += OnInteractInventory;
         Fresco.OnInteractFresco += OnInteractFresco;
+        PlayerHealth.OnMoanAudioClip += OnMoanAudioClip;
+        PlayerHealth.OnRoarAudioClip += OnRoarAudioClip;
+        MummyAttackState.OnLook += OnLook;
+        MummyKillingState.OnBit += OnBit;
     }
     private void OnDisable()
     {
         Barrier.OnUnlockBarrier -= OnUnlockBarrier;
         Puzzle.OnInteractInventory -= OnInteractInventory;
+        Fresco.OnInteractFresco -= OnInteractFresco;
+        PlayerHealth.OnMoanAudioClip -= OnMoanAudioClip;
+        PlayerHealth.OnRoarAudioClip -= OnRoarAudioClip;
+        MummyAttackState.OnLook -= OnLook;
+        MummyKillingState.OnBit -= OnBit;
     }
 
     private void Start()
     {
         if (_isSandScene)
         {
-            _player_AudioSource.clip = _sandClip;
+            _player_AudioSource.clip = _audioDataSO.sandClip.clip;
+            _player_AudioSource.volume = _audioDataSO.sandClip.volume;
         }
         else
         {
-            _player_AudioSource.clip = _stoneClip;
+            _player_AudioSource.clip = _audioDataSO.stoneClip.clip;
+            _player_AudioSource.volume = _audioDataSO.stoneClip.volume;
         }
 
     }
@@ -47,30 +52,52 @@ public class AudioSelector : MonoBehaviour
     {
         if (other.gameObject.CompareTag(_waterTag) && _isSandScene)
         {
-            _player_AudioSource.clip = _waterClip;
+            _player_AudioSource.clip = _audioDataSO.waterClip.clip;
+            _player_AudioSource.volume = _audioDataSO.waterClip.volume;
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag(_waterTag)&&_isSandScene)
         {
-            _player_AudioSource.clip = _sandClip;
+            _player_AudioSource.clip = _audioDataSO.sandClip.clip;
+            _player_AudioSource.volume = _audioDataSO.sandClip.volume;
         }
     }
     private void OnUnlockBarrier()
     {
-        _vfx_AudioSource.clip = _barierClip;
-        _vfx_AudioSource.Play();
+        FXPlay(_vfx_AudioSource, _audioDataSO.barierClip.clip, _audioDataSO.barierClip.volume);
     }
     private void OnInteractInventory()
     {
-        _vfx_AudioSource.clip = _interactableClip;
-        _vfx_AudioSource.Play();
+        FXPlay(_vfx_AudioSource, _audioDataSO.interactableClip.clip, _audioDataSO.interactableClip.volume);
     }
     private void OnInteractFresco()
     {
-        _vfx_AudioSource.clip = _frescoClip;
-        _vfx_AudioSource.Play();
+        FXPlay(_vfx_AudioSource, _audioDataSO.frescoClip.clip, _audioDataSO.frescoClip.volume);
     }
+    private void OnMoanAudioClip()
+    {
+        FXPlay(_vfx_AudioSource, _audioDataSO.hovardMoanClip.clip, _audioDataSO.hovardMoanClip.volume);
+    }
+    private void OnBit()
+    {
+        FXPlay(_vfx_AudioSource2, _audioDataSO.mummyBitClip.clip, _audioDataSO.mummyBitClip.volume);
+    }
+    private void OnRoarAudioClip()
+    {
+        FXPlay(_vfx_AudioSource, _audioDataSO.hovardRoarClip.clip, _audioDataSO.hovardRoarClip.volume);
+    }
+    private void OnLook()
+    {
+        FXPlay(_vfx_AudioSource, _audioDataSO.mummyAwakeClip.clip, _audioDataSO.mummyAwakeClip.volume);
+    }
+    private void FXPlay(AudioSource audioSource, AudioClip clip,float volume)
+    {
+        audioSource.clip = clip;
+        audioSource.volume = volume;
+        audioSource.Play();
+    }
+
 
 }

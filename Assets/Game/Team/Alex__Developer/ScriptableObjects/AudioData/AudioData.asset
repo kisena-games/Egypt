@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5f88d210fa51e49830cf77b9ac2ecc, type: 3}
+  m_Name: AudioData
+  m_EditorClassIdentifier: 
+  sandClip:
+    clip: {fileID: 8300000, guid: 8f7de5cccac9b5c4e8c898ab27e04e12, type: 3}
+    volume: 1
+  waterClip:
+    clip: {fileID: 8300000, guid: 17fe3f8ca58bf074ebe7a3773e6dd185, type: 3}
+    volume: 1
+  stoneClip:
+    clip: {fileID: 8300000, guid: b53b4c7aeb1e11342a9205ad591f3149, type: 3}
+    volume: 1
+  barierClip:
+    clip: {fileID: 8300000, guid: 24abed8f3836bbe4b97034131da76f7d, type: 3}
+    volume: 1
+  interactableClip:
+    clip: {fileID: 8300000, guid: 2421eb2dc02a006468c4a84270677e50, type: 3}
+    volume: 0.5
+  frescoClip:
+    clip: {fileID: 8300000, guid: 46381a957c4beca498b778d67c9f5eaf, type: 3}
+    volume: 1
+  hovardRoarClip:
+    clip: {fileID: 8300000, guid: 2e02961b8c9e5b94c886f5edf8ee903f, type: 3}
+    volume: 1
+  hovardMoanClip:
+    clip: {fileID: 8300000, guid: 54f2337779d1ac940b48d4e9ff8c36b0, type: 3}
+    volume: 1
+  mummyAwakeClip:
+    clip: {fileID: 8300000, guid: 4d4fb53a0ed98bd4292f06a0965cdd28, type: 3}
+    volume: 0.5
+  mummyBitClip:
+    clip: {fileID: 8300000, guid: a1342e1efc024c0429d47d0435c324c8, type: 3}
+    volume: 1

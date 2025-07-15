@@ -4,15 +4,20 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using DG.Tweening;
 using System.Collections;
+using System;
 
 public class PlayerHealth : MonoBehaviour
 {
     public static int healthCount = 3;
+    public static Action OnRoarAudioClip;
+    public static Action OnMoanAudioClip;
+
 
     [SerializeField] private int _sceneIndex;
     [SerializeField] private Image _imageDark;
     [SerializeField] private Image _blood;
     [SerializeField] private Image _bloodBack;
+
     private int _preCount;
     private float _emisson;
     private void Start()
@@ -26,20 +31,7 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         _imageDark.DOColor(colorBlack(0), 1f);
     }
-    void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        
-    }
+    
     private Color color(float a)
     {
         return new Color(1,1,1,a);
@@ -57,6 +49,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (_preCount> healthCount&&!(healthCount<=0))
         {
+            OnMoanAudioClip?.Invoke();
             _emisson += 0.4f;
             _blood.DOColor(color(_emisson), 0.5f)
                 .OnComplete(() => {
@@ -73,10 +66,12 @@ public class PlayerHealth : MonoBehaviour
 
         if (healthCount <= 0)
         {
+            OnRoarAudioClip?.Invoke();
+            Debug.Log("Audio");
             StopAllCoroutines();
-            _imageDark.DOColor(colorBlack(1f), 0.5f)
+            _imageDark.DOColor(colorBlack(1f), 1f)
                 .OnComplete(()=>SceneManager.LoadScene(_sceneIndex));
-            
+            healthCount = 3;
         }
     }
 }

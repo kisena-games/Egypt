@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class MummyAttackState : State
 {
+    public static Action OnLook;
+
     private const string RUN_ANIM_KEY = "Run";
 
     private readonly Animator _animator;
@@ -22,6 +25,7 @@ public class MummyAttackState : State
 
     public override void OnEnter()
     {
+        OnLook?.Invoke();
         _agent.speed= _currentSpeed;
         //_animator.speed= _currentSpeed * 2F;
         _animator.SetBool(RUN_ANIM_KEY, true);

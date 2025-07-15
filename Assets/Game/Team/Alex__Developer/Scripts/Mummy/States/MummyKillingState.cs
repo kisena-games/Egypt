@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Unity.Services.Analytics;
 using UnityEngine;
@@ -7,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class MummyKillingState : State
 {
+    public static Action OnBit;
+
     private const string KILL_ANIM_KEY = "Kill";
 
     private readonly Animator _animator;
@@ -26,6 +29,8 @@ public class MummyKillingState : State
 
     public override void OnEnter()
     {
+
+        OnBit?.Invoke();
         _agent.isStopped = true;
         _animator.SetBool(KILL_ANIM_KEY, true);
         _mummyCollider.enabled = false;
@@ -38,6 +43,7 @@ public class MummyKillingState : State
         _timeToKill -= Time.deltaTime;
         if(_timeToKill < 0)
         {
+            OnBit?.Invoke();
             PlayerHealth.healthCount--;
             _timeToKill = 1.5f;
         } 
