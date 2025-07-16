@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class AudioSelector : MonoBehaviour
 {
     [SerializeField] private AudioSource _player_AudioSource;
-    [SerializeField] private AudioSource _vfx_AudioSource;
-    [SerializeField] private AudioSource _vfx_AudioSource2;
+    [SerializeField] private List<AudioSource> _vfx_AudioSources;
+    
     [SerializeField] private bool _isSandScene;
     [SerializeField] private string _waterTag;
 
@@ -66,31 +66,31 @@ public class AudioSelector : MonoBehaviour
     }
     private void OnUnlockBarrier()
     {
-        FXPlay(_vfx_AudioSource, _audioDataSO.barierClip.clip, _audioDataSO.barierClip.volume);
+        FXPlay(_vfx_AudioSources[0], _audioDataSO.barierClip.clip, _audioDataSO.barierClip.volume);
     }
     private void OnInteractInventory()
     {
-        FXPlay(_vfx_AudioSource, _audioDataSO.interactableClip.clip, _audioDataSO.interactableClip.volume);
+        FXPlay(_vfx_AudioSources[0], _audioDataSO.interactableClip.clip, _audioDataSO.interactableClip.volume);
     }
     private void OnInteractFresco()
     {
-        FXPlay(_vfx_AudioSource, _audioDataSO.frescoClip.clip, _audioDataSO.frescoClip.volume);
+        FXPlay(_vfx_AudioSources[0], _audioDataSO.frescoClip.clip, _audioDataSO.frescoClip.volume);
     }
     private void OnMoanAudioClip()
     {
-        FXPlay(_vfx_AudioSource, _audioDataSO.hovardMoanClip.clip, _audioDataSO.hovardMoanClip.volume);
+        FXPlay(_vfx_AudioSources[1], _audioDataSO.hovardMoanClip.clip, _audioDataSO.hovardMoanClip.volume);
     }
     private void OnBit()
     {
-        FXPlay(_vfx_AudioSource2, _audioDataSO.mummyBitClip.clip, _audioDataSO.mummyBitClip.volume);
+        FXPlay(_vfx_AudioSources[2], _audioDataSO.mummyBitClip.clip, _audioDataSO.mummyBitClip.volume);
     }
     private void OnRoarAudioClip()
     {
-        FXPlay(_vfx_AudioSource, _audioDataSO.hovardRoarClip.clip, _audioDataSO.hovardRoarClip.volume);
+        FXPlay(_vfx_AudioSources[3], _audioDataSO.hovardRoarClip.clip, _audioDataSO.hovardRoarClip.volume);
     }
     private void OnLook()
     {
-        FXPlay(_vfx_AudioSource, _audioDataSO.mummyAwakeClip.clip, _audioDataSO.mummyAwakeClip.volume);
+        FXPlay(_vfx_AudioSources[0], _audioDataSO.mummyAwakeClip.clip, _audioDataSO.mummyAwakeClip.volume);
     }
     private void FXPlay(AudioSource audioSource, AudioClip clip,float volume)
     {
