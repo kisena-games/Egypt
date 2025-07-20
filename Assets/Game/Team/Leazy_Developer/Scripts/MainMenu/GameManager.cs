@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _fpsText;
     [SerializeField] private Toggle _toggle;
+    [SerializeField] private int _nextScene=2;
 
     private int _currentFPS = -1;
 
@@ -83,7 +84,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadTestScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(_nextScene);
     }
 
     public void ExitGame()
