@@ -10,11 +10,11 @@ public class TimerAnimation : MonoBehaviour
     private bool _isMummyRunning,_isScarabRunning;
     private void OnEnable()
     {
-        PlayerAttacking.OnMummyWait += OnMummyWait;
+        //PlayerAttacking.OnMummyWait += OnMummyWait;
     }
     private void OnDisable()
     {
-        PlayerAttacking.OnMummyWait -= OnMummyWait;
+        //PlayerAttacking.OnMummyWait -= OnMummyWait;
     }
     private void Update()
     {

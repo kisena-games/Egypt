@@ -2167,6 +2167,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Infrastructure
       objectReference: {fileID: 0}
+    - target: {fileID: 3363003771281571812, guid: 6d4921b24495e4b4aadb77fbca7079d2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8041383647384680527, guid: 6d4921b24495e4b4aadb77fbca7079d2, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -2826,6 +2830,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 41619ead3cdd38f4f89e1083c736e219, type: 3}
       propertyPath: m_Name
       value: Anubis walk
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41619ead3cdd38f4f89e1083c736e219, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
