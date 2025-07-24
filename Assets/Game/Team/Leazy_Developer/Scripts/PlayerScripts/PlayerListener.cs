@@ -14,8 +14,8 @@ public class PlayerListener : MonoBehaviour
 
     private PlayerInventory _inventory;
     private WaitForSeconds _forTime;
-    public float stopInteractTime;
-    private bool _isStopInteracting;
+  
+    
 
     private void OnDrawGizmos()
     {
@@ -57,18 +57,12 @@ public class PlayerListener : MonoBehaviour
 
     private void CheckInteract()
     {
-        stopInteractTime += Time.deltaTime;
-        if (stopInteractTime > 1f)
+
+        if(Input.GetKeyDown(KeyCode.E) && LastObject != null)
         {
-            _isStopInteracting = false;
+           LastObject.Interact(_inventory);
         }
-        if (Input.GetKeyDown(KeyCode.E) && LastObject != null && !_isStopInteracting)
-        {
-            _isStopInteracting = true;
-            stopInteractTime = 0f;
-            LastObject.Interact(_inventory);
-            
-        }
+  
     }
 
     private IInteractable GetClosestObject()

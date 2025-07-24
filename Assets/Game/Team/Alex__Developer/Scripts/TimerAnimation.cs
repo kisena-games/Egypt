@@ -7,14 +7,18 @@ public class TimerAnimation : MonoBehaviour
     [SerializeField] private Image _imageTimerMummy;
     [SerializeField] private GameObject _timerScarab;
     [SerializeField] private Image _imageTimerScarab;
+    
     private bool _isMummyRunning,_isScarabRunning;
+
+
+
     private void OnEnable()
     {
-        //PlayerAttacking.OnMummyWait += OnMummyWait;
+        PlayerAttacking.OnMummyWait += OnMummyWait;
     }
     private void OnDisable()
     {
-        //PlayerAttacking.OnMummyWait -= OnMummyWait;
+        PlayerAttacking.OnMummyWait -= OnMummyWait;
     }
     private void Update()
     {

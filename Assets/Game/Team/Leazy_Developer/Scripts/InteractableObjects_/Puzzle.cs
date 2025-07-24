@@ -10,10 +10,7 @@ public class Puzzle : MonoBehaviour, IInteractable
 
     [SerializeField] private NewOutline _outline;
 
-    private void Awake()
-    {
-        //_outline = GetComponent<Outline>();
-    }
+
 
     public void Highlight(bool isActive)
     {

@@ -51,10 +51,8 @@ public class PlayerHealth : MonoBehaviour
         {
             OnMoanAudioClip?.Invoke();
             _emisson += 0.4f;
-            _blood.DOColor(color(_emisson), 0.5f)
-                .OnComplete(() => {
-                    _blood.DOColor(color(0), 1f);
-                });
+            _blood.DOColor(color(_emisson), 0.5f);
+
             _bloodBack.DOColor(colorRed(_emisson), 0.5f)
                 .OnComplete(() => {
                     _bloodBack.DOColor(colorRed(0), 1f);
@@ -71,6 +69,7 @@ public class PlayerHealth : MonoBehaviour
             StopAllCoroutines();
             _imageDark.DOColor(colorBlack(1f), 1f)
                 .OnComplete(()=>SceneManager.LoadScene(_sceneIndex));
+            _blood.DOColor(colorBlack(1f), 2f);
             healthCount = 3;
         }
     }

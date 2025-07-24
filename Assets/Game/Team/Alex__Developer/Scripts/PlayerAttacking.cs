@@ -10,6 +10,8 @@ public class PlayerAttacking : MonoBehaviour
 
     [SerializeField] private GameObject _radiuses;
     [SerializeField] private MummyStateMachine _mummyStateMacine;
+
+
     private PlayerStateMachine _playerStateMachine;
     private bool _isMummyWait,_isScarabWait,x;
     public bool isSpecificalMummy;
@@ -30,7 +32,7 @@ public class PlayerAttacking : MonoBehaviour
     private void Update()
     {
 
-        if(SceneManager.GetActiveScene().buildIndex >= 5)
+        if(SceneManager.GetActiveScene().buildIndex >= 7)
         {
             
             if (_playerStateMachine.isStealth
@@ -47,7 +49,7 @@ public class PlayerAttacking : MonoBehaviour
                 _radiuses.SetActive(true);
             }
 
-            if (Input.GetKeyDown(KeyCode.E) && !_isScarabWait && !_isMummyWait)
+            if (Input.GetKeyDown(KeyCode.Q) && !_isScarabWait && !_isMummyWait)
             {
                 OnMummyWait?.Invoke();
                 _radiuses.SetActive(false);
