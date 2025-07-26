@@ -1178,7 +1178,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 13056142}
-  - component: {fileID: 13056141}
   m_Layer: 0
   m_Name: My biom-Medium Farms
   m_TagString: Untagged
@@ -1186,18 +1185,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &13056141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 13056140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df16ee49ef1a2246ba1007a065388a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &13056142
 Transform:
   m_ObjectHideFlags: 0
@@ -26798,7 +26785,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 324206858}
-  - component: {fileID: 324206857}
   m_Layer: 0
   m_Name: My biom-Small Farms
   m_TagString: Untagged
@@ -26806,18 +26792,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &324206857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 324206856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df16ee49ef1a2246ba1007a065388a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &324206858
 Transform:
   m_ObjectHideFlags: 0
@@ -32474,7 +32448,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 395786437}
-  - component: {fileID: 395786436}
   m_Layer: 0
   m_Name: Gaia Runtime
   m_TagString: Untagged
@@ -32482,18 +32455,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &395786436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395786435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c39bb83efacf448b1192428beb6f87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &395786437
 Transform:
   m_ObjectHideFlags: 0
@@ -35934,7 +35895,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 450968772}
-  - component: {fileID: 450968771}
   m_Layer: 0
   m_Name: My biom-Grass
   m_TagString: Untagged
@@ -35942,18 +35902,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &450968771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450968770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df16ee49ef1a2246ba1007a065388a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &450968772
 Transform:
   m_ObjectHideFlags: 0
@@ -38926,7 +38874,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 495792476}
-  - component: {fileID: 495792477}
   m_Layer: 0
   m_Name: Stamper
   m_TagString: Untagged
@@ -38949,18 +38896,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1760224731}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &495792477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495792475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a6de5e15bbf726429ed2f777b34dc8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &495961390
 GameObject:
   m_ObjectHideFlags: 0
@@ -44909,7 +44844,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 561458010}
-  - component: {fileID: 561458009}
   m_Layer: 0
   m_Name: My biom-Texture
   m_TagString: Untagged
@@ -44917,18 +44851,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &561458009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 561458008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df16ee49ef1a2246ba1007a065388a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &561458010
 Transform:
   m_ObjectHideFlags: 0
@@ -57886,7 +57808,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 707208512}
-  - component: {fileID: 707208513}
   m_Layer: 0
   m_Name: Session Manager
   m_TagString: Untagged
@@ -57909,18 +57830,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1760224731}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &707208513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707208511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd968c7c0aaf894daa18afd9eac9965, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &707719802 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b706e057c124ea0478da89f219c527bb, type: 3}
@@ -63337,6 +63246,10 @@ PrefabInstance:
     - target: {fileID: 8812147547350915573, guid: 7ad431b8bd7e2a9498c20f5746466fed, type: 3}
       propertyPath: m_Name
       value: TestCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812147547350915573, guid: 7ad431b8bd7e2a9498c20f5746466fed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -72105,7 +72018,6 @@ GameObject:
   - component: {fileID: 910715733}
   - component: {fileID: 910715736}
   - component: {fileID: 910715735}
-  - component: {fileID: 910715734}
   m_Layer: 0
   m_Name: Terrain_0_0-20250707 - 191054
   m_TagString: Untagged
@@ -72128,18 +72040,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1602138579}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &910715734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910715732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 966db0f861b7d6f49a523cc0c4089382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!154 &910715735
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -80327,7 +80227,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1001015991}
-  - component: {fileID: 1001015990}
   m_Layer: 0
   m_Name: My biom
   m_TagString: Untagged
@@ -80335,18 +80234,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1001015990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001015989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd63de8b80658e841978e0280130ee66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1001015991
 Transform:
   m_ObjectHideFlags: 0
@@ -91143,7 +91030,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1118844008}
-  - component: {fileID: 1118844009}
   m_Layer: 0
   m_Name: Terrain Loader Manager
   m_TagString: Untagged
@@ -91166,18 +91052,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 395786437}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1118844009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1118844007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b16076b8d3339d49b9620137d1144a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1119202158
 GameObject:
   m_ObjectHideFlags: 0
@@ -109262,7 +109136,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1339670014}
-  - component: {fileID: 1339670013}
   m_Layer: 0
   m_Name: My biom-New Spawner
   m_TagString: Untagged
@@ -109270,18 +109143,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1339670013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1339670012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df16ee49ef1a2246ba1007a065388a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1339670014
 Transform:
   m_ObjectHideFlags: 0
@@ -132553,7 +132414,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1602138579}
-  - component: {fileID: 1602138578}
   m_Layer: 0
   m_Name: Gaia Terrains
   m_TagString: Untagged
@@ -132561,18 +132421,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1602138578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602138577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c39bb83efacf448b1192428beb6f87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1602138579
 Transform:
   m_ObjectHideFlags: 0
@@ -144328,7 +144176,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760224731}
-  - component: {fileID: 1760224730}
   m_Layer: 0
   m_Name: Gaia Tools
   m_TagString: EditorOnly
@@ -144336,18 +144183,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1760224730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760224729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c39bb83efacf448b1192428beb6f87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1760224731
 Transform:
   m_ObjectHideFlags: 0
@@ -158335,7 +158170,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1945650077}
-  - component: {fileID: 1945650076}
   m_Layer: 0
   m_Name: My biom-Large Farms
   m_TagString: Untagged
@@ -158343,18 +158177,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1945650076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945650075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df16ee49ef1a2246ba1007a065388a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1945650077
 Transform:
   m_ObjectHideFlags: 0
@@ -165230,7 +165052,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2020702138}
-  - component: {fileID: 2020702137}
   m_Layer: 0
   m_Name: My biom-Tree
   m_TagString: Untagged
@@ -165238,18 +165059,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2020702137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020702136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df16ee49ef1a2246ba1007a065388a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2020702138
 Transform:
   m_ObjectHideFlags: 0
@@ -167389,7 +167198,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2051347225}
-  - component: {fileID: 2051347224}
   m_Layer: 0
   m_Name: My biom-Rock
   m_TagString: Untagged
@@ -167397,18 +167205,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2051347224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2051347223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df16ee49ef1a2246ba1007a065388a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2051347225
 Transform:
   m_ObjectHideFlags: 0
