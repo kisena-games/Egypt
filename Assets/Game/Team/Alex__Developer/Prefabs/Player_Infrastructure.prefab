@@ -695,15 +695,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5547147714361854630, guid: 6ef4edc20a8a6d34f964d9c428c48f7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 497.94
+      value: 115.2654
       objectReference: {fileID: 0}
     - target: {fileID: 5547147714361854630, guid: 6ef4edc20a8a6d34f964d9c428c48f7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6023839
+      value: 1.636056
       objectReference: {fileID: 0}
     - target: {fileID: 5547147714361854630, guid: 6ef4edc20a8a6d34f964d9c428c48f7d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 561.653
+      value: 13.336675
       objectReference: {fileID: 0}
     - target: {fileID: 5547147714361854630, guid: 6ef4edc20a8a6d34f964d9c428c48f7d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -711,15 +711,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5547147714361854630, guid: 6ef4edc20a8a6d34f964d9c428c48f7d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.121015415
+      value: 0.12101542
       objectReference: {fileID: 0}
     - target: {fileID: 5547147714361854630, guid: 6ef4edc20a8a6d34f964d9c428c48f7d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 2.672065e-11
+      value: 0.00000003307513
       objectReference: {fileID: 0}
     - target: {fileID: 5547147714361854630, guid: 6ef4edc20a8a6d34f964d9c428c48f7d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -3.2575513e-12
+      value: -0.0000000040322354
       objectReference: {fileID: 0}
     - target: {fileID: 5547147714361854630, guid: 6ef4edc20a8a6d34f964d9c428c48f7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -891,15 +891,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 577419836071360197, guid: 80f192d8284e21143a9559aeed4804ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 497.94
+      value: 493.94705
       objectReference: {fileID: 0}
     - target: {fileID: 577419836071360197, guid: 80f192d8284e21143a9559aeed4804ef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6023839
+      value: 2.5293608
       objectReference: {fileID: 0}
     - target: {fileID: 577419836071360197, guid: 80f192d8284e21143a9559aeed4804ef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 561.653
+      value: 565.177
+      objectReference: {fileID: 0}
+    - target: {fileID: 577419836071360197, guid: 80f192d8284e21143a9559aeed4804ef, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7467881
+      objectReference: {fileID: 0}
+    - target: {fileID: 577419836071360197, guid: 80f192d8284e21143a9559aeed4804ef, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.08519943
+      objectReference: {fileID: 0}
+    - target: {fileID: 577419836071360197, guid: 80f192d8284e21143a9559aeed4804ef, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6553311
+      objectReference: {fileID: 0}
+    - target: {fileID: 577419836071360197, guid: 80f192d8284e21143a9559aeed4804ef, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.074765295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4857498464429359328, guid: 80f192d8284e21143a9559aeed4804ef, type: 3}
+      propertyPath: VerticalAxis.Value
+      value: 42.63712
+      objectReference: {fileID: 0}
+    - target: {fileID: 4857498464429359328, guid: 80f192d8284e21143a9559aeed4804ef, type: 3}
+      propertyPath: HorizontalAxis.Value
+      value: 82.53763
       objectReference: {fileID: 0}
     - target: {fileID: 6898850777466292945, guid: 80f192d8284e21143a9559aeed4804ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -944,6 +968,14 @@ PrefabInstance:
     - target: {fileID: 7058235769706832183, guid: 80f192d8284e21143a9559aeed4804ef, type: 3}
       propertyPath: m_Name
       value: Infastructure
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861872954137673546, guid: 80f192d8284e21143a9559aeed4804ef, type: 3}
+      propertyPath: m_ControllerManager.Controllers.Array.data[1].InputValue
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861872954137673546, guid: 80f192d8284e21143a9559aeed4804ef, type: 3}
+      propertyPath: m_ControllerManager.Controllers.Array.data[2].InputValue
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9053135186389305745, guid: 80f192d8284e21143a9559aeed4804ef, type: 3}
       propertyPath: Target.TrackingTarget

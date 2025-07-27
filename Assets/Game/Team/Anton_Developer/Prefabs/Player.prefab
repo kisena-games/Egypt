@@ -2938,6 +2938,7 @@ GameObject:
   - component: {fileID: 3540574157620985836}
   - component: {fileID: 1687140186667791315}
   - component: {fileID: 1079389032663220193}
+  - component: {fileID: 2356798013598739201}
   - component: {fileID: 9101272293111707692}
   m_Layer: 6
   m_Name: Player
@@ -3026,7 +3027,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactDistance: 6
   _updateInteractTime: 0.3
-  stopInteractTime: 0
 --- !u!114 &1079389032663220193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3040,6 +3040,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventorySize: 6
+--- !u!114 &2356798013598739201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7853256048540415587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09804bdcb6233746ac9586d98ee4c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &9101272293111707692
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,23 +3,23 @@ using UnityEngine.SceneManagement;
 
 public class ForTest : MonoBehaviour
 {
+    private int _sceneCount;
+    private void Start()
+    {
+        _sceneCount = SceneManager.sceneCount;
+    }
     public void OpenScene(int index)
     {
         SceneManager.LoadScene(index);
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        for(int i = 0; i < 8; i++)
         {
-            OpenScene(8);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            OpenScene(9);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha6))
-        {
-            OpenScene(10);
+            if (Input.GetKeyDown(KeyCode.Alpha0+i))
+            {
+                SceneManager.LoadScene(i*3);
+            }
         }
     }
 }
