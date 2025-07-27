@@ -21,5 +21,9 @@ public class ForTest : MonoBehaviour
                 SceneManager.LoadScene(i*3);
             }
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }
