@@ -16,20 +16,24 @@ public class SaveToJson : MonoBehaviour
     void Awake()
     {
         var index = SceneManager.GetActiveScene().buildIndex;
-        switch (index) 
+       
+            switch (index)
+            {
+                case 1: SetLevel(1); break;
+                case 2: SetLevel(2); break;
+                case 3: SetLevel(4); break;
+                case 6: SetLevel(7); break;
+                case 9: SetLevel(10); break;
+                case 12: SetLevel(13); break;
+                case 15: SetLevel(16); break;
+                case 18: SetLevel(19); break;
+                case 21: SetLevel(22); break;
+            }
+        if (GetLevel() == 0)
         {
-            case 1: SetLevel(1); break;
-            case 2: SetLevel(2); break;
-            case 3: SetLevel(4); break;
-            case 6: SetLevel(7); break;
-            case 9: SetLevel(10); break;
-            case 12: SetLevel(13); break;
-            case 15: SetLevel(16); break;
-            case 18: SetLevel(19); break;
-            case 21: SetLevel(22); break;
+            SetLevel(0);
         }
-        
-        
+
     }
     private void SavePlayerDataToJson()
     {
