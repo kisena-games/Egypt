@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         _keysFPS = new List<int>(_keyValueFPS.Keys);
+        Cursor.lockState= CursorLockMode.None;
     }
 
     private void Start()
