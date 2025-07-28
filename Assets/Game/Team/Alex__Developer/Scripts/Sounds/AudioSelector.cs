@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-using EventWwise = AK.Wwise.Event;
+//using EventWwise = AK.Wwise.Event;
 
 public class AudioSelector : MonoBehaviour
 {
@@ -15,7 +15,7 @@ public class AudioSelector : MonoBehaviour
 
     [SerializeField] private AudioDataSO _audioDataSO;
 
-    public EventWwise wwiseOnInteractInventory;
+    //public EventWwise wwiseOnInteractInventory;
 
     private void OnEnable()
     {
@@ -24,8 +24,10 @@ public class AudioSelector : MonoBehaviour
         Fresco.OnInteractFresco += OnInteractFresco;
         PlayerHealth.OnMoanAudioClip += OnMoanAudioClip;
         PlayerHealth.OnRoarAudioClip += OnRoarAudioClip;
-        MummyAttackState.OnLook += OnLook;
-        MummyKillingState.OnBit += OnBit;
+        MummyAttackState.OnAnubisLook += OnAnubisLook;
+        MummyAttackState.OnMummyLook += OnMummyLook;
+        MummyKillingState.OnAnubisBit += OnAnubisBit;
+        MummyKillingState.OnMummyBit += OnMummyBit;
     }
     private void OnDisable()
     {
@@ -34,8 +36,10 @@ public class AudioSelector : MonoBehaviour
         Fresco.OnInteractFresco -= OnInteractFresco;
         PlayerHealth.OnMoanAudioClip -= OnMoanAudioClip;
         PlayerHealth.OnRoarAudioClip -= OnRoarAudioClip;
-        MummyAttackState.OnLook -= OnLook;
-        MummyKillingState.OnBit -= OnBit;
+        MummyAttackState.OnAnubisLook -= OnAnubisLook;
+        MummyAttackState.OnMummyLook -= OnMummyLook;
+        MummyKillingState.OnAnubisBit -= OnAnubisBit;
+        MummyKillingState.OnMummyBit -= OnMummyBit;
     }
 
     private void Start()
@@ -75,8 +79,8 @@ public class AudioSelector : MonoBehaviour
     }
     private void OnInteractInventory()
     {
-       // FXPlay(_vfx_AudioSources[0], _audioDataSO.interactableClip.clip, _audioDataSO.interactableClip.volume);
-        wwiseOnInteractInventory.Post(gameObject);
+        FXPlay(_vfx_AudioSources[0], _audioDataSO.interactableClip.clip, _audioDataSO.interactableClip.volume);
+        //wwiseOnInteractInventory.Post(gameObject);
     }
     private void OnInteractFresco()
     {
@@ -86,17 +90,26 @@ public class AudioSelector : MonoBehaviour
     {
         FXPlay(_vfx_AudioSources[1], _audioDataSO.hovardMoanClip.clip, _audioDataSO.hovardMoanClip.volume);
     }
-    private void OnBit()
+    private void OnMummyBit()
     {
         FXPlay(_vfx_AudioSources[2], _audioDataSO.mummyBitClip.clip, _audioDataSO.mummyBitClip.volume);
     }
+    private void OnAnubisBit()
+    {
+        FXPlay(_vfx_AudioSources[4], _audioDataSO.anubisBitClip.clip, _audioDataSO.anubisBitClip.volume);
+    }
+   
     private void OnRoarAudioClip()
     {
         FXPlay(_vfx_AudioSources[3], _audioDataSO.hovardRoarClip.clip, _audioDataSO.hovardRoarClip.volume);
     }
-    private void OnLook()
+    private void OnAnubisLook()
     {
-        FXPlay(_vfx_AudioSources[0], _audioDataSO.mummyAwakeClip.clip, _audioDataSO.mummyAwakeClip.volume);
+        FXPlay(_vfx_AudioSources[4], _audioDataSO.anubisAwakeClip.clip, _audioDataSO.anubisAwakeClip.volume);
+    }
+    private void OnMummyLook()
+    {
+        FXPlay(_vfx_AudioSources[2], _audioDataSO.mummyAwakeClip.clip, _audioDataSO.mummyAwakeClip.volume);
     }
     private void FXPlay(AudioSource audioSource, AudioClip clip,float volume)
     {

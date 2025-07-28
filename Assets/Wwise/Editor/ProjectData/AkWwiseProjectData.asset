@@ -38,8 +38,25 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9442e329b4c2f84bbf02812a385f50aa
     GuidInternal: 
-    m_lastTime: -8584478951250571418
+    m_lastTime: -8584478816565391049
     List:
+    - name: Fx Bus
+      guid: 4fb1e2a06897d24b8858a778bc86a118
+      id: 3948848313
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9442e329b4c2f84bbf02812a385f50aa
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Fx Bus
+        ObjectType: 2
+        guid: 4fb1e2a06897d24b8858a778bc86a118
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Fx Bus
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -54,6 +71,23 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Music Bus
+      guid: 7508bfac498522479a10e041d030dd61
+      id: 3127962312
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9442e329b4c2f84bbf02812a385f50aa
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music Bus
+        ObjectType: 2
+        guid: 7508bfac498522479a10e041d030dd61
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music Bus
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -66,8 +100,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 4c87f8ac1fc0d048ad814d6b7b0f3bc5
     GuidInternal: 
-    m_lastTime: -8584478951250531445
-    List: []
+    m_lastTime: -8584478816565271106
+    List:
+    - name: bank1
+      guid: 16e20c9a47a83744bd941374cb26557e
+      id: 3445346556
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4c87f8ac1fc0d048ad814d6b7b0f3bc5
+      - ElementName: bank1
+        ObjectType: 7
+        guid: 16e20c9a47a83744bd941374cb26557e
+      Path: SoundBanks\Default Work Unit\bank1
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +128,45 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
     GuidInternal: 
-    m_lastTime: -8584478951250591409
-    List: []
+    m_lastTime: -8584478816565636623
+    List:
+    - name: Mumia
+      guid: fb824209e74baa49ab81de195b790dec
+      id: 3926509614
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
+      - ElementName: Mumia
+        ObjectType: 4
+        guid: fb824209e74baa49ab81de195b790dec
+      Path: Events\Default Work Unit\Mumia
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Mumia_Agro
+      guid: c6a839d53e660e498cd7b46a02d53866
+      id: 851501667
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
+      - ElementName: Mumia
+        ObjectType: 4
+        guid: fb824209e74baa49ab81de195b790dec
+      - ElementName: Play_Mumia_Agro
+        ObjectType: 3
+        guid: c6a839d53e660e498cd7b46a02d53866
+      Path: Events\Default Work Unit\Mumia\Play_Mumia_Agro
+      maxAttenuation: 0
+      maxDuration: 1.0700227
+      minDuration: 1.0700227
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -138,9 +223,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584478951250501463
     List: []
-  ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedFileSystemItemIds: 0100000002000000030000000400000006000000080000000a0000000b0000000d0000000e0000000f00000012000000
+  ExpandedWaapiItemIds: 02000000030000000400000006000000080000000a0000000d00000012000000
   AutoSyncSelection: 0
-  autoPopulateEnabled: 1
-  currentDataSource: 0
+  autoPopulateEnabled: 0
+  currentDataSource: 1
   CurrentPluginConfig: 
