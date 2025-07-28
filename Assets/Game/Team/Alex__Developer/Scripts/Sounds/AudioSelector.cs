@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using EventWwise = AK.Wwise.Event;
+
 public class AudioSelector : MonoBehaviour
 {
     [SerializeField] private AudioSource _player_AudioSource;
@@ -12,7 +14,9 @@ public class AudioSelector : MonoBehaviour
     [SerializeField] private string _waterTag;
 
     [SerializeField] private AudioDataSO _audioDataSO;
- 
+
+    public EventWwise wwiseOnInteractInventory;
+
     private void OnEnable()
     {
         Barrier.OnUnlockBarrier += OnUnlockBarrier;
@@ -67,10 +71,12 @@ public class AudioSelector : MonoBehaviour
     private void OnUnlockBarrier()
     {
         FXPlay(_vfx_AudioSources[0], _audioDataSO.barierClip.clip, _audioDataSO.barierClip.volume);
+        
     }
     private void OnInteractInventory()
     {
-        FXPlay(_vfx_AudioSources[0], _audioDataSO.interactableClip.clip, _audioDataSO.interactableClip.volume);
+       // FXPlay(_vfx_AudioSources[0], _audioDataSO.interactableClip.clip, _audioDataSO.interactableClip.volume);
+        wwiseOnInteractInventory.Post(gameObject);
     }
     private void OnInteractFresco()
     {
