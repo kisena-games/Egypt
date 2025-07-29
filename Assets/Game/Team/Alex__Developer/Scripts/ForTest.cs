@@ -23,7 +23,7 @@ public class ForTest : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene(0);
+           // SceneManager.LoadScene(0);
         }
     }
 }

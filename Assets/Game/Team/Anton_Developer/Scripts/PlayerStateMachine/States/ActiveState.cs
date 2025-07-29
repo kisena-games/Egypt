@@ -1,6 +1,11 @@
+using System;
 using UnityEngine;
+
 public class ActiveState : State
 {
+    public static Action OnPlayerWalk,OnPlayerStealth;
+
+
     private readonly Animator _animator;
     private readonly CharacterController _controller;
     private readonly Camera _camera;
@@ -30,6 +35,9 @@ public class ActiveState : State
     private readonly int _animIDJump = Animator.StringToHash("Jump");
     private readonly int _animIDFreeFall = Animator.StringToHash("FreeFall");
     private readonly int _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
+
+    private float _timeToSoundWalk;
+    
 
     public ActiveState(Animator animator, CharacterController controller, Camera camera, Transform transform, float gravity,float moveSpeed, 
         float sprintSpeed, float speedChangeRate, float jumpForce, float rotationSmoothTime, float fallTimeout, LayerMask groundLayers)
@@ -65,6 +73,7 @@ public class ActiveState : State
 
     private void Move()
     {
+        
         Vector2 input = InputManager.Instance.MoveInputNormalized;
         float targetSpeed = InputManager.Instance.IsSprint ? _sprintSpeed : _moveSpeed;
 
@@ -82,6 +91,17 @@ public class ActiveState : State
 
         if (inputDirection.magnitude >= 0.1f)
         {
+            void ForAudio()
+            {
+                _timeToSoundWalk += Time.deltaTime;
+                if (_timeToSoundWalk > 0.5f&& _isGrounded)
+                {
+                    OnPlayerWalk?.Invoke();
+                    _timeToSoundWalk = 0f;
+                }
+            }
+            ForAudio();
+            
             Vector3 camForward = _camera.transform.forward;
             Vector3 camRight = _camera.transform.right;
             camForward.y = 0f;
@@ -185,4 +205,5 @@ public class ActiveState : State
         }
 
     }
+
 }

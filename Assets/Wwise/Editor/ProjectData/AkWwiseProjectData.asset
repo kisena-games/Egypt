@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 4c87f8ac1fc0d048ad814d6b7b0f3bc5
     GuidInternal: 
-    m_lastTime: -8584478375636688712
+    m_lastTime: -8584478108764694621
     List:
     - name: bank1
       guid: 16e20c9a47a83744bd941374cb26557e
@@ -128,8 +128,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
     GuidInternal: 
-    m_lastTime: -8584478375636937168
+    m_lastTime: -8584478108765628579
     List:
+    - name: Anubis
+      guid: e2a002f331cab84ea19062f5d36c85e8
+      id: 351061749
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
+      - ElementName: Anubis
+        ObjectType: 4
+        guid: e2a002f331cab84ea19062f5d36c85e8
+      Path: Events\Default Work Unit\Anubis
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Mumia
       guid: fb824209e74baa49ab81de195b790dec
       id: 3926509614
@@ -147,6 +164,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Anubis_Step
+      guid: 8f8cf94683895c428a5d33c9636430e9
+      id: 2979878043
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
+      - ElementName: Anubis
+        ObjectType: 4
+        guid: e2a002f331cab84ea19062f5d36c85e8
+      - ElementName: Play_Anubis_Step
+        ObjectType: 3
+        guid: 8f8cf94683895c428a5d33c9636430e9
+      Path: Events\Default Work Unit\Anubis\Play_Anubis_Step
+      maxAttenuation: 0
+      maxDuration: 0.923288
+      minDuration: 0.923288
     - name: Play_Mumia_Agro
       guid: c6a839d53e660e498cd7b46a02d53866
       id: 851501667
@@ -167,6 +204,123 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.0700227
       minDuration: 1.0700227
+    - name: Play_Mumia_Step
+      guid: 1011727265c04648800c2ca97053d2e1
+      id: 2495563692
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
+      - ElementName: Mumia
+        ObjectType: 4
+        guid: fb824209e74baa49ab81de195b790dec
+      - ElementName: Play_Mumia_Step
+        ObjectType: 3
+        guid: 1011727265c04648800c2ca97053d2e1
+      Path: Events\Default Work Unit\Mumia\Play_Mumia_Step
+      maxAttenuation: 0
+      maxDuration: 0.47927436
+      minDuration: 0.47927436
+    - name: Play_Player_Step
+      guid: 74b6853c3e6afb48b99995cb2860098e
+      id: 3502518326
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
+      - ElementName: Player
+        ObjectType: 4
+        guid: 8fb214ec9df85944adc73f6b9e2ed1b1
+      - ElementName: Play_Player_Step
+        ObjectType: 3
+        guid: 74b6853c3e6afb48b99995cb2860098e
+      Path: Events\Default Work Unit\Player\Play_Player_Step
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Step_Gravel
+      guid: 472b8efe424b7945b7e82348cd32a7c2
+      id: 2915718306
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
+      - ElementName: Player
+        ObjectType: 4
+        guid: 8fb214ec9df85944adc73f6b9e2ed1b1
+      - ElementName: Play_Step_Gravel
+        ObjectType: 3
+        guid: 472b8efe424b7945b7e82348cd32a7c2
+      Path: Events\Default Work Unit\Player\Play_Step_Gravel
+      maxAttenuation: 0
+      maxDuration: 0.2587755
+      minDuration: 0.2587755
+    - name: Play_Step_Sand
+      guid: 540c8891d5c9ba45801c327b6939c0fa
+      id: 3258421893
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
+      - ElementName: Player
+        ObjectType: 4
+        guid: 8fb214ec9df85944adc73f6b9e2ed1b1
+      - ElementName: Play_Step_Sand
+        ObjectType: 3
+        guid: 540c8891d5c9ba45801c327b6939c0fa
+      Path: Events\Default Work Unit\Player\Play_Step_Sand
+      maxAttenuation: 0
+      maxDuration: 0.35099775
+      minDuration: 0.35099775
+    - name: Play_Step_Stone
+      guid: dd74cf697b63284da0e75371b56112f8
+      id: 1569235226
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
+      - ElementName: Player
+        ObjectType: 4
+        guid: 8fb214ec9df85944adc73f6b9e2ed1b1
+      - ElementName: Play_Step_Stone
+        ObjectType: 3
+        guid: dd74cf697b63284da0e75371b56112f8
+      Path: Events\Default Work Unit\Player\Play_Step_Stone
+      maxAttenuation: 0
+      maxDuration: 0.065782316
+      minDuration: 0.065782316
+    - name: Player
+      guid: 8fb214ec9df85944adc73f6b9e2ed1b1
+      id: 1069431850
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
+      - ElementName: Player
+        ObjectType: 4
+        guid: 8fb214ec9df85944adc73f6b9e2ed1b1
+      Path: Events\Default Work Unit\Player
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -207,8 +361,74 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: b67c9985d0430e4e91a207f45e90fcea
     GuidInternal: 
-    m_lastTime: -8584478375636678711
-    List: []
+    m_lastTime: -8584478108764684627
+    List:
+    - name: Surface
+      guid: c0f1b3f48bb1bc48af964838c4914afb
+      id: 1834394558
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b67c9985d0430e4e91a207f45e90fcea
+      - ElementName: Surface
+        ObjectType: 11
+        guid: c0f1b3f48bb1bc48af964838c4914afb
+      Path: Switches\Default Work Unit\Surface
+      values:
+      - name: Gravel
+        guid: fe1265c99ed2bc4c900f095e10f2b377
+        id: 2185786256
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b67c9985d0430e4e91a207f45e90fcea
+        - ElementName: Surface
+          ObjectType: 11
+          guid: c0f1b3f48bb1bc48af964838c4914afb
+        - ElementName: Gravel
+          ObjectType: 10
+          guid: fe1265c99ed2bc4c900f095e10f2b377
+      - name: Sand
+        guid: 4c960de75402da48a497738b8312a3eb
+        id: 803837735
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b67c9985d0430e4e91a207f45e90fcea
+        - ElementName: Surface
+          ObjectType: 11
+          guid: c0f1b3f48bb1bc48af964838c4914afb
+        - ElementName: Sand
+          ObjectType: 10
+          guid: 4c960de75402da48a497738b8312a3eb
+      - name: Stone
+        guid: ce7c3c4ab283e740a457999ff485cc63
+        id: 1216965916
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b67c9985d0430e4e91a207f45e90fcea
+        - ElementName: Surface
+          ObjectType: 11
+          guid: c0f1b3f48bb1bc48af964838c4914afb
+        - ElementName: Stone
+          ObjectType: 10
+          guid: ce7c3c4ab283e740a457999ff485cc63
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -223,7 +443,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584478375636668712
     List: []
-  ExpandedFileSystemItemIds: 0100000002000000030000000400000006000000080000000a0000000b0000000d0000000e0000000f00000012000000
+  ExpandedFileSystemItemIds: 010000000200000003000000040000000500000006000000080000000a0000000b0000000d0000000e0000000f00000012000000
   ExpandedWaapiItemIds: 02000000030000000400000006000000080000000a0000000d00000012000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 0
