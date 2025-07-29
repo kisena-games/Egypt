@@ -53,9 +53,37 @@
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Fx Bus",
       "GUID": "{A0E2B14F-9768-4BD2-8858-A778BC86A118}"
      }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "1834394558",
+      "Name": "Surface",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Surface",
+      "GUID": "{F4B3F1C0-B18B-48BC-AF96-4838C4914AFB}",
+      "Switches": [
+       {
+        "Id": "803837735",
+        "Name": "Sand",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface\\Sand",
+        "GUID": "{E70D964C-0254-48DA-A497-738B8312A3EB}"
+       },
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface\\Stone",
+        "GUID": "{4A3C7CCE-83B2-40E7-A457-999FF485CC63}"
+       },
+       {
+        "Id": "2185786256",
+        "Name": "Gravel",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface\\Gravel",
+        "GUID": "{C96512FE-D29E-4CBC-900F-095E10F2B377}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{849AF38D-297B-EAFF-A80F-73DF8FE77EAB}"
+  "FileHash": "{65E93158-6415-80A1-006A-82617C89401A}"
  }
 }

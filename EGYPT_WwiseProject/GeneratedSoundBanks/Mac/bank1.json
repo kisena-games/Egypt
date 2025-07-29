@@ -10,11 +10,27 @@
     "Type": "User",
     "GUID": "{9A0CE216-A847-4437-BD94-1374CB26557E}",
     "Language": "SFX",
-    "Hash": "{E99A5F3A-8D55-E8E7-7573-B26D1633166C}",
+    "Hash": "{CCBD7684-54BD-47F3-80EF-20C104C3F7CF}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\bank1",
     "ShortName": "bank1",
     "Path": "bank1.bnk",
     "Media": [
+     {
+      "Id": "101509122",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "anubis step-005.wav",
+      "CachePath": "BC/{BCBAF5FB-3236-05DB-ECC2-B9630D7D2121}.wem"
+     },
+     {
+      "Id": "139821229",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_gravel-002.wav",
+      "CachePath": "81/{8170AA28-E823-E30B-D029-63CC9D48EF76}.wem"
+     },
      {
       "Id": "166301828",
       "Language": "SFX",
@@ -22,6 +38,14 @@
       "Location": "Memory",
       "ShortName": "mumia_agro-004.wav",
       "CachePath": "C2/{C2857973-DE5A-65D8-FA6C-51C5CEEE83F9}.wem"
+     },
+     {
+      "Id": "256049301",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "anubis step-003.wav",
+      "CachePath": "48/{48D387D1-71C2-C0A2-128B-B598374B658A}.wem"
      },
      {
       "Id": "261843230",
@@ -32,6 +56,62 @@
       "CachePath": "E5/{E59FC7E9-B3A8-A0D0-CCE1-7DC8F396473F}.wem"
      },
      {
+      "Id": "284869909",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_concrete-003.wav",
+      "CachePath": "8A/{8A2D1ACB-C39F-718F-D57B-5095AF2A2C60}.wem"
+     },
+     {
+      "Id": "295658025",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_concrete-005.wav",
+      "CachePath": "16/{16C31339-D661-F824-5ACF-97D510235014}.wem"
+     },
+     {
+      "Id": "304774432",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_gravel-004.wav",
+      "CachePath": "57/{5736D2D9-86E0-6754-6D9E-78FCF0CCBEBC}.wem"
+     },
+     {
+      "Id": "340252119",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mumia step-001.wav",
+      "CachePath": "4B/{4BA54200-7725-F7A6-989D-BF623DD347D4}.wem"
+     },
+     {
+      "Id": "403861504",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mumia step-002.wav",
+      "CachePath": "9B/{9BF39CA8-FEB1-63E4-7819-DDFAD421F70B}.wem"
+     },
+     {
+      "Id": "415039201",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "anubis step-002.wav",
+      "CachePath": "18/{188EBA93-33FC-33A5-3B9C-8DEA84DFB13A}.wem"
+     },
+     {
+      "Id": "446697455",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mumia step-004.wav",
+      "CachePath": "9A/{9A1821C9-A183-5F93-4CDA-6A4B58738227}.wem"
+     },
+     {
       "Id": "489095842",
       "Language": "SFX",
       "Streaming": "false",
@@ -40,15 +120,153 @@
       "CachePath": "D4/{D45E6E4E-CC4F-EE64-3DA4-0DD2FA2E723B}.wem"
      },
      {
+      "Id": "527900807",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_concrete-004.wav",
+      "CachePath": "56/{5685D79D-1512-9035-9133-FA55F4272AA6}.wem"
+     },
+     {
+      "Id": "555275543",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_gravel-003.wav",
+      "CachePath": "EE/{EEE0B249-DC2E-7199-AB45-98E2FA7F4E74}.wem"
+     },
+     {
+      "Id": "557515721",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_sand-003.wav",
+      "CachePath": "74/{74E5F9F3-F975-F116-8028-C533D48B9C82}.wem"
+     },
+     {
+      "Id": "597920908",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_sand-002.wav",
+      "CachePath": "DE/{DE73F664-F4EB-28A9-F373-26A0C2C47D2B}.wem"
+     },
+     {
+      "Id": "701923641",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_gravel-005.wav",
+      "CachePath": "B6/{B6D84126-580F-764C-CEC2-5901EFFC2426}.wem"
+     },
+     {
       "Id": "765708336",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mumia_agro-003.wav",
       "CachePath": "71/{71FFC310-A7C2-6EA7-7E82-DBCC2314BB96}.wem"
+     },
+     {
+      "Id": "800076971",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_sand-001.wav",
+      "CachePath": "CB/{CBAEFFF2-8600-7694-C62C-CC1C816A28FA}.wem"
+     },
+     {
+      "Id": "810728278",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_gravel-001.wav",
+      "CachePath": "6A/{6A03C865-68E5-4AAD-34E6-6EAD50E7958A}.wem"
+     },
+     {
+      "Id": "822798359",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_concrete-001.wav",
+      "CachePath": "3A/{3AF47499-B053-B3B0-93D8-16776FC1525A}.wem"
+     },
+     {
+      "Id": "826763742",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_concrete-002.wav",
+      "CachePath": "7E/{7E054491-7228-4DB7-06E5-3A0FFE6E5A4F}.wem"
+     },
+     {
+      "Id": "860865332",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_sand-005.wav",
+      "CachePath": "FE/{FED46905-7BA9-B528-3F5D-A133331FE822}.wem"
+     },
+     {
+      "Id": "923381877",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "anubis step-004.wav",
+      "CachePath": "D2/{D2F428D2-3D06-F60B-AA57-8C09CA867E6C}.wem"
+     },
+     {
+      "Id": "927364542",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_sand-004.wav",
+      "CachePath": "F9/{F93D7AE1-FF72-E78B-5763-76701CEFC0C7}.wem"
+     },
+     {
+      "Id": "972122807",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "anubis step-001.wav",
+      "CachePath": "E2/{E27ED238-ED2F-56F6-21C9-D250A887A74E}.wem"
+     },
+     {
+      "Id": "1025955031",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mumia step-003.wav",
+      "CachePath": "62/{62F9EB59-7A56-96DA-77EA-6A2D1352B18A}.wem"
      }
     ],
     "Events": [
+     {
+      "Id": "2979878043",
+      "Name": "Play_Anubis_Step",
+      "ObjectPath": "\\Events\\Default Work Unit\\Anubis\\Play_Anubis_Step",
+      "GUID": "{46F98C8F-8983-425C-8A5D-33C9636430E9}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.923288",
+      "DurationMax": "0.923288",
+      "MediaRefs": [
+       {
+        "Id": "101509122"
+       },
+       {
+        "Id": "256049301"
+       },
+       {
+        "Id": "415039201"
+       },
+       {
+        "Id": "923381877"
+       },
+       {
+        "Id": "972122807"
+       }
+      ]
+     },
      {
       "Id": "851501667",
       "Name": "Play_Mumia_Agro",
@@ -71,10 +289,148 @@
         "Id": "765708336"
        }
       ]
+     },
+     {
+      "Id": "2495563692",
+      "Name": "Play_Mumia_Step",
+      "ObjectPath": "\\Events\\Default Work Unit\\Mumia\\Play_Mumia_Step",
+      "GUID": "{72721110-C065-4846-800C-2CA97053D2E1}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.47927436",
+      "DurationMax": "0.47927436",
+      "MediaRefs": [
+       {
+        "Id": "340252119"
+       },
+       {
+        "Id": "403861504"
+       },
+       {
+        "Id": "446697455"
+       },
+       {
+        "Id": "1025955031"
+       }
+      ]
+     },
+     {
+      "Id": "3502518326",
+      "Name": "Play_Player_Step",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Player_Step",
+      "GUID": "{3C85B674-6A3E-48FB-B999-95CB2860098E}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2915718306",
+      "Name": "Play_Step_Gravel",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Step_Gravel",
+      "GUID": "{FE8E2B47-4B42-4579-B7E8-2348CD32A7C2}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.2587755",
+      "DurationMax": "0.2587755",
+      "MediaRefs": [
+       {
+        "Id": "139821229"
+       },
+       {
+        "Id": "304774432"
+       },
+       {
+        "Id": "555275543"
+       },
+       {
+        "Id": "701923641"
+       },
+       {
+        "Id": "810728278"
+       }
+      ]
+     },
+     {
+      "Id": "3258421893",
+      "Name": "Play_Step_Sand",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Step_Sand",
+      "GUID": "{91880C54-C9D5-45BA-801C-327B6939C0FA}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.35099775",
+      "DurationMax": "0.35099775",
+      "MediaRefs": [
+       {
+        "Id": "557515721"
+       },
+       {
+        "Id": "597920908"
+       },
+       {
+        "Id": "800076971"
+       },
+       {
+        "Id": "860865332"
+       },
+       {
+        "Id": "927364542"
+       }
+      ]
+     },
+     {
+      "Id": "1569235226",
+      "Name": "Play_Step_Stone",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Step_Stone",
+      "GUID": "{69CF74DD-637B-4D28-A0E7-5371B56112F8}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.065782316",
+      "DurationMax": "0.065782316",
+      "MediaRefs": [
+       {
+        "Id": "284869909"
+       },
+       {
+        "Id": "295658025"
+       },
+       {
+        "Id": "527900807"
+       },
+       {
+        "Id": "822798359"
+       },
+       {
+        "Id": "826763742"
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "1834394558",
+      "Name": "Surface",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Surface",
+      "GUID": "{F4B3F1C0-B18B-48BC-AF96-4838C4914AFB}",
+      "Switches": [
+       {
+        "Id": "803837735",
+        "Name": "Sand",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface\\Sand",
+        "GUID": "{E70D964C-0254-48DA-A497-738B8312A3EB}"
+       },
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface\\Stone",
+        "GUID": "{4A3C7CCE-83B2-40E7-A457-999FF485CC63}"
+       },
+       {
+        "Id": "2185786256",
+        "Name": "Gravel",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface\\Gravel",
+        "GUID": "{C96512FE-D29E-4CBC-900F-095E10F2B377}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{572A21CA-7A62-AE37-3CB9-04664063B5F7}"
+  "FileHash": "{7378864E-4A2D-6CBF-79FF-36CE7065DB93}"
  }
 }
