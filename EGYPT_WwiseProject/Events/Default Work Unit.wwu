@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A5D72D9B-93AF-4012-9EE4-AEEB2C2D1B52}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{A5D72D9B-93AF-4012-9EE4-AEEB2C2D1B52}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Mumia" ID="{094282FB-4BE7-49AA-AB81-DE195B790DEC}" ShortID="150828491">
+					<ChildrenList>
+						<Event Name="Play_Mumia_Agro" ID="{D539A8C6-663E-490E-8CD7-B46A02D53866}">
+							<ChildrenList>
+								<Action Name="" ID="{1CB78F89-F10B-4390-91D4-AC55ED69DFD0}" ShortID="824486675">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Scream" ID="{EA7E6116-540E-47C6-8BDF-9BB71BAF7D96}" WorkUnitID="{05C34427-496B-4499-B9DD-2B334CF77C54}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

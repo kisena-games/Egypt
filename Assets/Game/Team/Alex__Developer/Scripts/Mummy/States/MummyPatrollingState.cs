@@ -13,12 +13,14 @@ public class MummyPatrollingState:State
     private float _currentSpeed=1f;
 
     private int _pointIndex;
+    private bool _isAnubis;
 
-    public MummyPatrollingState(Animator animator, NavMeshAgent agent, Transform[] patrollingPoints)
+    public MummyPatrollingState(Animator animator, NavMeshAgent agent, Transform[] patrollingPoints,bool isAnubis)
     {
         _animator = animator;
         _agent = agent;
         _patrollingPoints = patrollingPoints;
+        _isAnubis = isAnubis;
     }
     
     public override void OnEnter()

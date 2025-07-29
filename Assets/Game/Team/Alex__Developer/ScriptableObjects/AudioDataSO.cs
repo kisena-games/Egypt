@@ -13,7 +13,7 @@ public class AudioDataSO : ScriptableObject
     public AudioSelect waterClip;
     [Header("Звук шагов по камню")]
     public AudioSelect stoneClip;
-
+    
     [Header("Fx sounds (громкомть работает)")]
     [Header("Звук исчезновения барьера")]
     public AudioSelect barierClip;
@@ -27,8 +27,13 @@ public class AudioDataSO : ScriptableObject
     public AudioSelect hovardMoanClip;
     [Header("Мумия нападает")]
     public AudioSelect mummyAwakeClip;
+    [Header("Анубис нападает")]
+    public AudioSelect anubisAwakeClip;
     [Header("Мумия бьет")]
     public AudioSelect mummyBitClip;
+    [Header("Анубис бьет")]
+    public AudioSelect anubisBitClip;
+
 
 }
 [System.Serializable]

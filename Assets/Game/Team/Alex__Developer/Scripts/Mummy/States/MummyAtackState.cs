@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 public class MummyAttackState : State
 {
-    public static Action OnLook;
+    public static Action OnMummyLook,OnAnubisLook;
 
     private const string RUN_ANIM_KEY = "Run";
 
@@ -13,19 +13,20 @@ public class MummyAttackState : State
 
     private Transform _player;
     private float _currentSpeed=5f;
+    private bool _isAnubis;
 
-
-    public MummyAttackState(Animator animator, NavMeshAgent agent, Transform player)
+    public MummyAttackState(Animator animator, NavMeshAgent agent, Transform player,bool isAnubis)
     {
         _animator = animator;
         _agent = agent;
         _player = player;
-
+        _isAnubis = isAnubis;
     }
 
     public override void OnEnter()
     {
-        OnLook?.Invoke();
+        
+        LookCall();
         _agent.speed= _currentSpeed;
         //_animator.speed= _currentSpeed * 2F;
         _animator.SetBool(RUN_ANIM_KEY, true);
@@ -46,6 +47,13 @@ public class MummyAttackState : State
     private void GoToNextDestination()
     {
         _agent.SetDestination(_player.position);
+    }
+    private void LookCall()
+    {
+        if (_isAnubis)
+            OnAnubisLook?.Invoke();
+        else
+            OnMummyLook?.Invoke();
     }
 }
 

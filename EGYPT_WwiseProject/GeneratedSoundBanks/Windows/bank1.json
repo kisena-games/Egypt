@@ -1,0 +1,80 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3445346556",
+    "Type": "User",
+    "GUID": "{9A0CE216-A847-4437-BD94-1374CB26557E}",
+    "Language": "SFX",
+    "Hash": "{E99A5F3A-8D55-E8E7-7573-B26D1633166C}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\bank1",
+    "ShortName": "bank1",
+    "Path": "bank1.bnk",
+    "Media": [
+     {
+      "Id": "166301828",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mumia_agro-004.wav",
+      "CachePath": "C2/{C2857973-DE5A-65D8-FA6C-51C5CEEE83F9}.wem"
+     },
+     {
+      "Id": "261843230",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mumia_agro-001.wav",
+      "CachePath": "E5/{E59FC7E9-B3A8-A0D0-CCE1-7DC8F396473F}.wem"
+     },
+     {
+      "Id": "489095842",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mumia_agro-002.wav",
+      "CachePath": "D4/{D45E6E4E-CC4F-EE64-3DA4-0DD2FA2E723B}.wem"
+     },
+     {
+      "Id": "765708336",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mumia_agro-003.wav",
+      "CachePath": "71/{71FFC310-A7C2-6EA7-7E82-DBCC2314BB96}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "851501667",
+      "Name": "Play_Mumia_Agro",
+      "ObjectPath": "\\Events\\Default Work Unit\\Mumia\\Play_Mumia_Agro",
+      "GUID": "{D539A8C6-663E-490E-8CD7-B46A02D53866}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.0700227",
+      "DurationMax": "1.0700227",
+      "MediaRefs": [
+       {
+        "Id": "166301828"
+       },
+       {
+        "Id": "261843230"
+       },
+       {
+        "Id": "489095842"
+       },
+       {
+        "Id": "765708336"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{D04DBAC5-4B4B-15F2-5376-27405121F80F}"
+ }
+}
