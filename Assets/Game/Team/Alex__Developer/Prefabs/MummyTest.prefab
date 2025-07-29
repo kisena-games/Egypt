@@ -2129,6 +2129,10 @@ GameObject:
   - component: {fileID: 1197716421611104545}
   - component: {fileID: 8260105277863336882}
   - component: {fileID: 6584243517791992817}
+  - component: {fileID: 5917791210611795091}
+  - component: {fileID: 6565577951990638082}
+  - component: {fileID: 7150013090174536275}
+  - component: {fileID: 6694466800535786110}
   m_Layer: 0
   m_Name: MummyTest
   m_TagString: Untagged
@@ -2194,6 +2198,7 @@ MonoBehaviour:
   _player: {fileID: 0}
   _mummyCollider: {fileID: 6584243517791992817}
   _sceneIndex: 0
+  _isAnubis: 0
 --- !u!114 &8504719192823836947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2258,6 +2263,103 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5917791210611795091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7291200111824259747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab689067648d934fa095a26485da105, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wwiseOnAnubisLook:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d0559525fec74b9498bbf11aa887ac84, type: 2}
+  wwiseOnMummyLook:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d0559525fec74b9498bbf11aa887ac84, type: 2}
+  wwiseOnAnubisBit:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  wwiseOnMummyBit:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  wwiseOnAnubisWalk:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4dd467dc61e04914aa709c9a3d2701f1, type: 2}
+  wwiseOnMummyWalk:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: adf6b8348db5df14896223a6aed1686e, type: 2}
+  wwiseOnAnubisRun:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4dd467dc61e04914aa709c9a3d2701f1, type: 2}
+  wwiseOnMummyRun:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: adf6b8348db5df14896223a6aed1686e, type: 2}
+--- !u!114 &6565577951990638082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7291200111824259747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62a07ebf088403849a9b0a6b18bf114d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &7150013090174536275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7291200111824259747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ea05b90072ba6d4080cddbd06e5251b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  bOverrideScalingFactor: 0
+  scalingFactor: -1
+  listenerId: 0
+--- !u!114 &6694466800535786110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7291200111824259747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b168341d4753ef47b75b50cf25a3988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceProbe: {fileID: 0}
 --- !u!1 &7395023237323874210
 GameObject:
   m_ObjectHideFlags: 0

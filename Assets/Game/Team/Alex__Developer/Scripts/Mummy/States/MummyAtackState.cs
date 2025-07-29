@@ -5,6 +5,8 @@ using UnityEngine.AI;
 public class MummyAttackState : State
 {
     public static Action OnMummyLook,OnAnubisLook;
+    public static Action OnMummyRun;
+    public static Action OnAnubisRun;
 
     private const string RUN_ANIM_KEY = "Run";
 
@@ -14,6 +16,8 @@ public class MummyAttackState : State
     private Transform _player;
     private float _currentSpeed=5f;
     private bool _isAnubis;
+
+    private float _timeForStep;
 
     public MummyAttackState(Animator animator, NavMeshAgent agent, Transform player,bool isAnubis)
     {
@@ -42,6 +46,21 @@ public class MummyAttackState : State
     public override void OnUpdate()
     {
         GoToNextDestination();
+
+        void ForAudio()
+        {
+            _timeForStep += Time.deltaTime;
+            if (_timeForStep > 0.3f)
+            {
+                if (_isAnubis)
+                    OnAnubisRun?.Invoke();
+                else
+                    OnMummyRun?.Invoke();
+
+                _timeForStep = 0;
+            }
+        }
+        ForAudio();
     }
 
     private void GoToNextDestination()

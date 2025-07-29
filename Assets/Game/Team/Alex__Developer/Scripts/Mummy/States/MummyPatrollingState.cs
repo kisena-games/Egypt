@@ -1,8 +1,13 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class MummyPatrollingState:State
 {
+    public static Action OnMummyWalk;
+    public static Action OnAnubisWalk;
+
+
     private const string WALK_ANIM_KEY = "Walk";
 
     private readonly Animator _animator;
@@ -14,6 +19,8 @@ public class MummyPatrollingState:State
 
     private int _pointIndex;
     private bool _isAnubis;
+
+    private float _timeForStep;
 
     public MummyPatrollingState(Animator animator, NavMeshAgent agent, Transform[] patrollingPoints,bool isAnubis)
     {
@@ -59,7 +66,20 @@ public class MummyPatrollingState:State
         {
             GoToNextDestination();
         }
+        void ForAudio()
+        {
+            _timeForStep += Time.deltaTime;
+            if (_timeForStep > 1f)
+            {
+                if (_isAnubis)
+                    OnAnubisWalk?.Invoke();
+                else
+                    OnMummyWalk?.Invoke();
 
+                _timeForStep = 0;
+            }
+        }
+        ForAudio();
     }
 
     private void GoToNextDestination()

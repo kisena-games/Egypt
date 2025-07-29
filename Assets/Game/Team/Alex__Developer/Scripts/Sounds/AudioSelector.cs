@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 using EventWwise = AK.Wwise.Event;
-using SwithWwise = AK.Wwise.Switch;
+
 
 public class AudioSelector : MonoBehaviour
 {

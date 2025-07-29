@@ -36,8 +36,8 @@ public class MummyKillingState : State
         _animator.SetBool(KILL_ANIM_KEY, true);
         _mummyCollider.enabled = false;
         if(_isAnubis)
-        PlayerHealth.healthCount--;
-        else PlayerHealth.healthCount-=2;
+        PlayerHealth.healthCount-=2;
+        else PlayerHealth.healthCount--;
 
     }
    
