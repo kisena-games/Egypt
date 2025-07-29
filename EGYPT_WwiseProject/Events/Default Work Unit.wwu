@@ -16,6 +16,80 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Mumia_Step" ID="{72721110-C065-4846-800C-2CA97053D2E1}">
+							<ChildrenList>
+								<Action Name="" ID="{E6D015E3-3777-455E-84AC-586E7C9E95AC}" ShortID="989745443">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Mumia_Step" ID="{705E9E9C-17E2-4659-B203-6BEF0A94DB6B}" WorkUnitID="{05C34427-496B-4499-B9DD-2B334CF77C54}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Player" ID="{EC14B28F-F89D-4459-ADC7-3F6B9E2ED1B1}" ShortID="656582441">
+					<ChildrenList>
+						<Event Name="Play_Player_Step" ID="{3C85B674-6A3E-48FB-B999-95CB2860098E}">
+							<ChildrenList>
+								<Action Name="" ID="{2C24B6E6-6E27-41C8-9258-63CDA740A7C8}" ShortID="1009099210">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Steps" ID="{AC568BE5-1E89-4EDD-A405-3DB38C1E07A2}" WorkUnitID="{05C34427-496B-4499-B9DD-2B334CF77C54}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Step_Gravel" ID="{FE8E2B47-4B42-4579-B7E8-2348CD32A7C2}">
+							<ChildrenList>
+								<Action Name="" ID="{516DC960-9E66-4B92-A034-6DF57E0E2239}" ShortID="437085367">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Graviy" ID="{50C5CB06-9BE9-4977-BECD-5C0ADB18F491}" WorkUnitID="{05C34427-496B-4499-B9DD-2B334CF77C54}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Step_Sand" ID="{91880C54-C9D5-45BA-801C-327B6939C0FA}">
+							<ChildrenList>
+								<Action Name="" ID="{876BEAFF-96D7-46DB-8107-6B55BC04E1CE}" ShortID="626825428">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Sand" ID="{561C5AB4-C694-4985-A034-F56CED93D84C}" WorkUnitID="{05C34427-496B-4499-B9DD-2B334CF77C54}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Step_Stone" ID="{69CF74DD-637B-4D28-A0E7-5371B56112F8}">
+							<ChildrenList>
+								<Action Name="" ID="{C41FC088-3183-4AF3-AF03-8C3022ABB563}" ShortID="877980620">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Stone" ID="{A972400D-45B7-4E9B-8E16-018F786834EE}" WorkUnitID="{05C34427-496B-4499-B9DD-2B334CF77C54}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Anubis" ID="{F302A0E2-CA31-4EB8-A190-62F5D36C85E8}" ShortID="292742224">
+					<ChildrenList>
+						<Event Name="Play_Anubis_Step" ID="{46F98C8F-8983-425C-8A5D-33C9636430E9}">
+							<ChildrenList>
+								<Action Name="" ID="{900EC137-718F-46AF-9536-0F67F1B41E58}" ShortID="529581413">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Anubis Step" ID="{841B1664-A741-4C9F-9AD4-22A8949D649E}" WorkUnitID="{05C34427-496B-4499-B9DD-2B334CF77C54}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

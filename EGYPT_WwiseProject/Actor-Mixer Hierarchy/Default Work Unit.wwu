@@ -6,12 +6,22 @@
 				<Folder Name="Player" ID="{BC620590-DAFD-43BC-B302-1E2E6FCD4458}" ShortID="1044890367">
 					<ChildrenList>
 						<SwitchContainer Name="Steps" ID="{AC568BE5-1E89-4EDD-A405-3DB38C1E07A2}" ShortID="760939498">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
 								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Gravel" ID="{C96512FE-D29E-4CBC-900F-095E10F2B377}" WorkUnitID="{85997CB6-43D0-4E0E-91A2-07F45E90FCEA}"/>
+								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+									<ObjectRef Name="Fx Bus" ID="{A0E2B14F-9768-4BD2-8858-A778BC86A118}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="Surface" ID="{F4B3F1C0-B18B-48BC-AF96-4838C4914AFB}" WorkUnitID="{85997CB6-43D0-4E0E-91A2-07F45E90FCEA}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -24,6 +34,118 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="step_gravel-001" ID="{09AB69AD-C0F3-48A1-A764-CDC72ACEBAB0}" ShortID="786519461">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="step_gravel-001" ID="{A600F624-8137-4755-A458-5223F2FAFA2A}">
+													<Language>SFX</Language>
+													<AudioFile>step_gravel-001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="810728278"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="step_gravel-001" ID="{A600F624-8137-4755-A458-5223F2FAFA2A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="step_gravel-002" ID="{7D1934D4-FF15-421D-AE15-D861B4C96BFE}" ShortID="1050709173">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="step_gravel-002" ID="{11CEFC4D-270A-4EC6-89FF-7D53A3208CC2}">
+													<Language>SFX</Language>
+													<AudioFile>step_gravel-002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="139821229"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="step_gravel-002" ID="{11CEFC4D-270A-4EC6-89FF-7D53A3208CC2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="step_gravel-003" ID="{B164C6DA-D1DC-4EDF-B7F1-9921456854B6}" ShortID="712429499">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="step_gravel-003" ID="{ADAB460D-82A5-4ED1-B92C-A82F5CA36D5E}">
+													<Language>SFX</Language>
+													<AudioFile>step_gravel-003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="555275543"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="step_gravel-003" ID="{ADAB460D-82A5-4ED1-B92C-A82F5CA36D5E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="step_gravel-004" ID="{0D2E8B85-5D79-47C2-8F62-633B050ADCD5}" ShortID="218304816">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="step_gravel-004" ID="{6F471A2F-4FC7-46E1-91A9-B80608DAAA40}">
+													<Language>SFX</Language>
+													<AudioFile>step_gravel-004.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="304774432"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="step_gravel-004" ID="{6F471A2F-4FC7-46E1-91A9-B80608DAAA40}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="step_gravel-005" ID="{EA3F569C-2BF4-4B36-9208-2FFDDF1CD654}" ShortID="449253867">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="step_gravel-005" ID="{333CDE8E-125B-414D-8F26-105838775BB9}">
+													<Language>SFX</Language>
+													<AudioFile>step_gravel-005.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="701923641"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="step_gravel-005" ID="{333CDE8E-125B-414D-8F26-105838775BB9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Sand" ID="{561C5AB4-C694-4985-A034-F56CED93D84C}" ShortID="589583171">
 									<ReferenceList>
@@ -34,6 +156,118 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="step_sand-001" ID="{A3590E67-23F7-4148-BA59-E2E42EE132CC}" ShortID="428776343">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="step_sand-001" ID="{6A7E8074-C946-4D52-A148-DDAAFE286CAC}">
+													<Language>SFX</Language>
+													<AudioFile>step_sand-001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="800076971"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="step_sand-001" ID="{6A7E8074-C946-4D52-A148-DDAAFE286CAC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="step_sand-002" ID="{AAFB9662-0D84-4E4A-9389-C2471A90A66F}" ShortID="304086901">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="step_sand-002" ID="{1A134BC4-7936-48C2-B8DD-25E9C7EBBCD1}">
+													<Language>SFX</Language>
+													<AudioFile>step_sand-002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="597920908"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="step_sand-002" ID="{1A134BC4-7936-48C2-B8DD-25E9C7EBBCD1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="step_sand-003" ID="{E575682E-2319-45F8-85C0-ADA237B5C3FE}" ShortID="410568988">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="step_sand-003" ID="{7109BF6E-2593-45FD-84C9-67F771FAAB90}">
+													<Language>SFX</Language>
+													<AudioFile>step_sand-003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="557515721"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="step_sand-003" ID="{7109BF6E-2593-45FD-84C9-67F771FAAB90}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="step_sand-004" ID="{17A05637-55D3-4B26-823E-5ADAF118849C}" ShortID="998393028">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="step_sand-004" ID="{04038AE2-C6B1-4A81-9515-911F7C1F7C8B}">
+													<Language>SFX</Language>
+													<AudioFile>step_sand-004.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="927364542"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="step_sand-004" ID="{04038AE2-C6B1-4A81-9515-911F7C1F7C8B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="step_sand-005" ID="{D3AEF7B9-640A-4337-B04E-736560DA6D60}" ShortID="715289227">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="step_sand-005" ID="{E600F08C-5E6A-460E-8226-8AC662C1C14F}">
+													<Language>SFX</Language>
+													<AudioFile>step_sand-005.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="860865332"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="step_sand-005" ID="{E600F08C-5E6A-460E-8226-8AC662C1C14F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Stone" ID="{A972400D-45B7-4E9B-8E16-018F786834EE}" ShortID="569826931">
 									<ReferenceList>
@@ -44,6 +278,118 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="step_concrete-001" ID="{FC82B669-2CC7-42B9-8FAD-692D27D47A37}" ShortID="611780323">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="step_concrete-001" ID="{F948E9FC-CDA1-4A10-AF3C-11C11A13BF3A}">
+													<Language>SFX</Language>
+													<AudioFile>step_concrete-001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="822798359"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="step_concrete-001" ID="{F948E9FC-CDA1-4A10-AF3C-11C11A13BF3A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="step_concrete-002" ID="{A8622AE9-A6F7-48AB-AD3E-207C11366C4D}" ShortID="818683478">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="step_concrete-002" ID="{04994E83-00A2-4B08-9079-307FA457C071}">
+													<Language>SFX</Language>
+													<AudioFile>step_concrete-002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="826763742"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="step_concrete-002" ID="{04994E83-00A2-4B08-9079-307FA457C071}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="step_concrete-003" ID="{92BFBCA1-0408-417B-BB19-CAF4F3260700}" ShortID="994685842">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="step_concrete-003" ID="{D4F9628E-AFD9-4C0D-8FFF-55EF22A8DCF6}">
+													<Language>SFX</Language>
+													<AudioFile>step_concrete-003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="284869909"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="step_concrete-003" ID="{D4F9628E-AFD9-4C0D-8FFF-55EF22A8DCF6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="step_concrete-004" ID="{5ECA20B8-0344-43AF-A32F-7C2B5C077C34}" ShortID="922744662">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="step_concrete-004" ID="{48B07832-C57F-4C38-9DAA-263CAA43E02D}">
+													<Language>SFX</Language>
+													<AudioFile>step_concrete-004.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="527900807"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="step_concrete-004" ID="{48B07832-C57F-4C38-9DAA-263CAA43E02D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="step_concrete-005" ID="{2E01882D-AF33-46B3-AD4B-AF578918D072}" ShortID="392243294">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="step_concrete-005" ID="{26F62A11-07E6-4520-BE8C-7FE3DC96C821}">
+													<Language>SFX</Language>
+													<AudioFile>step_concrete-005.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="295658025"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="step_concrete-005" ID="{26F62A11-07E6-4520-BE8C-7FE3DC96C821}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
 								</RandomSequenceContainer>
 							</ChildrenList>
 							<GroupingInfo>
@@ -164,6 +510,239 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="mumia_agro-004" ID="{7BECF4EC-2F48-4C1D-B831-C44E201C0588}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Mumia_Step" ID="{705E9E9C-17E2-4659-B203-6BEF0A94DB6B}" ShortID="815973733">
+							<PropertyList>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Fx Bus" ID="{A0E2B14F-9768-4BD2-8858-A778BC86A118}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="mumia step-001" ID="{E355FAB8-BBB1-4F3C-A35F-74B44DBBCB87}" ShortID="370149973">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="mumia step-001" ID="{CB0A3120-053D-4F84-A25F-140D2B0BEA2F}">
+											<Language>SFX</Language>
+											<AudioFile>mumia step-001.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="340252119"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="mumia step-001" ID="{CB0A3120-053D-4F84-A25F-140D2B0BEA2F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="mumia step-002" ID="{1AA9AE16-1FAD-4F0B-9DBC-EDDABB383AAC}" ShortID="974440342">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="mumia step-002" ID="{C83BAB17-F98D-4430-8E3D-8E4A42FB9CB7}">
+											<Language>SFX</Language>
+											<AudioFile>mumia step-002.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="403861504"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="mumia step-002" ID="{C83BAB17-F98D-4430-8E3D-8E4A42FB9CB7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="mumia step-003" ID="{11A55262-C038-402A-83B0-B603F43182AE}" ShortID="989970339">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="mumia step-003" ID="{C6D4B43A-426A-48BE-9710-7B9019ADFBF2}">
+											<Language>SFX</Language>
+											<AudioFile>mumia step-003.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1025955031"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="mumia step-003" ID="{C6D4B43A-426A-48BE-9710-7B9019ADFBF2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="mumia step-004" ID="{B474F358-7271-4EE5-8E9B-0A53B34718B8}" ShortID="141956912">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="mumia step-004" ID="{7E98F094-C31C-40E9-B318-301A5C508F00}">
+											<Language>SFX</Language>
+											<AudioFile>mumia step-004.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="446697455"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="mumia step-004" ID="{7E98F094-C31C-40E9-B318-301A5C508F00}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Anubis" ID="{02D97342-19B2-464C-9B54-11BBD626C05D}" ShortID="104529256">
+					<ChildrenList>
+						<RandomSequenceContainer Name="Anubis Step" ID="{841B1664-A741-4C9F-9AD4-22A8949D649E}" ShortID="266640269">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Fx Bus" ID="{A0E2B14F-9768-4BD2-8858-A778BC86A118}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="anubis step-001" ID="{14C9C702-7672-48A6-9B90-E5F57FA368E7}" ShortID="521079618">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="anubis step-001" ID="{CB0ACC40-F660-4F9C-A395-2F915484B51B}">
+											<Language>SFX</Language>
+											<AudioFile>anubis step-001.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="972122807"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="anubis step-001" ID="{CB0ACC40-F660-4F9C-A395-2F915484B51B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="anubis step-002" ID="{F12C72D9-BC5C-4B07-8BBF-137FF399C120}" ShortID="940539971">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="anubis step-002" ID="{3964F82C-BA71-4B8D-8C8C-A5EB9B137A7D}">
+											<Language>SFX</Language>
+											<AudioFile>anubis step-002.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="415039201"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="anubis step-002" ID="{3964F82C-BA71-4B8D-8C8C-A5EB9B137A7D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="anubis step-003" ID="{0F4AF2BA-2690-4BE6-868B-84F1D6CE96E5}" ShortID="122284774">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="anubis step-003" ID="{973CC5C2-89C2-42AA-9D21-BDE0AF531B76}">
+											<Language>SFX</Language>
+											<AudioFile>anubis step-003.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="256049301"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="anubis step-003" ID="{973CC5C2-89C2-42AA-9D21-BDE0AF531B76}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="anubis step-004" ID="{39AAE839-FC23-4555-96C5-C50B8E7939F8}" ShortID="892753791">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="anubis step-004" ID="{369A50E9-44F8-49FF-9B2C-5AB2A52A2120}">
+											<Language>SFX</Language>
+											<AudioFile>anubis step-004.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="923381877"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="anubis step-004" ID="{369A50E9-44F8-49FF-9B2C-5AB2A52A2120}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="anubis step-005" ID="{62B0D526-5387-4ADE-9308-8477FE714563}" ShortID="846197864">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="anubis step-005" ID="{1CD29B5A-9B34-4FD2-BA6D-62399F58D154}">
+											<Language>SFX</Language>
+											<AudioFile>anubis step-005.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="101509122"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="anubis step-005" ID="{1CD29B5A-9B34-4FD2-BA6D-62399F58D154}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
