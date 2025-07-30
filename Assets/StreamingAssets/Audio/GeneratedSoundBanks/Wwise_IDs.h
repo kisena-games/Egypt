@@ -13,13 +13,29 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_ANUBIS_AGRO = 3155164924U;
+        static const AkUniqueID PLAY_ANUBIS_ATTACK = 530125689U;
         static const AkUniqueID PLAY_ANUBIS_STEP = 2979878043U;
+        static const AkUniqueID PLAY_ARTEFACT_VOICE = 1054154995U;
+        static const AkUniqueID PLAY_FIRE = 3015324718U;
+        static const AkUniqueID PLAY_FOG_DISSAPEAR = 2216606755U;
         static const AkUniqueID PLAY_MUMIA_AGRO = 851501667U;
+        static const AkUniqueID PLAY_MUMIA_ATTACK = 3120015350U;
         static const AkUniqueID PLAY_MUMIA_STEP = 2495563692U;
+        static const AkUniqueID PLAY_PLAYER_DIE = 1461641338U;
+        static const AkUniqueID PLAY_PLAYER_JUMP = 562256996U;
+        static const AkUniqueID PLAY_PLAYER_REBORN = 1881398934U;
         static const AkUniqueID PLAY_PLAYER_STEP = 3502518326U;
+        static const AkUniqueID PLAY_PLAYER_TAKE_DAMAGE = 1172205655U;
+        static const AkUniqueID PLAY_PORTAL_ACTIVATING = 3309238901U;
+        static const AkUniqueID PLAY_PORTAL_WORKING = 573222996U;
+        static const AkUniqueID PLAY_SCARAB = 3669466544U;
         static const AkUniqueID PLAY_STEP_GRAVEL = 2915718306U;
         static const AkUniqueID PLAY_STEP_SAND = 3258421893U;
         static const AkUniqueID PLAY_STEP_STONE = 1569235226U;
+        static const AkUniqueID PLAY_STONE_INSERT = 387540179U;
+        static const AkUniqueID PLAY_USE_STUFF = 2751653356U;
+        static const AkUniqueID PLAY_WATER = 441572235U;
     } // namespace EVENTS
 
     namespace SWITCHES
@@ -49,6 +65,7 @@ namespace AK
         static const AkUniqueID FX_BUS = 3948848313U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC_BUS = 3127962312U;
+        static const AkUniqueID UI = 1551306167U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

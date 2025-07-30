@@ -749,6 +749,64 @@
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Environement" ID="{6A52D99E-6E69-4024-8357-869FEF0A6906}" ShortID="423665625">
+					<ChildrenList>
+						<RandomSequenceContainer Name="Portal_Working" ID="{A02A9585-F02E-41E3-8C08-6E3214438075}" ShortID="531931538">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="3.5"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Fx Bus" ID="{A0E2B14F-9768-4BD2-8858-A778BC86A118}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="portal_working" ID="{DD575194-5421-48ED-BFCC-32E32E34CCBB}" ShortID="192662416">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="portal_working" ID="{64C93559-3726-4937-9D92-E0D17BC9F39C}">
+											<Language>SFX</Language>
+											<AudioFile>portal_working.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="324242678"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="portal_working" ID="{64C93559-3726-4937-9D92-E0D17BC9F39C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="portal_working" ID="{DD575194-5421-48ED-BFCC-32E32E34CCBB}" WorkUnitID="{05C34427-496B-4499-B9DD-2B334CF77C54}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="portal_working" ID="{DD575194-5421-48ED-BFCC-32E32E34CCBB}" WorkUnitID="{05C34427-496B-4499-B9DD-2B334CF77C54}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

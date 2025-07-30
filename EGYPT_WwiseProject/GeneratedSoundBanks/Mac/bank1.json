@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{9A0CE216-A847-4437-BD94-1374CB26557E}",
     "Language": "SFX",
-    "Hash": "{CCBD7684-54BD-47F3-80EF-20C104C3F7CF}",
+    "Hash": "{9241CB0E-FCC1-706B-2DE0-28AFC5417231}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\bank1",
     "ShortName": "bank1",
     "Path": "bank1.bnk",
@@ -78,6 +78,14 @@
       "Location": "Memory",
       "ShortName": "step_gravel-004.wav",
       "CachePath": "57/{5736D2D9-86E0-6754-6D9E-78FCF0CCBEBC}.wem"
+     },
+     {
+      "Id": "324242678",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "portal_working.wav",
+      "CachePath": "E9/{E99CD4B7-C214-4BDB-7093-D323D1BE0849}.wem"
      },
      {
       "Id": "340252119",
@@ -242,6 +250,26 @@
     ],
     "Events": [
      {
+      "Id": "3155164924",
+      "Name": "Play_Anubis_Agro",
+      "ObjectPath": "\\Events\\Default Work Unit\\Anubis\\Play_Anubis_Agro",
+      "GUID": "{AAD21DA3-EB63-4E2D-90E8-C94F685543F7}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "530125689",
+      "Name": "Play_Anubis_Attack",
+      "ObjectPath": "\\Events\\Default Work Unit\\Anubis\\Play_Anubis_Attack",
+      "GUID": "{6A562FE2-EE7D-4CEA-A361-831DB00B3830}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
       "Id": "2979878043",
       "Name": "Play_Anubis_Step",
       "ObjectPath": "\\Events\\Default Work Unit\\Anubis\\Play_Anubis_Step",
@@ -268,6 +296,36 @@
       ]
      },
      {
+      "Id": "1054154995",
+      "Name": "Play_Artefact_Voice",
+      "ObjectPath": "\\Events\\Default Work Unit\\Artefacts\\Play_Artefact_Voice",
+      "GUID": "{5F43EBDF-2577-4A14-894B-25A2AD1A4F84}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "3015324718",
+      "Name": "Play_Fire",
+      "ObjectPath": "\\Events\\Default Work Unit\\Environement\\Play_Fire",
+      "GUID": "{31BA6A6C-BEF6-4A38-A027-9FF2D642A868}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2216606755",
+      "Name": "Play_Fog_Dissapear",
+      "ObjectPath": "\\Events\\Default Work Unit\\Trigering_Stuf\\Play_Fog_Dissapear",
+      "GUID": "{B46E0D25-DD71-4523-B242-31AEE70E070C}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
       "Id": "851501667",
       "Name": "Play_Mumia_Agro",
       "ObjectPath": "\\Events\\Default Work Unit\\Mumia\\Play_Mumia_Agro",
@@ -289,6 +347,16 @@
         "Id": "765708336"
        }
       ]
+     },
+     {
+      "Id": "3120015350",
+      "Name": "Play_Mumia_Attack",
+      "ObjectPath": "\\Events\\Default Work Unit\\Mumia\\Play_Mumia_Attack",
+      "GUID": "{FC24A515-6BDA-42A3-A831-29613B770EF7}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      },
      {
       "Id": "2495563692",
@@ -314,10 +382,82 @@
       ]
      },
      {
+      "Id": "1461641338",
+      "Name": "Play_Player_Die",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Player_Die",
+      "GUID": "{13FFB314-1B8B-4F9C-A78B-ABC131440E5E}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "562256996",
+      "Name": "Play_Player_Jump",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Player_Jump",
+      "GUID": "{B1A43E25-D97D-4B04-87C7-FA70A594F633}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1881398934",
+      "Name": "Play_Player_Reborn",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Player_Reborn",
+      "GUID": "{AA147BCF-50E8-48BD-8E96-29366614F5AB}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
       "Id": "3502518326",
       "Name": "Play_Player_Step",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Player_Step",
       "GUID": "{3C85B674-6A3E-48FB-B999-95CB2860098E}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1172205655",
+      "Name": "Play_Player_Take_Damage",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Player_Take_Damage",
+      "GUID": "{BC77BF37-B81D-4CDD-ACD2-3C3BA735D5F4}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "3309238901",
+      "Name": "Play_Portal_Activating",
+      "ObjectPath": "\\Events\\Default Work Unit\\Trigering_Stuf\\Play_Portal_Activating",
+      "GUID": "{72B1DA74-4B59-4758-9649-95434F80EA79}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "573222996",
+      "Name": "Play_Portal_Working",
+      "ObjectPath": "\\Events\\Default Work Unit\\Environement\\Play_Portal_Working",
+      "GUID": "{C7E39C9C-195E-4BD6-95AC-9EF7FD69E543}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "324242678"
+       }
+      ]
+     },
+     {
+      "Id": "3669466544",
+      "Name": "Play_Scarab",
+      "ObjectPath": "\\Events\\Default Work Unit\\Trigering_Stuf\\Play_Scarab",
+      "GUID": "{774079D9-2CE6-42D1-A8CE-1735E0F78CC6}",
+      "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -399,6 +539,36 @@
         "Id": "826763742"
        }
       ]
+     },
+     {
+      "Id": "387540179",
+      "Name": "Play_Stone_Insert",
+      "ObjectPath": "\\Events\\Default Work Unit\\Trigering_Stuf\\Play_Stone_Insert",
+      "GUID": "{4EA500BC-2B2A-4BC4-8717-553E916906CF}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2751653356",
+      "Name": "Play_use_stuff",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_use_stuff",
+      "GUID": "{725E64DC-07C1-4F00-996F-65CB47641F77}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "441572235",
+      "Name": "Play_Water",
+      "ObjectPath": "\\Events\\Default Work Unit\\Environement\\Play_Water",
+      "GUID": "{F69020B2-C457-45A5-A2D3-33EB4D4CDDAF}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ],
     "SwitchGroups": [
@@ -431,6 +601,6 @@
     ]
    }
   ],
-  "FileHash": "{7378864E-4A2D-6CBF-79FF-36CE7065DB93}"
+  "FileHash": "{7E968CC5-D961-57B0-D490-F60B2798312B}"
  }
 }

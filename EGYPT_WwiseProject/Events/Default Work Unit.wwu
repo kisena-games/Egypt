@@ -27,6 +27,11 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Mumia_Attack" ID="{FC24A515-6BDA-42A3-A831-29613B770EF7}">
+							<ChildrenList>
+								<Action Name="" ID="{27330B2E-E8C5-4640-83B1-1FEB022950CD}" ShortID="51380619"/>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{EC14B28F-F89D-4459-ADC7-3F6B9E2ED1B1}" ShortID="656582441">
@@ -75,6 +80,31 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Player_Die" ID="{13FFB314-1B8B-4F9C-A78B-ABC131440E5E}">
+							<ChildrenList>
+								<Action Name="" ID="{3CA64D2F-DFB6-4DE0-9245-94B161FB59A0}" ShortID="801924450"/>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Take_Damage" ID="{BC77BF37-B81D-4CDD-ACD2-3C3BA735D5F4}">
+							<ChildrenList>
+								<Action Name="" ID="{DF05E03D-3A2A-4D23-9A58-FEB8155A690C}" ShortID="735379110"/>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_use_stuff" ID="{725E64DC-07C1-4F00-996F-65CB47641F77}">
+							<ChildrenList>
+								<Action Name="" ID="{FE7AC86F-4A2F-4F06-B79D-08B0BF78726D}" ShortID="342610703"/>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Jump" ID="{B1A43E25-D97D-4B04-87C7-FA70A594F633}">
+							<ChildrenList>
+								<Action Name="" ID="{D9EC9E97-5929-40E6-9A7F-30B7BC472CA2}" ShortID="319578065"/>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Reborn" ID="{AA147BCF-50E8-48BD-8E96-29366614F5AB}">
+							<ChildrenList>
+								<Action Name="" ID="{6913ED94-E017-446F-AE71-366C4586C86F}" ShortID="953268193"/>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Anubis" ID="{F302A0E2-CA31-4EB8-A190-62F5D36C85E8}" ShortID="292742224">
@@ -88,6 +118,74 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Anubis_Agro" ID="{AAD21DA3-EB63-4E2D-90E8-C94F685543F7}">
+							<ChildrenList>
+								<Action Name="" ID="{A3B32AE5-059C-4C4A-8C1E-A66ED2B3E3B4}" ShortID="80291209"/>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Anubis_Attack" ID="{6A562FE2-EE7D-4CEA-A361-831DB00B3830}">
+							<ChildrenList>
+								<Action Name="" ID="{929D52FF-8688-43E0-8D6E-F0C224ADACE4}" ShortID="218131931"/>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Environement" ID="{A3C553C3-B71C-40ED-83B2-D594FD6810F2}" ShortID="841357287">
+					<ChildrenList>
+						<Event Name="Play_Fire" ID="{31BA6A6C-BEF6-4A38-A027-9FF2D642A868}">
+							<ChildrenList>
+								<Action Name="" ID="{D1B390FF-9617-41A0-8411-A6C299FBEFBA}" ShortID="731988664"/>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Water" ID="{F69020B2-C457-45A5-A2D3-33EB4D4CDDAF}">
+							<ChildrenList>
+								<Action Name="" ID="{3CDA3D11-A8E7-419E-8B18-89766ABBE6CE}" ShortID="688464164"/>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Portal_Working" ID="{C7E39C9C-195E-4BD6-95AC-9EF7FD69E543}">
+							<ChildrenList>
+								<Action Name="" ID="{CCF3988A-2F5D-4AAD-B586-E6E40399FF98}" ShortID="1020850704">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Portal_Working" ID="{A02A9585-F02E-41E3-8C08-6E3214438075}" WorkUnitID="{05C34427-496B-4499-B9DD-2B334CF77C54}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Trigering_Stuf" ID="{943776EF-706C-491E-A52A-3A10B470A499}" ShortID="1053064702">
+					<ChildrenList>
+						<Event Name="Play_Portal_Activating" ID="{72B1DA74-4B59-4758-9649-95434F80EA79}">
+							<ChildrenList>
+								<Action Name="" ID="{5FB1FD66-CD09-4F3E-9F1E-108B0E805083}" ShortID="695130652"/>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Scarab" ID="{774079D9-2CE6-42D1-A8CE-1735E0F78CC6}">
+							<ChildrenList>
+								<Action Name="" ID="{16A6E700-ECB8-4134-8A8A-14F3C559E5F6}" ShortID="804821609"/>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Stone_Insert" ID="{4EA500BC-2B2A-4BC4-8717-553E916906CF}">
+							<ChildrenList>
+								<Action Name="" ID="{CD7C68E9-4C4B-40EE-BF9C-491A9CF17D5E}" ShortID="741863548"/>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Fog_Dissapear" ID="{B46E0D25-DD71-4523-B242-31AEE70E070C}">
+							<ChildrenList>
+								<Action Name="" ID="{AEECAC43-CF01-4AE0-8013-722B29B76BED}" ShortID="763945481"/>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Artefacts" ID="{7F0D4092-445D-4F70-9076-13D0BCDBBD26}" ShortID="163107994">
+					<ChildrenList>
+						<Event Name="Play_Artefact_Voice" ID="{5F43EBDF-2577-4A14-894B-25A2AD1A4F84}">
+							<ChildrenList>
+								<Action Name="" ID="{4DDB5BF8-FA8F-4B22-B9F9-3E9E92AF0A8A}" ShortID="809663057"/>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>

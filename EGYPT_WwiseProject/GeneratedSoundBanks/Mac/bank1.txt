@@ -1,11 +1,27 @@
 Event	ID	Name			Wwise Object Path	Notes
+	387540179	Play_Stone_Insert			\Default Work Unit\Trigering_Stuf\Play_Stone_Insert	
+	441572235	Play_Water			\Default Work Unit\Environement\Play_Water	
+	530125689	Play_Anubis_Attack			\Default Work Unit\Anubis\Play_Anubis_Attack	
+	562256996	Play_Player_Jump			\Default Work Unit\Player\Play_Player_Jump	
+	573222996	Play_Portal_Working			\Default Work Unit\Environement\Play_Portal_Working	
 	851501667	Play_Mumia_Agro			\Default Work Unit\Mumia\Play_Mumia_Agro	
+	1054154995	Play_Artefact_Voice			\Default Work Unit\Artefacts\Play_Artefact_Voice	
+	1172205655	Play_Player_Take_Damage			\Default Work Unit\Player\Play_Player_Take_Damage	
+	1461641338	Play_Player_Die			\Default Work Unit\Player\Play_Player_Die	
 	1569235226	Play_Step_Stone			\Default Work Unit\Player\Play_Step_Stone	
+	1881398934	Play_Player_Reborn			\Default Work Unit\Player\Play_Player_Reborn	
+	2216606755	Play_Fog_Dissapear			\Default Work Unit\Trigering_Stuf\Play_Fog_Dissapear	
 	2495563692	Play_Mumia_Step			\Default Work Unit\Mumia\Play_Mumia_Step	
+	2751653356	Play_use_stuff			\Default Work Unit\Player\Play_use_stuff	
 	2915718306	Play_Step_Gravel			\Default Work Unit\Player\Play_Step_Gravel	
 	2979878043	Play_Anubis_Step			\Default Work Unit\Anubis\Play_Anubis_Step	
+	3015324718	Play_Fire			\Default Work Unit\Environement\Play_Fire	
+	3120015350	Play_Mumia_Attack			\Default Work Unit\Mumia\Play_Mumia_Attack	
+	3155164924	Play_Anubis_Agro			\Default Work Unit\Anubis\Play_Anubis_Agro	
 	3258421893	Play_Step_Sand			\Default Work Unit\Player\Play_Step_Sand	
+	3309238901	Play_Portal_Activating			\Default Work Unit\Trigering_Stuf\Play_Portal_Activating	
 	3502518326	Play_Player_Step			\Default Work Unit\Player\Play_Player_Step	
+	3669466544	Play_Scarab			\Default Work Unit\Trigering_Stuf\Play_Scarab	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1834394558	Surface			\Default Work Unit\Surface	
@@ -24,6 +40,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	284869909	step_concrete-003	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\8A\{8A2D1ACB-C39F-718F-D57B-5095AF2A2C60}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Stone\step_concrete-003		11700
 	295658025	step_concrete-005	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\16\{16C31339-D661-F824-5ACF-97D510235014}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Stone\step_concrete-005		11700
 	304774432	step_gravel-004	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\57\{5736D2D9-86E0-6754-6D9E-78FCF0CCBEBC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Graviy\step_gravel-004		45744
+	324242678	portal_working	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\E9\{E99CD4B7-C214-4BDB-7093-D323D1BE0849}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environement\Portal_Working\portal_working		11063964
 	340252119	mumia step-001	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\4B\{4BA54200-7725-F7A6-989D-BF623DD347D4}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mumia\Mumia_Step\mumia step-001		84640
 	403861504	mumia step-002	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\9B\{9BF39CA8-FEB1-63E4-7819-DDFAD421F70B}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mumia\Mumia_Step\mumia step-002		84640
 	415039201	anubis step-002	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\18\{188EBA93-33FC-33A5-3B9C-8DEA84DFB13A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Anubis\Anubis Step\anubis step-002		162964
