@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{9A0CE216-A847-4437-BD94-1374CB26557E}",
     "Language": "SFX",
-    "Hash": "{9241CB0E-FCC1-706B-2DE0-28AFC5417231}",
+    "Hash": "{A2D90116-1D9D-D78C-F93F-C7E878F49CDA}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\bank1",
     "ShortName": "bank1",
     "Path": "bank1.bnk",
@@ -330,6 +330,7 @@
       "Name": "Play_Mumia_Agro",
       "ObjectPath": "\\Events\\Default Work Unit\\Mumia\\Play_Mumia_Agro",
       "GUID": "{D539A8C6-663E-490E-8CD7-B46A02D53866}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "1.0700227",
       "DurationMax": "1.0700227",
@@ -363,6 +364,7 @@
       "Name": "Play_Mumia_Step",
       "ObjectPath": "\\Events\\Default Work Unit\\Mumia\\Play_Mumia_Step",
       "GUID": "{72721110-C065-4846-800C-2CA97053D2E1}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0.47927436",
       "DurationMax": "0.47927436",
@@ -416,6 +418,7 @@
       "Name": "Play_Player_Step",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Player_Step",
       "GUID": "{3C85B674-6A3E-48FB-B999-95CB2860098E}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -467,6 +470,7 @@
       "Name": "Play_Step_Gravel",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Step_Gravel",
       "GUID": "{FE8E2B47-4B42-4579-B7E8-2348CD32A7C2}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0.2587755",
       "DurationMax": "0.2587755",
@@ -493,6 +497,7 @@
       "Name": "Play_Step_Sand",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Step_Sand",
       "GUID": "{91880C54-C9D5-45BA-801C-327B6939C0FA}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0.35099775",
       "DurationMax": "0.35099775",
@@ -519,6 +524,7 @@
       "Name": "Play_Step_Stone",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Step_Stone",
       "GUID": "{69CF74DD-637B-4D28-A0E7-5371B56112F8}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0.065782316",
       "DurationMax": "0.065782316",
@@ -601,6 +607,6 @@
     ]
    }
   ],
-  "FileHash": "{7E968CC5-D961-57B0-D490-F60B2798312B}"
+  "FileHash": "{37F1FCCF-5FDF-7C4D-CCD6-B33FE3707FF5}"
  }
 }
