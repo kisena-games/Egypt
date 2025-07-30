@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerAttacking : MonoBehaviour
 {
-    public static Action OnMummyWait;
+    public static Action OnMummyWait,OnScarabWait;
 
     [SerializeField] private GameObject _radiuses;
     [SerializeField] private MummyStateMachine _mummyStateMacine;
@@ -51,7 +51,15 @@ public class PlayerAttacking : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Q) && !_isScarabWait && !_isMummyWait)
             {
-                OnMummyWait?.Invoke();
+                if (_mummyStateMacine.isFeelPlayerNoise)
+                {
+                    OnMummyWait?.Invoke();
+                }
+                else
+                {
+                    OnScarabWait?.Invoke();
+                }
+
                 _radiuses.SetActive(false);
                 _mummyStateMacine.SetSmell(false);
                 _mummyStateMacine.SetNoise(false);
@@ -61,6 +69,8 @@ public class PlayerAttacking : MonoBehaviour
                 _isScarabWait = true;
                 _isMummyWait = true;
             }
+            
+
         }
         
     }
