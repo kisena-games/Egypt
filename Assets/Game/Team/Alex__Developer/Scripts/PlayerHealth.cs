@@ -72,5 +72,6 @@ public class PlayerHealth : MonoBehaviour
             _blood.DOColor(colorBlack(1f), 2f);
             healthCount = 3;
         }
+        
     }
 }

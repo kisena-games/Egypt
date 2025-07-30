@@ -6,7 +6,7 @@ using UnityEngine;
 public class TutorialManager : MonoBehaviour
 {
     [SerializeField] private List<TutorialInfo> _infos;
-    [SerializeField] private float _minTriggerTime = 2f;
+    [SerializeField] private float _minTriggerTime = 1f;
 
     private int triggersNum = 0;
 

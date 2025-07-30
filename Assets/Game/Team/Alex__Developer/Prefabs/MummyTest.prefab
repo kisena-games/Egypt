@@ -2132,7 +2132,6 @@ GameObject:
   - component: {fileID: 5917791210611795091}
   - component: {fileID: 6565577951990638082}
   - component: {fileID: 7150013090174536275}
-  - component: {fileID: 6694466800535786110}
   m_Layer: 0
   m_Name: MummyTest
   m_TagString: Untagged
@@ -2278,7 +2277,7 @@ MonoBehaviour:
   wwiseOnAnubisLook:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: d0559525fec74b9498bbf11aa887ac84, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 769102935461b3848989c54e15f04dfa, type: 2}
   wwiseOnMummyLook:
     idInternal: 0
     valueGuidInternal: 
@@ -2286,11 +2285,11 @@ MonoBehaviour:
   wwiseOnAnubisBit:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: ab7872056bf812c43bf82a82e64b4768, type: 2}
   wwiseOnMummyBit:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 54d03ed36fb13ac4284bb5f5a64b3a81, type: 2}
   wwiseOnAnubisWalk:
     idInternal: 0
     valueGuidInternal: 
@@ -2298,7 +2297,7 @@ MonoBehaviour:
   wwiseOnMummyWalk:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: adf6b8348db5df14896223a6aed1686e, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 28e6ed84fcb19d0489c2e85bdfb9bf53, type: 2}
   wwiseOnAnubisRun:
     idInternal: 0
     valueGuidInternal: 
@@ -2306,7 +2305,7 @@ MonoBehaviour:
   wwiseOnMummyRun:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: adf6b8348db5df14896223a6aed1686e, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 28e6ed84fcb19d0489c2e85bdfb9bf53, type: 2}
 --- !u!114 &6565577951990638082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2347,19 +2346,6 @@ MonoBehaviour:
   bOverrideScalingFactor: 0
   scalingFactor: -1
   listenerId: 0
---- !u!114 &6694466800535786110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7291200111824259747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b168341d4753ef47b75b50cf25a3988, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceProbe: {fileID: 0}
 --- !u!1 &7395023237323874210
 GameObject:
   m_ObjectHideFlags: 0

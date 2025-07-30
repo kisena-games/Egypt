@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerStateMachine : MonoBehaviour
@@ -17,6 +18,7 @@ public class PlayerStateMachine : MonoBehaviour
     private Camera _mainCamera;
     private StateMachine _stateMachine;
     public bool isStealth = false;
+    
 
     private void Start()
     {
@@ -50,7 +52,11 @@ public class PlayerStateMachine : MonoBehaviour
         {
             isStealth = false;
         }
-
+        if (transform.position.y < -20f&&SceneManager.GetActiveScene().buildIndex==14)
+        {
+            SceneManager.LoadScene(13);
+            transform.position = new Vector3(0, 100, 0);
+        }
         _stateMachine.OnUpdate();
     }
 
