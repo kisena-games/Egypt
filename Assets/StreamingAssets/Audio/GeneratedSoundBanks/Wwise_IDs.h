@@ -15,12 +15,14 @@ namespace AK
     {
         static const AkUniqueID PLAY_ANUBIS_AGRO = 3155164924U;
         static const AkUniqueID PLAY_ANUBIS_ATTACK = 530125689U;
+        static const AkUniqueID PLAY_ANUBIS_HIT = 3489147708U;
         static const AkUniqueID PLAY_ANUBIS_STEP = 2979878043U;
         static const AkUniqueID PLAY_ARTEFACT_VOICE = 1054154995U;
         static const AkUniqueID PLAY_FIRE = 3015324718U;
         static const AkUniqueID PLAY_FOG_DISSAPEAR = 2216606755U;
         static const AkUniqueID PLAY_MUMIA_AGRO = 851501667U;
         static const AkUniqueID PLAY_MUMIA_ATTACK = 3120015350U;
+        static const AkUniqueID PLAY_MUMIA_HIT = 943022013U;
         static const AkUniqueID PLAY_MUMIA_STEP = 2495563692U;
         static const AkUniqueID PLAY_PLAYER_DIE = 1461641338U;
         static const AkUniqueID PLAY_PLAYER_JUMP = 562256996U;

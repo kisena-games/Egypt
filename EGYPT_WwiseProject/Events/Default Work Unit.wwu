@@ -32,6 +32,11 @@
 								<Action Name="" ID="{27330B2E-E8C5-4640-83B1-1FEB022950CD}" ShortID="51380619"/>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Mumia_Hit" ID="{55616B7A-B254-43F5-A004-DE46C8B1950B}">
+							<ChildrenList>
+								<Action Name="" ID="{EC71F1B9-9B62-48D1-A911-1574560CB2B0}" ShortID="243584882"/>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{EC14B28F-F89D-4459-ADC7-3F6B9E2ED1B1}" ShortID="656582441">
@@ -128,6 +133,11 @@
 						<Event Name="Play_Anubis_Attack" ID="{6A562FE2-EE7D-4CEA-A361-831DB00B3830}">
 							<ChildrenList>
 								<Action Name="" ID="{929D52FF-8688-43E0-8D6E-F0C224ADACE4}" ShortID="218131931"/>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Anubis_Hit" ID="{6F728F93-E6AE-4883-BC07-C243E9ECBB66}">
+							<ChildrenList>
+								<Action Name="" ID="{642DCC9B-289D-468F-9A64-5FC2CA4441AF}" ShortID="413679667"/>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>

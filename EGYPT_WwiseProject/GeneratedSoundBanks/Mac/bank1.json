@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{9A0CE216-A847-4437-BD94-1374CB26557E}",
     "Language": "SFX",
-    "Hash": "{A2D90116-1D9D-D78C-F93F-C7E878F49CDA}",
+    "Hash": "{5743E30D-24FA-E708-A7BB-F1AF4A3790BD}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\bank1",
     "ShortName": "bank1",
     "Path": "bank1.bnk",
@@ -270,6 +270,16 @@
       "DurationMax": "0"
      },
      {
+      "Id": "3489147708",
+      "Name": "Play_Anubis_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Anubis\\Play_Anubis_Hit",
+      "GUID": "{6F728F93-E6AE-4883-BC07-C243E9ECBB66}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
       "Id": "2979878043",
       "Name": "Play_Anubis_Step",
       "ObjectPath": "\\Events\\Default Work Unit\\Anubis\\Play_Anubis_Step",
@@ -354,6 +364,16 @@
       "Name": "Play_Mumia_Attack",
       "ObjectPath": "\\Events\\Default Work Unit\\Mumia\\Play_Mumia_Attack",
       "GUID": "{FC24A515-6BDA-42A3-A831-29613B770EF7}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "943022013",
+      "Name": "Play_Mumia_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Mumia\\Play_Mumia_Hit",
+      "GUID": "{55616B7A-B254-43F5-A004-DE46C8B1950B}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -607,6 +627,6 @@
     ]
    }
   ],
-  "FileHash": "{37F1FCCF-5FDF-7C4D-CCD6-B33FE3707FF5}"
+  "FileHash": "{1D81D115-6C11-E649-C0F9-CD72A8E82D2E}"
  }
 }
