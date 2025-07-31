@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 public class ForTest : MonoBehaviour
 {
     private int _sceneCount;
+    [SerializeField] private GameObject _canvasPause,_inputManager;
+
     private void Start()
     {
         _sceneCount = SceneManager.sceneCount;
@@ -23,7 +25,9 @@ public class ForTest : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-           // SceneManager.LoadScene(0);
+           _canvasPause.SetActive(true);
+           _inputManager.SetActive(false);
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }

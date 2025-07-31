@@ -22,6 +22,7 @@ public class PlayerStateMachine : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;
         _playerController = GetComponent<CharacterController>();
         _mainCamera = Camera.main;
 
@@ -52,9 +53,14 @@ public class PlayerStateMachine : MonoBehaviour
         {
             isStealth = false;
         }
-        if (transform.position.y < -20f&&SceneManager.GetActiveScene().buildIndex==14)
+        if (transform.position.y < -20f)
         {
-            SceneManager.LoadScene(13);
+            switch (SceneManager.GetActiveScene().buildIndex)
+            { 
+                case 14: SceneManager.LoadScene(13); break;
+                case 17: SceneManager.LoadScene(18); break;
+            }
+
             transform.position = new Vector3(0, 100, 0);
         }
         _stateMachine.OnUpdate();
