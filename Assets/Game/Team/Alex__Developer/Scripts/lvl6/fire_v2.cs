@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Fire : MonoBehaviour
+public class fire_v2 : MonoBehaviour
 {
     public Light pointLight;
     public float minIntensity = 2f;
