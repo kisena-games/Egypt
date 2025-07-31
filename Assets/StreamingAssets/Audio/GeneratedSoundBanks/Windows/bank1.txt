@@ -1,0 +1,66 @@
+Event	ID	Name			Wwise Object Path	Notes
+	387540179	Play_Stone_Insert			\Default Work Unit\Trigering_Stuf\Play_Stone_Insert	
+	441572235	Play_Water			\Default Work Unit\Environement\Play_Water	
+	530125689	Play_Anubis_Attack			\Default Work Unit\Anubis\Play_Anubis_Attack	
+	562256996	Play_Player_Jump			\Default Work Unit\Player\Play_Player_Jump	
+	573222996	Play_Portal_Working			\Default Work Unit\Environement\Play_Portal_Working	
+	851501667	Play_Mumia_Agro			\Default Work Unit\Mumia\Play_Mumia_Agro	
+	943022013	Play_Mumia_Hit			\Default Work Unit\Mumia\Play_Mumia_Hit	
+	1054154995	Play_Artefact_Voice			\Default Work Unit\Artefacts\Play_Artefact_Voice	
+	1172205655	Play_Player_Take_Damage			\Default Work Unit\Player\Play_Player_Take_Damage	
+	1461641338	Play_Player_Die			\Default Work Unit\Player\Play_Player_Die	
+	1569235226	Play_Step_Stone			\Default Work Unit\Player\Play_Step_Stone	
+	1881398934	Play_Player_Reborn			\Default Work Unit\Player\Play_Player_Reborn	
+	2216606755	Play_Fog_Dissapear			\Default Work Unit\Trigering_Stuf\Play_Fog_Dissapear	
+	2495563692	Play_Mumia_Step			\Default Work Unit\Mumia\Play_Mumia_Step	
+	2751653356	Play_use_stuff			\Default Work Unit\Player\Play_use_stuff	
+	2915718306	Play_Step_Gravel			\Default Work Unit\Player\Play_Step_Gravel	
+	2979878043	Play_Anubis_Step			\Default Work Unit\Anubis\Play_Anubis_Step	
+	3015324718	Play_Fire			\Default Work Unit\Environement\Play_Fire	
+	3120015350	Play_Mumia_Attack			\Default Work Unit\Mumia\Play_Mumia_Attack	
+	3155164924	Play_Anubis_Agro			\Default Work Unit\Anubis\Play_Anubis_Agro	
+	3258421893	Play_Step_Sand			\Default Work Unit\Player\Play_Step_Sand	
+	3309238901	Play_Portal_Activating			\Default Work Unit\Trigering_Stuf\Play_Portal_Activating	
+	3489147708	Play_Anubis_Hit			\Default Work Unit\Anubis\Play_Anubis_Hit	
+	3502518326	Play_Player_Step			\Default Work Unit\Player\Play_Player_Step	
+	3669466544	Play_Scarab			\Default Work Unit\Trigering_Stuf\Play_Scarab	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1834394558	Surface			\Default Work Unit\Surface	
+
+Switch	ID	Name	Switch Group			Notes
+	803837735	Sand	Surface			
+	1216965916	Stone	Surface			
+	2185786256	Gravel	Surface			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	101509122	anubis step-005	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\BC\{BCBAF5FB-3236-05DB-ECC2-B9630D7D2121}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Anubis\Anubis Step\anubis step-005		162964
+	139821229	step_gravel-002	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\81\{8170AA28-E823-E30B-D029-63CC9D48EF76}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Graviy\step_gravel-002		45744
+	166301828	mumia_agro-004	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\C2\{C2857973-DE5A-65D8-FA6C-51C5CEEE83F9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mumia\Scream\mumia_agro-004		188848
+	256049301	anubis step-003	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\48\{48D387D1-71C2-C0A2-128B-B598374B658A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Anubis\Anubis Step\anubis step-003		162964
+	261843230	mumia_agro-001	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\E5\{E59FC7E9-B3A8-A0D0-CCE1-7DC8F396473F}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mumia\Scream\mumia_agro-001		188848
+	284869909	step_concrete-003	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\8A\{8A2D1ACB-C39F-718F-D57B-5095AF2A2C60}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Stone\step_concrete-003		11700
+	295658025	step_concrete-005	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\16\{16C31339-D661-F824-5ACF-97D510235014}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Stone\step_concrete-005		11700
+	304774432	step_gravel-004	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\57\{5736D2D9-86E0-6754-6D9E-78FCF0CCBEBC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Graviy\step_gravel-004		45744
+	324242678	portal_working	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\E9\{E99CD4B7-C214-4BDB-7093-D323D1BE0849}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environement\Portal_Working\portal_working		11063964
+	340252119	mumia step-001	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\4B\{4BA54200-7725-F7A6-989D-BF623DD347D4}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mumia\Mumia_Step\mumia step-001		84640
+	403861504	mumia step-002	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\9B\{9BF39CA8-FEB1-63E4-7819-DDFAD421F70B}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mumia\Mumia_Step\mumia step-002		84640
+	415039201	anubis step-002	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\18\{188EBA93-33FC-33A5-3B9C-8DEA84DFB13A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Anubis\Anubis Step\anubis step-002		162964
+	446697455	mumia step-004	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\9A\{9A1821C9-A183-5F93-4CDA-6A4B58738227}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mumia\Mumia_Step\mumia step-004		84640
+	489095842	mumia_agro-002	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\D4\{D45E6E4E-CC4F-EE64-3DA4-0DD2FA2E723B}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mumia\Scream\mumia_agro-002		188848
+	527900807	step_concrete-004	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\56\{5685D79D-1512-9035-9133-FA55F4272AA6}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Stone\step_concrete-004		11700
+	555275543	step_gravel-003	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\EE\{EEE0B249-DC2E-7199-AB45-98E2FA7F4E74}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Graviy\step_gravel-003		45744
+	557515721	step_sand-003	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\74\{74E5F9F3-F975-F116-8028-C533D48B9C82}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Sand\step_sand-003		62012
+	597920908	step_sand-002	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\DE\{DE73F664-F4EB-28A9-F373-26A0C2C47D2B}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Sand\step_sand-002		62012
+	701923641	step_gravel-005	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\B6\{B6D84126-580F-764C-CEC2-5901EFFC2426}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Graviy\step_gravel-005		45744
+	765708336	mumia_agro-003	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\71\{71FFC310-A7C2-6EA7-7E82-DBCC2314BB96}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mumia\Scream\mumia_agro-003		188848
+	800076971	step_sand-001	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\CB\{CBAEFFF2-8600-7694-C62C-CC1C816A28FA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Sand\step_sand-001		62012
+	810728278	step_gravel-001	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\6A\{6A03C865-68E5-4AAD-34E6-6EAD50E7958A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Graviy\step_gravel-001		45744
+	822798359	step_concrete-001	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\3A\{3AF47499-B053-B3B0-93D8-16776FC1525A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Stone\step_concrete-001		11700
+	826763742	step_concrete-002	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\7E\{7E054491-7228-4DB7-06E5-3A0FFE6E5A4F}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Stone\step_concrete-002		11700
+	860865332	step_sand-005	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\FE\{FED46905-7BA9-B528-3F5D-A133331FE822}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Sand\step_sand-005		62012
+	923381877	anubis step-004	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\D2\{D2F428D2-3D06-F60B-AA57-8C09CA867E6C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Anubis\Anubis Step\anubis step-004		162964
+	927364542	step_sand-004	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\F9\{F93D7AE1-FF72-E78B-5763-76701CEFC0C7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Sand\step_sand-004		62012
+	972122807	anubis step-001	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\E2\{E27ED238-ED2F-56F6-21C9-D250A887A74E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Anubis\Anubis Step\anubis step-001		162964
+	1025955031	mumia step-003	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\62\{62F9EB59-7A56-96DA-77EA-6A2D1352B18A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mumia\Mumia_Step\mumia step-003		84640
+
