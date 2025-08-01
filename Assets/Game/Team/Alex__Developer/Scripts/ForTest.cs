@@ -1,18 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ForTest : MonoBehaviour
 {
-    private int _sceneCount;
-    [SerializeField] private GameObject _canvasPause,_inputManager;
+    [SerializeField] private GameObject _canvasPause,_inputManager,_inventory;
 
-    private void Start()
+
+    
+    private void OpenMenu()
     {
-        _sceneCount = SceneManager.sceneCount;
-    }
-    public void OpenScene(int index)
-    {
-        SceneManager.LoadScene(index);
+        _canvasPause.SetActive(true);
+        _inputManager.SetActive(false);
+        _inventory.SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
     }
     private void Update()
     {
@@ -25,9 +26,11 @@ public class ForTest : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-           _canvasPause.SetActive(true);
-           _inputManager.SetActive(false);
-            Cursor.lockState = CursorLockMode.None;
+            if(_canvasPause.activeSelf)
+                _inventory.SetActive(true);
+            else
+                OpenMenu();
+
         }
     }
 }
