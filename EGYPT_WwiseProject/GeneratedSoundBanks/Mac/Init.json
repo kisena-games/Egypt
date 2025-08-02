@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{E986003B-016A-E3B0-7CE9-E3D77FED4E2F}",
+    "Hash": "{8B0F7D06-EBBB-4908-DE4D-ED7508A4E802}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -60,6 +60,26 @@
       "GUID": "{A0E2B14F-9768-4BD2-8858-A778BC86A118}"
      }
     ],
+    "GameParameters": [
+     {
+      "Id": "1006694123",
+      "Name": "Music_volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Music_volume",
+      "GUID": "{0CC03A46-E016-4CA9-BAA4-33B713C113EE}"
+     },
+     {
+      "Id": "1719345792",
+      "Name": "UI_volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\UI_volume",
+      "GUID": "{B5454843-BDCF-4CA3-B889-BD1DD041F596}"
+     },
+     {
+      "Id": "3350225276",
+      "Name": "Fx_volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Fx_volume",
+      "GUID": "{57E87970-E12D-459E-9BEC-7B928F3785F0}"
+     }
+    ],
     "SwitchGroups": [
      {
       "Id": "1834394558",
@@ -90,6 +110,6 @@
     ]
    }
   ],
-  "FileHash": "{FE2692B3-84A1-3E97-F1BE-A37BC5DB85E0}"
+  "FileHash": "{B95E62F8-C4AF-DEF9-ABFD-79CA5C6496DC}"
  }
 }
