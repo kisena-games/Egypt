@@ -87,12 +87,24 @@
 						</Event>
 						<Event Name="Play_Player_Die" ID="{13FFB314-1B8B-4F9C-A78B-ABC131440E5E}">
 							<ChildrenList>
-								<Action Name="" ID="{3CA64D2F-DFB6-4DE0-9245-94B161FB59A0}" ShortID="801924450"/>
+								<Action Name="" ID="{3CA64D2F-DFB6-4DE0-9245-94B161FB59A0}" ShortID="801924450">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Death" ID="{1D8F3C8F-6CD0-43F5-9435-64B1AD4398ED}" WorkUnitID="{05C34427-496B-4499-B9DD-2B334CF77C54}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_Player_Take_Damage" ID="{BC77BF37-B81D-4CDD-ACD2-3C3BA735D5F4}">
 							<ChildrenList>
-								<Action Name="" ID="{DF05E03D-3A2A-4D23-9A58-FEB8155A690C}" ShortID="735379110"/>
+								<Action Name="" ID="{DF05E03D-3A2A-4D23-9A58-FEB8155A690C}" ShortID="735379110">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Take_Damage" ID="{18603265-DE5F-4873-9000-466F553515BF}" WorkUnitID="{05C34427-496B-4499-B9DD-2B334CF77C54}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_use_stuff" ID="{725E64DC-07C1-4F00-996F-65CB47641F77}">
@@ -102,7 +114,13 @@
 						</Event>
 						<Event Name="Play_Player_Jump" ID="{B1A43E25-D97D-4B04-87C7-FA70A594F633}">
 							<ChildrenList>
-								<Action Name="" ID="{D9EC9E97-5929-40E6-9A7F-30B7BC472CA2}" ShortID="319578065"/>
+								<Action Name="" ID="{D9EC9E97-5929-40E6-9A7F-30B7BC472CA2}" ShortID="319578065">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jump" ID="{164C6390-6847-480A-9A6D-B938E9C3DC4B}" WorkUnitID="{05C34427-496B-4499-B9DD-2B334CF77C54}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_Player_Reborn" ID="{AA147BCF-50E8-48BD-8E96-29366614F5AB}">
@@ -196,6 +214,20 @@
 						<Event Name="Play_Artefact_Voice" ID="{5F43EBDF-2577-4A14-894B-25A2AD1A4F84}">
 							<ChildrenList>
 								<Action Name="" ID="{4DDB5BF8-FA8F-4B22-B9F9-3E9E92AF0A8A}" ShortID="809663057"/>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{3C0C600C-D746-483F-AAAA-81D7F3382EE8}" ShortID="342458382">
+					<ChildrenList>
+						<Event Name="Play_Menu_Music" ID="{22F30789-7257-4321-9D21-DE05D2885993}">
+							<ChildrenList>
+								<Action Name="" ID="{06C7DCE7-D4D8-4679-8434-76BC91A2C196}" ShortID="279903472"/>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Lvl1_Music" ID="{7BA20459-61D3-43AE-B766-3D0CFC3BB074}">
+							<ChildrenList>
+								<Action Name="" ID="{D000A68E-885B-4509-B1AE-C266BA766088}" ShortID="322376208"/>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>
