@@ -87,12 +87,24 @@
 						</Event>
 						<Event Name="Play_Player_Die" ID="{13FFB314-1B8B-4F9C-A78B-ABC131440E5E}">
 							<ChildrenList>
-								<Action Name="" ID="{3CA64D2F-DFB6-4DE0-9245-94B161FB59A0}" ShortID="801924450"/>
+								<Action Name="" ID="{3CA64D2F-DFB6-4DE0-9245-94B161FB59A0}" ShortID="801924450">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Death" ID="{1D8F3C8F-6CD0-43F5-9435-64B1AD4398ED}" WorkUnitID="{05C34427-496B-4499-B9DD-2B334CF77C54}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_Player_Take_Damage" ID="{BC77BF37-B81D-4CDD-ACD2-3C3BA735D5F4}">
 							<ChildrenList>
-								<Action Name="" ID="{DF05E03D-3A2A-4D23-9A58-FEB8155A690C}" ShortID="735379110"/>
+								<Action Name="" ID="{DF05E03D-3A2A-4D23-9A58-FEB8155A690C}" ShortID="735379110">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Take_Damage" ID="{18603265-DE5F-4873-9000-466F553515BF}" WorkUnitID="{05C34427-496B-4499-B9DD-2B334CF77C54}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_use_stuff" ID="{725E64DC-07C1-4F00-996F-65CB47641F77}">

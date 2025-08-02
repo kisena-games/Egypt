@@ -20,6 +20,8 @@ namespace AK
         static const AkUniqueID PLAY_ARTEFACT_VOICE = 1054154995U;
         static const AkUniqueID PLAY_FIRE = 3015324718U;
         static const AkUniqueID PLAY_FOG_DISSAPEAR = 2216606755U;
+        static const AkUniqueID PLAY_LVL1_MUSIC = 29834681U;
+        static const AkUniqueID PLAY_MENU_MUSIC = 2228153899U;
         static const AkUniqueID PLAY_MUMIA_AGRO = 851501667U;
         static const AkUniqueID PLAY_MUMIA_ATTACK = 3120015350U;
         static const AkUniqueID PLAY_MUMIA_HIT = 943022013U;
