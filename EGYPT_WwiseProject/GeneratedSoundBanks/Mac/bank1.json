@@ -10,11 +10,19 @@
     "Type": "User",
     "GUID": "{9A0CE216-A847-4437-BD94-1374CB26557E}",
     "Language": "SFX",
-    "Hash": "{5743E30D-24FA-E708-A7BB-F1AF4A3790BD}",
+    "Hash": "{52A2DC29-31D4-2CB6-7777-42B639831DE6}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\bank1",
     "ShortName": "bank1",
     "Path": "bank1.bnk",
     "Media": [
+     {
+      "Id": "9079806",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "jump-003.wav",
+      "CachePath": "2F/{2F4BBB15-845B-1818-971B-55FD4F8E964C}.wem"
+     },
      {
       "Id": "101509122",
       "Language": "SFX",
@@ -152,12 +160,28 @@
       "CachePath": "74/{74E5F9F3-F975-F116-8028-C533D48B9C82}.wem"
      },
      {
+      "Id": "582726380",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "jump-002.wav",
+      "CachePath": "F6/{F6EDF436-FCD0-4120-9BFD-5EBEC2536D09}.wem"
+     },
+     {
       "Id": "597920908",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "step_sand-002.wav",
       "CachePath": "DE/{DE73F664-F4EB-28A9-F373-26A0C2C47D2B}.wem"
+     },
+     {
+      "Id": "613466755",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "jump-004.wav",
+      "CachePath": "27/{2727542F-925D-B0FE-6679-BF18E961093F}.wem"
      },
      {
       "Id": "701923641",
@@ -230,6 +254,14 @@
       "Location": "Memory",
       "ShortName": "step_sand-004.wav",
       "CachePath": "F9/{F93D7AE1-FF72-E78B-5763-76701CEFC0C7}.wem"
+     },
+     {
+      "Id": "968247832",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "jump-001.wav",
+      "CachePath": "A2/{A276C720-6538-AEDF-E83B-130018AC9DA4}.wem"
      },
      {
       "Id": "972122807",
@@ -627,6 +659,6 @@
     ]
    }
   ],
-  "FileHash": "{1D81D115-6C11-E649-C0F9-CD72A8E82D2E}"
+  "FileHash": "{3053CA50-443A-47FD-1201-58C07BFE3CE1}"
  }
 }
