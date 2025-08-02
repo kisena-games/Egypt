@@ -58,9 +58,10 @@ public class PlayerListener : MonoBehaviour
     private void CheckInteract()
     {
 
-        if(Input.GetKeyDown(KeyCode.E) && LastObject != null)
+        if(Input.GetKey(KeyCode.E) && LastObject != null)
         {
            LastObject.Interact(_inventory);
+           LastObject=null;
         }
   
     }

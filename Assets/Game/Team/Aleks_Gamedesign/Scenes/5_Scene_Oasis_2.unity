@@ -1209,6 +1209,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 755130271}
     m_Modifications:
+    - target: {fileID: 644844155234287663, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
+      propertyPath: _radius
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1197716421611104545, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
       propertyPath: _timeToCalmDownNoise
       value: 5
@@ -1245,6 +1249,10 @@ PrefabInstance:
       propertyPath: _patrollingWay
       value: 
       objectReference: {fileID: 1558644542}
+    - target: {fileID: 6280859537164437337, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
+      propertyPath: _radius
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6694466800535786110, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
       propertyPath: distanceProbe
       value: 
@@ -2366,11 +2374,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8416440251510524942, guid: 5147712114994284ba1cfd0183524c05, type: 3}
       propertyPath: m_text
-      value: "\u041C\u0443\u043C\u0438\u0438 \u0433\u043B\u0443\u0445\u043E\u0432\u0430\u0442\u044B
-        \u0438 \u0441\u043E\u0432\u0441\u0435\u043C \u043F\u043B\u043E\u0445\u043E
-        \u0432\u0438\u0434\u044F\u0442.\n\u0415\u0441\u043B\u0438 \u043F\u0435\u0440\u0435\u0434\u0432\u0438\u0433\u0430\u0442\u044C\u0441\u044F
-        \u0442\u0438\u0445\u043E (\u0421), \u0442\u043E \u043C\u043E\u0436\u043D\u043E
-        \u0438\u0445 \n\u043F\u043E\u0447\u0442\u0438 \u043D\u0435 \u0431\u043E\u044F\u0442\u044C\u0441\u044F"
+      value: "\u0410\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u044F \u0441\u043A\u0430\u0440\u0430\u0431\u0435\u044F-Q,
+        \u0434\u043B\u044F \u043E\u0433\u043B\u0443\u0448\u0435\u043D\u0438\u044F
+        \u043C\u0443\u043C\u0438\u0439!"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -2478,6 +2484,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 755130271}
     m_Modifications:
+    - target: {fileID: 644844155234287663, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
+      propertyPath: _radius
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1197716421611104545, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
       propertyPath: _timeToCalmDownNoise
       value: 5
@@ -2510,6 +2520,10 @@ PrefabInstance:
       propertyPath: _patrollingWay
       value: 
       objectReference: {fileID: 733592387}
+    - target: {fileID: 6280859537164437337, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
+      propertyPath: _radius
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6694466800535786110, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
       propertyPath: distanceProbe
       value: 
@@ -3170,6 +3184,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 755130271}
     m_Modifications:
+    - target: {fileID: 644844155234287663, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
+      propertyPath: _radius
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1197716421611104545, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
       propertyPath: _timeToCalmDownNoise
       value: 5
@@ -3202,6 +3220,10 @@ PrefabInstance:
       propertyPath: _patrollingWay
       value: 
       objectReference: {fileID: 37096534}
+    - target: {fileID: 6280859537164437337, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
+      propertyPath: _radius
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6694466800535786110, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
       propertyPath: distanceProbe
       value: 
@@ -3596,6 +3618,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 755130271}
     m_Modifications:
+    - target: {fileID: 644844155234287663, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
+      propertyPath: _radius
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1197716421611104545, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
       propertyPath: _timeToCalmDownNoise
       value: 5
@@ -3628,6 +3654,10 @@ PrefabInstance:
       propertyPath: _patrollingWay
       value: 
       objectReference: {fileID: 781188227}
+    - target: {fileID: 6280859537164437337, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
+      propertyPath: _radius
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6694466800535786110, guid: d8e9d7c7b09148048ba2e1747f4393c1, type: 3}
       propertyPath: distanceProbe
       value: 

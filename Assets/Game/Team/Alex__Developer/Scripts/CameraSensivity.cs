@@ -26,7 +26,7 @@ public class CameraSensivity : MonoBehaviour
     {
         float currentSensitivity = mouseKeyboardSensitivity; // Здесь это не нужно, если ты просто используешь Slider.value
         Vector2 mouseDelta = _moveCursorAction.action.ReadValue<Vector2>(); // Доступ к значению через .action
-        Vector2 scaledMouseDelta = mouseDelta * _slider.value*2;
+        Vector2 scaledMouseDelta = mouseDelta * _slider.value;
     }
 }
 
