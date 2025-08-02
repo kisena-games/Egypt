@@ -10,11 +10,19 @@
     "Type": "User",
     "GUID": "{9A0CE216-A847-4437-BD94-1374CB26557E}",
     "Language": "SFX",
-    "Hash": "{5743E30D-24FA-E708-A7BB-F1AF4A3790BD}",
+    "Hash": "{DBAA288D-AF4C-9D1E-FE1C-A4B1775C7126}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\bank1",
     "ShortName": "bank1",
     "Path": "bank1.bnk",
     "Media": [
+     {
+      "Id": "9079806",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "jump-003.wav",
+      "CachePath": "2F/{2F4BBB15-845B-1818-971B-55FD4F8E964C}.wem"
+     },
      {
       "Id": "101509122",
       "Language": "SFX",
@@ -22,6 +30,14 @@
       "Location": "Memory",
       "ShortName": "anubis step-005.wav",
       "CachePath": "BC/{BCBAF5FB-3236-05DB-ECC2-B9630D7D2121}.wem"
+     },
+     {
+      "Id": "108162736",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "death-003.wav",
+      "CachePath": "01/{013CADB9-BC83-7BE9-F3D4-D3ADD52E914B}.wem"
      },
      {
       "Id": "139821229",
@@ -38,6 +54,14 @@
       "Location": "Memory",
       "ShortName": "mumia_agro-004.wav",
       "CachePath": "C2/{C2857973-DE5A-65D8-FA6C-51C5CEEE83F9}.wem"
+     },
+     {
+      "Id": "226745581",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "death-001.wav",
+      "CachePath": "0B/{0BFED8BA-5A4B-8AEB-56B8-2456C5371F9C}.wem"
      },
      {
       "Id": "256049301",
@@ -86,6 +110,14 @@
       "Location": "Memory",
       "ShortName": "portal_working.wav",
       "CachePath": "E9/{E99CD4B7-C214-4BDB-7093-D323D1BE0849}.wem"
+     },
+     {
+      "Id": "325095268",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "take damage-004.wav",
+      "CachePath": "C0/{C0E4B731-454F-8B73-9D68-E6CBFD7513AD}.wem"
      },
      {
       "Id": "340252119",
@@ -152,6 +184,14 @@
       "CachePath": "74/{74E5F9F3-F975-F116-8028-C533D48B9C82}.wem"
      },
      {
+      "Id": "582726380",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "jump-002.wav",
+      "CachePath": "F6/{F6EDF436-FCD0-4120-9BFD-5EBEC2536D09}.wem"
+     },
+     {
       "Id": "597920908",
       "Language": "SFX",
       "Streaming": "false",
@@ -160,12 +200,36 @@
       "CachePath": "DE/{DE73F664-F4EB-28A9-F373-26A0C2C47D2B}.wem"
      },
      {
+      "Id": "613466755",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "jump-004.wav",
+      "CachePath": "27/{2727542F-925D-B0FE-6679-BF18E961093F}.wem"
+     },
+     {
       "Id": "701923641",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "step_gravel-005.wav",
       "CachePath": "B6/{B6D84126-580F-764C-CEC2-5901EFFC2426}.wem"
+     },
+     {
+      "Id": "735768023",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "take damage-003.wav",
+      "CachePath": "13/{132DA473-B36B-8CD8-01C0-B1919A69561E}.wem"
+     },
+     {
+      "Id": "736742997",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "death-002.wav",
+      "CachePath": "44/{443B210C-434A-4149-F787-F64EB766C7A8}.wem"
      },
      {
       "Id": "765708336",
@@ -192,6 +256,14 @@
       "CachePath": "6A/{6A03C865-68E5-4AAD-34E6-6EAD50E7958A}.wem"
      },
      {
+      "Id": "812209398",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "take damage-001.wav",
+      "CachePath": "3D/{3D2BDD98-6294-C019-14D5-117E2FEB75FF}.wem"
+     },
+     {
       "Id": "822798359",
       "Language": "SFX",
       "Streaming": "false",
@@ -206,6 +278,14 @@
       "Location": "Memory",
       "ShortName": "step_concrete-002.wav",
       "CachePath": "7E/{7E054491-7228-4DB7-06E5-3A0FFE6E5A4F}.wem"
+     },
+     {
+      "Id": "851648009",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "take damage-002.wav",
+      "CachePath": "55/{5594A4D4-22F7-14F4-FA0E-0E37A1CA9D93}.wem"
      },
      {
       "Id": "860865332",
@@ -230,6 +310,14 @@
       "Location": "Memory",
       "ShortName": "step_sand-004.wav",
       "CachePath": "F9/{F93D7AE1-FF72-E78B-5763-76701CEFC0C7}.wem"
+     },
+     {
+      "Id": "968247832",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "jump-001.wav",
+      "CachePath": "A2/{A276C720-6538-AEDF-E83B-130018AC9DA4}.wem"
      },
      {
       "Id": "972122807",
@@ -336,6 +424,26 @@
       "DurationMax": "0"
      },
      {
+      "Id": "29834681",
+      "Name": "Play_Lvl1_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_Lvl1_Music",
+      "GUID": "{7BA20459-61D3-43AE-B766-3D0CFC3BB074}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2228153899",
+      "Name": "Play_Menu_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_Menu_Music",
+      "GUID": "{22F30789-7257-4321-9D21-DE05D2885993}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
       "Id": "851501667",
       "Name": "Play_Mumia_Agro",
       "ObjectPath": "\\Events\\Default Work Unit\\Mumia\\Play_Mumia_Agro",
@@ -384,7 +492,7 @@
       "Name": "Play_Mumia_Step",
       "ObjectPath": "\\Events\\Default Work Unit\\Mumia\\Play_Mumia_Step",
       "GUID": "{72721110-C065-4846-800C-2CA97053D2E1}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "45",
       "DurationType": "OneShot",
       "DurationMin": "0.47927436",
       "DurationMax": "0.47927436",
@@ -408,20 +516,43 @@
       "Name": "Play_Player_Die",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Player_Die",
       "GUID": "{13FFB314-1B8B-4F9C-A78B-ABC131440E5E}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "2.815102",
+      "DurationMax": "2.815102",
+      "MediaRefs": [
+       {
+        "Id": "108162736"
+       },
+       {
+        "Id": "226745581"
+       },
+       {
+        "Id": "736742997"
+       }
+      ]
      },
      {
       "Id": "562256996",
       "Name": "Play_Player_Jump",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Player_Jump",
       "GUID": "{B1A43E25-D97D-4B04-87C7-FA70A594F633}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.51161",
+      "DurationMax": "0.51161",
+      "MediaRefs": [
+       {
+        "Id": "9079806"
+       },
+       {
+        "Id": "582726380"
+       },
+       {
+        "Id": "613466755"
+       },
+       {
+        "Id": "968247832"
+       }
+      ]
      },
      {
       "Id": "1881398934",
@@ -448,10 +579,24 @@
       "Name": "Play_Player_Take_Damage",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Player_Take_Damage",
       "GUID": "{BC77BF37-B81D-4CDD-ACD2-3C3BA735D5F4}",
-      "MaxAttenuation": "0",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.891678",
+      "DurationMax": "0.891678",
+      "MediaRefs": [
+       {
+        "Id": "325095268"
+       },
+       {
+        "Id": "735768023"
+       },
+       {
+        "Id": "812209398"
+       },
+       {
+        "Id": "851648009"
+       }
+      ]
      },
      {
       "Id": "3309238901",
@@ -627,6 +772,6 @@
     ]
    }
   ],
-  "FileHash": "{1D81D115-6C11-E649-C0F9-CD72A8E82D2E}"
+  "FileHash": "{A6127E9A-FE8F-8A53-CBFC-3CF906B5F460}"
  }
 }
