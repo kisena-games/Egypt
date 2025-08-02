@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9442e329b4c2f84bbf02812a385f50aa
     GuidInternal: 
-    m_lastTime: -8584476422806319466
+    m_lastTime: -8584474436300871902
     List:
     - name: Fx Bus
       guid: 4fb1e2a06897d24b8858a778bc86a118
@@ -117,7 +117,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 4c87f8ac1fc0d048ad814d6b7b0f3bc5
     GuidInternal: 
-    m_lastTime: -8584477444505600024
+    m_lastTime: -8584474439620715791
     List:
     - name: bank1
       guid: 16e20c9a47a83744bd941374cb26557e
@@ -145,7 +145,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
     GuidInternal: 
-    m_lastTime: -8584476422807492753
+    m_lastTime: -8584474450504156972
     List:
     - name: Anubis
       guid: e2a002f331cab84ea19062f5d36c85e8
@@ -212,6 +212,23 @@ MonoBehaviour:
         ObjectType: 4
         guid: fb824209e74baa49ab81de195b790dec
       Path: Events\Default Work Unit\Mumia
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Music
+      guid: 0c600c3c46d73f48aaaa81d7f3382ee8
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
+      - ElementName: Music
+        ObjectType: 4
+        guid: 0c600c3c46d73f48aaaa81d7f3382ee8
+      Path: Events\Default Work Unit\Music
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -292,7 +309,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 8f8cf94683895c428a5d33c9636430e9
       Path: Events\Default Work Unit\Anubis\Play_Anubis_Step
-      maxAttenuation: 0
+      maxAttenuation: 55
       maxDuration: 0.923288
       minDuration: 0.923288
     - name: Play_Artefact_Voice
@@ -352,6 +369,46 @@ MonoBehaviour:
         ObjectType: 3
         guid: 250d6eb471dd2345b24231aee70e070c
       Path: Events\Default Work Unit\Trigering_Stuf\Play_Fog_Dissapear
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Lvl1_Music
+      guid: 5904a27bd361ae43b7663d0cfc3bb074
+      id: 29834681
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
+      - ElementName: Music
+        ObjectType: 4
+        guid: 0c600c3c46d73f48aaaa81d7f3382ee8
+      - ElementName: Play_Lvl1_Music
+        ObjectType: 3
+        guid: 5904a27bd361ae43b7663d0cfc3bb074
+      Path: Events\Default Work Unit\Music\Play_Lvl1_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Menu_Music
+      guid: 8907f322577221439d21de05d2885993
+      id: 2228153899
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
+      - ElementName: Music
+        ObjectType: 4
+        guid: 0c600c3c46d73f48aaaa81d7f3382ee8
+      - ElementName: Play_Menu_Music
+        ObjectType: 3
+        guid: 8907f322577221439d21de05d2885993
+      Path: Events\Default Work Unit\Music\Play_Menu_Music
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -432,7 +489,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 1011727265c04648800c2ca97053d2e1
       Path: Events\Default Work Unit\Mumia\Play_Mumia_Step
-      maxAttenuation: 100
+      maxAttenuation: 35
       maxDuration: 0.47927436
       minDuration: 0.47927436
     - name: Play_Player_Die
@@ -453,8 +510,8 @@ MonoBehaviour:
         guid: 14b3ff138b1b9c4fa78babc131440e5e
       Path: Events\Default Work Unit\Player\Play_Player_Die
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 2.815102
+      minDuration: 2.815102
     - name: Play_Player_Jump
       guid: 253ea4b17dd9044b87c7fa70a594f633
       id: 562256996
@@ -473,8 +530,8 @@ MonoBehaviour:
         guid: 253ea4b17dd9044b87c7fa70a594f633
       Path: Events\Default Work Unit\Player\Play_Player_Jump
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.51161
+      minDuration: 0.51161
     - name: Play_Player_Reborn
       guid: cf7b14aae850bd488e9629366614f5ab
       id: 1881398934
@@ -532,9 +589,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 37bf77bc1db8dd4cacd23c3ba735d5f4
       Path: Events\Default Work Unit\Player\Play_Player_Take_Damage
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxAttenuation: 100
+      maxDuration: 0.891678
+      minDuration: 0.891678
     - name: Play_Portal_Activating
       guid: 74dab172594b5847964995434f80ea79
       id: 3309238901
@@ -572,7 +629,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 9c9ce3c75e19d64b95ac9ef7fd69e543
       Path: Events\Default Work Unit\Environement\Play_Portal_Working
-      maxAttenuation: 0
+      maxAttenuation: 45
       maxDuration: 0
       minDuration: 0
     - name: Play_Scarab
@@ -761,8 +818,50 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 214fd60f6f60304b97f6544b79fe2e3a
     GuidInternal: 
-    m_lastTime: -8584478375636937168
-    List: []
+    m_lastTime: -8584474436301699175
+    List:
+    - name: Fx_volume
+      guid: 7079e8572de19e459bec7b928f3785f0
+      id: 3350225276
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 214fd60f6f60304b97f6544b79fe2e3a
+      - ElementName: Fx_volume
+        ObjectType: 13
+        guid: 7079e8572de19e459bec7b928f3785f0
+      Path: Game Parameters\Default Work Unit\Fx_volume
+    - name: Music_volume
+      guid: 463ac00c16e0a94cbaa433b713c113ee
+      id: 1006694123
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 214fd60f6f60304b97f6544b79fe2e3a
+      - ElementName: Music_volume
+        ObjectType: 13
+        guid: 463ac00c16e0a94cbaa433b713c113ee
+      Path: Game Parameters\Default Work Unit\Music_volume
+    - name: UI_volume
+      guid: 434845b5cfbda34cb889bd1dd041f596
+      id: 1719345792
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 214fd60f6f60304b97f6544b79fe2e3a
+      - ElementName: UI_volume
+        ObjectType: 13
+        guid: 434845b5cfbda34cb889bd1dd041f596
+      Path: Game Parameters\Default Work Unit\UI_volume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -871,7 +970,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584478375636668712
     List: []
-  ExpandedFileSystemItemIds: 01000000020000000300000004000000090000000a0000000b0000000d0000000e0000000f0000001000000012000000150000001600000017000000190000001a0000001b0000001c0000001e000000
+  ExpandedFileSystemItemIds: 0100000002000000030000000400000008000000090000000a0000000b0000000d0000000e0000000f0000001000000012000000150000001600000017000000190000001a0000001b0000001c0000001e000000
   ExpandedWaapiItemIds: 02000000030000000400000006000000080000000a0000000d00000012000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 0
