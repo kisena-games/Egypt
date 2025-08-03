@@ -157321,6 +157321,7 @@ GameObject:
   - component: {fileID: 971311028}
   - component: {fileID: 971311030}
   - component: {fileID: 971311029}
+  - component: {fileID: 971311031}
   m_Layer: 0
   m_Name: cabel_z4_110 (1)
   m_TagString: Untagged
@@ -157395,6 +157396,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971311027}
+  m_Mesh: {fileID: -3055231175700951037, guid: a6464b86097d59a4496bcb31959cfa80, type: 3}
+--- !u!64 &971311031
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971311027}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -3055231175700951037, guid: a6464b86097d59a4496bcb31959cfa80, type: 3}
 --- !u!1 &971600313 stripped
 GameObject:
@@ -379426,6 +379449,7 @@ GameObject:
   - component: {fileID: 2105154930}
   - component: {fileID: 2105154932}
   - component: {fileID: 2105154931}
+  - component: {fileID: 2105154933}
   m_Layer: 0
   m_Name: cabel_z4_109 (2)
   m_TagString: Untagged
@@ -379500,6 +379524,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105154929}
+  m_Mesh: {fileID: -1037915851149886830, guid: a6464b86097d59a4496bcb31959cfa80, type: 3}
+--- !u!64 &2105154933
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105154929}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -1037915851149886830, guid: a6464b86097d59a4496bcb31959cfa80, type: 3}
 --- !u!1 &2107106142 stripped
 GameObject:
