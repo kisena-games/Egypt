@@ -35,6 +35,7 @@ namespace AK
         static const AkUniqueID PLAY_PLAYER_TAKE_DAMAGE = 1172205655U;
         static const AkUniqueID PLAY_PORTAL_ACTIVATING = 3309238901U;
         static const AkUniqueID PLAY_PORTAL_WORKING = 573222996U;
+        static const AkUniqueID PLAY_REBORN_THEME = 1853454154U;
         static const AkUniqueID PLAY_SCARAB = 3669466544U;
         static const AkUniqueID PLAY_STEP_GRAVEL = 2915718306U;
         static const AkUniqueID PLAY_STEP_SAND = 3258421893U;

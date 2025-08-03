@@ -254,6 +254,22 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Lvl2_Music" ID="{16F5C40A-ED3D-4EA7-86E5-1E910CAFA7F8}">
+							<ChildrenList>
+								<Action Name="" ID="{C89042CC-446B-4FE1-9E15-6060666FC3A7}" ShortID="791481722"/>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Reborn_Theme" ID="{D11FB21A-26DA-49B1-83B4-2C3DBB589127}">
+							<ChildrenList>
+								<Action Name="" ID="{4B7B6154-DBA0-4797-8535-A7046B4DECBF}" ShortID="128475748">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Reborn_Theme" ID="{F33301E4-CCE2-4D07-B239-ACD1680543E3}" WorkUnitID="{1F75D9F3-7B83-466F-A942-1472A655A129}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

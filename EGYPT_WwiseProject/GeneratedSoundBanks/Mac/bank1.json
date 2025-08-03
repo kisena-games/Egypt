@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{9A0CE216-A847-4437-BD94-1374CB26557E}",
     "Language": "SFX",
-    "Hash": "{B1C638C5-C339-2421-A34B-8644B0BFA20E}",
+    "Hash": "{02BA7BDF-1213-957D-D077-C398AD49580D}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\bank1",
     "ShortName": "bank1",
     "Path": "bank1.bnk",
@@ -206,6 +206,14 @@
       "Location": "Memory",
       "ShortName": "mob dmg-002.wav",
       "CachePath": "D6/{D6DBB03E-682B-249B-0726-E8777B959FC4}.wem"
+     },
+     {
+      "Id": "474624008",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Reborn_Theme.wav",
+      "CachePath": "20/{20448999-2CE4-C573-2C67-21C8B235534A}.wem"
      },
      {
       "Id": "487210408",
@@ -751,6 +759,20 @@
       ]
      },
      {
+      "Id": "1853454154",
+      "Name": "Play_Reborn_Theme",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_Reborn_Theme",
+      "GUID": "{D11FB21A-26DA-49B1-83B4-2C3DBB589127}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "MediaRefs": [
+       {
+        "Id": "474624008"
+       }
+      ]
+     },
+     {
       "Id": "3669466544",
       "Name": "Play_Scarab",
       "ObjectPath": "\\Events\\Default Work Unit\\Trigering_Stuf\\Play_Scarab",
@@ -902,6 +924,6 @@
     ]
    }
   ],
-  "FileHash": "{ABD5AB59-DB6F-F306-054A-56A63C425DAF}"
+  "FileHash": "{03D35F44-FC60-D653-17EA-DCDCC8C91919}"
  }
 }
