@@ -6,8 +6,10 @@ public class ForTest : MonoBehaviour
 {
     [SerializeField] private GameObject _canvasPause,_inputManager,_inventory;
 
+    private string inputBuffer = "";
+    private float inputTimer = 0f;
+    private float inputTimeout = 2f; // Таймаут на ввод команды (сек)
 
-    
     private void OpenMenu()
     {
         _canvasPause.SetActive(true);
@@ -17,20 +19,68 @@ public class ForTest : MonoBehaviour
     }
     private void Update()
     {
-        for(int i = 0; i < 8; i++)
+        // Обработка быстрого переключения цифрами 0-7
+        for (int i = 0; i <= 7; i++)
         {
-            if (Input.GetKeyDown(KeyCode.Alpha0+i))
+            if (Input.GetKeyDown(KeyCode.Alpha0 + i))
             {
-                SceneManager.LoadScene(i*3);
+                int sceneIndex = i * 3;
+                SceneManager.LoadScene(sceneIndex);
+                // Очистим буфер — для надёжности
+                inputBuffer = "";
+                inputTimer = 0f;
+                return; // Чтобы не обрабатывать ввод дальше в этом кадре
             }
         }
+
+        // Обработка Escape (как у тебя)
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(_canvasPause.activeSelf)
+            if (_canvasPause.activeSelf)
                 _inventory.SetActive(true);
             else
                 OpenMenu();
+        }
 
+        // Проверка ввода текста для чит-команд
+        foreach (char c in Input.inputString)
+        {
+            inputBuffer += c;
+            inputTimer = 0f; // Сброс таймера при вводе новой буквы
+        }
+
+        if (inputBuffer.Length > 0)
+        {
+            inputTimer += Time.deltaTime;
+
+            if (inputTimer > inputTimeout)
+            {
+                // Таймаут, сбрасываем буфер
+                inputBuffer = "";
+                inputTimer = 0f;
+            }
+            else
+            {
+                CheckInputBuffer();
+            }
         }
     }
+
+    private void CheckInputBuffer()
+    {
+        // Пробегаем по командам fara1 - fara7
+        for (int i = 1; i <= 7; i++)
+        {
+            string command = "fara" + i;
+            if (inputBuffer.EndsWith(command))
+            {
+                Debug.Log($"Cheat detected: {command}, loading scene {i}");
+                SceneManager.LoadScene(i);
+                inputBuffer = "";
+                inputTimer = 0f;
+                break;
+            }
+        }
+    }
+
 }

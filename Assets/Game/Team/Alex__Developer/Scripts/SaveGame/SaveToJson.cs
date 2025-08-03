@@ -7,7 +7,7 @@ public class SaveToJson : MonoBehaviour
     [System.Serializable]
     private class PlayerData
     {
-        public int level;
+        public int level=1;
 
     }
     private string filePath = "playerData.json";
@@ -29,10 +29,7 @@ public class SaveToJson : MonoBehaviour
                 case 18: SetLevel(19); break;
                 case 21: SetLevel(22); break;
             }
-        if (GetLevel() == 0)
-        {
-            SetLevel(1);
-        }
+       
 
     }
     private void SavePlayerDataToJson()
