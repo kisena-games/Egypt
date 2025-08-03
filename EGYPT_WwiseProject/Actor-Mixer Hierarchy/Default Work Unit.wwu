@@ -864,6 +864,16 @@
 						<RandomSequenceContainer Name="Take_damage_flesh" ID="{9DB9ECDF-A860-4DAD-BFCF-2C6AEF5A3F72}" ShortID="640428021">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-250</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -885,6 +895,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="mob dmg-001" ID="{0B0D36A8-342D-4DA5-8416-55C256033EC6}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0295737724164467"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0407914102295816"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>mob dmg-001.wav</AudioFile>
 											<MediaIDList>
@@ -907,6 +922,10 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="mob dmg-002" ID="{F1438D84-211C-4FD1-9451-14AD85E337A9}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0683256121345492"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>mob dmg-002.wav</AudioFile>
 											<MediaIDList>
@@ -929,6 +948,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="mob dmg-003" ID="{049E5FA5-3012-47B9-95DE-E5691C3616A3}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.114725841270698"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.114725841270698"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>mob dmg-003.wav</AudioFile>
 											<MediaIDList>
@@ -951,6 +975,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="mob dmg-004" ID="{C7904899-8053-465D-BBA6-2CC477C7B0C2}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.136141331641229"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.136141331641229"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>mob dmg-004.wav</AudioFile>
 											<MediaIDList>

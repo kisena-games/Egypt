@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{9A0CE216-A847-4437-BD94-1374CB26557E}",
     "Language": "SFX",
-    "Hash": "{6747FB21-E7FB-0216-B130-1C9EB96E49CF}",
+    "Hash": "{B3F15D5C-4D98-075E-B9F4-A61E59E942E1}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\bank1",
     "ShortName": "bank1",
     "Path": "bank1.bnk",
@@ -37,7 +37,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mob dmg-004.wav",
-      "CachePath": "23/{231122E7-D898-9BD9-F7C2-7E149B22A31E}.wem"
+      "CachePath": "03/{03820A63-32FB-AF64-5ACC-39DA62EA4618}.wem"
      },
      {
       "Id": "101509122",
@@ -165,7 +165,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mob dmg-001.wav",
-      "CachePath": "B8/{B8429206-865B-AEAA-94AA-B836BFCD2EBB}.wem"
+      "CachePath": "F2/{F26E6899-FAD8-DDC8-10E5-835715D035A1}.wem"
      },
      {
       "Id": "403861504",
@@ -197,7 +197,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mob dmg-002.wav",
-      "CachePath": "D4/{D42301B9-64AC-FD5E-79F0-AABFB459867D}.wem"
+      "CachePath": "D6/{D6DBB03E-682B-249B-0726-E8777B959FC4}.wem"
      },
      {
       "Id": "487210408",
@@ -205,7 +205,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mob dmg-003.wav",
-      "CachePath": "29/{2994CA5D-3638-903F-2039-25D4BCF1ED76}.wem"
+      "CachePath": "E4/{E45F821A-4E3F-9A5F-3C87-A3D8E164151B}.wem"
      },
      {
       "Id": "489095842",
@@ -668,13 +668,24 @@
       "Name": "Play_Player_Take_Damage",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Player_Take_Damage",
       "GUID": "{BC77BF37-B81D-4CDD-ACD2-3C3BA735D5F4}",
-      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0.891678",
       "DurationMax": "0.891678",
       "MediaRefs": [
        {
+        "Id": "41921166"
+       },
+       {
         "Id": "325095268"
+       },
+       {
+        "Id": "378617672"
+       },
+       {
+        "Id": "456250339"
+       },
+       {
+        "Id": "487210408"
        },
        {
         "Id": "735768023"
@@ -862,6 +873,6 @@
     ]
    }
   ],
-  "FileHash": "{3FE96F86-D881-66AF-CA00-FF440EADA87B}"
+  "FileHash": "{70F2BF9C-686B-AEC0-2F58-C616BA8F8903}"
  }
 }

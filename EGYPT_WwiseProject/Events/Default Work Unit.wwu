@@ -105,6 +105,13 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{206E34B4-0DC8-4CED-8235-653F68D19FD1}" ShortID="599399707">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Take_damage_flesh" ID="{9DB9ECDF-A860-4DAD-BFCF-2C6AEF5A3F72}" WorkUnitID="{05C34427-496B-4499-B9DD-2B334CF77C54}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_use_stuff" ID="{725E64DC-07C1-4F00-996F-65CB47641F77}">
