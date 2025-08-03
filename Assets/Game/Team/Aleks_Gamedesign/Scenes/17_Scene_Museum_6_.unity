@@ -1607,6 +1607,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 9193968909497295854, guid: 003a81393608f52489b7de202075a7de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7282,6 +7286,14 @@ PrefabInstance:
     - target: {fileID: 953225164976561567, guid: b4e5f4448c097724c9c9741028cec64c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729296072110051735, guid: b4e5f4448c097724c9c9741028cec64c, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 530244739}
+    - target: {fileID: 2729296072110051735, guid: b4e5f4448c097724c9c9741028cec64c, type: 3}
+      propertyPath: _isAnubis
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2729296072110051735, guid: b4e5f4448c097724c9c9741028cec64c, type: 3}
       propertyPath: _patrollingWay
@@ -13643,7 +13655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 935025223460563051, guid: 003a81393608f52489b7de202075a7de, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7071068
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 935025223460563051, guid: 003a81393608f52489b7de202075a7de, type: 3}
       propertyPath: m_LocalRotation.x
@@ -13651,11 +13663,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 935025223460563051, guid: 003a81393608f52489b7de202075a7de, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 935025223460563051, guid: 003a81393608f52489b7de202075a7de, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 935025223460563051, guid: 003a81393608f52489b7de202075a7de, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13663,15 +13675,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 935025223460563051, guid: 003a81393608f52489b7de202075a7de, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 270
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 935025223460563051, guid: 003a81393608f52489b7de202075a7de, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1657012076135348708, guid: 003a81393608f52489b7de202075a7de, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657012076135348708, guid: 003a81393608f52489b7de202075a7de, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657012076135348708, guid: 003a81393608f52489b7de202075a7de, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657012076135348708, guid: 003a81393608f52489b7de202075a7de, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657012076135348708, guid: 003a81393608f52489b7de202075a7de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078031761834668840, guid: 003a81393608f52489b7de202075a7de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8744253014085715247, guid: 003a81393608f52489b7de202075a7de, type: 3}
       propertyPath: _sceneIndex
-      value: 11
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8744253014085715247, guid: 003a81393608f52489b7de202075a7de, type: 3}
       propertyPath: _portalParticles
@@ -16312,7 +16348,7 @@ PrefabInstance:
     - target: {fileID: 2729296072110051735, guid: b4e5f4448c097724c9c9741028cec64c, type: 3}
       propertyPath: _player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 530244739}
     - target: {fileID: 2729296072110051735, guid: b4e5f4448c097724c9c9741028cec64c, type: 3}
       propertyPath: _isAnubis
       value: 1
