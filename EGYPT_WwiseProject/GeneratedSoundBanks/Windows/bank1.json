@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{9A0CE216-A847-4437-BD94-1374CB26557E}",
     "Language": "SFX",
-    "Hash": "{D5963910-E953-00FE-AD62-D482C61D634B}",
+    "Hash": "{B3F15D5C-4D98-075E-B9F4-A61E59E942E1}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\bank1",
     "ShortName": "bank1",
     "Path": "bank1.bnk",
@@ -30,6 +30,14 @@
       "Location": "Memory",
       "ShortName": "jump-003.wav",
       "CachePath": "7C/{7C46A69F-F468-2383-5AF9-A6D12DDD2C2F}.wem"
+     },
+     {
+      "Id": "41921166",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mob dmg-004.wav",
+      "CachePath": "03/{03820A63-32FB-AF64-5ACC-39DA62EA4618}.wem"
      },
      {
       "Id": "101509122",
@@ -128,12 +136,36 @@
       "CachePath": "58/{580A4149-0932-E406-DEB4-A2A9563EC603}.wem"
      },
      {
+      "Id": "332127799",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "anubis_agro-003.wav",
+      "CachePath": "3F/{3FC8D86A-1FE8-F4B1-0D40-11EE32AAEF1D}.wem"
+     },
+     {
       "Id": "340252119",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mumia step-001.wav",
       "CachePath": "E5/{E573344E-A7D9-87EA-F90E-9997E9EFE4F5}.wem"
+     },
+     {
+      "Id": "360294324",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "anubis_agro-002.wav",
+      "CachePath": "55/{559C4660-6DA0-840E-D40A-DC172E51E960}.wem"
+     },
+     {
+      "Id": "378617672",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mob dmg-001.wav",
+      "CachePath": "F2/{F26E6899-FAD8-DDC8-10E5-835715D035A1}.wem"
      },
      {
       "Id": "403861504",
@@ -158,6 +190,22 @@
       "Location": "Memory",
       "ShortName": "mumia step-004.wav",
       "CachePath": "1A/{1A59E086-6581-EBED-1C8D-48DB729DC2D9}.wem"
+     },
+     {
+      "Id": "456250339",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mob dmg-002.wav",
+      "CachePath": "D6/{D6DBB03E-682B-249B-0726-E8777B959FC4}.wem"
+     },
+     {
+      "Id": "487210408",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mob dmg-003.wav",
+      "CachePath": "E4/{E45F821A-4E3F-9A5F-3C87-A3D8E164151B}.wem"
      },
      {
       "Id": "489095842",
@@ -240,6 +288,14 @@
       "CachePath": "A0/{A0CBF395-D263-F1F7-65AD-CE25A585BFB7}.wem"
      },
      {
+      "Id": "749366610",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "anubis_agro-001.wav",
+      "CachePath": "3A/{3A52E4AC-BA29-B19D-D8A8-21D6CF44691D}.wem"
+     },
+     {
       "Id": "765708336",
       "Language": "SFX",
       "Streaming": "false",
@@ -296,12 +352,36 @@
       "CachePath": "A2/{A2219726-9387-3A51-3EF4-571AB4F8F2AA}.wem"
      },
      {
+      "Id": "857944144",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "anubis attack-001.wav",
+      "CachePath": "3D/{3DB455F0-5270-88FF-D800-669FCDEAB10D}.wem"
+     },
+     {
       "Id": "860865332",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "step_sand-005.wav",
       "CachePath": "0A/{0AE2AC52-7409-1AF6-0BA1-7D5B414F2773}.wem"
+     },
+     {
+      "Id": "882245505",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "anubis attack-002.wav",
+      "CachePath": "86/{86AE028D-43C5-6F7B-4ACC-2013FC91F9AF}.wem"
+     },
+     {
+      "Id": "913640164",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "anubis attack-003.wav",
+      "CachePath": "CA/{CA2FE965-4699-8532-0098-8EF3A8100ABE}.wem"
      },
      {
       "Id": "923381877",
@@ -457,7 +537,7 @@
       "Name": "Play_Mumia_Agro",
       "ObjectPath": "\\Events\\Default Work Unit\\Mumia\\Play_Mumia_Agro",
       "GUID": "{D539A8C6-663E-490E-8CD7-B46A02D53866}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "25",
       "DurationType": "OneShot",
       "DurationMin": "1.0700227",
       "DurationMax": "1.0700227",
@@ -588,13 +668,24 @@
       "Name": "Play_Player_Take_Damage",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Player_Take_Damage",
       "GUID": "{BC77BF37-B81D-4CDD-ACD2-3C3BA735D5F4}",
-      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0.891678",
       "DurationMax": "0.891678",
       "MediaRefs": [
        {
+        "Id": "41921166"
+       },
+       {
         "Id": "325095268"
+       },
+       {
+        "Id": "378617672"
+       },
+       {
+        "Id": "456250339"
+       },
+       {
+        "Id": "487210408"
        },
        {
         "Id": "735768023"
@@ -782,6 +873,6 @@
     ]
    }
   ],
-  "FileHash": "{668BAD9B-E89E-AA64-3396-39E86D64A575}"
+  "FileHash": "{85660FE7-1EE4-0784-58E9-71D240972204}"
  }
 }
