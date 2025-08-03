@@ -145,7 +145,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
     GuidInternal: 
-    m_lastTime: -8584473787831867400
+    m_lastTime: -8584473765411510333
     List:
     - name: Anubis
       guid: e2a002f331cab84ea19062f5d36c85e8
@@ -329,6 +329,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: dfeb435f7725144a894b25a2ad1a4f84
       Path: Events\Default Work Unit\Artefacts\Play_Artefact_Voice
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Boss_Fight
+      guid: 4ca62699e258ee4ba23ff8f1fea5a4ec
+      id: 1557594114
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
+      - ElementName: Music
+        ObjectType: 4
+        guid: 0c600c3c46d73f48aaaa81d7f3382ee8
+      - ElementName: Play_Boss_Fight
+        ObjectType: 3
+        guid: 4ca62699e258ee4ba23ff8f1fea5a4ec
+      Path: Events\Default Work Unit\Music\Play_Boss_Fight
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

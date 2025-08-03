@@ -581,9 +581,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2212221537203126025}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1268,7 +1268,6 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 4846829a185e2034381e870918b21da3, type: 2}
-  _audioObject: {fileID: 909926959045433179}
 --- !u!1 &5938549117205620657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1884,9 +1883,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 3678953322677544570}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2050,9 +2049,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2748143095058874741}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3857,11 +3856,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d26852296128db443804eec538224e97, type: 3}
---- !u!1 &909926959045433179 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1999588179071896536, guid: d26852296128db443804eec538224e97, type: 3}
-  m_PrefabInstance: {fileID: 1666124489493240963}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2273301777518797015 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 617873348266261588, guid: d26852296128db443804eec538224e97, type: 3}

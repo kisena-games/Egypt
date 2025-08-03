@@ -62,24 +62,29 @@ public class AudioSelector : MonoBehaviour
     }
     private void OnUnlockBarrier()
     {
+        wwiseOnUnlockBarrier.Post(gameObject);
         //FXPlay(_vfx_AudioSources[0], _audioDataSO.barierClip.clip, _audioDataSO.barierClip.volume);
-        
+
     }
     private void OnInteractInventory()
     {
+        wwiseOnInteractInventory.Post(gameObject);
         //FXPlay(_vfx_AudioSources[0], _audioDataSO.interactableClip.clip, _audioDataSO.interactableClip.volume);
         
     }
     private void OnInteractFresco()
     {
+        wwiseOnInteractInventory.Post(gameObject);
         //FXPlay(_vfx_AudioSources[0], _audioDataSO.frescoClip.clip, _audioDataSO.frescoClip.volume);
     }
     private void OnMoanAudioClip()
     {
+        wwiseOnMoanAudioClip.Post(gameObject);
         //FXPlay(_vfx_AudioSources[1], _audioDataSO.hovardMoanClip.clip, _audioDataSO.hovardMoanClip.volume);
     }
     private void OnRoarAudioClip()
     {
+        wwiseOnRoarAudioClip.Post(gameObject);
         //FXPlay(_vfx_AudioSources[3], _audioDataSO.hovardRoarClip.clip, _audioDataSO.hovardRoarClip.volume);
     }
     

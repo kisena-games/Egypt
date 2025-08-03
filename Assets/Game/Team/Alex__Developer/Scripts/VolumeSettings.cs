@@ -1,6 +1,7 @@
+using AK.Wwise;
 using UnityEngine;
 using UnityEngine.UI;
-using AK.Wwise;
+using static UnityEngine.Rendering.DebugUI;
 
 public class VolumeControl : MonoBehaviour
 {
@@ -23,10 +24,9 @@ public class VolumeControl : MonoBehaviour
         musicSlider.value = PlayerPrefs.GetFloat(MUSIC_PREF, 50f);
         uiSlider.value = PlayerPrefs.GetFloat(UI_PREF, 50f);
 
-        // Устанавливаем RTPC с учетом gameObject, чтобы громкость применялась именно к этому объекту
-        fxVolumeRTPC.SetValue(gameObject, fxSlider.value);
-        musicVolumeRTPC.SetValue(gameObject, musicSlider.value);
-        uiVolumeRTPC.SetValue(gameObject, uiSlider.value);
+        AkUnitySoundEngine.SetRTPCValue("Fx_volume", fxSlider.value);
+        AkUnitySoundEngine.SetRTPCValue("Music_volume", musicSlider.value);
+        AkUnitySoundEngine.SetRTPCValue("UI_volume", uiSlider.value);
 
         // Подписываемся на изменение слайдеров
         fxSlider.onValueChanged.AddListener(OnFxVolumeChanged);
@@ -36,21 +36,21 @@ public class VolumeControl : MonoBehaviour
 
     private void OnFxVolumeChanged(float value)
     {
-        fxVolumeRTPC.SetValue(gameObject, value);
+        AkUnitySoundEngine.SetRTPCValue("Fx_volume",value);
         PlayerPrefs.SetFloat(FX_PREF, value);
         PlayerPrefs.Save();
     }
 
     private void OnMusicVolumeChanged(float value)
     {
-        musicVolumeRTPC.SetValue(gameObject, value);
+        AkUnitySoundEngine.SetRTPCValue("Music_volume", value);
         PlayerPrefs.SetFloat(MUSIC_PREF, value);
         PlayerPrefs.Save();
     }
 
     private void OnUiVolumeChanged(float value)
     {
-        uiVolumeRTPC.SetValue(gameObject, value);
+        AkUnitySoundEngine.SetRTPCValue("UI_volume", value);
         PlayerPrefs.SetFloat(UI_PREF, value);
         PlayerPrefs.Save();
     }
