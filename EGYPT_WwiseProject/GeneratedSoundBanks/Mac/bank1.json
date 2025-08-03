@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{9A0CE216-A847-4437-BD94-1374CB26557E}",
     "Language": "SFX",
-    "Hash": "{F60FFC33-AB30-2EC3-3BAA-92D7042E2727}",
+    "Hash": "{B1C638C5-C339-2421-A34B-8644B0BFA20E}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\bank1",
     "ShortName": "bank1",
     "Path": "bank1.bnk",
@@ -38,6 +38,14 @@
       "Location": "Memory",
       "ShortName": "mob dmg-004.wav",
       "CachePath": "03/{03820A63-32FB-AF64-5ACC-39DA62EA4618}.wem"
+     },
+     {
+      "Id": "46590317",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "boss fight.wav",
+      "CachePath": "28/{2896CCBA-031F-14E3-966C-C05F433A6BFB}.wem"
      },
      {
       "Id": "101509122",
@@ -238,6 +246,14 @@
       "Location": "Memory",
       "ShortName": "step_sand-003.wav",
       "CachePath": "3F/{3F2E17A6-467F-C2E3-02A5-6E31E156DDC3}.wem"
+     },
+     {
+      "Id": "564137937",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "main_menu.wav",
+      "CachePath": "16/{16F852B6-C842-CF69-8BEC-5662B8CC64B0}.wem"
      },
      {
       "Id": "582726380",
@@ -482,6 +498,18 @@
       "DurationMax": "0"
      },
      {
+      "Id": "1557594114",
+      "Name": "Play_Boss_Fight",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_Boss_Fight",
+      "GUID": "{9926A64C-58E2-4BEE-A23F-F8F1FEA5A4EC}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "46590317"
+       }
+      ]
+     },
+     {
       "Id": "3015324718",
       "Name": "Play_Fire",
       "ObjectPath": "\\Events\\Default Work Unit\\Environement\\Play_Fire",
@@ -512,14 +540,26 @@
       "DurationMax": "0"
      },
      {
-      "Id": "2228153899",
-      "Name": "Play_Menu_Music",
-      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_Menu_Music",
-      "GUID": "{22F30789-7257-4321-9D21-DE05D2885993}",
+      "Id": "2606732406",
+      "Name": "Play_Lvl2_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_Lvl2_Music",
+      "GUID": "{16F5C40A-ED3D-4EA7-86E5-1E910CAFA7F8}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
+     },
+     {
+      "Id": "2228153899",
+      "Name": "Play_Menu_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_Menu_Music",
+      "GUID": "{22F30789-7257-4321-9D21-DE05D2885993}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "564137937"
+       }
+      ]
      },
      {
       "Id": "851501667",
@@ -862,6 +902,6 @@
     ]
    }
   ],
-  "FileHash": "{77C462FA-219E-BA1A-6D0C-3A102453A378}"
+  "FileHash": "{ABD5AB59-DB6F-F306-054A-56A63C425DAF}"
  }
 }
