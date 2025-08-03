@@ -10,11 +10,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	1054154995	Play_Artefact_Voice			\Default Work Unit\Artefacts\Play_Artefact_Voice	
 	1172205655	Play_Player_Take_Damage			\Default Work Unit\Player\Play_Player_Take_Damage	
 	1461641338	Play_Player_Die			\Default Work Unit\Player\Play_Player_Die	
+	1557594114	Play_Boss_Fight			\Default Work Unit\Music\Play_Boss_Fight	
 	1569235226	Play_Step_Stone			\Default Work Unit\Player\Play_Step_Stone	
 	1881398934	Play_Player_Reborn			\Default Work Unit\Player\Play_Player_Reborn	
 	2216606755	Play_Fog_Dissapear			\Default Work Unit\Trigering_Stuf\Play_Fog_Dissapear	
 	2228153899	Play_Menu_Music			\Default Work Unit\Music\Play_Menu_Music	
 	2495563692	Play_Mumia_Step			\Default Work Unit\Mumia\Play_Mumia_Step	
+	2606732406	Play_Lvl2_Music			\Default Work Unit\Music\Play_Lvl2_Music	
 	2751653356	Play_use_stuff			\Default Work Unit\Player\Play_use_stuff	
 	2915718306	Play_Step_Gravel			\Default Work Unit\Player\Play_Step_Gravel	
 	2979878043	Play_Anubis_Step			\Default Work Unit\Anubis\Play_Anubis_Step	
@@ -39,6 +41,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	8517536	Death_Theme	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\58\{58984D0B-9AD9-7552-1F2B-E270CF7EFBE0}.wem		\Interactive Music Hierarchy\Default Work Unit\Death_Theme\Death_Theme\Death_Theme		76155
 	9079806	jump-003	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\7C\{7C46A69F-F468-2383-5AF9-A6D12DDD2C2F}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump\jump-003		13904
 	41921166	mob dmg-004	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\03\{03820A63-32FB-AF64-5ACC-39DA62EA4618}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Take_damage_flesh\mob dmg-004		20960
+	46590317	boss fight	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\28\{2896CCBA-031F-14E3-966C-C05F433A6BFB}.wem		\Interactive Music Hierarchy\Default Work Unit\Boss_Fight\boss fight\boss fight		2004349
 	101509122	anubis step-005	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\D4\{D47EE781-059D-E17A-42A0-036B017ADE6F}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Anubis\Anubis Step\anubis step-005		45944
 	108162736	death-003	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\95\{95A12CA5-AF2E-ECAB-7652-829E28774C69}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Death\death-003		50768
 	139821229	step_gravel-002	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\1D\{1DBAD5A9-1D1B-751F-9B82-0A4E6196903B}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Graviy\step_gravel-002		9440
@@ -64,6 +67,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	527900807	step_concrete-004	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\43\{4398410E-7D19-E562-517C-7E2D4BCF2BF4}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Stone\step_concrete-004		1880
 	555275543	step_gravel-003	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\19\{190BA034-AA39-DA00-310E-127C169A890F}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Graviy\step_gravel-003		10592
 	557515721	step_sand-003	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\3F\{3F2E17A6-467F-C2E3-02A5-6E31E156DDC3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Sand\step_sand-003		17504
+	564137937	main_menu	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\16\{16F852B6-C842-CF69-8BEC-5662B8CC64B0}.wem		\Interactive Music Hierarchy\Default Work Unit\Main_menu\main_menu\main_menu		1704898
 	582726380	jump-002	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\D3\{D32D5E29-9406-C5DD-65B1-BD655058A264}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump\jump-002		13904
 	597920908	step_sand-002	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\FA\{FA81099B-077F-F802-467D-953033D83920}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Steps\Sand\step_sand-002		14336
 	613466755	jump-004	I:\GAMES\PROJ\EGYPT\EGYPT_WwiseProject\.cache\8F\{8F0CB3AA-64C5-0F5D-4C29-96CEB81B733E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump\jump-004		13904

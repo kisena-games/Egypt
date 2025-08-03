@@ -229,7 +229,13 @@
 					<ChildrenList>
 						<Event Name="Play_Menu_Music" ID="{22F30789-7257-4321-9D21-DE05D2885993}">
 							<ChildrenList>
-								<Action Name="" ID="{06C7DCE7-D4D8-4679-8434-76BC91A2C196}" ShortID="279903472"/>
+								<Action Name="" ID="{06C7DCE7-D4D8-4679-8434-76BC91A2C196}" ShortID="279903472">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Main_menu" ID="{C139B031-5AEE-4E30-9FCE-496901170E48}" WorkUnitID="{1F75D9F3-7B83-466F-A942-1472A655A129}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_Lvl1_Music" ID="{7BA20459-61D3-43AE-B766-3D0CFC3BB074}">
