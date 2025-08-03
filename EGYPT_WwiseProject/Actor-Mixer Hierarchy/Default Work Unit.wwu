@@ -1055,7 +1055,7 @@
 						<RandomSequenceContainer Name="Mumia_Step" ID="{705E9E9C-17E2-4659-B203-6BEF0A94DB6B}" ShortID="815973733">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-								<Property Name="AttenuationDistanceScaling" Type="Real32" Value="0.35"/>
+								<Property Name="AttenuationDistanceScaling" Type="Real32" Value="0.17"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
@@ -1167,7 +1167,7 @@
 						<RandomSequenceContainer Name="Anubis Step" ID="{841B1664-A741-4C9F-9AD4-22A8949D649E}" ShortID="266640269">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-								<Property Name="AttenuationDistanceScaling" Type="Real32" Value="0.55"/>
+								<Property Name="AttenuationDistanceScaling" Type="Real32" Value="0.17"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
