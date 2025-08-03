@@ -767,7 +767,7 @@
 									<ObjectRef Name="ADPCM Auto Detect Medium" ID="{1ADE8C79-CF88-45CD-8D8B-13FFA25639DF}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+									<ObjectRef Name="Fx Bus" ID="{A0E2B14F-9768-4BD2-8858-A778BC86A118}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -861,6 +861,109 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Take_damage_flesh" ID="{9DB9ECDF-A860-4DAD-BFCF-2C6AEF5A3F72}" ShortID="640428021">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="ADPCM Auto Detect Medium" ID="{1ADE8C79-CF88-45CD-8D8B-13FFA25639DF}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Fx Bus" ID="{A0E2B14F-9768-4BD2-8858-A778BC86A118}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="mob dmg-001" ID="{8930E044-6B71-451D-B51D-BB3C1096C074}" ShortID="376635523">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="mob dmg-001" ID="{0B0D36A8-342D-4DA5-8416-55C256033EC6}">
+											<Language>SFX</Language>
+											<AudioFile>mob dmg-001.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="378617672"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="mob dmg-001" ID="{0B0D36A8-342D-4DA5-8416-55C256033EC6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="mob dmg-002" ID="{E33CA7B6-A839-4EC8-8E4A-A99EA0208D4C}" ShortID="89806205">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="mob dmg-002" ID="{F1438D84-211C-4FD1-9451-14AD85E337A9}">
+											<Language>SFX</Language>
+											<AudioFile>mob dmg-002.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="456250339"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="mob dmg-002" ID="{F1438D84-211C-4FD1-9451-14AD85E337A9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="mob dmg-003" ID="{674B6322-47A0-4DC4-A1FD-2CB26870E745}" ShortID="411139126">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="mob dmg-003" ID="{049E5FA5-3012-47B9-95DE-E5691C3616A3}">
+											<Language>SFX</Language>
+											<AudioFile>mob dmg-003.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="487210408"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="mob dmg-003" ID="{049E5FA5-3012-47B9-95DE-E5691C3616A3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="mob dmg-004" ID="{F607B071-4D15-4A80-B7C4-194412DD15D0}" ShortID="175061295">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="mob dmg-004" ID="{C7904899-8053-465D-BBA6-2CC477C7B0C2}">
+											<Language>SFX</Language>
+											<AudioFile>mob dmg-004.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="41921166"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="mob dmg-004" ID="{C7904899-8053-465D-BBA6-2CC477C7B0C2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Mumia" ID="{D1C7AAB7-8B94-4D47-8927-58CD00B81E15}" ShortID="841252103">
@@ -868,6 +971,7 @@
 						<RandomSequenceContainer Name="Scream" ID="{EA7E6116-540E-47C6-8BDF-9BB71BAF7D96}" ShortID="781421467">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="AttenuationDistanceScaling" Type="Real32" Value="0.25"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
@@ -1290,6 +1394,162 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="anubis step-005" ID="{1CD29B5A-9B34-4FD2-BA6D-62399F58D154}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Anubis_agro" ID="{778ECE15-9706-4DF1-8117-03240AB85470}" ShortID="10604582">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="ADPCM Auto Detect Medium" ID="{1ADE8C79-CF88-45CD-8D8B-13FFA25639DF}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="anubis_agro-001" ID="{87D1CE14-E6F7-4FC4-904A-DC33B3AB3A3E}" ShortID="653603359">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="anubis_agro-001" ID="{23983F80-A16A-4309-AA0C-A3623B5C0007}">
+											<Language>SFX</Language>
+											<AudioFile>anubis_agro-001.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="749366610"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="anubis_agro-001" ID="{23983F80-A16A-4309-AA0C-A3623B5C0007}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="anubis_agro-002" ID="{FC74FE34-51C8-41B5-858E-4840E4CB71A0}" ShortID="1013412158">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="anubis_agro-002" ID="{774A54A1-4AC8-4AF8-80B0-20E604180C84}">
+											<Language>SFX</Language>
+											<AudioFile>anubis_agro-002.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="360294324"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="anubis_agro-002" ID="{774A54A1-4AC8-4AF8-80B0-20E604180C84}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="anubis_agro-003" ID="{DAED4020-F462-40F4-9442-14F6002A4627}" ShortID="1054767698">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="anubis_agro-003" ID="{B68DBD1D-7BA8-4B02-B457-5E10B208398B}">
+											<Language>SFX</Language>
+											<AudioFile>anubis_agro-003.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="332127799"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="anubis_agro-003" ID="{B68DBD1D-7BA8-4B02-B457-5E10B208398B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Anubis_attack" ID="{00BBB9D2-7CBA-4509-9D6E-BA4C8BDBA3EC}" ShortID="874114117">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="ADPCM Auto Detect Medium" ID="{1ADE8C79-CF88-45CD-8D8B-13FFA25639DF}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="anubis attack-001" ID="{42B8020D-BF1E-48E2-AA51-46CE2B1FB6BD}" ShortID="180791979">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="anubis attack-001" ID="{5EFDF116-92F7-4904-A8DC-BB889B31FF31}">
+											<Language>SFX</Language>
+											<AudioFile>anubis attack-001.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="857944144"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="anubis attack-001" ID="{5EFDF116-92F7-4904-A8DC-BB889B31FF31}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="anubis attack-002" ID="{9ED3A086-6215-4E77-A2B8-4D67AF3CFA87}" ShortID="436305669">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="anubis attack-002" ID="{2D82DD0A-10AE-4B36-BC2C-2875530E4A02}">
+											<Language>SFX</Language>
+											<AudioFile>anubis attack-002.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="882245505"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="anubis attack-002" ID="{2D82DD0A-10AE-4B36-BC2C-2875530E4A02}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="anubis attack-003" ID="{F3E0C143-00C4-4E67-9137-AA461CD2C32B}" ShortID="689437874">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="anubis attack-003" ID="{309284F6-8A9B-43D9-A927-7B21A0B0E79B}">
+											<Language>SFX</Language>
+											<AudioFile>anubis attack-003.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="913640164"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="anubis attack-003" ID="{309284F6-8A9B-43D9-A927-7B21A0B0E79B}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
