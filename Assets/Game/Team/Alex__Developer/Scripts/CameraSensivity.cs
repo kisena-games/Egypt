@@ -1,32 +1,42 @@
+
+using Unity.Cinemachine;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.UI; // Не забудь добавить это, если используешь Slider
+using UnityEngine.UI;
+
 
 public class CameraSensivity : MonoBehaviour
 {
+    [SerializeField] private CinemachineInputAxisController axisController;
     [SerializeField] private Slider _slider;
-    [SerializeField] private InputActionReference _moveCursorAction; // Используем reference
 
-    public float mouseKeyboardSensitivity = 1.0f;
-    public float gamepadSensitivity = 0.5f;
+    private string sliderKey = "sliderValue";
 
-    void OnEnable()
+    void Start()
     {
-        // Включаем действия
-        _moveCursorAction.action.Enable(); // Доступ к действию через .action
+        _slider.value = PlayerPrefs.GetFloat(sliderKey, 0.5f);
+
+        _slider.onValueChanged.AddListener(SaveSliderValue);
+    }
+    void SaveSliderValue(float value)
+    {
+        PlayerPrefs.SetFloat(sliderKey, value);
+        PlayerPrefs.Save();
     }
 
-    void OnDisable()
+    private void OnDestroy()
     {
-        // Отключаем действия
-        _moveCursorAction.action.Disable(); // Доступ к действию через .action
+        _slider.onValueChanged.RemoveListener(SaveSliderValue);
     }
-
-    void Update()
+    private void Update()
     {
-        float currentSensitivity = mouseKeyboardSensitivity; // Здесь это не нужно, если ты просто используешь Slider.value
-        Vector2 mouseDelta = _moveCursorAction.action.ReadValue<Vector2>(); // Доступ к значению через .action
-        Vector2 scaledMouseDelta = mouseDelta * _slider.value;
+        foreach (var controller in axisController.Controllers)
+        {
+            if (controller.Name == "Look Orbit X")
+                controller.Input.Gain = _slider.value;
+            if (controller.Name == "Look Orbit Y")
+                controller.Input.Gain = - _slider.value;
+
+        }
     }
 }
 

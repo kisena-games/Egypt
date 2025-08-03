@@ -14204,10 +14204,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8910768220887615697, guid: 6d4921b24495e4b4aadb77fbca7079d2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9108864122577850777, guid: 6d4921b24495e4b4aadb77fbca7079d2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.33
@@ -14231,7 +14227,7 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 56947750}
     - targetCorrespondingSourceObject: {fileID: 326176153087535285, guid: 6d4921b24495e4b4aadb77fbca7079d2, type: 3}
-      insertIndex: 6
+      insertIndex: -1
       addedObject: {fileID: 491168247}
   m_SourcePrefab: {fileID: 100100000, guid: 6d4921b24495e4b4aadb77fbca7079d2, type: 3}
 --- !u!4 &1160642270 stripped

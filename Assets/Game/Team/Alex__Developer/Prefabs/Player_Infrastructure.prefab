@@ -170,7 +170,7 @@ RectTransform:
   m_Father: {fileID: 5015946051533152260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.18367347, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -545,6 +545,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8767643694781681153}
   - component: {fileID: 1701084025871183668}
+  - component: {fileID: 2195998932378783783}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -619,13 +620,27 @@ MonoBehaviour:
   m_FillRect: {fileID: 6342120300462514123}
   m_HandleRect: {fileID: 8057027647026310034}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: 0.1
+  m_MaxValue: 5
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2195998932378783783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5670658924419488875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e90eeebb0556fd4695515131c801908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axisController: {fileID: 3607341677000406017}
+  _slider: {fileID: 1701084025871183668}
 --- !u!1 &6440076582891746650
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,8 +709,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 505816601296699701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.18367347, y: 0}
+  m_AnchorMax: {x: 0.18367347, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 37.8, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4227,6 +4242,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee516dd3da17ce0448d81624b697b084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3607341677000406017 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8861872954137673546, guid: 80f192d8284e21143a9559aeed4804ef, type: 3}
+  m_PrefabInstance: {fileID: 5256941406929701707}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89875cdc57c54474a8a74efd9b2a3b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5774692197049780265 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1790105734131286882, guid: 80f192d8284e21143a9559aeed4804ef, type: 3}
@@ -5560,32 +5586,8 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1590824102472552271, guid: e53a80bf140af9848bf9960b610a486f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6660107656758508188}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7853256048540415587, guid: e53a80bf140af9848bf9960b610a486f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5187533829279610446}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e53a80bf140af9848bf9960b610a486f, type: 3}
---- !u!1 &326176153087535285 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7853256048540415587, guid: e53a80bf140af9848bf9960b610a486f, type: 3}
-  m_PrefabInstance: {fileID: 7528489977257926358}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5187533829279610446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326176153087535285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e90eeebb0556fd4695515131c801908, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _slider: {fileID: 1701084025871183668}
-  _moveCursorAction: {fileID: -5630151704836100654, guid: 1d6e640e716dc4ff6989b73d02023f2b, type: 3}
-  mouseKeyboardSensitivity: 1
-  gamepadSensitivity: 0.5
 --- !u!4 &3134507006404835570 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4898386136171783716, guid: e53a80bf140af9848bf9960b610a486f, type: 3}
