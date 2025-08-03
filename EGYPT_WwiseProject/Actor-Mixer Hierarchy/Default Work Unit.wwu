@@ -9,6 +9,11 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -493,6 +498,11 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -597,6 +607,11 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1315,28 +1330,6 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="anubis step-001" ID="{14C9C702-7672-48A6-9B90-E5F57FA368E7}" ShortID="521079618">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29E34294-C2B4-4BF8-BF02-812A385F50AA}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="anubis step-001" ID="{CB0ACC40-F660-4F9C-A395-2F915484B51B}">
-											<Language>SFX</Language>
-											<AudioFile>anubis step-001.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="972122807"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="anubis step-001" ID="{CB0ACC40-F660-4F9C-A395-2F915484B51B}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="anubis step-002" ID="{F12C72D9-BC5C-4B07-8BBF-137FF399C120}" ShortID="940539971">
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1428,6 +1421,13 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Anubis_agro" ID="{778ECE15-9706-4DF1-8117-03240AB85470}" ShortID="10604582">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="ADPCM Auto Detect Medium" ID="{1ADE8C79-CF88-45CD-8D8B-13FFA25639DF}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
@@ -1460,6 +1460,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="anubis_agro-002" ID="{FC74FE34-51C8-41B5-858E-4840E4CB71A0}" ShortID="1013412158">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DFD6D9BB-A704-45AF-A961-893185A71568}"/>
@@ -1506,6 +1513,13 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Anubis_attack" ID="{00BBB9D2-7CBA-4509-9D6E-BA4C8BDBA3EC}" ShortID="874114117">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="ADPCM Auto Detect Medium" ID="{1ADE8C79-CF88-45CD-8D8B-13FFA25639DF}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>

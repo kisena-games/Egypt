@@ -237,6 +237,17 @@
 								<Action Name="" ID="{D000A68E-885B-4509-B1AE-C266BA766088}" ShortID="322376208"/>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Boss_Fight" ID="{9926A64C-58E2-4BEE-A23F-F8F1FEA5A4EC}">
+							<ChildrenList>
+								<Action Name="" ID="{9BF6E456-CE3E-4818-A684-EECEC4F2A0A4}" ShortID="146321454">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boss_Fight" ID="{B5687938-DBC9-442D-BAF0-17594290895D}" WorkUnitID="{1F75D9F3-7B83-466F-A942-1472A655A129}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
