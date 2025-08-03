@@ -13,6 +13,11 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_1ST_SCREEN = 2034384041U;
+        static const AkUniqueID PLAY_2ND_SCREEN = 2897245085U;
+        static const AkUniqueID PLAY_3RD_SCREEN = 75872426U;
+        static const AkUniqueID PLAY_ACTION = 414226868U;
+        static const AkUniqueID PLAY_ACTION_2 = 3692447371U;
         static const AkUniqueID PLAY_ANUBIS_AGRO = 3155164924U;
         static const AkUniqueID PLAY_ANUBIS_ATTACK = 530125689U;
         static const AkUniqueID PLAY_ANUBIS_HIT = 3489147708U;
@@ -21,8 +26,10 @@ namespace AK
         static const AkUniqueID PLAY_BOSS_FIGHT = 1557594114U;
         static const AkUniqueID PLAY_FIRE = 3015324718U;
         static const AkUniqueID PLAY_FOG_DISSAPEAR = 2216606755U;
+        static const AkUniqueID PLAY_LAST_SCREEN = 4138246913U;
         static const AkUniqueID PLAY_LVL1_MUSIC = 29834681U;
         static const AkUniqueID PLAY_LVL2_MUSIC = 2606732406U;
+        static const AkUniqueID PLAY_MAIN_THEME = 3568813383U;
         static const AkUniqueID PLAY_MENU_MUSIC = 2228153899U;
         static const AkUniqueID PLAY_MUMIA_AGRO = 851501667U;
         static const AkUniqueID PLAY_MUMIA_ATTACK = 3120015350U;
