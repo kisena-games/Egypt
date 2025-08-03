@@ -19,6 +19,7 @@ public class ForTest : MonoBehaviour
     }
     private void Update()
     {
+        /*
         // Обработка быстрого переключения цифрами 0-7
         for (int i = 0; i <= 7; i++)
         {
@@ -32,6 +33,7 @@ public class ForTest : MonoBehaviour
                 return; // Чтобы не обрабатывать ввод дальше в этом кадре
             }
         }
+        */
 
         // Обработка Escape (как у тебя)
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -75,7 +77,7 @@ public class ForTest : MonoBehaviour
             if (inputBuffer.EndsWith(command))
             {
                 Debug.Log($"Cheat detected: {command}, loading scene {i}");
-                SceneManager.LoadScene(i);
+                SceneManager.LoadScene(i*3);
                 inputBuffer = "";
                 inputTimer = 0f;
                 break;
