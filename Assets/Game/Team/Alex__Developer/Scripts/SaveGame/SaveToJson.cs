@@ -32,6 +32,7 @@ public class SaveToJson : MonoBehaviour
         if (GetLevel() == 0)
         {
             _playerData.level = 1;
+            SavePlayerDataToJson();
         }
 
     }
