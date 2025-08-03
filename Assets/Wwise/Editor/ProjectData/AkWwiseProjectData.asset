@@ -145,7 +145,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 9b2dd7a5af9312409ee4aeeb2c2d1b52
     GuidInternal: 
-    m_lastTime: -8584474425974653467
+    m_lastTime: -8584473787831867400
     List:
     - name: Anubis
       guid: e2a002f331cab84ea19062f5d36c85e8
@@ -429,7 +429,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: c6a839d53e660e498cd7b46a02d53866
       Path: Events\Default Work Unit\Mumia\Play_Mumia_Agro
-      maxAttenuation: 100
+      maxAttenuation: 25
       maxDuration: 1.0700227
       minDuration: 1.0700227
     - name: Play_Mumia_Attack
@@ -589,7 +589,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 37bf77bc1db8dd4cacd23c3ba735d5f4
       Path: Events\Default Work Unit\Player\Play_Player_Take_Damage
-      maxAttenuation: 100
+      maxAttenuation: 0
       maxDuration: 0.891678
       minDuration: 0.891678
     - name: Play_Portal_Activating

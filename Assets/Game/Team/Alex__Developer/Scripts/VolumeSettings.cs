@@ -16,9 +16,6 @@ public class VolumeControl : MonoBehaviour
     private const string MUSIC_PREF = "MusicVolume";
     private const string UI_PREF = "UiVolume";
 
-    [SerializeField] private GameObject _audioObject;
-
-
     private void Start()
     {
         // Загружаем сохраняемые значения (или 50 по умолчанию)
@@ -27,7 +24,7 @@ public class VolumeControl : MonoBehaviour
         uiSlider.value = PlayerPrefs.GetFloat(UI_PREF, 50f);
 
         // Устанавливаем RTPC с учетом gameObject, чтобы громкость применялась именно к этому объекту
-        fxVolumeRTPC.SetValue(_audioObject, fxSlider.value);
+        fxVolumeRTPC.SetValue(gameObject, fxSlider.value);
         musicVolumeRTPC.SetValue(gameObject, musicSlider.value);
         uiVolumeRTPC.SetValue(gameObject, uiSlider.value);
 
@@ -39,7 +36,7 @@ public class VolumeControl : MonoBehaviour
 
     private void OnFxVolumeChanged(float value)
     {
-        fxVolumeRTPC.SetValue(_audioObject, value);
+        fxVolumeRTPC.SetValue(gameObject, value);
         PlayerPrefs.SetFloat(FX_PREF, value);
         PlayerPrefs.Save();
     }
