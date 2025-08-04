@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{9A0CE216-A847-4437-BD94-1374CB26557E}",
     "Language": "SFX",
-    "Hash": "{D6136FD6-D7D8-BEF2-3859-F7A0D96EC819}",
+    "Hash": "{AC044C33-12D7-48A7-834D-8E1CD9BB9DDD}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\bank1",
     "ShortName": "bank1",
     "Path": "bank1.bnk",
@@ -879,9 +879,12 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Player_Die",
       "GUID": "{13FFB314-1B8B-4F9C-A78B-ABC131440E5E}",
       "DurationType": "OneShot",
-      "DurationMin": "2.815102",
-      "DurationMax": "2.815102",
+      "DurationMin": "9.85136",
+      "DurationMax": "9.85136",
       "MediaRefs": [
+       {
+        "Id": "8517536"
+       },
        {
         "Id": "108162736"
        },
@@ -1169,6 +1172,6 @@
     ]
    }
   ],
-  "FileHash": "{AE3D7806-D046-6AE4-8237-16279B3C8609}"
+  "FileHash": "{54D97A7A-C9B5-AF2F-B7AF-7B4FA5F5E680}"
  }
 }

@@ -94,6 +94,13 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{5810A68B-4375-43FF-9041-C99969BD3459}" ShortID="920007574">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Death_Theme" ID="{D95C8726-1406-4E42-880E-498D1C07FE37}" WorkUnitID="{1F75D9F3-7B83-466F-A942-1472A655A129}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_Player_Take_Damage" ID="{BC77BF37-B81D-4CDD-ACD2-3C3BA735D5F4}">
