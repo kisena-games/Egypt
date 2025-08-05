@@ -149,7 +149,13 @@
 						</Event>
 						<Event Name="Play_Player_Reborn" ID="{AA147BCF-50E8-48BD-8E96-29366614F5AB}">
 							<ChildrenList>
-								<Action Name="" ID="{6913ED94-E017-446F-AE71-366C4586C86F}" ShortID="953268193"/>
+								<Action Name="" ID="{6913ED94-E017-446F-AE71-366C4586C86F}" ShortID="953268193">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Reborn_Theme" ID="{5E4F4475-8A3C-42C6-9B07-071121F7AB0D}" WorkUnitID="{1F75D9F3-7B83-466F-A942-1472A655A129}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>
@@ -277,7 +283,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Lvl1_Music" ID="{D5F3FC8E-44E2-427F-9BFE-B90AC387B4AC}" WorkUnitID="{1F75D9F3-7B83-466F-A942-1472A655A129}"/>
+											<ObjectRef Name="Calm_Theme" ID="{88B29E51-F4C1-4DB7-98A0-426D7A4AD184}" WorkUnitID="{1F75D9F3-7B83-466F-A942-1472A655A129}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -310,18 +316,7 @@
 								<Action Name="" ID="{C89042CC-446B-4FE1-9E15-6060666FC3A7}" ShortID="791481722">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Calm_Theme" ID="{88B29E51-F4C1-4DB7-98A0-426D7A4AD184}" WorkUnitID="{1F75D9F3-7B83-466F-A942-1472A655A129}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Reborn_Theme" ID="{D11FB21A-26DA-49B1-83B4-2C3DBB589127}">
-							<ChildrenList>
-								<Action Name="" ID="{4B7B6154-DBA0-4797-8535-A7046B4DECBF}" ShortID="128475748">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Reborn_Theme" ID="{F33301E4-CCE2-4D07-B239-ACD1680543E3}" WorkUnitID="{1F75D9F3-7B83-466F-A942-1472A655A129}"/>
+											<ObjectRef Name="Lvl1_Music" ID="{D5F3FC8E-44E2-427F-9BFE-B90AC387B4AC}" WorkUnitID="{1F75D9F3-7B83-466F-A942-1472A655A129}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -464,6 +459,105 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Event Name="Stop_Action" ID="{0D619582-64B4-47B5-992D-6FED53490762}">
+							<ChildrenList>
+								<Action Name="" ID="{E01F4A4C-6A35-4C52-AA44-7E9B00731F9F}" ShortID="778208437">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Action_Theme" ID="{AD6B707B-9E22-4BE5-B65C-0B3F0AED118F}" WorkUnitID="{1F75D9F3-7B83-466F-A942-1472A655A129}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Action_2" ID="{C28C999E-8392-4702-AABF-511B7708F930}">
+							<ChildrenList>
+								<Action Name="" ID="{811CF0F8-9B23-43EB-A96F-DD0AE1C5CE2A}" ShortID="129219779">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Action_Theme_2" ID="{A116F25F-7D33-4B6C-975D-F34087345EAB}" WorkUnitID="{1F75D9F3-7B83-466F-A942-1472A655A129}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Boss_Fight" ID="{79D611C3-74A3-44A4-94DB-5AEEEC028B5B}">
+							<ChildrenList>
+								<Action Name="" ID="{7A27460E-E4A0-43AB-B686-E0460E9DDED3}" ShortID="541861225">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boss_Fight" ID="{B5687938-DBC9-442D-BAF0-17594290895D}" WorkUnitID="{1F75D9F3-7B83-466F-A942-1472A655A129}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Lvl1_Music" ID="{9DC5AF54-E6FA-41F8-98B3-755767831D26}">
+							<ChildrenList>
+								<Action Name="" ID="{828D27AE-420C-4FF3-89BE-CB2AE3461875}" ShortID="346108842">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Calm_Theme" ID="{88B29E51-F4C1-4DB7-98A0-426D7A4AD184}" WorkUnitID="{1F75D9F3-7B83-466F-A942-1472A655A129}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Lvl2_Music" ID="{4F9B296A-C342-4B97-A2BB-4BDA6B8DA4F8}">
+							<ChildrenList>
+								<Action Name="" ID="{458AD906-4A0F-4ADA-8A93-72453993EFC4}" ShortID="556867051">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lvl1_Music" ID="{D5F3FC8E-44E2-427F-9BFE-B90AC387B4AC}" WorkUnitID="{1F75D9F3-7B83-466F-A942-1472A655A129}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Main_Theme" ID="{9290C51B-2EFE-49DF-B9A2-56668BA1DA66}">
+							<ChildrenList>
+								<Action Name="" ID="{7AD2740A-A705-4459-B244-FE45F69415EF}" ShortID="1056498776">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Main_Theme" ID="{9E666B39-7859-4F7D-BE2A-8F1848B97A5B}" WorkUnitID="{1F75D9F3-7B83-466F-A942-1472A655A129}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Menu_Music" ID="{D1B9C902-D54A-48B3-B1F1-411167F41E95}">
+							<ChildrenList>
+								<Action Name="" ID="{B387E7F9-00FE-4A6F-8DFA-CA1805A6A62C}" ShortID="708893003">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Main_menu" ID="{C139B031-5AEE-4E30-9FCE-496901170E48}" WorkUnitID="{1F75D9F3-7B83-466F-A942-1472A655A129}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

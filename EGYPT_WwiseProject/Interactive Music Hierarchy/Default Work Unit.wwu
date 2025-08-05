@@ -776,6 +776,13 @@
 					</ChildrenList>
 				</MusicPlaylistContainer>
 				<MusicPlaylistContainer Name="Action_Theme" ID="{AD6B707B-9E22-4BE5-B65C-0B3F0AED118F}" ShortID="53418855">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
