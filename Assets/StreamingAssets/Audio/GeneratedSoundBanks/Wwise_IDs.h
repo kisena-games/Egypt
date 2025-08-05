@@ -42,7 +42,6 @@ namespace AK
         static const AkUniqueID PLAY_PLAYER_TAKE_DAMAGE = 1172205655U;
         static const AkUniqueID PLAY_PORTAL_ACTIVATING = 3309238901U;
         static const AkUniqueID PLAY_PORTAL_WORKING = 573222996U;
-        static const AkUniqueID PLAY_REBORN_THEME = 1853454154U;
         static const AkUniqueID PLAY_SCARAB = 3669466544U;
         static const AkUniqueID PLAY_STEP_GRAVEL = 2915718306U;
         static const AkUniqueID PLAY_STEP_SAND = 3258421893U;
@@ -50,6 +49,13 @@ namespace AK
         static const AkUniqueID PLAY_STONE_INSERT = 387540179U;
         static const AkUniqueID PLAY_USE_STUFF = 2751653356U;
         static const AkUniqueID PLAY_WATER = 441572235U;
+        static const AkUniqueID STOP_ACTION = 1317446406U;
+        static const AkUniqueID STOP_ACTION_2 = 1140149477U;
+        static const AkUniqueID STOP_BOSS_FIGHT = 2398336644U;
+        static const AkUniqueID STOP_LVL1_MUSIC = 3993941255U;
+        static const AkUniqueID STOP_LVL2_MUSIC = 2143064784U;
+        static const AkUniqueID STOP_MAIN_THEME = 2881402637U;
+        static const AkUniqueID STOP_MENU_MUSIC = 3945748993U;
     } // namespace EVENTS
 
     namespace SWITCHES

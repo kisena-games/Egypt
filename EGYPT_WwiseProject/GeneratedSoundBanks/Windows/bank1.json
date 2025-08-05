@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{9A0CE216-A847-4437-BD94-1374CB26557E}",
     "Language": "SFX",
-    "Hash": "{AC044C33-12D7-48A7-834D-8E1CD9BB9DDD}",
+    "Hash": "{EC15F16F-6CB3-75FE-FA2E-0C0624420AA3}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\bank1",
     "ShortName": "bank1",
     "Path": "bank1.bnk",
@@ -765,7 +765,7 @@
         "Id": "402732836"
        },
        {
-        "Id": "661008728"
+        "Id": "414985445"
        }
       ]
      },
@@ -777,7 +777,7 @@
       "DurationType": "Infinite",
       "MediaRefs": [
        {
-        "Id": "414985445"
+        "Id": "661008728"
        }
       ]
      },
@@ -924,10 +924,14 @@
       "Name": "Play_Player_Reborn",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Player_Reborn",
       "GUID": "{AA147BCF-50E8-48BD-8E96-29366614F5AB}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "7.473583",
+      "DurationMax": "7.473583",
+      "MediaRefs": [
+       {
+        "Id": "474624008"
+       }
+      ]
      },
      {
       "Id": "3502518326",
@@ -1003,20 +1007,6 @@
       "MediaRefs": [
        {
         "Id": "324242678"
-       }
-      ]
-     },
-     {
-      "Id": "1853454154",
-      "Name": "Play_Reborn_Theme",
-      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_Reborn_Theme",
-      "GUID": "{D11FB21A-26DA-49B1-83B4-2C3DBB589127}",
-      "DurationType": "OneShot",
-      "DurationMin": "7.473583",
-      "DurationMax": "7.473583",
-      "MediaRefs": [
-       {
-        "Id": "474624008"
        }
       ]
      },
@@ -1140,6 +1130,111 @@
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
+     },
+     {
+      "Id": "1317446406",
+      "Name": "Stop_Action",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Stop_Action",
+      "GUID": "{0D619582-64B4-47B5-992D-6FED53490762}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "MediaRefs": [
+       {
+        "Id": "916815128"
+       }
+      ]
+     },
+     {
+      "Id": "1140149477",
+      "Name": "Stop_Action_2",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Stop_Action_2",
+      "GUID": "{C28C999E-8392-4702-AABF-511B7708F930}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "MediaRefs": [
+       {
+        "Id": "551596499"
+       }
+      ]
+     },
+     {
+      "Id": "2398336644",
+      "Name": "Stop_Boss_Fight",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Stop_Boss_Fight",
+      "GUID": "{79D611C3-74A3-44A4-94DB-5AEEEC028B5B}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "MediaRefs": [
+       {
+        "Id": "46590317"
+       }
+      ]
+     },
+     {
+      "Id": "3993941255",
+      "Name": "Stop_Lvl1_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Stop_Lvl1_Music",
+      "GUID": "{9DC5AF54-E6FA-41F8-98B3-755767831D26}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "MediaRefs": [
+       {
+        "Id": "414985445"
+       }
+      ]
+     },
+     {
+      "Id": "2143064784",
+      "Name": "Stop_Lvl2_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Stop_Lvl2_Music",
+      "GUID": "{4F9B296A-C342-4B97-A2BB-4BDA6B8DA4F8}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "MediaRefs": [
+       {
+        "Id": "661008728"
+       }
+      ]
+     },
+     {
+      "Id": "2881402637",
+      "Name": "Stop_Main_Theme",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Stop_Main_Theme",
+      "GUID": "{9290C51B-2EFE-49DF-B9A2-56668BA1DA66}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "MediaRefs": [
+       {
+        "Id": "688812051"
+       }
+      ]
+     },
+     {
+      "Id": "3945748993",
+      "Name": "Stop_Menu_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Stop_Menu_Music",
+      "GUID": "{D1B9C902-D54A-48B3-B1F1-411167F41E95}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "MediaRefs": [
+       {
+        "Id": "661008728"
+       }
+      ]
      }
     ],
     "SwitchGroups": [
@@ -1172,6 +1267,6 @@
     ]
    }
   ],
-  "FileHash": "{54D97A7A-C9B5-AF2F-B7AF-7B4FA5F5E680}"
+  "FileHash": "{CEF05374-E236-8064-53D9-801A91584BA7}"
  }
 }
